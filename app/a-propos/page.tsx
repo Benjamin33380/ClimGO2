@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bgPage my-28">
+    <div className="min-h-screen bgPage my-20">
       {/* Hero Section */}
       <section className="py-20 bgPage">
         <div className="container mx-auto px-4 text-center">
