@@ -19,7 +19,7 @@ export default function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-15">
             {/* Bouton d'appel */}
-            <Link href="/contact" className="flex items-center space-x-2">
+            <Link href="tel:0766460008" className="flex items-center space-x-2">
               <button className="bg-white climText px-6 py-2 rounded-lg font-bold transform transition-transform duration-300 hover:scale-110">NOUS APPELER</button>
             </Link>
             {/* Réseaux sociaux */}

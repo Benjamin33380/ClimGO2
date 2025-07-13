@@ -10,11 +10,11 @@ export default function Aids() {
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#f8f8f9] mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#f8f8f9] mb-6" style={{ color: '#f8f8f9' }}>
               Profitez des aides financières !
             </h2>
-            <p className="text-lg text-[#f8f8f9] max-w-4xl mx-auto leading-relaxed">
-              <strong>Optimisez votre investissement</strong> grâce aux nombreuses <strong>subventions</strong> et <strong>avantages fiscaux</strong> disponibles pour vos travaux d&apos;amélioration énergétique. <strong>ClimGO vous accompagne pas à pas</strong> pour simplifier vos démarches et <strong>maximiser vos économies</strong>.
+            <p className="text-lg text-[#f8f8f9] max-w-4xl mx-auto leading-relaxed" style={{ color: '#f8f8f9' }}>
+              <strong style={{ color: '#f8f8f9' }}>Optimisez votre investissement</strong> grâce aux nombreuses <strong style={{ color: '#f8f8f9' }}>subventions</strong> et <strong style={{ color: '#f8f8f9' }}>avantages fiscaux</strong> disponibles pour vos travaux d&apos;amélioration énergétique. <strong style={{ color: '#f8f8f9' }}>ClimGO vous accompagne pas à pas</strong> pour simplifier vos démarches et <strong style={{ color: '#f8f8f9' }}>maximiser vos économies</strong>.
             </p>
           </div>
   
@@ -29,8 +29,8 @@ export default function Aids() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#f8f8f9] mb-2">MaPrimeRénov&apos;</h3>
-                  <p className="text-[#f8f8f9] leading-relaxed">
+                  <h3 className="text-xl font-semibold text-[#f8f8f9] mb-2" style={{ color: '#f8f8f9' }}>MaPrimeRénov&apos;</h3>
+                  <p className="text-[#f8f8f9] leading-relaxed" style={{ color: '#f8f8f9' }}>
                     Une aide significative pour vos travaux d&apos;économie d&apos;énergie.
                   </p>
                 </div>
@@ -44,8 +44,8 @@ export default function Aids() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#f8f8f9] mb-2">TVA réduite</h3>
-                  <p className="text-[#f8f8f9] leading-relaxed">
+                  <h3 className="text-xl font-semibold text-[#f8f8f9] mb-2" style={{ color: '#f8f8f9' }}>TVA réduite</h3>
+                  <p className="text-[#f8f8f9] leading-relaxed" style={{ color: '#f8f8f9' }}>
                     Bénéficiez d&apos;un taux réduit à 5,5% pour vos installations.
                   </p>
                 </div>
@@ -59,8 +59,8 @@ export default function Aids() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#f8f8f9] mb-2">Certificats d&apos;Économies d&apos;Énergie (CEE)</h3>
-                  <p className="text-[#f8f8f9] leading-relaxed">
+                  <h3 className="text-xl font-semibold text-[#f8f8f9] mb-2" style={{ color: '#f8f8f9' }}>Certificats d&apos;Économies d&apos;Énergie (CEE)</h3>
+                  <p className="text-[#f8f8f9] leading-relaxed" style={{ color: '#f8f8f9' }}>
                     Obtenez un soutien financier complémentaire.
                   </p>
                 </div>
@@ -74,8 +74,8 @@ export default function Aids() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#f8f8f9] mb-2">Éco-prêt à taux zéro (Éco-PTZ)</h3>
-                  <p className="text-[#f8f8f9] leading-relaxed">
+                  <h3 className="text-xl font-semibold text-[#f8f8f9] mb-2" style={{ color: '#f8f8f9' }}>Éco-prêt à taux zéro (Éco-PTZ)</h3>
+                  <p className="text-[#f8f8f9] leading-relaxed" style={{ color: '#f8f8f9' }}>
                     Financez vos travaux sans intérêts.
                   </p>
                 </div>
@@ -87,8 +87,8 @@ export default function Aids() {
               <Link href="/aides-subventions-top-guide-2025/" className="bg-[#f8f8f9] text-[#c59f36] px-8 py-3 rounded-full hover:opacity-90 transition-opacity font-medium text-lg">
                 Découvrir toutes les aides
               </Link>
-              <p className="text-lg text-[#f8f8f9] mt-6">
-                <strong>ClimGO</strong>, votre partenaire <strong>confort</strong> et <strong>économies</strong>.
+              <p className="text-lg text-[#f8f8f9] mt-6" style={{ color: '#f8f8f9' }}>
+                <strong style={{ color: '#f8f8f9' }}>ClimGO</strong>, votre partenaire <strong style={{ color: '#f8f8f9' }}>confort</strong> et <strong style={{ color: '#f8f8f9' }}>économies</strong>.
               </p>
             </div>
           </div>

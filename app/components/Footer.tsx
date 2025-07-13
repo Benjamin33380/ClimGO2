@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-[#f9f9f6] text-black py-12">
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-8">
-          <Image src="/logo.png" alt="ClimGO Logo" className="h-20" width={100} height={100} />
+          <Image src="/logo.png" alt="ClimGO Logo" width={120} height={40} className="mx-auto object-contain" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Navigation */}
