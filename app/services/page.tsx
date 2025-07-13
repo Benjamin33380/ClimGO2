@@ -28,7 +28,7 @@ export default function ServicesPage() {
               Nos services ClimGO couvrent tous vos besoins en chauffage, climatisation, chauffe-eau et entretien.
             </p>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              ClimGO met tout son savoir-faire à votre service pour concrétiser vos projets d&apos;équipement thermique. 
+              ClimGO met tout son savoir-faire à votre service pour concrétiser vos projets d'équipement thermique. 
               Chauffage, climatisation, chauffe-eau ou maintenance : nous vous proposons des solutions fiables, 
               performantes et adaptées à vos besoins, avec un accompagnement sur-mesure.
             </p>
@@ -39,7 +39,7 @@ export default function ServicesPage() {
       {/* Nos domaines d'expertise cards */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#03144a] mb-10 text-center">Nos domaines d&apos;expertise</h2>
+          <h2 className="text-3xl font-bold text-[#03144a] mb-10 text-center">Nos domaines d'expertise</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div
               onClick={() => setSelectedSection('climatisation')}
@@ -69,7 +69,7 @@ export default function ServicesPage() {
                 <IoWater className="w-12 h-12 text-[#03144a] group-hover:text-cyan-500 transition" />
               </div>
               <h3 className="text-xl font-semibold text-[#03144a] mb-2">Eau chaude sanitaire</h3>
-              <p className="text-gray-600">Production d&apos;eau chaude fiable et économique.</p>
+              <p className="text-gray-600">Production d'eau chaude fiable et économique.</p>
             </div>
             <div
               onClick={() => setSelectedSection('maintenance')}
