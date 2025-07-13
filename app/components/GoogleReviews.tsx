@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 export default function GoogleReviews() {
   return (
     <section className="py-20 bgPage">
@@ -18,10 +19,12 @@ export default function GoogleReviews() {
             <div className="flex flex-col items-center justify-center">
               <p className="text-lg text-gray-600 flex items-center justify-center gap-2 mb-2">
                 Basée sur <strong>100% des avis</strong>
-                <img 
+                <Image 
                   src="badge.png" 
                   alt="Badge Google" 
-                  className="w-6 h-6" 
+                  className="w-6 h-6"
+                  width={24}
+                  height={24}
                   style={{ display: 'inline-block' }} 
                 />
               </p>
@@ -31,10 +34,12 @@ export default function GoogleReviews() {
                 </button>
               </Link>
             </div>
-            <img 
+            <Image  
               src="qrcode.png" 
               alt="QR Code Google" 
-              className="w-24 h-24 absolute top-0 right-0 hidden md:block" 
+              className="w-24 h-24 absolute top-0 right-0 hidden md:block"
+              width={96}
+              height={96}
             />
           </div>
           

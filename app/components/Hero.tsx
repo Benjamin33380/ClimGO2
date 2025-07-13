@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -67,10 +68,11 @@ export default function Hero() {
                 </button>
               </Link>
               <Link href="/contact">
-                <img 
+                  <Image 
                   src="/rge.png" 
                   alt="Logo RGE"
-                  className="w-24 h-auto mt-2 sm:mt-0 shadow-lg rounded transition duration-300 transform hover:scale-110 hover:shadow-xl"
+                  className="w-24 h-auto mt-2 sm:mt-0 shadow-lg rounded transition duration-300 transform hover:scale-110 hover:shadow-xl"                  width={96}
+                  height={96}
                 />
               </Link>
             </div>

@@ -8,7 +8,6 @@ import History from './components/History';
 import FinancialAids from './components/FinancialAids';
 import Partenaires from './components/Partenaires';
 import Aids from './components/Aids';
-import AboutPage from './a-propos/page';
 
 export default function Home() {
   return (

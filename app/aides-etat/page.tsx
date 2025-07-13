@@ -50,7 +50,7 @@ export default function AidesEtatPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#03144a]">Aides & Subventions</h1>
             <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-[#03144a]">Simplifiez vos démarches avec ClimGO</h2>
             <p className="text-lg max-w-4xl mx-auto leading-relaxed text-[#03144a]">
-              <strong>Aides & Subventions</strong> : plusieurs dispositifs existent pour alléger le coût de vos travaux de chauffage, climatisation ou rénovation énergétique. Chez ClimGO, nous vous aidons à chaque étape pour bénéficier sereinement des aides de l'État.
+              <strong>Aides & Subventions</strong> : plusieurs dispositifs existent pour alléger le coût de vos travaux de chauffage, climatisation ou rénovation énergétique. Chez ClimGO, nous vous aidons à chaque étape pour bénéficier sereinement des aides de l&apos;État.
             </p>
           </div>
         </div>

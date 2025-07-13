@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
     <footer className="bg-[#f9f9f6] text-black py-12">
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-8">
-          <img src="/logo.png" alt="ClimGO Logo" className="h-20" />
+          <Image src="/logo.png" alt="ClimGO Logo" className="h-20" width={100} height={100} />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Navigation */}
@@ -93,7 +94,7 @@ export default function Footer() {
                 className="text-black hover:text-white transition-colors"
                 aria-label="Facebook"
               >
-                <img src="/fb.png" alt="Facebook" className="w-6 h-6" />
+                <Image src="/fb.png" alt="Facebook" className="w-6 h-6" width={24} height={24} />
               </a>
               <a
                 href="https://www.instagram.com/climgo_climatisation_chauffage"
@@ -102,7 +103,7 @@ export default function Footer() {
                 className="text-black hover:text-white transition-colors"
                 aria-label="Instagram"
               >
-                <img src="/insta.png" alt="Instagram" className="w-6 h-6" />
+                <Image src="/insta.png" alt="Instagram" className="w-6 h-6" width={24} height={24} />
               </a>
               <a
                 href="https://www.linkedin.com"
@@ -111,7 +112,7 @@ export default function Footer() {
                 className="text-black hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
-                <img src="/in.png" alt="LinkedIn" className="w-6 h-6" />
+                <Image src="/in.png" alt="LinkedIn" className="w-6 h-6" width={24} height={24} />
               </a>
             </div>
           </div>
