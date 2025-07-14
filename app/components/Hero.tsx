@@ -83,7 +83,7 @@ export default function Hero() {
               <Link href="/climatisation" className="text-center w-full sm:w-auto text-white font-semibold tracking-wide text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
                 Climatisation
               </Link>
-              <Link href="/pompe-a-chaleur" className="text-center w-full sm:w-auto text-white font-semibold tracking-wide text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+              <Link href="/nos-services" className="text-center w-full sm:w-auto text-white font-semibold tracking-wide text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
                 Pompe à chaleur
               </Link>
               <Link href="/eau-chaude-sanitaire" className="text-center w-full sm:w-auto text-white font-semibold tracking-wide text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">

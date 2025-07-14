@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function History() {
   return (
     <section className="py-20 bgPage">
@@ -18,9 +20,9 @@ export default function History() {
               </p>
               
               <div className="flex flex-col items-center justify-center text-center space-y-4 mt-12">
-                <button className="bg-[#001E60] text-white px-6 py-3 rounded-full shadow-md transition transform hover:scale-105 duration-300">
+                <Link href="/a-propos" className="bg-[#001E60] text-white px-6 py-3 rounded-full shadow-md transition transform hover:scale-105 duration-300">
                   Notre histoire
-                </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -59,7 +59,7 @@ export default function ClimatisationPage() {
   ];
 
   return (
-    <div className=" bgPage">
+    <div className="bgPage mt-48">
       {/* Section badge titre statique */}
       <section className="section2 mt-16">
         <div className="flex justify-center mb-14">
@@ -76,25 +76,25 @@ export default function ClimatisationPage() {
       {/* Solutions de climatisation */}
       <section className="py-16 bgPage">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto space-y-16">
+          <div className="max-w-6xl mx-auto flex flex-col gap-16">
 
             {solutions.map((item) => (
-              <div key={item.title} className="group flex flex-col md:flex-row bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden transition-all duration-300 group hover:shadow-lg">
+              <div key={item.title} className="group flex p-4 flex-col md:flex-row bg-gradient-to-br from-[#f8f9f4] via-[#ffffff] to-[#f0f2ec] border border-[#e6e6e6] border border-gray-200 rounded-xl shadow-md overflow-hidden transition-all duration-300 group hover:shadow-lg">
                 <div className="w-full md:w-1/2 flex items-center justify-center bg-[#f8f9f4]">
                   <div className="w-[220px] h-[160px] relative">
                     <Image src={item.image} alt={item.title} fill className="object-contain transition-transform duration-300 group-hover:scale-105" />
                   </div>
                 </div>
                 <div className="p-6 w-full md:w-1/2 flex flex-col justify-center text-gray-900">
-                  <h3 className="text-lg font-bold text-[#1c1e21]">{item.title}</h3>
+                  <h3 className="text-2xl font-bold text-[#1c1e21]">{item.title}</h3>
                   <p className="text-base text-[#4b4f56] mt-2">{item.intro}</p>
                   <button
                     onClick={() => setExpandedIndex(expandedIndex === item.title ? null : item.title)}
-                    className="text-sm font-medium text-[#03144a] hover:text-[#021035] transition-colors duration-150 flex items-center space-x-1 mt-2"
+                    className="text-md font-medium text-[#03144a] hover:text-blue-600 hover:underline cursor-pointer transition-colors duration-150 flex items-center space-x-1 mt-2"
                   >
                     <>
                       {expandedIndex === item.title ? 'Voir moins' : 'Voir plus'}
-                      <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3 h-3 ml-1 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </>
@@ -124,25 +124,32 @@ export default function ClimatisationPage() {
             ))}
 
             {/* Pourquoi choisir ClimGO */}
-            <div className="mb-20 text-center py-16">
-              <h2 className="text-3xl font-bold climText mb-6">
-                Pourquoi choisir ClimGO pour votre climatisation ?
-              </h2>
-              <p className="text-xl text-gray-700 mb-8">
-                Un savoir-faire maîtrisé, au service de votre confort toute l&apos;année.
-              </p>
-              <p className="text-lg text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Chez ClimGO, chaque projet est pensé sur-mesure. Nous installons des systèmes de climatisation fiables, 
-                discrets et performants, adaptés à vos besoins et à l&apos;esthétique de votre logement. Le confort, sans le compromis.
-              </p>
-              <div className="bg-white rounded-lg shadow-sm p-8 max-w-3xl mx-auto">
-                <h3 className="text-xl font-semibold climText mb-4">Engagement ClimGO ?</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Vous garantir une température idéale en toute saison, un appareil bien posé, silencieux, économe… 
-                  et un service qui reste joignable quand vous en avez besoin.
+
+            <section
+              className="section3 relative w-full py-24 mt-24 text-center shadow-md bg-scroll md:bg-fixed"
+              style={{
+                backgroundImage: "url('/fond3.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                width: "100vw",
+                marginLeft: "calc(-50vw + 50%)",
+                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)'
+              }}
+            >
+              <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
+              <div className="relative z-10">
+                <h2 className="text-3xl font-bold climText mb-6" style={{ color: '#ffffff' }}>
+                  Pourquoi choisir ClimGO pour votre climatisation ?
+                </h2>
+                <p className="text-xl text-white mb-8">
+                  Un savoir-faire maîtrisé, au service de votre confort toute l&apos;année.
                 </p>
-              </div>
+                <p className="text-lg text-white mb-8 max-w-4xl mx-auto leading-relaxed">
+                  Chez ClimGO, chaque projet est pensé sur-mesure. Nous installons des systèmes de climatisation fiables, 
+                  discrets et performants, adaptés à vos besoins et à l&apos;esthétique de votre logement. Le confort, sans le compromis.
+                </p>
             </div>
+            </section>
 
           </div>
         </div>

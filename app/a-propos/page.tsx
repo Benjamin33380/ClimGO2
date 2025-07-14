@@ -7,6 +7,9 @@ export default function AboutPage() {
     <div className="min-h-screen bgPage my-20">
       {/* Hero Section */}
       <section className="py-20 bgPage">
+        <div className="flex justify-center mb-14 w-full">
+        <Image src="/Logo + nom.png" alt="ClimGO" width={1000} height={500} className="w-fit h-auto" />
+        </div>
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold climText mb-6">
             À propos de ClimGO

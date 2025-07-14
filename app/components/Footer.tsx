@@ -8,7 +8,7 @@ export default function Footer() {
 
         {/* Bloc 1 : Logo + slogan */}
         <div className="text-center md:text-left">
-          <Image src="/logo.png" alt="ClimGO Logo" width={140} height={40} className="object-contain mb-2 mx-auto md:mx-0" />
+          <Image src="/Logo.png" alt="ClimGO Logo" width={140} height={40} className="object-contain mb-2 mx-auto md:mx-0" />
           <p className="text-sm text-gray-600">Le confort sur mesure entre Bordeaux & le Bassin</p>
         </div>
 
@@ -21,7 +21,7 @@ export default function Footer() {
             <li><Link href="/aides-etat" className="hover:text-[#1e40af] transition-colors">Aides & subventions</Link></li>
             <li><Link href="/contact" className="hover:text-[#1e40af] transition-colors">Contact</Link></li>
             <li><Link href="/mentions-legales" className="hover:text-[#1e40af] transition-colors">Mentions légales</Link></li>
-            <li><Link href="/conditions-generales" className="hover:text-[#1e40af] transition-colors">Conditions générales</Link></li>
+            <li><Link href="/privacy" className="hover:text-[#1e40af] transition-colors">Politique de Confidentialité</Link></li>
           </ul>
         </div>
 
@@ -29,15 +29,19 @@ export default function Footer() {
         <div className="text-center md:text-left">
           <h3 className="text-md font-semibold mb-4">Nous contacter</h3>
           <p className="text-sm text-gray-600 mb-1">📍 Entre Bordeaux et Arcachon</p>
-          <p className="text-sm text-gray-600 mb-1">📞 <a href="tel:+33766460008" className="hover:text-[#1e40af]">07 66 46 00 08</a></p>
-          <p className="text-sm text-gray-600 mb-3">📧 <a href="mailto:contact@climgo.fr" className="hover:text-[#1e40af]">contact@climgo.fr</a></p>
-          <div className="flex justify-center md:justify-start space-x-3">
-            <a href="https://www.instagram.com/climgo_climatisation_chauffage" aria-label="Instagram" className="hover:opacity-80 transition-opacity">
+          <p className="text-sm text-gray-600 mb-1">📞 <Link href="tel:+33766460008" className="hover:text-[#1e40af]">07 66 46 00 08</Link></p>
+          <p className="text-sm text-gray-600 mb-3">📧 <Link href="mailto:contact@climgo.fr" className="hover:text-[#1e40af]">contact@climgo.fr</Link></p>
+          <div className="flex justify-center items-center md:justify-start space-x-3">
+            <Link href="https://www.instagram.com/climgo_climatisation_chauffage" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
               <Image src="/insta.png" alt="Instagram" width={20} height={20} />
-            </a>
-            <a href="https://www.linkedin.com" aria-label="LinkedIn" className="hover:opacity-80 transition-opacity">
+            </Link>
+            <Link href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
               <Image src="/in.png" alt="LinkedIn" width={20} height={20} />
-            </a>
+            </Link>
+            <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#1e40af] transition-colors">
+            <Image src="/fb.png" alt="Facebook" width={24} height={24} />
+            </Link>
+
           </div>
         </div>
       </div>

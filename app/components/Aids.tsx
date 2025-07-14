@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Aids() {
     return (
       <section
-        className="py-20 relative bg-fixed bg-center bg-no-repeat bg-cover"
+        className="py-20 relative bg-fixed bg-center bg-no-repeat bg-cover bg-scroll md:bg-fixed"
         style={{
           backgroundImage: 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/opti1.png")'
         }}
@@ -84,7 +84,7 @@ export default function Aids() {
   
             {/* Call to Action */}
             <div className="text-center mt-12">
-              <Link href="/aides-subventions-top-guide-2025/" className="bg-[#f8f8f9] text-[#c59f36] px-8 py-3 rounded-full hover:opacity-90 transition-opacity font-medium text-lg">
+              <Link href="/aides-etat/" className="bg-[#f8f8f9] text-[#c59f36] px-8 py-3 rounded-full hover:opacity-90 transition-opacity font-medium text-lg">
                 Découvrir toutes les aides
               </Link>
               <p className="text-lg text-[#f8f8f9] mt-6" style={{ color: '#f8f8f9' }}>

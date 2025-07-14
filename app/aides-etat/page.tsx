@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Effet zoom au hover sur le bouton
 
@@ -12,25 +13,6 @@ export default function AidesEtatPage() {
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
-
-  const faqItems = [
-    {
-      question: "Toutes les PAC sont-elles éligibles ?",
-      answer: "Non, seules certaines pompes à chaleur sont éligibles aux aides de l'État. Il faut qu'elles répondent à des critères de performance (COP, étiquette énergie, etc.) et qu'elles soient installées par une entreprise RGE comme ClimGO."
-    },
-    {
-      question: "Mon Projet est-il éligible ?",
-      answer: "La plupart des projets de rénovation énergétique le sont, mais cela dépend de plusieurs critères : type de travaux, situation du logement, revenus, etc. ClimGO vous accompagne pour vérifier votre éligibilité avant même le devis."
-    },
-    {
-      question: "Des aides pour foyers modestes ?",
-      answer: "Oui, certaines aides sont renforcées pour les ménages aux revenus modestes ou très modestes (MaPrimeRénov&apos;, CEE bonifiés…). Les montants sont plus élevés et le reste à charge réduit."
-    },
-    {
-      question: "L'éco-PTZ est-il cumulable ?",
-      answer: "Oui. L'éco-prêt à taux zéro peut se cumuler avec MaPrimeRénov', les CEE ou encore la TVA à taux réduit. C'est un excellent moyen de financer un reste à charge sans intérêts."
-    }
-  ];
 
   return (
     <div className="min-h-screen bgPage my-24">
@@ -439,13 +421,13 @@ export default function AidesEtatPage() {
         <p className="text-gray-600 mb-8">
           ClimGO s&apos;occupe de tout, vous profitez des économies.
         </p>
-        <a
+        <Link
           href="/contact"
           className="climBg px-8 py-4 rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center space-x-2 zoom-hover"
           style={{ color: '#03144a', backgroundColor: '#03144a', border: '2px solid #03144a' }}
         >
           <span style={{ color: '#fff' }}>Demander mon devis</span>
-        </a>
+        </Link>
       </div>
 
       {/* Style pour le zoom-hover, pastilles étapes ClimGO, logos, effet parallax, et disposition verticale des étapes */}

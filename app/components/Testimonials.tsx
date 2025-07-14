@@ -1,5 +1,5 @@
 import { TbSnowflake, TbFlame, TbDroplet, TbTools } from 'react-icons/tb';
-
+import Link from 'next/link';
 export default function Testimonials() {
   return (
     <section className="relative py-20 bg-transparent overflow-hidden">
@@ -14,7 +14,7 @@ export default function Testimonials() {
         {/* Cards minimalistes */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Climatisation */}
-          <a href="/climatisation" className="group block backdrop-blur-md bg-white/40 rounded-xl p-6 shadow-lg hover:shadow-xl hover:scale-[1.03] hover:bg-white/70 transition-all duration-300 transform hover:-translate-y-1">
+          <Link href="/climatisation" className="group block backdrop-blur-md bg-white/40 rounded-xl p-6 shadow-lg hover:shadow-xl hover:scale-[1.03] hover:bg-white/70 transition-all duration-300 transform hover:-translate-y-1">
             <div className="text-center transition-all duration-300">
               <div className="bg-[#ffffff] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 border-2 border-[#2563EB]">
                 <TbSnowflake className="w-10 h-10 drop-shadow-lg text-[#2563EB]" />
@@ -29,10 +29,10 @@ export default function Testimonials() {
                 </p>
               </div>
             </div>
-          </a>
+          </Link>
 
           {/* Chauffage */}
-          <a href="/chauffage" className="group block backdrop-blur-md bg-white/40 rounded-xl p-6 shadow-lg hover:shadow-xl hover:scale-[1.03] hover:bg-white/70 transition-all duration-300 transform hover:-translate-y-1">
+          <Link href="/chauffage" className="group block backdrop-blur-md bg-white/40 rounded-xl p-6 shadow-lg hover:shadow-xl hover:scale-[1.03] hover:bg-white/70 transition-all duration-300 transform hover:-translate-y-1">
             <div className="text-center transition-all duration-300">
               <div className="bg-[#ffffff] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 border-2 border-[#DC2626]">
                 <TbFlame className="w-10 h-10 drop-shadow-lg text-[#DC2626]" />
@@ -46,10 +46,10 @@ export default function Testimonials() {
                 </p>
               </div>
             </div>
-          </a>
+          </Link>
 
           {/* Eau Chaude Sanitaire */}
-          <a href="/eau-chaude-sanitaire" className="group block backdrop-blur-md bg-white/40 rounded-xl p-6 shadow-lg hover:shadow-xl hover:scale-[1.03] hover:bg-white/70 transition-all duration-300 transform hover:-translate-y-1">
+          <Link href="/eau-chaude-sanitaire" className="group block backdrop-blur-md bg-white/40 rounded-xl p-6 shadow-lg hover:shadow-xl hover:scale-[1.03] hover:bg-white/70 transition-all duration-300 transform hover:-translate-y-1">
             <div className="text-center transition-all duration-300">
               <div className="bg-[#ffffff] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 border-2 border-[#0EA5E9]">
                 <TbDroplet className="w-10 h-10 drop-shadow-lg text-[#0EA5E9]" />
@@ -63,10 +63,10 @@ export default function Testimonials() {
                 </p>
               </div>
             </div>
-          </a>
+          </Link>
 
           {/* Maintenance */}
-          <a href="/maintenance" className="group block backdrop-blur-md bg-white/40 rounded-xl p-6 shadow-lg hover:shadow-xl hover:scale-[1.03] hover:bg-white/70 transition-all duration-300 transform hover:-translate-y-1">
+          <Link href="/maintenance" className="group block backdrop-blur-md bg-white/40 rounded-xl p-6 shadow-lg hover:shadow-xl hover:scale-[1.03] hover:bg-white/70 transition-all duration-300 transform hover:-translate-y-1">
             <div className="text-center transition-all duration-300">
               <div className="bg-[#ffffff] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 border-2 border-[#10B981]">
                 <TbTools className="w-10 h-10 drop-shadow-lg text-[#10B981]" />
@@ -81,7 +81,7 @@ export default function Testimonials() {
                 </p>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

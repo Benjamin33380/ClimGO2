@@ -65,7 +65,7 @@ export default function Header() {
                   onMouseEnter={() => setIsMenuOpen(true)}
                   onMouseLeave={() => setIsMenuOpen(false)}
                 >
-                  <Link href="/services" className="text-white hover:text-[#d4af37] transition-colors flex items-center text-base font-semibold">
+                  <Link href="/nos-services" className="text-white hover:text-[#d4af37] transition-colors flex items-center text-base font-semibold">
                     Nos Services
                     <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -203,6 +203,13 @@ export default function Header() {
 
                   {isSubMenuOpen && (
                     <div className="pl-4 space-y-3 border-t border-white/20 mt-2 pt-3">
+                      <Link 
+                        href="/nos-services" 
+                        className="block text-white text-sm tracking-wide uppercase hover:text-[#d4af37] transition-colors py-2"
+                        onClick={closeMenu}
+                      >
+                        Tous les Services
+                      </Link>
                       <Link 
                         href="/chauffage" 
                         className="block text-white text-sm tracking-wide uppercase hover:text-[#d4af37] transition-colors py-2"

@@ -2,7 +2,7 @@ export default function WhyChooseUs() {
   return (
     <section className="relative overflow-hidden py-20">
       <div
-        className="absolute inset-0 -z-10 w-full h-full bg-fixed bg-center bg-cover bg-no-repeat"
+        className="absolute inset-0 -z-10 w-full h-full bg-fixed bg-center bg-cover bg-no-repeat bg-scroll md:bg-fixed"
         style={{
           backgroundImage: "url('/fond3.png')",
           filter: "brightness(0.5)",

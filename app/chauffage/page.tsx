@@ -20,7 +20,7 @@ export default function ChauffagePage() {
                 </div>
               </div>
               <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
-                Découvrez nos différentes solutions pour chauffer votre logement efficacement. Chaque technologie est pensée pour répondre à vos besoins de confort, d’économie et d’environnement.
+                Découvrez nos différentes solutions pour chauffer votre logement efficacement. Chaque technologie est pensée pour répondre à vos besoins de confort, d&apos;économie et d&apos;environnement.
               </p>
               <div className="flex flex-col gap-12">
                 {[{
@@ -30,15 +30,15 @@ export default function ChauffagePage() {
                   content: (
                     <>
                       <p className="text-base leading-relaxed text-gray-600 mb-4">
-                        La PAC air/eau récupère l'énergie gratuite de l'air extérieur pour chauffer l'eau de votre réseau. Idéale dans les logements bien isolés.
+                        La PAC air/eau récupère l&apos;énergie gratuite de l&apos;air extérieur pour chauffer l&apos;eau de votre réseau. Idéale dans les logements bien isolés.
                       </p>
                       <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm mb-4">
-                        <li>Réduisez jusqu'à 70% votre facture</li>
-                        <li>Compatible avec MaPrimeRénov', CEE...</li>
+                        <li>Réduisez jusqu&apos;à 70% votre facture</li>
+                        <li>Compatible avec MaPrimeRénov&apos;, CEE...</li>
                         <li>Chauffage homogène et silencieux</li>
                       </ul>
                       <p className="text-base leading-relaxed text-gray-600 mb-4">
-                        C’est une solution idéale pour remplacer une chaudière traditionnelle tout en réduisant son empreinte carbone. Elle s’intègre parfaitement à un plancher chauffant ou à des radiateurs basse température.
+                        C&apos;est une solution idéale pour remplacer une chaudière traditionnelle tout en réduisant son empreinte carbone. Elle s&apos;intègre parfaitement à un plancher chauffant ou à des radiateurs basse température.
                       </p>
                       <p className="text-sm text-gray-500 mb-2 italic">Vous êtes intéressé ?</p>
                       <Link href="/contact" className="climBg bg-[#03144a] hover:bg-[#021035] text-white px-4 py-2 rounded-md text-sm font-medium inline-flex items-center space-x-2">
@@ -54,7 +54,7 @@ export default function ChauffagePage() {
                   content: (
                     <>
                       <p className="text-base leading-relaxed text-gray-600 mb-4">
-                        Chauffez l'hiver, rafraîchissez l'été. Appareil compact et économique.
+                        Chauffez l&apos;hiver, rafraîchissez l&apos;été. Appareil compact et économique.
                       </p>
                       <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm mb-4">
                         <li>Deux fonctions en un seul appareil</li>
@@ -62,7 +62,7 @@ export default function ChauffagePage() {
                         <li>Idéal en rénovation</li>
                       </ul>
                       <p className="text-base leading-relaxed text-gray-600 mb-4">
-                        Avec son fonctionnement réversible, vous bénéficiez d’un confort toute l’année sans devoir installer plusieurs systèmes. Elle permet aussi de réaliser des économies importantes sur la facture d’énergie.
+                        Avec son fonctionnement réversible, vous bénéficiez d&apos;un confort toute l&apos;année sans devoir installer plusieurs systèmes. Elle permet aussi de réaliser des économies importantes sur la facture d&apos;énergie.
                       </p>
                       <p className="text-sm text-gray-500 mb-2 italic">Vous êtes intéressé ?</p>
                       <Link href="/contact" className="climBg bg-[#03144a] hover:bg-[#021035] text-white px-4 py-2 rounded-md text-sm font-medium inline-flex items-center space-x-2">
@@ -78,7 +78,7 @@ export default function ChauffagePage() {
                   content: (
                     <>
                       <p className="text-base leading-relaxed text-gray-600 mb-4">
-                        Invisible à l'œil nu, il diffuse une chaleur douce et libère vos murs.
+                        Invisible à l&apos;œil nu, il diffuse une chaleur douce et libère vos murs.
                       </p>
                       <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm mb-4">
                         <li>Esthétique & silence absolu</li>
@@ -110,7 +110,7 @@ export default function ChauffagePage() {
                         <li>Compatible PAC</li>
                       </ul>
                       <p className="text-base leading-relaxed text-gray-600 mb-4">
-                        Les modèles récents offrent un excellent rendement, tout en s’intégrant dans votre déco. Une solution simple, efficace, et sans gros travaux.
+                        Les modèles récents offrent un excellent rendement, tout en s&apos;intégrant dans votre déco. Une solution simple, efficace, et sans gros travaux.
                       </p>
                       <p className="text-sm text-gray-500 mb-2 italic">Vous êtes intéressé ?</p>
                       <Link href="/contact" className="climBg bg-[#03144a] hover:bg-[#021035] text-white px-4 py-2 rounded-md text-sm font-medium inline-flex items-center space-x-2">
@@ -146,12 +146,11 @@ export default function ChauffagePage() {
 
             {/* Pourquoi choisir ClimGO */}
             <section
-              className="section3 relative w-full py-24 mt-24 text-center shadow-md"
+              className="section3 relative w-full py-24 mt-24 text-center shadow-md bg-scroll md:bg-fixed"
               style={{
                 backgroundImage: "url('/fond3.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                backgroundAttachment: "fixed",
                 width: "100vw",
                 marginLeft: "calc(-50vw + 50%)",
                 boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)'
@@ -170,7 +169,7 @@ export default function ChauffagePage() {
                   Nous ne laissons rien au hasard, car votre confort mérite notre engagement le plus total.
                 </p>
                 <p className="text-lg text-white max-w-4xl mx-auto leading-relaxed italic">
-                  Chez nous, le confort, c’est pas une option. C’est un engagement.
+                  Chez nous, le confort, c&apos;est pas une option. C&apos;est un engagement.
                 </p>
               </div>
             </section>

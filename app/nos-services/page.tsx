@@ -33,7 +33,7 @@ export default function ServicesPage() {
             Nos services ClimGO couvrent tous vos besoins en chauffage, climatisation, chauffe-eau et entretien.
           </p>
           <p className="text-lg text-white max-w-4xl mx-auto leading-relaxed">
-            ClimGO met tout son savoir-faire à votre service pour concrétiser vos projets d'équipement thermique. 
+            ClimGO met tout son savoir-faire à votre service pour concrétiser vos projets d&apos;équipement thermique. 
             Chauffage, climatisation, chauffe-eau ou maintenance : nous vous proposons des solutions fiables, 
             performantes et adaptées à vos besoins, avec un accompagnement sur-mesure.
           </p>
@@ -42,14 +42,14 @@ export default function ServicesPage() {
 
       {/* 
         ============================
-        // Section 1 – Titre "Nos domaines d'expertise"
+          // Section 1 – Titre "Nos domaines d&apos;expertise"
         ============================
       */}
       <section className="relative bg-[#f8f9f4] text-[#0a0f2c] py-24 overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('/epic-bg.jpg')] bg-cover bg-center"></div>
         <div className="relative z-10 container mx-auto px-6 text-center max-w-3xl">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight drop-shadow-lg">
-            Nos domaines d’expertise
+            Nos domaines d&apos;expertise
           </h2>
           <div className="h-1 w-32 mx-auto mt-4 bg-gradient-to-r from-[#1E40AF] via-[#dc2626] to-[#10B981] rounded-full"></div>
         </div>
@@ -94,19 +94,19 @@ export default function ServicesPage() {
                   Performants, discrets et silencieux, nos systèmes vous offrent une température idéale toute l’année, dans un confort absolu.
                 </p>
                 <ul className="text-gray-700 list-none mb-4 space-y-2">
-                  <li>✔️ Confort thermique toute l'année</li>
+                  <li>✔️ Confort thermique toute l&apos;année</li>
                   <li>✔️ Systèmes discrets et silencieux</li>
                   <li>✔️ Entretien simple et performant</li>
                 </ul>
                 <p className="text-[#1E40AF] font-bold">
-                  Profitez d'un air pur et d'une température idéale, été comme hiver.
+                  Profitez d&apos;un air pur et d&apos;une température idéale, été comme hiver.
                 </p>
-                <a
-                  href="/services/climatisation"
+                <Link
+                  href="/climatisation"
                   className="inline-block mt-6 px-6 py-3 bg-[#1E40AF] text-white font-semibold rounded-lg transition hover:brightness-110"
                 >
                   En savoir plus
-                </a>
+                </Link>
               </section>
             )}
             {/* Bloc Chauffage */}
@@ -132,25 +132,25 @@ export default function ServicesPage() {
                   Chaleur douce, économies fortes.
                 </h3>
                 <p className="text-gray-700 mb-2">
-                  Nos solutions de chauffage s’adaptent à tous les intérieurs : pompes à chaleur air/eau ou air/air, plancher chauffant ou radiateurs nouvelle génération.
+                  Nos solutions de chauffage s&apos;adaptent à tous les intérieurs : pompes à chaleur air/eau ou air/air, plancher chauffant ou radiateurs nouvelle génération.
                 </p>
                 <p className="text-gray-700 mb-2">
                   Fiables, performants et éligibles aux aides, nos équipements garantissent confort durable et consommation maîtrisée.
                 </p>
                 <ul className="text-gray-700 list-none mb-4 space-y-2">
-                  <li>✔️ Jusqu'à 70% d'économies sur votre facture</li>
-                  <li>✔️ Systèmes éligibles aux aides de l'État</li>
+                  <li>✔️ Jusqu&apos;à 70% d&apos;économies sur votre facture</li>
+                  <li>✔️ Systèmes éligibles aux aides de l&apos;État</li>
                   <li>✔️ Installation rapide et personnalisée</li>
                 </ul>
                 <p className="text-[#dc2626] font-bold">
-                  Profitez d'une chaleur homogène et économe en énergie, tout au long de l'année.
+                  Profitez d&apos;une chaleur homogène et économe en énergie, tout au long de l&apos;année.
                 </p>
-                <a
-                  href="/services/chauffage"
+                <Link
+                  href="/chauffage"
                   className="inline-block mt-6 px-6 py-3 bg-[#dc2626] text-white font-semibold rounded-lg transition hover:brightness-110"
                 >
                   En savoir plus
-                </a>
+                </Link>
               </section>
             )}
             {/* Bloc Eau Chaude Sanitaire */}
@@ -165,7 +165,7 @@ export default function ServicesPage() {
                 Eau chaude & sérénité
               </div>
               <h3 className="text-xl font-semibold text-[#0EA5E9] group-hover:text-white mb-2 transition">Eau chaude sanitaire</h3>
-              <p className="text-gray-600 group-hover:text-white transition">Production d'eau chaude fiable et économique.</p>
+              <p className="text-gray-600 group-hover:text-white transition">Production d&apos;eau chaude fiable et économique.</p>
             </div>
             {activeSection === 'eau-chaude' && (
               <section className="mt-6 bg-[#f8f9f4] rounded-lg shadow-lg px-8 py-12 transition-all duration-500 ease-in-out text-center">
@@ -173,7 +173,7 @@ export default function ServicesPage() {
                   <IoWater className="w-6 h-6 text-[#0EA5E9]" /> Eau chaude sanitaire
                 </h2>
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                  De l’eau chaude quand vous en avez besoin, sans gaspiller un centime.
+                  De l&apos;eau chaude quand vous en avez besoin, sans gaspiller un centime.
                 </h3>
                 <p className="text-gray-700 mb-2">
                   ClimGO vous propose des chauffe-eaux thermodynamiques ou classiques, parfaitement adaptés à votre rythme de vie et à votre logement.
@@ -182,19 +182,19 @@ export default function ServicesPage() {
                   Des équipements sobres, fiables, silencieux, et conçus pour durer, tout en allégeant vos factures.
                 </p>
                 <ul className="text-gray-700 list-none mb-4 space-y-2">
-                  <li>✔️ Jusqu'à 60% d’économie sur votre production d'eau chaude</li>
+                  <li>✔️ Jusqu&apos;à 60% d&apos;économie sur votre production d&apos;eau chaude</li>
                   <li>✔️ Installation adaptée à vos besoins et à votre logement</li>
                   <li>✔️ Équipements éligibles aux aides financières</li>
                 </ul>
                 <p className="text-[#0EA5E9] font-bold">
-                  Profitez d'une eau chaude fiable, économique et disponible à tout moment.
+                  Profitez d&apos;une eau chaude fiable, économique et disponible à tout moment.
                 </p>
-                <a
-                  href="/services/eau-chaude"
+                <Link
+                  href="/eau-chaude-sanitaire"
                   className="inline-block mt-6 px-6 py-3 bg-[#0EA5E9] text-white font-semibold rounded-lg transition hover:brightness-110"
                 >
                   En savoir plus
-                </a>
+                </Link>
               </section>
             )}
             {/* Bloc Maintenance */}
@@ -217,7 +217,7 @@ export default function ServicesPage() {
                   <IoSettings className="w-6 h-6 text-[#10B981]" /> Maintenance
                 </h2>
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                  Parce qu’un bon équipement mérite un bon suivi.
+                  Parce qu&apos;un bon équipement mérite un bon suivi.
                 </h3>
                 <p className="text-gray-700 mb-2">
                   Nos équipes assurent un entretien rigoureux et préventif de vos installations : clim, PAC, chauffe-eau.
@@ -233,12 +233,12 @@ export default function ServicesPage() {
                 <p className="text-[#10B981] font-bold">
                   Prolongez la durée de vie de vos équipements en toute sérénité.
                 </p>
-                <a
-                  href="/services/entretien"
+                <Link
+                  href="/maintenance"
                   className="inline-block mt-6 px-6 py-3 bg-[#10B981] text-white font-semibold rounded-lg transition hover:brightness-110"
                 >
                   En savoir plus
-                </a>
+                  </Link>
               </section>
             )}
           </div>
@@ -265,12 +265,12 @@ export default function ServicesPage() {
             <br />
             Un expert vous rappelle sous 48h.
           </p>
-          <a
+          <Link
             href="tel:0766460008"
             className="inline-block bg-[#03144a] hover:scale-105 hover:brightness-110 text-white font-bold py-4 px-10 rounded-full text-lg shadow-xl transition-all duration-300"
           >
              Je veux être rappelé
-          </a>
+          </Link>
         </div>
       </section>
 

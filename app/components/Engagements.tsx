@@ -2,7 +2,7 @@ export default function Engagements() {
   return (
     <section className="relative py-20 overflow-hidden">
       <div
-        className="absolute inset-0 -z-10 w-full h-full bg-fixed bg-center bg-cover bg-no-repeat"
+        className="absolute inset-0 -z-10 w-full h-full bg-fixed bg-center bg-cover bg-no-repeat bg-scroll md:bg-fixed"
         style={{
           backgroundImage: "url('/fond2.png')",
           filter: "brightness(0.5)",

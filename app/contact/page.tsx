@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 
 export default function ContactPage() {
@@ -96,9 +97,9 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-[#03144a]">Téléphone</p>
-                      <a href="tel:+33766460008" className="text-gray-600 hover:text-blue-600 transition-colors">
+                      <Link href="tel:+33766460008" className="text-gray-600 hover:text-blue-600 transition-colors">
                         +33 (0)7 66 46 00 08
-                      </a>
+                      </Link>
                     </div>
                   </div>
 
@@ -111,9 +112,9 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-[#03144a]">Email</p>
-                      <a href="mailto:contact@climgo.fr" className="text-gray-600 hover:text-blue-600 transition-colors">
+                      <Link href="mailto:contact@climgo.fr" className="text-gray-600 hover:text-blue-600 transition-colors">
                         contact@climgo.fr
-                      </a>
+                      </Link>
                     </div>
                   </div>
 
@@ -134,7 +135,7 @@ export default function ContactPage() {
                 {/* Bouton d'appel d'urgence */}
                 <div className="mt-8 p-4 bg-white/20 backdrop-blur-md rounded-lg">
                   <p className="text-sm text-gray-600 mb-3">Besoin urgent ?</p>
-                  <a
+                  <Link
                     href="tel:+33766460008"
                     className="bg-[#03144a] text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center space-x-2"
                   >
@@ -142,7 +143,7 @@ export default function ContactPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                     <span>Appelez maintenant</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
