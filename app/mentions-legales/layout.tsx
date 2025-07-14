@@ -1,36 +1,20 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Header from './components/Header';
-import InteractiveMap from './components/InteractiveMap';
-import Footer from './components/Footer';
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-  
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'ClimGO - Spécialiste Chauffage, Climatisation & Pompe à Chaleur',
+  title: 'Mentions légales ClimGO',
   description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
   openGraph: {
-    title: 'ClimGO - Spécialiste Chauffage, Climatisation & Pompe à Chaleur',
+    title: 'Mentions légales ClimGO',
     description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
     images: ['/Logo.png'],
   },
   twitter: {
-    title: 'ClimGO - Spécialiste Chauffage, Climatisation & Pompe à Chaleur',
+    title: 'Mentions légales ClimGO',
     description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
     images: ['/Logo.png'],
   },
   alternates: {
-    canonical: 'https://www.climgo.fr',
+    canonical: 'https://www.climgo.fr/mentions-legales',
   },
   robots: {
     index: true,
@@ -46,23 +30,11 @@ export const metadata: Metadata = {
   category: 'business',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function MentionsLegalesLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <InteractiveMap />
-        <Footer />
-      </body>
-    </html>
+    <div>
+      <h1>Mentions légales ClimGO</h1>
+      {children}
+    </div>
   );
 }
