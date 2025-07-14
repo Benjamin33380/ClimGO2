@@ -5,12 +5,17 @@ import { IoWater, IoFlame, IoSnow, IoSettings } from 'react-icons/io5';
 import Link from 'next/link';
 
 export default function ServicesPage() {
-  const [selectedSection, setSelectedSection] = useState<string | null>(null);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  const toggleSection = (section: string) => {
+    setActiveSection((prev) => (prev === section ? null : section));
+  };
+
   return (
     <div className="min-h-screen bgPage">
       {/* Hero Section */}
       <section
-        className="py-32 bgPage bg-cover bg-center"
+        className="relative py-32 bgPage bg-cover bg-center"
         style={{
           backgroundImage: "url('/serv.png')",
           backgroundSize: 'cover',
@@ -19,163 +24,221 @@ export default function ServicesPage() {
           minHeight: '600px'
         }}
       >
-        <div className="container mx-auto px-4 text-center mt-64">
-          <div className="bg-white/30 backdrop-blur-sm p-6 rounded-lg inline-block">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#03144a] mb-6 drop-shadow-xl">
-              Notre savoir-faire à votre service
-            </h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-              Nos services ClimGO couvrent tous vos besoins en chauffage, climatisation, chauffe-eau et entretien.
-            </p>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              ClimGO met tout son savoir-faire à votre service pour concrétiser vos projets d'équipement thermique. 
-              Chauffage, climatisation, chauffe-eau ou maintenance : nous vous proposons des solutions fiables, 
-              performantes et adaptées à vos besoins, avec un accompagnement sur-mesure.
-            </p>
-          </div>
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+        <div className="container relative z-10 mx-auto px-4 text-center mt-64">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-xl">
+            Notre savoir-faire à votre service
+          </h1>
+          <p className="text-xl text-white max-w-3xl mx-auto mb-8">
+            Nos services ClimGO couvrent tous vos besoins en chauffage, climatisation, chauffe-eau et entretien.
+          </p>
+          <p className="text-lg text-white max-w-4xl mx-auto leading-relaxed">
+            ClimGO met tout son savoir-faire à votre service pour concrétiser vos projets d'équipement thermique. 
+            Chauffage, climatisation, chauffe-eau ou maintenance : nous vous proposons des solutions fiables, 
+            performantes et adaptées à vos besoins, avec un accompagnement sur-mesure.
+          </p>
         </div>
       </section>
 
-      {/* Nos domaines d'expertise cards */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#03144a] mb-10 text-center">Nos domaines d'expertise</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+      {/* 
+        ============================
+        // Section 1 – Titre "Nos domaines d'expertise"
+        ============================
+      */}
+      <section className="relative bg-[#f8f9f4] text-[#0a0f2c] py-24 overflow-hidden">
+        <div className="absolute inset-0 opacity-10 bg-[url('/epic-bg.jpg')] bg-cover bg-center"></div>
+        <div className="relative z-10 container mx-auto px-6 text-center max-w-3xl">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight drop-shadow-lg">
+            Nos domaines d’expertise
+          </h2>
+          <div className="h-1 w-32 mx-auto mt-4 bg-gradient-to-r from-[#1E40AF] via-[#dc2626] to-[#10B981] rounded-full"></div>
+        </div>
+      </section>
+
+      {/* 
+        ============================
+        // Section 2 – Blocs de services
+        ============================
+      */}
+      <section
+        className="pt-20 pb-32 relative bg-[#f8f9f4] text-[#0a0f2c]"
+      >
+        <div className="container relative z-10 mx-auto px-4">
+          <div className="space-y-10 max-w-4xl mx-auto">
+            {/* Bloc Climatisation */}
             <div
-              onClick={() => setSelectedSection('climatisation')}
-              className="group block bg-white rounded-lg shadow-md hover:shadow-xl hover:bg-[#e6f0fa] transition p-8 text-center cursor-pointer"
+              onClick={() => toggleSection('clim')}
+              className="group block cursor-pointer border border-gray-200 border-t-4 border-t-[#1E40AF] rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 ease-in-out p-8 text-center bg-[#f1f1f1] hover:bg-[#1E40AF]"
             >
               <div className="flex justify-center mb-4">
-                <IoSnow className="w-12 h-12 text-[#03144a] group-hover:text-blue-500 transition" />
+                <IoSnow className="w-12 h-12 text-[#1E40AF] group-hover:text-white transition" />
               </div>
-              <h3 className="text-xl font-semibold text-[#03144a] mb-2">Climatisation</h3>
-              <p className="text-gray-600">Installation, entretien et dépannage de systèmes de climatisation.</p>
-            </div>
-            <div
-              onClick={() => setSelectedSection('chauffage')}
-              className="group block bg-white rounded-lg shadow-md hover:shadow-xl hover:bg-[#fceee7] transition p-8 text-center cursor-pointer"
-            >
-              <div className="flex justify-center mb-4">
-                <IoFlame className="w-12 h-12 text-[#03144a] group-hover:text-orange-500 transition" />
+              <div className="inline-block bg-[#dbeafe] text-[#1E40AF] text-xs font-semibold px-3 py-1 rounded-full mb-2">
+                Air pur & confort
               </div>
-              <h3 className="text-xl font-semibold text-[#03144a] mb-2">Chauffage</h3>
-              <p className="text-gray-600">Solutions de chauffage économiques et performantes.</p>
+              <h3 className="text-xl font-semibold text-[#1E40AF] group-hover:text-white mb-2 transition">Climatisation</h3>
+              <p className="text-gray-600 group-hover:text-white transition">Installation, entretien et dépannage de systèmes de climatisation.</p>
             </div>
-            <div
-              onClick={() => setSelectedSection('eau-chaude')}
-              className="group block bg-white rounded-lg shadow-md hover:shadow-xl hover:bg-[#e7f7f6] transition p-8 text-center cursor-pointer"
-            >
-              <div className="flex justify-center mb-4">
-                <IoWater className="w-12 h-12 text-[#03144a] group-hover:text-cyan-500 transition" />
-              </div>
-              <h3 className="text-xl font-semibold text-[#03144a] mb-2">Eau chaude sanitaire</h3>
-              <p className="text-gray-600">Production d'eau chaude fiable et économique.</p>
-            </div>
-            <div
-              onClick={() => setSelectedSection('maintenance')}
-              className="group block bg-white rounded-lg shadow-md hover:shadow-xl hover:bg-[#f7f7f7] transition p-8 text-center cursor-pointer"
-            >
-              <div className="flex justify-center mb-4">
-                <IoSettings className="w-12 h-12 text-[#03144a] group-hover:text-gray-600 transition" />
-              </div>
-              <h3 className="text-xl font-semibold text-[#03144a] mb-2">Maintenance</h3>
-              <p className="text-gray-600">Entretien et suivi régulier de vos équipements.</p>
-            </div>
-          </div>
-          {/* Affichage dynamique des sections */}
-          <div className="max-w-4xl mx-auto">
-            {selectedSection === 'eau-chaude' && (
-              <section className="mt-10 transition-all duration-500 ease-in-out">
-                <h2 className="text-2xl font-bold text-[#001240] mb-4">Eau chaude sanitaire</h2>
+            {activeSection === 'clim' && (
+              <section className="mt-6 bg-[#f8f9f4] rounded-lg shadow-lg px-8 py-12 transition-all duration-500 ease-in-out text-center">
+                <h2 className="text-2xl font-bold text-[#1E40AF] mb-4 flex items-center justify-center gap-2">
+                  <IoSnow className="w-6 h-6 text-[#1E40AF]" /> Climatisation
+                </h2>
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                  Une eau chaude toujours disponible, performante et économique.
+                  Un air pur en toute saison. Un confort sur-mesure au quotidien.
                 </h3>
                 <p className="text-gray-700 mb-2">
-                  ClimGO installe des chauffe-eaux thermodynamiques ou électriques selon vos besoins, la configuration de votre logement et votre budget.
+                  ClimGO installe des climatiseurs muraux, gainables, consoles ou cassettes, selon la configuration de votre logement.
                 </p>
                 <p className="text-gray-700 mb-2">
-                  Nos équipements sont fiables, durables, silencieux et éligibles aux aides de l'État.
-                </p>
-                <p className="text-gray-700 mb-4">
-                  Vous profitez d'un confort constant tout en réduisant votre consommation d'énergie.
-                </p>
-                <ul className="text-gray-700 list-none mb-4 space-y-2">
-                  <li>✔️ Jusqu'à 60% d’économie sur votre production d'eau chaude</li>
-                  <li>✔️ Installation adaptée à vos besoins et à votre logement</li>
-                  <li>✔️ Équipements éligibles aux aides financières</li>
-                </ul>
-                <p className="text-[#001240] font-bold">
-                  Profitez d'une eau chaude fiable, économique et disponible à tout moment.
-                </p>
-              </section>
-            )}
-            {selectedSection === 'chauffage' && (
-              <section className="mt-10 transition-all duration-500 ease-in-out">
-                <h2 className="text-2xl font-bold text-[#001240] mb-4">Chauffage</h2>
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                  Un confort thermique toute l'année, pour un logement bien chauffé et économique.
-                </h3>
-                <p className="text-gray-700 mb-2">
-                  Offrez à votre logement un confort thermique optimal avec nos solutions de chauffage économiques et performantes.
-                </p>
-                <p className="text-gray-700 mb-2">
-                  Pompes à chaleur air/eau ou air/air, plancher chauffant, radiateurs dernière génération : nous vous accompagnons dans le choix, l'installation et l'entretien du système le plus adapté à vos besoins.
-                </p>
-                <ul className="text-gray-700 list-none mb-4 space-y-2">
-                  <li>✔️ Jusqu'à 70% d'économies sur votre facture</li>
-                  <li>✔️ Systèmes éligibles aux aides de l'État</li>
-                  <li>✔️ Installation rapide et personnalisée</li>
-                </ul>
-                <p className="text-[#001240] font-bold">
-                  Profitez d'une chaleur homogène et économe en énergie, tout au long de l'année.
-                </p>
-              </section>
-            )}
-            {selectedSection === 'climatisation' && (
-              <section className="mt-10 transition-all duration-500 ease-in-out">
-                <h2 className="text-2xl font-bold text-[#001240] mb-4">Climatisation</h2>
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                  Un air frais en été, un air sain toute l'année.
-                </h3>
-                <p className="text-gray-700 mb-2">
-                  ClimGO installe des climatiseurs muraux, gainables, consoles ou cassettes pour répondre à toutes les configurations de logements.
-                </p>
-                <p className="text-gray-700 mb-2">
-                  Discrets, efficaces et silencieux, nos systèmes vous garantissent un confort sur-mesure avec un excellent rapport qualité/prix.
+                  Performants, discrets et silencieux, nos systèmes vous offrent une température idéale toute l’année, dans un confort absolu.
                 </p>
                 <ul className="text-gray-700 list-none mb-4 space-y-2">
                   <li>✔️ Confort thermique toute l'année</li>
                   <li>✔️ Systèmes discrets et silencieux</li>
                   <li>✔️ Entretien simple et performant</li>
                 </ul>
-                <p className="text-[#001240] font-bold">
+                <p className="text-[#1E40AF] font-bold">
                   Profitez d'un air pur et d'une température idéale, été comme hiver.
                 </p>
+                <a
+                  href="/services/climatisation"
+                  className="inline-block mt-6 px-6 py-3 bg-[#1E40AF] text-white font-semibold rounded-lg transition hover:brightness-110"
+                >
+                  En savoir plus
+                </a>
               </section>
             )}
-            {selectedSection === 'maintenance' && (
-              <section className="mt-10 transition-all duration-500 ease-in-out">
-                <h2 className="text-2xl font-bold text-[#001240] mb-4">Maintenance</h2>
+            {/* Bloc Chauffage */}
+            <div
+              onClick={() => toggleSection('chauffage')}
+              className="group block cursor-pointer border border-gray-200 border-t-4 border-t-[#dc2626] rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 ease-in-out p-8 text-center bg-[#f1f1f1] hover:bg-[#dc2626]"
+            >
+              <div className="flex justify-center mb-4">
+                <IoFlame className="w-12 h-12 text-[#dc2626] group-hover:text-white transition" />
+              </div>
+              <div className="inline-block bg-[#fee2e2] text-[#dc2626] text-xs font-semibold px-3 py-1 rounded-full mb-2">
+                Chaleur & économies
+              </div>
+              <h3 className="text-xl font-semibold text-[#dc2626] group-hover:text-white mb-2 transition">Chauffage</h3>
+              <p className="text-gray-600 group-hover:text-white transition">Solutions de chauffage économiques et performantes.</p>
+            </div>
+            {activeSection === 'chauffage' && (
+              <section className="mt-6 bg-[#f8f9f4] rounded-lg shadow-lg px-8 py-12 transition-all duration-500 ease-in-out text-center">
+                <h2 className="text-2xl font-bold text-[#dc2626] mb-4 flex items-center justify-center gap-2">
+                  <IoFlame className="w-6 h-6 text-[#dc2626]" /> Chauffage
+                </h2>
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                  Un système bien entretenu, c'est plus de confort, plus longtemps.
+                  Chaleur douce, économies fortes.
                 </h3>
                 <p className="text-gray-700 mb-2">
-                  Un bon équipement, c'est aussi un bon suivi.
+                  Nos solutions de chauffage s’adaptent à tous les intérieurs : pompes à chaleur air/eau ou air/air, plancher chauffant ou radiateurs nouvelle génération.
                 </p>
                 <p className="text-gray-700 mb-2">
-                  ClimGO assure l'entretien régulier et la maintenance de vos installations pour prolonger leur durée de vie et garantir leur performance.
+                  Fiables, performants et éligibles aux aides, nos équipements garantissent confort durable et consommation maîtrisée.
+                </p>
+                <ul className="text-gray-700 list-none mb-4 space-y-2">
+                  <li>✔️ Jusqu'à 70% d'économies sur votre facture</li>
+                  <li>✔️ Systèmes éligibles aux aides de l'État</li>
+                  <li>✔️ Installation rapide et personnalisée</li>
+                </ul>
+                <p className="text-[#dc2626] font-bold">
+                  Profitez d'une chaleur homogène et économe en énergie, tout au long de l'année.
+                </p>
+                <a
+                  href="/services/chauffage"
+                  className="inline-block mt-6 px-6 py-3 bg-[#dc2626] text-white font-semibold rounded-lg transition hover:brightness-110"
+                >
+                  En savoir plus
+                </a>
+              </section>
+            )}
+            {/* Bloc Eau Chaude Sanitaire */}
+            <div
+              onClick={() => toggleSection('eau-chaude')}
+              className="group block cursor-pointer border border-gray-200 border-t-4 border-t-[#0EA5E9] rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 ease-in-out p-8 text-center bg-[#f1f1f1] hover:bg-[#0EA5E9]"
+            >
+              <div className="flex justify-center mb-4">
+                <IoWater className="w-12 h-12 text-[#0EA5E9] group-hover:text-white transition" />
+              </div>
+              <div className="inline-block bg-[#bae6fd] text-[#0EA5E9] text-xs font-semibold px-3 py-1 rounded-full mb-2">
+                Eau chaude & sérénité
+              </div>
+              <h3 className="text-xl font-semibold text-[#0EA5E9] group-hover:text-white mb-2 transition">Eau chaude sanitaire</h3>
+              <p className="text-gray-600 group-hover:text-white transition">Production d'eau chaude fiable et économique.</p>
+            </div>
+            {activeSection === 'eau-chaude' && (
+              <section className="mt-6 bg-[#f8f9f4] rounded-lg shadow-lg px-8 py-12 transition-all duration-500 ease-in-out text-center">
+                <h2 className="text-2xl font-bold text-[#0EA5E9] mb-4 flex items-center justify-center gap-2">
+                  <IoWater className="w-6 h-6 text-[#0EA5E9]" /> Eau chaude sanitaire
+                </h2>
+                <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                  De l’eau chaude quand vous en avez besoin, sans gaspiller un centime.
+                </h3>
+                <p className="text-gray-700 mb-2">
+                  ClimGO vous propose des chauffe-eaux thermodynamiques ou classiques, parfaitement adaptés à votre rythme de vie et à votre logement.
                 </p>
                 <p className="text-gray-700 mb-2">
-                  Pompe à chaleur, climatisation, chauffe-eau : un seul interlocuteur, un service de proximité et zéro mauvaise surprise.
+                  Des équipements sobres, fiables, silencieux, et conçus pour durer, tout en allégeant vos factures.
+                </p>
+                <ul className="text-gray-700 list-none mb-4 space-y-2">
+                  <li>✔️ Jusqu'à 60% d’économie sur votre production d'eau chaude</li>
+                  <li>✔️ Installation adaptée à vos besoins et à votre logement</li>
+                  <li>✔️ Équipements éligibles aux aides financières</li>
+                </ul>
+                <p className="text-[#0EA5E9] font-bold">
+                  Profitez d'une eau chaude fiable, économique et disponible à tout moment.
+                </p>
+                <a
+                  href="/services/eau-chaude"
+                  className="inline-block mt-6 px-6 py-3 bg-[#0EA5E9] text-white font-semibold rounded-lg transition hover:brightness-110"
+                >
+                  En savoir plus
+                </a>
+              </section>
+            )}
+            {/* Bloc Maintenance */}
+            <div
+              onClick={() => toggleSection('maintenance')}
+              className="group block cursor-pointer border border-gray-200 border-t-4 border-t-[#10B981] rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 ease-in-out p-8 text-center bg-[#f1f1f1] hover:bg-[#10B981]"
+            >
+              <div className="flex justify-center mb-4">
+                <IoSettings className="w-12 h-12 text-[#10B981] group-hover:text-white transition" />
+              </div>
+              <div className="inline-block bg-[#d1fae5] text-[#10B981] text-xs font-semibold px-3 py-1 rounded-full mb-2">
+                Suivi & tranquillité
+              </div>
+              <h3 className="text-xl font-semibold text-[#10B981] group-hover:text-white mb-2 transition">Maintenance</h3>
+              <p className="text-gray-600 group-hover:text-white transition">Entretien et suivi régulier de vos équipements.</p>
+            </div>
+            {activeSection === 'maintenance' && (
+              <section className="mt-6 bg-[#f8f9f4] rounded-lg shadow-lg px-8 py-12 transition-all duration-500 ease-in-out text-center">
+                <h2 className="text-2xl font-bold text-[#10B981] mb-4 flex items-center justify-center gap-2">
+                  <IoSettings className="w-6 h-6 text-[#10B981]" /> Maintenance
+                </h2>
+                <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                  Parce qu’un bon équipement mérite un bon suivi.
+                </h3>
+                <p className="text-gray-700 mb-2">
+                  Nos équipes assurent un entretien rigoureux et préventif de vos installations : clim, PAC, chauffe-eau.
+                </p>
+                <p className="text-gray-700 mb-2">
+                  Objectif : performance maximale, durée de vie prolongée, zéro imprévu.
                 </p>
                 <ul className="text-gray-700 list-none mb-4 space-y-2">
                   <li>✔️ Nettoyage complet et vérification des réglages</li>
                   <li>✔️ Diagnostic préventif pour éviter les pannes</li>
                   <li>✔️ Intervention rapide et suivie</li>
                 </ul>
-                <p className="text-[#001240] font-bold">
+                <p className="text-[#10B981] font-bold">
                   Prolongez la durée de vie de vos équipements en toute sérénité.
                 </p>
+                <a
+                  href="/services/entretien"
+                  className="inline-block mt-6 px-6 py-3 bg-[#10B981] text-white font-semibold rounded-lg transition hover:brightness-110"
+                >
+                  En savoir plus
+                </a>
               </section>
             )}
           </div>
@@ -183,17 +246,30 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-[#001240] text-white py-16 mt-24">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Besoin d’un devis rapide ?</h2>
-          <p className="text-lg mb-8">
-            Contactez-nous dès maintenant pour obtenir une estimation personnalisée de vos travaux.
+      {/* 
+        ============================
+        // Section 3 – CTA final
+        ============================
+      */}
+      <section className="relative bg-[#f8f9f4] text-[#0a0f2c] py-24 overflow-hidden">
+        <div className="absolute inset-0 opacity-10 bg-[url('/epic-bg.jpg')] bg-cover bg-center"></div>
+        <div className="relative z-10 container mx-auto px-6 text-center max-w-3xl">
+          <div className="h-1 w-32 mx-auto mb-10 bg-gradient-to-r from-[#1E40AF] via-[#dc2626] to-[#10B981] rounded-full"></div>
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight drop-shadow-lg">
+            Vous avez un projet ?
+            <br />
+            On le rend possible.
+          </h2>
+          <p className="text-lg md:text-xl mb-10 text-[#475569] font-light">
+            Demandez votre devis personnalisé, rapide et sans engagement.
+            <br />
+            Un expert vous rappelle sous 48h.
           </p>
           <a
             href="tel:0766460008"
-            className="inline-block bg-[#c59f36] hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-lg text-lg transition"
+            className="inline-block bg-[#03144a] hover:scale-105 hover:brightness-110 text-white font-bold py-4 px-10 rounded-full text-lg shadow-xl transition-all duration-300"
           >
-            Nous appeler
+             Je veux être rappelé
           </a>
         </div>
       </section>
@@ -201,4 +277,4 @@ export default function ServicesPage() {
       {/* Les sections Services Grid et CTA Section ont été supprimées */}
     </div>
   );
-} 
+}
