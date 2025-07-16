@@ -51,9 +51,9 @@ export default function ClimatisationPage() {
       {/* Section badge titre statique */}
       <section className="section2 mt-16">
         <div className="flex justify-center mb-14">
-          <div className="bg-blue-50 border border-blue-300 text-blue-700 rounded-xl px-6 py-4 shadow-sm text-center">
+          <div className="bg-[#0EA5E9]/10 border border-[#0EA5E9] text-[#0EA5E9] rounded-xl px-6 py-4 shadow-sm text-center">
             <h2 className="text-xl md:text-2xl font-bold mb-1">Nos solutions d&apos;eau chaude sanitaire</h2>
-            <p className="text-sm md:text-base font-medium text-blue-600">Offrez-vous une eau chaude sanitaire fiable, économique et bien pensée</p>
+            <p className="text-sm md:text-base font-medium text-[#0EA5E9]">Offrez-vous une eau chaude sanitaire fiable, économique et bien pensée</p>
           </div>
         </div>
         <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">

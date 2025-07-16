@@ -71,12 +71,13 @@ export default function Hero() {
                   <Image 
                   src="/rge.png" 
                   alt="Logo RGE"
-                  className="w-24 h-auto mt-2 sm:mt-0 shadow-lg rounded transition duration-300 transform hover:scale-110 hover:shadow-xl"                  width={96}
+                  className="w-24 h-auto mt-2 sm:mt-0 shadow-lg rounded transition duration-300 transform hover:scale-110 hover:shadow-xl"                  
+                  width={96}
                   height={96}
                 />
               </Link>
             </div>
-            <nav className="flex flex-wrap justify-center gap-4 mt-12 text-center px-4 max-w-7xl mx-auto">
+            <nav className="flex flex-wrap justify-center gap-4 mt-12 text-center px-4 max-w-7xl mx-auto hidden md:flex">
               <Link href="/chauffage" className="text-center w-full sm:w-auto text-white font-semibold tracking-wide text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
                 Chauffage
               </Link>

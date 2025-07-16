@@ -13,7 +13,6 @@ export default function Partenaires() {
 }
 const CarouselMarques: React.FC = () => {
   const images: { src: string; alt: string }[] = [
-    { src: "/HeiwaLogo.png", alt: "Heiwa" },
     { src: "/DaikinLogo.png", alt: "Daikin" },
     { src: "/Mitsubishi-Electric-Logo.png", alt: "Mitsubishi Electric" },
     { src: "/atl.png", alt: "ATL" },
