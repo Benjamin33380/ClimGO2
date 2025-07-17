@@ -20,7 +20,7 @@ export default function Header() {
           <div className="flex items-center justify-between h-15">
             {/* Bouton d'appel */}
             <Link href="tel:0766460008" className="flex items-center space-x-2">
-              <button className="bg-white climText px-6 py-2 rounded-lg font-bold transform transition-transform duration-300 hover:scale-110">NOUS APPELER</button>
+              <button className="bg-white climText px-6 py-2 rounded-lg font-bold transform transition-transform duration-300 hover:scale-110" aria-label="Nous appeler">NOUS APPELER</button>
             </Link>
             {/* Réseaux sociaux */}
             <div className="flex items-center px-2 py-1 gap-3">
@@ -117,6 +117,7 @@ export default function Header() {
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
                   className="p-2 rounded-full bg-[#03144a] text-white hover:bg-[#d4af37] transition-colors"
+                  aria-label="Ouvrir le menu"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     {isMenuOpen ? (
