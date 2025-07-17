@@ -28,8 +28,8 @@ export default function GoogleReviews() {
                   style={{ display: 'inline-block' }} 
                 />
               </p>
-              <Link href="https://g.page/r/CYU8G8pY5uo1EBM/review" target="_blank" rel="noopener noreferrer">
-                <button className="mt-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition">
+              <Link href="https://g.page/r/CYU8G8pY5uo1EBM/review" target="_blank" rel="noopener noreferrer" className='p-4'>
+                <button className="mt-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition w-64 h-20">
                   Écrire un avis
                 </button>
               </Link>

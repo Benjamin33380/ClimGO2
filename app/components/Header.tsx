@@ -43,11 +43,11 @@ export default function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center h-20 mt-4 relative">
             {/* Navigation centrée avec logo intégré */}
-            <div className="bg-white/10 hover:bg-[#03144a] transition-colors duration-300 rounded-full px-4 py-0.5 backdrop-blur-md mt-4 text-[#03144a] group-hover:text-white">
+            <div className="bg-white/10 hover:bg-[#03144a] transition-colors duration-300 rounded-full px-4 py-0.5 backdrop-blur-md mt-4 group-hover:text-white">
 
           {/* Section navigation centrée avec logo intégré */}
               {/* Navigation Desktop */}
-              <nav className="hidden md:flex items-center space-x-6">
+              <nav className="hidden md:flex items-center space-x-6 text-[#03144a] group">
                 <Link href="/" className="flex items-center">
                   <Image
                     src="/Logo.png"
@@ -57,7 +57,7 @@ export default function Header() {
                     className="h-14 w-auto mr-6"
                   />
                 </Link>
-                <Link href="/" className="text-white hover:text-[#d4af37] transition-colors text-base font-semibold">
+                <Link href="/" className="group-hover:text-white transition-colors text-base font-semibold">
                   Accueil
                 </Link>
                 <div
@@ -65,7 +65,7 @@ export default function Header() {
                   onMouseEnter={() => setIsMenuOpen(true)}
                   onMouseLeave={() => setIsMenuOpen(false)}
                 >
-                  <Link href="/nos-services" className="text-white hover:text-[#d4af37] transition-colors flex items-center text-base font-semibold">
+                  <Link href="/nos-services" className="group-hover:text-white transition-colors text-base font-semibold flex items-center">
                     Nos Services
                     <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -92,13 +92,13 @@ export default function Header() {
                     </div>
                   </div>
                 </div>
-                <Link href="/aides-etat" className="text-white hover:text-[#d4af37] transition-colors text-base font-semibold">
+                <Link href="/aides-etat" className="group-hover:text-white transition-colors text-base font-semibold">
                   Aides d&apos;État
                 </Link>
-                <Link href="/a-propos" className="text-white hover:text-[#d4af37] transition-colors text-base font-semibold">
+                <Link href="/a-propos" className="group-hover:text-white transition-colors text-base font-semibold">
                   À Propos
                 </Link>
-                <Link href="/contact" className="text-white hover:text-[#d4af37] transition-colors text-base font-semibold">
+                <Link href="/contact" className="group-hover:text-white transition-colors text-base font-semibold">
                   Contact
                 </Link>
               </nav>
@@ -144,7 +144,7 @@ export default function Header() {
             />
             
           {/* Menu Panel */}
-        <div className={`fixed inset-0 h-full w-full bg-white/20 backdrop-blur-md shadow-lg transform transition-transform duration-300 ${
+        <div className={`fixed inset-0 h-full w-full bg-[#03144a] backdrop-blur-md shadow-lg transform transition-transform duration-300 ${
     isMenuOpen ? 'translate-x-0' : 'translate-x-full'
   }`}>
   
