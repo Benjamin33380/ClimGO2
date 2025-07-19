@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/Logo.png',
   },
-  keywords: ['ClimGO', 'Chauffage', 'Climatisation', 'Eau chaude', 'Pompe à chaleur', 'Plancher chauffant', 'Radiateur', 'Rénovation énergétique', 'Aides de l\'État', 'Subventions', 'Devis', 'Installation', 'Entretien', 'Maintenance', 'Confort', 'Économie', 'Écologie', 'Bordeaux', 'Arcachon', 'Gironde', 'Nouvelle Aquitaine', 'Bassin Arcachon', 'Marcheprime'],
+  keywords: ['ClimGO', 'CHAUFFAGE', 'CLIMATISATION', 'EAU CHAUDE', 'POMPE À CHALEUR', 'PLANCHER CHAUFFANT', 'RADIATEUR', 'Rénovation énergétique', 'Aides de l\'État', 'Subventions', 'Devis', 'INSTALLATION', 'ENTRETIEN', 'MAINTENANCE', 'Confort', 'Économie', 'POSE', 'BORDEAUX', 'ARCACHON', 'ANDERNOS', 'BIGANOS', "BASSIN D'ARCACHON", 'MARCHEPRIME'],
   authors: [{ name: 'ClimGO', url: 'https://www.climgo.fr' }],
   creator: 'ClimGO',
   publisher: 'ClimGO',
