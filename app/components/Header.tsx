@@ -20,7 +20,7 @@ export default function Header() {
           <div className="flex items-center justify-between h-15">
             {/* Bouton d'appel */}
             <Link href="tel:0766460008" className="flex items-center space-x-2">
-              <button className="bg-white climText px-6 py-2 rounded-lg font-bold transform transition-transform duration-300 hover:scale-110" aria-label="Nous appeler">NOUS APPELER</button>
+              <button className="bg-[#F9F8F4] climText px-6 py-2 rounded-lg font-bold transform transition-transform duration-300 hover:scale-110" aria-label="Nous appeler">NOUS APPELER</button>
             </Link>
             {/* Réseaux sociaux */}
             <div className="flex items-center px-2 py-1 gap-3">
@@ -43,9 +43,9 @@ export default function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center h-20 mt-4 relative">
             {/* Navigation centrée avec logo intégré */}
-            <div className="bg-white hover:bg-[#03144a] transition-colors duration-300 rounded-full px-4 py-0.5 backdrop-blur-md mt-4 group-hover:text-white">
+            <div className="bg-[#F9F8F4] hover:bg-[#03144a] transition-colors duration-300 rounded-full px-4 py-0.5 backdrop-blur-md mt-4 group-hover:text-white">
               {/* Navigation Desktop */}
-              <nav className="hidden md:flex items-center space-x-6 text-[#03144a] group">
+              <nav className="hidden md:flex items-center space-x-6 text-[#03144a] group bg-transparent">
                 <Link href="/" className="flex items-center">
                   <Image
                     src="/Logo.png"
