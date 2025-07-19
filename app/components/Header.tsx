@@ -43,9 +43,7 @@ export default function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center h-20 mt-4 relative">
             {/* Navigation centrée avec logo intégré */}
-            <div className="bg-white/10 hover:bg-[#03144a] transition-colors duration-300 rounded-full px-4 py-0.5 backdrop-blur-md mt-4 group-hover:text-white">
-
-          {/* Section navigation centrée avec logo intégré */}
+            <div className="bg-white hover:bg-[#03144a] transition-colors duration-300 rounded-full px-4 py-0.5 backdrop-blur-md mt-4 group-hover:text-white">
               {/* Navigation Desktop */}
               <nav className="hidden md:flex items-center space-x-6 text-[#03144a] group">
                 <Link href="/" className="flex items-center">
@@ -72,7 +70,7 @@ export default function Header() {
                     </svg>
                   </Link>
                   <div
-                    className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-1 transition-all duration-200 pointer-events-auto z-50"
+                    className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-1 transition-all duration-200 pointer-events-auto z-50"
                     onMouseEnter={() => setIsMenuOpen(true)}
                     onMouseLeave={() => setIsMenuOpen(false)}
                   >
@@ -137,18 +135,16 @@ export default function Header() {
           }`}>
             {/* Backdrop */}
             <div 
-              className={`fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300 ${
+              className={`fixed inset-0 bg-black bg-opacity-100 transition-opacity duration-300 ${
                 isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
               }`}
               onClick={closeMenu}
             />
             
-          {/* Menu Panel */}
-        <div className={`fixed inset-0 h-full w-full bg-[#03144a] backdrop-blur-md shadow-lg transform transition-transform duration-300 ${
-    isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-  }`}>
-  
-
+            {/* Menu Panel */}
+            <div className={`fixed inset-0 h-full w-full bg-[#03144a] backdrop-blur-md shadow-lg transform transition-transform duration-300 ${
+              isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            }`}>
               {/* Header du menu */}
               <div className="flex items-center justify-between p-6 pb-3">
                 <div className="flex items-center">
