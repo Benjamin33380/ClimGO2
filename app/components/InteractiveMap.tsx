@@ -1,7 +1,6 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import Link from 'next/link';
 
 // Composant de carte qui sera chargé dynamiquement
 const MapComponent = dynamic(() => import('./MapComponent'), {
