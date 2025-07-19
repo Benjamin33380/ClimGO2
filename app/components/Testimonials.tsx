@@ -4,10 +4,6 @@ export default function Testimonials() {
   return (
     <section className="relative py-20 bg-[#f8f9f4] overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <div
-          className="w-full h-full bg-[url('/fond-multiverse.png')] bg-cover bg-center opacity-40 animate-pulse-slow"
-          style={{ zIndex: 0 }}
-        ></div>
       </div>
       <div className="relative z-10 container mx-auto px-4">
 

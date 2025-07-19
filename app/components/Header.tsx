@@ -50,8 +50,8 @@ export default function Header() {
                   <Image
                     src="/Logo.png"
                     alt="ClimGO Logo"
-                    width={160}
-                    height={55}
+                    width={240}
+                    height={240}
                     className="h-14 w-auto mr-6"
                   />
                 </Link>
@@ -107,8 +107,8 @@ export default function Header() {
                   <Image
                     src="/Logo.png"
                     alt="ClimGO Logo"
-                    width={160}
-                    height={54}
+                    width={240}
+                    height={240}
                     className="h-14 w-auto"
                   />
                 </Link>
