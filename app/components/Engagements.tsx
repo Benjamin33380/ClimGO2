@@ -5,7 +5,7 @@ export default function Engagements() {
         className="absolute inset-0 -z-10 w-full h-full bg-fixed bg-center bg-cover bg-no-repeat bg-scroll md:bg-fixed"
         style={{
           backgroundImage: "url('/fond2.png')",
-          filter: "brightness(0.5)",
+          filter: "brightness(0.3)",
         }}
         aria-hidden="true"
       ></div>

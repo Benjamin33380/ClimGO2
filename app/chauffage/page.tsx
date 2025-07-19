@@ -22,7 +22,7 @@ export default function ChauffagePage() {
               <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
                 Découvrez nos différentes solutions pour chauffer votre logement efficacement. Chaque technologie est pensée pour répondre à vos besoins de confort, d&apos;économie et d&apos;environnement.
               </p>
-              <div className="flex flex-col gap-12">
+              <div className="flex flex-col gap-12 mt-24">
                 {[{
                   title: "Pompe à chaleur air/eau",
                   image: "/PacAirEau.png",
@@ -132,7 +132,7 @@ export default function ChauffagePage() {
                       <h3 className="text-2xl font-bold text-[#1a1a1a] mb-2">{item.title}</h3>
                       <p className="text-md text-[#4a4a4a] mb-4">{item.intro}</p>
                       <details className="text-sm text-gray-600 mb-4">
-                        <summary className="cursor-pointer font-medium text-[#03144a] hover:underline flex items-center gap-2">
+                        <summary className="cursor-pointer font-medium text-[#03144a] hover:underline flex items-center gap-2 hover:text-blue-600">
                           Voir plus
                           <svg className="w-4 h-4 transform transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                         </summary>

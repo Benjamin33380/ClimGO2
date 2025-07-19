@@ -3,9 +3,9 @@ import Link from 'next/link';
 export default function Aids() {
     return (
       <section
-        className="py-20 relative bg-fixed bg-center bg-no-repeat bg-cover bg-scroll md:bg-fixed"
+        className="py-20 relative bg-fixed bg-center bg-no-repeat bg-cover bg-scroll md:bg-fixed bg-opacity-20"
         style={{
-          backgroundImage: 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/opti1.png")'
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/opti1.png")'
         }}
       >
         <div className="container mx-auto px-4">
