@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#f9f9f9] text-gray-900 py-10">
+    <footer className="bg-[#f8f9f4] text-gray-900 py-10">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
 
         {/* Bloc 1 : Logo + slogan */}
