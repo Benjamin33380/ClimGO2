@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/Logo.png',
   },
-  keywords: ['ClimGO', 'Chauffage', 'Climatisation', 'Eau chaude', 'Pompe à chaleur', 'Plancher chauffant', 'Radiateur', 'Rénovation énergétique', 'Aides de l\'État', 'Subventions', 'Devis', 'Installation', 'Entretien', 'Maintenance', 'Confort', 'Économie', 'Écologie', 'Bordeaux', 'Arcachon', 'Gironde', 'Nouvelle Aquitaine'],
+  keywords: ['Politique de confidentialité', 'ClimGO confidentialité', 'Données personnelles ClimGO', 'Protection des données', 'Utilisation des données personnelles', 'Confidentialité site web', 'RGPD ClimGO', 'Sécurité des données', 'Collecte de données personnelles', 'Politique de confidentialité ClimGO'],
   authors: [{ name: 'ClimGO', url: 'https://www.climgo.fr' }],
   creator: 'ClimGO',
   publisher: 'ClimGO',

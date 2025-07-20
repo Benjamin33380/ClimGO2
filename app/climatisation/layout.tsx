@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/Logo.png',
   },
-  keywords: ['ClimGO', 'Climatisation', 'Pompe à chaleur', 'Clim', 'Air/Air', 'Rénovation énergétique', 'Aides de l\'État', 'Subventions', 'Devis', 'Installation', 'Entretien', 'pose', 'climatiseur', 'Maintenance', 'Confort', 'Économie', 'Écologie', 'Bordeaux', 'Arcachon', 'Gironde', 'Nouvelle Aquitaine', 'Bassin Arcachon', 'Marcheprime'],
+  keywords: ['CLIMGO CLIMATISATION RGE', 'INSTALLATION CLIMATISATION MARCHEPRIME', "POSE CLIM BASSIN D'ARCACHON", 'CLIMATISATION RÉVERSIBLE BIGANOS', 'ENTRETIEN CLIMATISATION ANDERNOS', 'MAINTENANCE CLIM ARCACHON', 'ARTISAN CLIMATISATION SILENCIEUSE', 'DEVIS CLIM GRATUIT', "ENTREPRISE CLIMATISATION BASSIN D'ARCACHON", 'CLIMATISATION GAINABLE', "INSTALLATION CLIMATISEUR BASSIN D'ARCACHON", 'POSE CLIMATISEUR MARCHEPRIME', 'CLIMATISATION GIRONDE', 'CLIMATISATION ÉCONOMIQUE AUDENGE', 'INSTALLATEUR CLIM PESSAC', 'CLIMATISATION MIOS', 'CLIMATICIEN MARCHEPRIME', 'CLIM DURABLE', "PRIX D'UNE CLIM BIGANOS", 'AIDES DE L\'ÉTAT CLIMATISATION'],
   authors: [{ name: 'ClimGO', url: 'https://www.climgo.fr' }],
   creator: 'ClimGO',
   publisher: 'ClimGO',
