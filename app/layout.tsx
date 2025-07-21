@@ -5,7 +5,6 @@ import InteractiveMap from './components/InteractiveMap';
 import Footer from './components/Footer';
 
 
-  
 
 export const metadata: Metadata = {
   title: 'ClimGO - Spécialiste Chauffage, Climatisation & Pompe à Chaleur',
@@ -46,6 +45,42 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
+              {
+                "@context": "https://schema.org",
+                "@type": "HVACBusiness",
+                "name": "ClimGO",
+                "url": "https://www.climgo.fr",
+                "logo": "https://www.climgo.fr/Logo.png",
+                "image": "https://www.climgo.fr/Logo.png",
+                "description": "ClimGO installe et entretient vos systèmes de chauffage, climatisation et pompes à chaleur bassin d'Arcachon.",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "28 rue de Cantelaude",
+                  "addressLocality": "Marcheprime",
+                  "postalCode": "33380",
+                  "addressCountry": "FR"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "44.6890",
+                  "longitude": "-0.9321"
+                },
+                "openingHours": "Mo-Fr 08:00-19:30",
+                "telephone": "+33 7 66 46 00 08",
+                "priceRange": "€€",
+                "sameAs": [
+                  "https://www.facebook.com/profile.php?id=61578576031066",
+                  "https://www.instagram.com/climgo_climatisation_chauffage/",
+                  "https://www.linkedin.com/company/climgo"
+                ]
+              }
+            `
+          }}
+        />
       </head>
       <body
       >
