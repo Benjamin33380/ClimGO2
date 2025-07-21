@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from './components/Header';
@@ -45,9 +44,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <Head>
+      <head>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </head>
       <body
       >
         <Header />
