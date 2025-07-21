@@ -19,6 +19,7 @@ export default function Footer() {
             <li><Link href="/" className="hover:text-[#1e40af] transition-colors">Accueil</Link></li>
             <li><Link href="/nos-services" className="hover:text-[#1e40af] transition-colors">Nos services</Link></li>
             <li><Link href="/aides-etat" className="hover:text-[#1e40af] transition-colors">Aides & subventions</Link></li>
+            <li><Link href="/zones-desservies" className="hover:text-[#1e40af] transition-colors">Zones desservies</Link></li>
             <li><Link href="/contact" className="hover:text-[#1e40af] transition-colors">Contact</Link></li>
             <li><Link href="/mentions-legales" className="hover:text-[#1e40af] transition-colors">Mentions légales</Link></li>
             <li><Link href="/privacy" className="hover:text-[#1e40af] transition-colors">Politique de Confidentialité</Link></li>

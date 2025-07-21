@@ -67,7 +67,7 @@ export default function AboutPage() {
                 sont assurées pendant <strong>10 ans</strong> contre les dommages liés à notre intervention.
               </p>
 
-              <div className="bg-gray-50 rounded-lg p-6 mb-6">
+              <div className="bg-[#F8F9F4] rounded-lg p-6 mb-6">
                 <h5 className="font-semibold climText mb-3">Informations d&apos;assurance :</h5>
                 <div className="text-sm text-gray-600 space-y-2">
                   <p><strong>Assureur :</strong> MAAF Assurances</p>
@@ -97,7 +97,7 @@ export default function AboutPage() {
 
               <div className="grid md:grid-cols-2 gap-6">
                 {/* QualiPAC RGE */}
-                <div className="bg-gray-50 rounded-lg p-6">
+                <div className="bg-[#F8F9F4] rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <div className="climBg rounded-full p-3 mr-4">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,7 +113,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Attestation fluides frigorigènes */}
-                <div className="bg-gray-50 rounded-lg p-6">
+                <div className="bg-[#F8F9F4] rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <div className="climBg rounded-full p-3 mr-4">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -129,7 +129,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Habilitation électrique BR */}
-                <div className="bg-gray-50 rounded-lg p-6">
+                <div className="bg-[#F8F9F4] rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <div className="climBg rounded-full p-3 mr-4">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -145,7 +145,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* BEP & Bac Pro TISEC */}
-                <div className="bg-gray-50 rounded-lg p-6">
+                <div className="bg-[#F8F9F4] rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <div className="climBg rounded-full p-3 mr-4">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
