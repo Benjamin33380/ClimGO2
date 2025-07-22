@@ -28,7 +28,7 @@ export default function AboutPage() {
             {/* Introduction */}
             <div className="p-8 mb-12">
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                <strong>ClimGO</strong>, artisan RGE Marcheprime, est une entreprise spécialisée dans l&apos;installation, 
+                <strong>ClimGO</strong>, artisan RGE à Marcheprime, est une entreprise spécialisée dans l&apos;installation, 
                 la mise en service et la maintenance de systèmes thermiques et énergétiques sur mesure.
               </p>
               
