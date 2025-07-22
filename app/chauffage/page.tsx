@@ -15,13 +15,13 @@ export default function ChauffagePage() {
             <section className="section2 mt-30">
               <div className="flex justify-center mb-14">
                 <div className="bg-[#DC2626]/10 border border-[#DC2626] text-[#DC2626] rounded-xl px-6 py-4 shadow-sm text-center">
-                  <h2 className="text-xl md:text-2xl font-bold mb-1">Nos solutions de chauffage</h2>
-                  <p className="text-sm md:text-base font-medium text-[#DC2626]">Chaleur & économies</p>
+                  <h1 className="text-xl md:text-2xl font-bold mb-1">Nos solutions de chauffage</h1>
+                  <strong className="text-sm md:text-base font-medium text-[#DC2626]">Chaleur & économies</strong>
                 </div>
               </div>
-              <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
+              <strong className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
                 Découvrez nos différentes solutions pour chauffer votre logement efficacement. Chaque technologie est pensée pour répondre à vos besoins de confort, d&apos;économie et d&apos;environnement.
-              </p>
+              </strong>
               <div className="flex flex-col gap-12 mt-24">
                 {[{
                   title: "Pompe à chaleur air/eau",
@@ -161,20 +161,18 @@ export default function ChauffagePage() {
                 <h2 className="text-3xl font-bold climText mb-6" style={{ color: '#ffffff' }}>
                   Pourquoi choisir ClimGO ?
                 </h2>
-                <p className="text-xl text-white mb-8">
+                <strong className="text-xl text-white mb-8">
                   L&apos;alliance du savoir-faire et de la rigueur.
-                </p>
-                <p className="text-lg text-white mb-8 max-w-4xl mx-auto leading-relaxed">
+                </strong>
+                <strong className="text-lg text-white mb-8 max-w-4xl mx-auto leading-relaxed">
                   Chez ClimGO, chaque installation est réalisée avec précision, exigence et soin. 
                   Nous ne laissons rien au hasard, car votre confort mérite notre engagement le plus total.
-                </p>
-                <p className="text-lg text-white max-w-4xl mx-auto leading-relaxed italic">
+                </strong>
+                <strong className="text-lg text-white max-w-4xl mx-auto leading-relaxed italic">
                   Chez nous, le confort, c&apos;est pas une option. C&apos;est un engagement.
-                </p>
+                </strong>
               </div>
             </section>
-
-
           </div>
         </div>
       </section>

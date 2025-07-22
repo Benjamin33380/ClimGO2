@@ -64,13 +64,13 @@ export default function ClimatisationPage() {
       <section className="section2 mt-16">
         <div className="flex justify-center mb-14">
           <div className="bg-[#2563EB]/10 border border-[#2563EB] text-[#2563EB] rounded-xl px-6 py-4 shadow-sm text-center">
-            <h2 className="text-xl md:text-2xl font-bold mb-1 ">Nos solutions de climatisation</h2>
-            <p className="text-sm md:text-base font-medium text-[#2563EB]">Confort & fraîcheur maîtrisée</p>
+            <h1 className="text-xl md:text-2xl font-bold mb-1 ">Nos solutions de climatisation</h1>
+            <strong className="text-sm md:text-base font-medium text-[#2563EB]">Confort & fraîcheur maîtrisée</strong>
           </div>
         </div>
-        <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
+        <strong className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
           Découvrez nos systèmes de climatisation pour chaque besoin : murale, gainable, console ou cassette. À chaque logement, sa solution ClimGO.
-        </p>
+        </strong>
       </section>
 
       {/* Solutions de climatisation */}
@@ -79,7 +79,7 @@ export default function ClimatisationPage() {
           <div className="max-w-6xl mx-auto flex flex-col gap-16">
 
             {solutions.map((item) => (
-              <div key={item.title} className="group flex p-4 flex-col md:flex-row bg-gradient-to-br from-[#f8f9f4] via-[#ffffff] to-[#f0f2ec] border border-[#e6e6e6] border border-gray-200 rounded-xl shadow-md overflow-hidden transition-all duration-300 group hover:shadow-lg">
+              <div key={item.title} className="group flex p-4 flex-col md:flex-row bg-gradient-to-br from-[#f8f9f4] via-[#ffffff] to-[#f0f2ec] border border-gray-200 rounded-xl shadow-md overflow-hidden transition-all duration-300 group hover:shadow-lg">
                 <div className="w-full md:w-1/2 flex items-center justify-center bg-[#f8f9f4]">
                   <div className="w-[220px] h-[160px] relative">
                     <Image src={item.image} alt={item.title} fill className="object-contain transition-transform duration-300 group-hover:scale-105" />
@@ -141,13 +141,13 @@ export default function ClimatisationPage() {
                 <h2 className="text-3xl font-bold climText mb-6" style={{ color: '#ffffff' }}>
                   Pourquoi choisir ClimGO pour votre climatisation ?
                 </h2>
-                <p className="text-xl text-white mb-8">
+                <strong className="text-xl text-white mb-8">
                   Un savoir-faire maîtrisé, au service de votre confort toute l&apos;année.
-                </p>
-                <p className="text-lg text-white mb-8 max-w-4xl mx-auto leading-relaxed">
+                </strong>
+                <strong className="text-lg text-white mb-8 max-w-4xl mx-auto leading-relaxed">
                   Chez ClimGO, chaque projet est pensé sur-mesure. Nous installons des systèmes de climatisation fiables, 
                   discrets et performants, adaptés à vos besoins et à l&apos;esthétique de votre logement. Le confort, sans le compromis.
-                </p>
+                </strong>
             </div>
             </section>
 

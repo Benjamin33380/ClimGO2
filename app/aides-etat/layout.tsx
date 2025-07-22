@@ -54,7 +54,6 @@ export const metadata: Metadata = {
 export default function AidesEtatLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
-      <h1>Aides & Subventions ClimGO</h1>
       {children}
     </div>
   );

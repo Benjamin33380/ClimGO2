@@ -33,7 +33,6 @@ export const metadata: Metadata = {
 export default function ClimatisationLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
-      <h1>Climatisation ClimGO</h1>
       {children}
     </div>
   );

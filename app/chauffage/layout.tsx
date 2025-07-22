@@ -54,7 +54,6 @@ export const metadata: Metadata = {
 export default function ChauffageLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
-      <h1>Chauffage ClimGO</h1>
       {children}
     </div>
   );

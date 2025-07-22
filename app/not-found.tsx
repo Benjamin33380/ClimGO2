@@ -24,23 +24,6 @@ export default function NotFoundPage() {
         overflow: 'hidden',
       }}
     >
-      <h1
-        style={{
-          position: 'absolute',
-          top: '10%',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          fontFamily: "'Rubik', sans-serif",
-          fontSize: '4rem',
-          background: 'linear-gradient(90deg, orange, #0033cc)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          fontWeight: 'bold',
-          zIndex: 10,
-        }}
-      >
-        Erreur 404
-      </h1>
     </div>
   );
 }

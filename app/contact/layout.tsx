@@ -54,7 +54,6 @@ export const metadata: Metadata = {
 export default function ContactLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
-      <h1>Contact ClimGO</h1>
       {children}
     </div>
   );

@@ -21,12 +21,12 @@ export default function ContactPage() {
         {/* Texte au-dessus */}
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="bg-white/20 backdrop-blur-md rounded-xl p-6 inline-block">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#03144a] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#03144a] mb-6">
               Parlons de votre projet
-            </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#03144a] mb-8">
-              Contact ClimGO
             </h2>
+            <h1 className="text-2xl md:text-3xl font-semibold text-[#03144a] mb-8">
+              Contact ClimGO
+            </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Vous avez une question, un projet d&apos;installation ou besoin d&apos;un devis ?
             </p>

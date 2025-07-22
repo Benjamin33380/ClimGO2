@@ -54,7 +54,6 @@ export const metadata: Metadata = {
 export default function MaintenanceLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
-      <h1>Maintenance ClimGO</h1>
       {children}
     </div>
   );

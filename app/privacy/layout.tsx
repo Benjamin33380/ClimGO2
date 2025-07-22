@@ -33,7 +33,6 @@ export const metadata: Metadata = {
 export default function PrivacyLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
-      <h1>Politique de confidentialité ClimGO</h1>
       {children}
     </div>
   );

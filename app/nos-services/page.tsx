@@ -29,14 +29,14 @@ export default function ServicesPage() {
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-xl">
             Notre savoir-faire à votre service
           </h1>
-          <p className="text-xl text-white max-w-3xl mx-auto mb-8">
+          <strong className="text-xl text-white max-w-3xl mx-auto mb-8">
             Nos services ClimGO couvrent tous vos besoins en chauffage, climatisation, chauffe-eau et entretien.
-          </p>
-          <p className="text-lg text-white max-w-4xl mx-auto leading-relaxed">
+          </strong>
+          <strong className="text-lg text-white max-w-4xl mx-auto leading-relaxed">
             ClimGO met tout son savoir-faire à votre service pour concrétiser vos projets d&apos;équipement thermique. 
             Chauffage, climatisation, chauffe-eau ou maintenance : nous vous proposons des solutions fiables, 
             performantes et adaptées à vos besoins, avec un accompagnement sur-mesure.
-          </p>
+          </strong>
         </div>
       </section>
 

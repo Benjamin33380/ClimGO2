@@ -54,7 +54,6 @@ export const metadata: Metadata = {
 export default function EauChaudeSanitaireLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
-      <h1>Eau chaude sanitaire ClimGO</h1>
       {children}
     </div>
   );
