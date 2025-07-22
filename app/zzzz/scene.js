@@ -3,12 +3,17 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 export function start3D() {
+  // Prevent multiple canvas renderers
+  const existingCanvas = document.querySelector('#canvas404');
+  if (existingCanvas) existingCanvas.remove();
+
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0xF8F9F4);
   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.set(0, 1, 7);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.domElement.id = 'canvas404';
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.getElementById('zebi-scene').appendChild(renderer.domElement);
 
@@ -27,7 +32,7 @@ export function start3D() {
   errorText.style.background = 'linear-gradient(to right, #ff7b00, #005bff)';
   errorText.style.webkitBackgroundClip = 'text';
   errorText.style.webkitTextFillColor = 'transparent';
-  document.body.appendChild(errorText);
+  document.getElementById('zebi-scene').appendChild(errorText);
 
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
