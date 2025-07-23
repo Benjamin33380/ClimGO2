@@ -56,7 +56,7 @@ export default function ClimatisationPage() {
             <strong className="text-sm md:text-base font-medium text-[#0EA5E9]">Offrez-vous une eau chaude sanitaire fiable, économique et bien pensée</strong>
           </div>
         </div>
-        <strong className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
+        <strong className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed flex justify-center">
           Découvrez nos systèmes de chauffe-eau pour chaque besoin : thermodynamique, électrique ou extra plat. À chaque logement, sa solution ClimGO.
         </strong>
       </section>

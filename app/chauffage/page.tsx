@@ -19,7 +19,7 @@ export default function ChauffagePage() {
                   <strong className="text-sm md:text-base font-medium text-[#DC2626]">Chaleur & économies</strong>
                 </div>
               </div>
-              <strong className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
+              <strong className="flex justify-center text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
                 Découvrez nos différentes solutions pour chauffer votre logement efficacement. Chaque technologie est pensée pour répondre à vos besoins de confort, d&apos;économie et d&apos;environnement.
               </strong>
               <div className="flex flex-col gap-12 mt-24">

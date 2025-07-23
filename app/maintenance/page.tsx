@@ -32,7 +32,7 @@ export default function MaintenancePage() {
             <strong className="text-sm md:text-base font-medium text-[#10B981]">Entretenez vos équipements pour durer</strong>
           </div>
         </div>
-        <strong className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
+        <strong className="flex justify-center text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
           Découvrez nos solutions de maintenance pour chaque besoin : climatisation, chauffage ou eau chaude. À chaque logement, sa solution ClimGO.
         </strong>
       </section>

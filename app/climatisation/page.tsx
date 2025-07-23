@@ -68,7 +68,7 @@ export default function ClimatisationPage() {
             <strong className="text-sm md:text-base font-medium text-[#2563EB]">Confort & fraîcheur maîtrisée</strong>
           </div>
         </div>
-        <strong className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
+        <strong className="flex justify-center text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
           Découvrez nos systèmes de climatisation pour chaque besoin : murale, gainable, console ou cassette. À chaque logement, sa solution ClimGO.
         </strong>
       </section>
