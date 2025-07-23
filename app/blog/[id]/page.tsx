@@ -214,13 +214,13 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                     </pre>
                   )
                 },
-                a: ({ href, children }: { href?: string; children: React.ReactNode }) => (
-                  <a href={href} className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">
-                    {children}
-                  </a>
+                a: (props) => (
+                  <Link href={props.href || ''} className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">
+                    {props.children}
+                  </Link>
                 ),
-                img: ({ src, alt }: { src?: string; alt?: string }) => (
-                  <Image width={1000} height={1000} src={typeof src === 'string' ? src : ''} alt={alt || ''} className="max-w-full h-auto rounded-lg my-4" />
+                img: (props) => (
+                  <Image width={1000} height={1000} src={typeof props.src === 'string' ? props.src : ''} alt={props.alt || ''} className="max-w-full h-auto rounded-lg my-4" />
                 ),
                 table: (props) => (
                   <div className="overflow-x-auto mb-4">
