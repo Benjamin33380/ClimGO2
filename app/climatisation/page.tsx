@@ -71,6 +71,7 @@ export default function ClimatisationPage() {
         <strong className="flex justify-center text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
           Découvrez nos systèmes de climatisation pour chaque besoin : murale, gainable, console ou cassette. À chaque logement, sa solution ClimGO.
         </strong>
+        
       </section>
 
       {/* Solutions de climatisation */}
@@ -141,9 +142,11 @@ export default function ClimatisationPage() {
                 <h2 className="text-3xl font-bold climText mb-6" style={{ color: '#ffffff' }}>
                   Pourquoi choisir ClimGO pour votre climatisation ?
                 </h2>
-                <strong className="text-xl text-white mb-8">
-                  Un savoir-faire maîtrisé, au service de votre confort toute l&apos;année.
-                </strong>
+                <div className="flex justify-center">
+                  <strong className="text-xl text-white mb-8 text-center">
+                    Un savoir-faire maîtrisé, au service de votre confort toute l&apos;année.
+                  </strong>
+                </div>
                 <strong className="text-lg text-white mb-8 max-w-4xl mx-auto leading-relaxed">
                   Chez ClimGO, chaque projet est pensé sur-mesure. Nous installons des systèmes de climatisation fiables, 
                   discrets et performants, adaptés à vos besoins et à l&apos;esthétique de votre logement. Le confort, sans le compromis.

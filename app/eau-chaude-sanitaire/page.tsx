@@ -56,9 +56,11 @@ export default function ClimatisationPage() {
             <strong className="text-sm md:text-base font-medium text-[#0EA5E9]">Offrez-vous une eau chaude sanitaire fiable, économique et bien pensée</strong>
           </div>
         </div>
-        <strong className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed flex justify-center">
-          Découvrez nos systèmes de chauffe-eau pour chaque besoin : thermodynamique, électrique ou extra plat. À chaque logement, sa solution ClimGO.
-        </strong>
+        <div className="flex justify-center">
+          <strong className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
+            Découvrez nos systèmes de chauffe-eau pour chaque besoin : thermodynamique, électrique ou extra plat. À chaque logement, sa solution ClimGO.
+          </strong>
+        </div>
       </section>
 
       {/* Solutions de climatisation */}
@@ -128,8 +130,11 @@ export default function ClimatisationPage() {
               <div className="relative z-10">
                 <h2 className="text-3xl font-bold climText mb-6" style={{ color: '#ffffff' }}>
                   Pourquoi choisir ClimGO pour votre eau chaude sanitaire ?                </h2>
-                <strong className="text-xl text-white mb-8">
-                  Un savoir-faire fiable, au service de votre quotidien.</strong>
+                <div className="flex justify-center">
+                  <strong className="text-xl text-white mb-8 text-center">
+                    Un savoir-faire fiable, au service de votre quotidien.
+                  </strong>
+                </div>
                 <strong className="text-lg text-white mb-8 max-w-4xl mx-auto leading-relaxed">
                   Chez ClimGO, chaque installation est pensée pour durer. Nous sélectionnons les équipements les plus performants, et nous les posons avec rigueur, précision et discrétion.
                 </strong>

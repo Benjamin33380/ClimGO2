@@ -161,9 +161,11 @@ export default function ChauffagePage() {
                 <h2 className="text-3xl font-bold climText mb-6" style={{ color: '#ffffff' }}>
                   Pourquoi choisir ClimGO ?
                 </h2>
-                <strong className="text-xl text-white mb-8">
-                  L&apos;alliance du savoir-faire et de la rigueur.
-                </strong>
+                <div className="flex justify-center">
+                  <strong className="text-xl text-white mb-8 text-center">
+                    L&apos;alliance du savoir-faire et de la rigueur.
+                  </strong>
+                </div>
                 <strong className="text-lg text-white mb-8 max-w-4xl mx-auto leading-relaxed">
                   Chez ClimGO, chaque installation est réalisée avec précision, exigence et soin. 
                   Nous ne laissons rien au hasard, car votre confort mérite notre engagement le plus total.

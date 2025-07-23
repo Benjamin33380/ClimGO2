@@ -32,9 +32,11 @@ export default function MaintenancePage() {
             <strong className="text-sm md:text-base font-medium text-[#10B981]">Entretenez vos équipements pour durer</strong>
           </div>
         </div>
-        <strong className="flex justify-center text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
-          Découvrez nos solutions de maintenance pour chaque besoin : climatisation, chauffage ou eau chaude. À chaque logement, sa solution ClimGO.
-        </strong>
+        <div className="flex justify-center">
+          <strong className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
+            Découvrez nos solutions de maintenance pour chaque besoin : climatisation, chauffage ou eau chaude. À chaque logement, sa solution ClimGO.
+          </strong>
+        </div>
       </section>
 
       {/* Solutions de climatisation */}
@@ -104,8 +106,10 @@ export default function MaintenancePage() {
               <div className="relative z-10">
                 <h2 className="text-3xl font-bold climText mb-6" style={{ color: '#ffffff' }}>
                   Pourquoi choisir ClimGO pour votre maintenance ?                </h2>
-                <p className="text-xl text-white mb-8">
+                <div className="flex justify-center">
+                  <p className="text-xl text-white mb-8 text-center">
                   Un savoir-faire fiable, au service de votre confort.</p>
+                </div>
                 <p className="text-lg text-white mb-8 max-w-4xl mx-auto leading-relaxed">
                   Chez ClimGO, on ne se contente pas d&apos;installer. On vous accompagne aussi dans le temps pour garantir la performance, la sécurité et la longévité de vos systèmes de chauffage, climatisation ou eau chaude.
                 </p>
