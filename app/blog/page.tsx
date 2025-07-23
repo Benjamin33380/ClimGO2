@@ -2,6 +2,9 @@ import { PrismaClient } from '@prisma/client'
 import Link from 'next/link'
 import Image from 'next/image'
 
+// Revalidate rapide pour voir les nouveaux articles
+export const revalidate = 60
+
 const prisma = new PrismaClient()
 
 type ArticlePreview = {

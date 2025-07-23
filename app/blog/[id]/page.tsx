@@ -6,6 +6,9 @@ import type { Metadata } from 'next'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
+// Revalidate rapide pour voir les nouveaux articles
+export const revalidate = 60
+
 const prisma = new PrismaClient()
 
 type ArticlePageProps = {
