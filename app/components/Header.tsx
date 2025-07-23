@@ -96,6 +96,9 @@ export default function Header() {
                 <Link href="/a-propos" className="group-hover:text-white transition-colors text-base font-semibold">
                   À Propos
                 </Link>
+                <Link href="/blog" className="group-hover:text-white transition-colors text-base font-semibold">
+                  Blog
+                </Link>
                 <Link href="/contact" className="group-hover:text-white transition-colors text-base font-semibold">
                   Contact
                 </Link>
@@ -254,7 +257,9 @@ export default function Header() {
                 >
                   À Propos
                 </Link>
-                
+                <Link href="/blog" className="text-white hover:text-[#d4af37] transition-colors text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase">
+                  Blog
+                </Link>
                 <Link 
                   href="/contact" 
                   onClick={closeMenu}

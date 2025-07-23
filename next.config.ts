@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
       config.externals.push('@prisma/client')
     }
     return config
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   }
 };
 

@@ -66,7 +66,7 @@ export default function ZonesDesservies() {
                 <li className="py-0.5"><Link href="/villeneuve-d-ornon/">Villenave-d&apos;Ornon</Link></li>
                 <li className="py-0.5"><Link href="/begles/">Bègles</Link></li>
                 <li className="py-0.5"><Link href="/merignac/">Mérignac</Link></li>
-                <li className="py-0.5"><Link href="/bordeaux/">Bordeaux</Link></li>
+                <li className="py-0.5"><Link href="/blog/chauffage-et-climatisation-a-bordeaux-expertise-locale">Bordeaux</Link></li>
               </ul>
             </section>
 
