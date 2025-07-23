@@ -214,29 +214,29 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                     </pre>
                   )
                 },
-                a: ({ href, children }) => (
-                  <a href={href} className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">
+                a: ({ href, children }: { href?: string; children: React.ReactNode }) => (
+                  <Link href={typeof href === 'string' ? href : ''} className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">
                     {children}
-                  </a>
+                  </Link>
                 ),
-                img: ({ src, alt }) => (
+                img: ({ src, alt }: { src?: string; alt?: string }) => (
                   <Image width={1000} height={1000} src={typeof src === 'string' ? src : ''} alt={alt || ''} className="max-w-full h-auto rounded-lg my-4" />
                 ),
-                table: ({ children }) => (
+                table: (props) => (
                   <div className="overflow-x-auto mb-4">
-                    <table className="min-w-full border border-gray-300">
-                      {children}
+                    <table {...props} className={`min-w-full border border-gray-300${props.className ? ' ' + props.className : ''}`}>
+                      {props.children}
                     </table>
                   </div>
                 ),
-                th: ({ children }) => (
-                  <th className="border border-gray-300 px-4 py-2 bg-gray-100 font-semibold">
-                    {children}
+                th: (props) => (
+                  <th {...props} className={`border border-gray-300 px-4 py-2 bg-gray-100 font-semibold${props.className ? ' ' + props.className : ''}`}>
+                    {props.children}
                   </th>
                 ),
-                td: ({ children }) => (
-                  <td className="border border-gray-300 px-4 py-2">
-                    {children}
+                td: (props) => (
+                  <td {...props} className={`border border-gray-300 px-4 py-2${props.className ? ' ' + props.className : ''}`}>
+                    {props.children}
                   </td>
                 ),
               }}
