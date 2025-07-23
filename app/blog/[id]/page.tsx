@@ -215,9 +215,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   )
                 },
                 a: ({ href, children }: { href?: string; children: React.ReactNode }) => (
-                  <Link href={typeof href === 'string' ? href : ''} className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">
+                  <a href={href} className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">
                     {children}
-                  </Link>
+                  </a>
                 ),
                 img: ({ src, alt }: { src?: string; alt?: string }) => (
                   <Image width={1000} height={1000} src={typeof src === 'string' ? src : ''} alt={alt || ''} className="max-w-full h-auto rounded-lg my-4" />
