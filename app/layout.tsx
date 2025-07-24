@@ -29,7 +29,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: '/favicon/favicon.svg',
+    icon: '/favicon/favicon.svg'
+    ,
   },
   keywords: [
     "installateur pompe à chaleur Marcheprime",

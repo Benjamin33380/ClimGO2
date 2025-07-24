@@ -21,10 +21,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: [
-      { url: '/favicon.ico', type: 'image/x-icon' },
-      { url: '/Logo.png', type: 'image/png' },
-    ],
+    icon: '/favicon/favicon.svg'
+    ,
   },
   keywords: [
     'CLIMGO',

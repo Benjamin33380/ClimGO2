@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: '/favicon/favicon.svg'
   },
   themeColor: '#ffffff',
   viewport: 'width=device-width, initial-scale=1',

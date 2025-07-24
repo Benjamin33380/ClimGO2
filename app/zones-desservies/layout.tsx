@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: '/Logo.png',
+    icon: '/favicon/favicon.svg'
   },
   keywords: [
     'CLIMGO',
