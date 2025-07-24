@@ -48,7 +48,7 @@ export default function ZonesDesservies() {
               <h2 className="mt-8 text-2xl font-bold climText mb-3">🌳 Val de l’Eyre</h2>
               <ul aria-label="Zones desservies dans le Val de l’Eyre" className="ml-4 list-disc">
                 <li className="py-0.5"><Link href="/blog/marcheprime/">Marcheprime</Link></li>
-                <li className="py-0.5"><Link href="/blog/Le Barp/">Le Barp</Link></li>
+                <li className="py-0.5"><Link href="/blog/le-Barp/">Le Barp</Link></li>
                 <li className="py-0.5"><Link href="/blog/mios/">Mios</Link></li>
                 <li className="py-0.5"><Link href="/blog/salles/">Salles</Link></li>
                 <li className="py-0.5"><Link href="/blog/belin-beliet/">Belin-Béliet</Link></li>
