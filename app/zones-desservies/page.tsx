@@ -31,70 +31,70 @@ export default function ZonesDesservies() {
             <section className="text-left mb-10">
               <h2 className="mt-8 text-2xl font-bold climText mb-3">🌊 Bassin d’Arcachon</h2>
               <ul aria-label="Zones desservies sur le Bassin d'Arcachon" className="ml-4 list-disc">
-                <li className="py-0.5"><Link href="/arcachon/">Arcachon</Link></li>
-                <li className="py-0.5"><Link href="/la-teste-de-buch/">La Teste-de-Buch</Link></li>
-                <li className="py-0.5"><Link href="/gujan-mestras/">Gujan-Mestras</Link></li>
-                <li className="py-0.5"><Link href="/le-teich/">Le Teich</Link></li>
-                <li className="py-0.5"><Link href="/biganos/">Biganos</Link></li>
-                <li className="py-0.5"><Link href="/audenge/">Audenge</Link></li>
-                <li className="py-0.5"><Link href="/lanton/">Lanton</Link></li>
-                <li className="py-0.5"><Link href="/andernos-les-bains/">Andernos-les-Bains</Link></li>
-                <li className="py-0.5"><Link href="/arès/">Arès</Link></li>
-                <li className="py-0.5"><Link href="/cap-ferret/">Cap Ferret</Link></li>
+                <li className="py-0.5"><Link href="/blog/arcachon/">Arcachon</Link></li>
+                <li className="py-0.5"><Link href="/blog/la-teste-de-buch/">La Teste-de-Buch</Link></li>
+                <li className="py-0.5"><Link href="/blog/gujan-mestras/">Gujan-Mestras</Link></li>
+                <li className="py-0.5"><Link href="/blog/le-teich/">Le Teich</Link></li>
+                <li className="py-0.5"><Link href="/blog/biganos/">Biganos</Link></li>
+                <li className="py-0.5"><Link href="/blog/audenge/">Audenge</Link></li>
+                <li className="py-0.5"><Link href="/blog/lanton/">Lanton</Link></li>
+                <li className="py-0.5"><Link href="/blog/andernos-les-bains/">Andernos-les-Bains</Link></li>
+                <li className="py-0.5"><Link href="/blog/arès/">Arès</Link></li>
+                <li className="py-0.5"><Link href="/blog/cap-ferret/">Cap Ferret</Link></li>
               </ul>
             </section>
 
             <section className="text-left mb-10">
               <h2 className="mt-8 text-2xl font-bold climText mb-3">🌳 Val de l’Eyre</h2>
               <ul aria-label="Zones desservies dans le Val de l’Eyre" className="ml-4 list-disc">
-                <li className="py-0.5"><Link href="/marcheprime/">Marcheprime</Link></li>
-                <li className="py-0.5"><Link href="/Le Barp/">Le Barp</Link></li>
-                <li className="py-0.5"><Link href="/mios/">Mios</Link></li>
-                <li className="py-0.5"><Link href="/salles/">Salles</Link></li>
-                <li className="py-0.5"><Link href="/belin-beliet/">Belin-Béliet</Link></li>
+                <li className="py-0.5"><Link href="/blog/marcheprime/">Marcheprime</Link></li>
+                <li className="py-0.5"><Link href="/blog/Le Barp/">Le Barp</Link></li>
+                <li className="py-0.5"><Link href="/blog/mios/">Mios</Link></li>
+                <li className="py-0.5"><Link href="/blog/salles/">Salles</Link></li>
+                <li className="py-0.5"><Link href="/blog/belin-beliet/">Belin-Béliet</Link></li>
               </ul>
             </section>
 
             <section className="text-left mb-10">
               <h2 className="mt-8 text-2xl font-bold climText mb-3">🏙 Agglomération Bordelaise</h2>
               <ul aria-label="Zones desservies dans l’agglomération de Bordeaux" className="ml-4 list-disc">
-                <li className="py-0.5"><Link href="/cestas/">Cestas</Link></li>
-                <li className="py-0.5"><Link href="/canéjan/">Canéjan</Link></li>
-                <li className="py-0.5"><Link href="/pessac/">Pessac</Link></li>
-                <li className="py-0.5"><Link href="/gradignan/">Gradignan</Link></li>
-                <li className="py-0.5"><Link href="/talence/">Talence</Link></li>
-                <li className="py-0.5"><Link href="/villeneuve-d-ornon/">Villenave-d&apos;Ornon</Link></li>
-                <li className="py-0.5"><Link href="/begles/">Bègles</Link></li>
-                <li className="py-0.5"><Link href="/merignac/">Mérignac</Link></li>
-                <li className="py-0.5"><Link href="/blog/chauffage-et-climatisation-a-bordeaux-expertise-locale">Bordeaux</Link></li>
+                <li className="py-0.5"><Link href="/blog/cestas/">Cestas</Link></li>
+                <li className="py-0.5"><Link href="/blog/canéjan/">Canéjan</Link></li>
+                <li className="py-0.5"><Link href="/blog/pessac/">Pessac</Link></li>
+                <li className="py-0.5"><Link href="/blog/gradignan/">Gradignan</Link></li>
+                <li className="py-0.5"><Link href="/blog/talence/">Talence</Link></li>
+                <li className="py-0.5"><Link href="/blog/villeneuve-d-ornon/">Villenave-d&apos;Ornon</Link></li>
+                <li className="py-0.5"><Link href="/blog/begles/">Bègles</Link></li>
+                <li className="py-0.5"><Link href="/blog/merignac/">Mérignac</Link></li>
+                <li className="py-0.5"><Link href="/blog/bordeaux">Bordeaux</Link></li>
               </ul>
             </section>
 
             <section className="text-left mb-10">
               <h2 className="mt-8 text-2xl font-bold climText mb-3">🌲 Nord des Landes</h2>
               <ul aria-label="Zones desservies dans le Nord des Landes" className="ml-4 list-disc">
-                <li className="py-0.5"><Link href="/sanguinet/">Sanguinet</Link></li>
-                <li className="py-0.5"><Link href="/parentis-en-born/">Parentis-en-Born</Link></li>
-                <li className="py-0.5"><Link href="/biscarrosse/">Biscarrosse</Link></li>
-                <li className="py-0.5"><Link href="/cazaux/">Cazaux</Link></li>
-                <li className="py-0.5"><Link href="/mimizan/">Mimizan</Link></li>
+                <li className="py-0.5"><Link href="/blog/sanguinet/">Sanguinet</Link></li>
+                <li className="py-0.5"><Link href="/blog/parentis-en-born/">Parentis-en-Born</Link></li>
+                <li className="py-0.5"><Link href="/blog/biscarrosse/">Biscarrosse</Link></li>
+                <li className="py-0.5"><Link href="/blog/cazaux/">Cazaux</Link></li>
+                <li className="py-0.5"><Link href="/blog/mimizan/">Mimizan</Link></li>
               </ul>
             </section>
 
             <section className="text-left mb-10">
               <h2 className="mt-8 text-2xl font-bold climText mb-3">🌾 Gironde</h2>
               <ul aria-label="Zones desservies en Gironde" className="ml-4 list-disc">
-                <li className="py-0.5"><Link href="/le-porge/">Le Porge</Link></li>
-                <li className="py-0.5"><Link href="/lacanau/">Lacanau</Link></li>
-                <li className="py-0.5"><Link href="/le-temple/">Le Temple</Link></li>
-                <li className="py-0.5"><Link href="/saint-loubes/">Saint-Loubès</Link></li>
-                <li className="py-0.5"><Link href="/saint-selve/">Saint-Selve</Link></li>
-                <li className="py-0.5"><Link href="/saint-jean-d-illac/">Saint-Jean-d&apos;Illac</Link></li>
-                <li className="py-0.5"><Link href="/saint-medard-en-jalles/">Saint-Médard-en-Jalles</Link></li>
-                <li className="py-0.5"><Link href="/saint-aubin-de-medoc/">Saint-Aubin-de-Médoc</Link></li>
-                <li className="py-0.5"><Link href="/saucats/">Saucats</Link></li>
-                <li className="py-0.5"><Link href="/martignas-sur-jalle/">Martignas-sur-Jalle</Link></li>
-                <li className="py-0.5"><Link href="/saint-savin/">Saint-Savin</Link></li>
+                <li className="py-0.5"><Link href="/blog/le-porge/">Le Porge</Link></li>
+                <li className="py-0.5"><Link href="/blog/lacanau/">Lacanau</Link></li>
+                <li className="py-0.5"><Link href="/blog/le-temple/">Le Temple</Link></li>
+                <li className="py-0.5"><Link href="/blog/saint-loubes/">Saint-Loubès</Link></li>
+                <li className="py-0.5"><Link href="/blog/saint-selve/">Saint-Selve</Link></li>
+                <li className="py-0.5"><Link href="/blog/saint-jean-d-illac/">Saint-Jean-d&apos;Illac</Link></li>
+                <li className="py-0.5"><Link href="/blog/saint-medard-en-jalles/">Saint-Médard-en-Jalles</Link></li>
+                <li className="py-0.5"><Link href="/blog/saint-aubin-de-medoc/">Saint-Aubin-de-Médoc</Link></li>
+                <li className="py-0.5"><Link href="/blog/saucats/">Saucats</Link></li>
+                <li className="py-0.5"><Link href="/blog/martignas-sur-jalle/">Martignas-sur-Jalle</Link></li>
+                <li className="py-0.5"><Link href="/blog/saint-savin/">Saint-Savin</Link></li>
               </ul>
             </section>
           </div>
