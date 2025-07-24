@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: '/Logo.png',
+    icon: '/avicon.ico',
   },
   keywords: [
     'CLIMGO',
@@ -49,6 +49,8 @@ export const metadata: Metadata = {
   creator: 'ClimGO',
   publisher: 'ClimGO',
   category: 'business',
+  generator: 'Next.js',
+  themeColor: '#ffffff',
 };
 
 export default function AProposLayout({ children }: { children: React.ReactNode }) {

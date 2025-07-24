@@ -2,15 +2,15 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Aides & Subventions ClimGO',
-  description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
+  description: 'Bénéficiez des aides de l’État avec ClimGO pour vos travaux de chauffage, climatisation ou eau chaude : MaPrimeRénov’, CEE, TVA réduite, éco-PTZ, et plus. Accompagnement sur Marcheprime, Bassin d’Arcachon et alentours.',
   openGraph: {
     title: 'Aides & Subventions ClimGO',
-    description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
+    description: 'Bénéficiez des aides de l’État avec ClimGO pour vos travaux de chauffage, climatisation ou eau chaude : MaPrimeRénov’, CEE, TVA réduite, éco-PTZ, et plus. Accompagnement sur Marcheprime, Bassin d’Arcachon et alentours.',
     images: ['/Logo.png'],
   },
   twitter: {
     title: 'Aides & Subventions ClimGO',
-    description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
+    description: 'Bénéficiez des aides de l’État avec ClimGO pour vos travaux de chauffage, climatisation ou eau chaude : MaPrimeRénov’, CEE, TVA réduite, éco-PTZ, et plus. Accompagnement sur Marcheprime, Bassin d’Arcachon et alentours.',
     images: ['/Logo.png'],
   },
   alternates: {
@@ -49,6 +49,8 @@ export const metadata: Metadata = {
   creator: 'ClimGO',
   publisher: 'ClimGO',
   category: 'business',
+  generator: 'Next.js',
+  themeColor: '#ffffff',
 };
 
 export default function AidesEtatLayout({ children }: { children: React.ReactNode }) {

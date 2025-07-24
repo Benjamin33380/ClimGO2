@@ -1,12 +1,18 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.climgo.fr'),
   title: 'Contact ClimGO',
   description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
+  applicationName: 'ClimGO',
+  themeColor: '#ffffff',
+  viewport: 'width=device-width, initial-scale=1.0',
   openGraph: {
     title: 'Contact ClimGO',
     description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
     images: ['/Logo.png'],
+    locale: 'fr_FR',
+    siteName: 'ClimGO',
   },
   twitter: {
     title: 'Contact ClimGO',
@@ -14,14 +20,14 @@ export const metadata: Metadata = {
     images: ['/Logo.png'],
   },
   alternates: {
-    canonical: 'https://www.climgo.fr/contact',
+    canonical: '/contact',
   },
   robots: {
     index: true,
     follow: true,
   },
   icons: {
-    icon: '/Logo.png',
+    icon: '/favicon/favicon.ico',
   },
   keywords: [
     'CLIMGO CONTACT',

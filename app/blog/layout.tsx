@@ -1,9 +1,17 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Blog - ClimGo | Actualités et Conseils Climatisation',
-  description: 'Découvrez nos derniers articles sur la climatisation, le chauffage et les solutions énergétiques. Conseils d\'experts et actualités du secteur.',
-  keywords: 'blog climatisation, conseils chauffage, actualités énergétiques, ClimGo',
+  title: 'Blog ClimGO | Conseils Chauffage, Climatisation & Énergie à Marcheprime',
+  description: 'Explorez les articles ClimGO sur la climatisation, le chauffage, l’eau chaude sanitaire et les aides à la rénovation. Informations locales pour le Bassin d’Arcachon, la Gironde et alentours. Profitez de conseils d’experts, d’actualités et de solutions adaptées à Marcheprime et à la région Sud-Ouest pour optimiser votre confort thermique.',
+  keywords: 'blog climatisation Marcheprime, conseils chauffage Gironde, eau chaude sanitaire Bassin d’Arcachon, rénovation énergétique Sud-Ouest, aides climatisation Marcheprime, PAC air eau Gironde, climatisation RGE Marcheprime, actualités énergie Gironde, ClimGO Bassin d’Arcachon, installation climatisation locale, solutions énergétiques Marcheprime',
+  category: 'business',
+  alternates: {
+    canonical: '/blog',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function BlogLayout({

@@ -21,7 +21,10 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: '/Logo.png',
+    icon: [
+      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/Logo.png', type: 'image/png' },
+    ],
   },
   keywords: ['Politique de confidentialité', 'ClimGO confidentialité', 'Données personnelles ClimGO', 'Protection des données', 'Utilisation des données personnelles', 'Confidentialité site web', 'RGPD ClimGO', 'Sécurité des données', 'Collecte de données personnelles', 'Politique de confidentialité ClimGO'],
   authors: [{ name: 'ClimGO', url: 'https://www.climgo.fr' }],

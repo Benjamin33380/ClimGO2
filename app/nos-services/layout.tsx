@@ -1,16 +1,16 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Nos services ClimGO',
-  description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
+  title: 'Nos services ClimGO - Climatisation, Chauffage & Eau Chaude Sanitaire | Marcheprime & Bassin d’Arcachon',
+  description: 'ClimGO, spécialiste RGE en climatisation, chauffage et eau chaude sanitaire à Marcheprime et dans le Bassin d’Arcachon. Devis gratuit, intervention rapide, confort thermique assuré.',
   openGraph: {
-    title: 'Nos services ClimGO',
-    description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
+    title: 'Nos services ClimGO - Climatisation, Chauffage & Eau Chaude Sanitaire | Marcheprime & Bassin d’Arcachon',
+    description: 'ClimGO, spécialiste RGE en climatisation, chauffage et eau chaude sanitaire à Marcheprime et dans le Bassin d’Arcachon. Devis gratuit, intervention rapide, confort thermique assuré.',
     images: ['/Logo.png'],
   },
   twitter: {
-    title: 'Nos services ClimGO',
-    description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
+    title: 'Nos services ClimGO - Climatisation, Chauffage & Eau Chaude Sanitaire | Marcheprime & Bassin d’Arcachon',
+    description: 'ClimGO, spécialiste RGE en climatisation, chauffage et eau chaude sanitaire à Marcheprime et dans le Bassin d’Arcachon. Devis gratuit, intervention rapide, confort thermique assuré.',
     images: ['/Logo.png'],
   },
   alternates: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: '/Logo.png',
+    icon: '/favicon.ico',
   },
   keywords: [
     'CLIMGO SERVICES',
@@ -43,7 +43,12 @@ export const metadata: Metadata = {
     'CONFORT THERMIQUE',
     'SERVICE TECHNIQUE CLIMGO',
     'ÉCOLOGIE & ÉCONOMIES',
-    'INTERVENTION RAPIDE'
+    'INTERVENTION RAPIDE',
+    'INSTALLATEUR CLIM MARCHEPRIME',
+    'CHAUFFAGE BASSIN D’ARCACHON',
+    'POMPE À CHALEUR ARCACHON',
+    'RGE GIRONDE',
+    'CLIMATISATION MARCHEPRIME'
   ],
   authors: [{ name: 'ClimGO', url: 'https://www.climgo.fr' }],
   creator: 'ClimGO',
