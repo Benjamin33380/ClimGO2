@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     title: 'ClimGO - Spécialiste Chauffage, Climatisation & Pompe à Chaleur',
     description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
     images: ['/Logo.png'],
+    locale: 'fr_FR',
+    siteName: 'ClimGO',
   },
   twitter: {
     title: 'ClimGO - Spécialiste Chauffage, Climatisation & Pompe à Chaleur',
@@ -27,33 +29,34 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: '/Logo.png',
+    icon: '/favicon/favicon.svg',
   },
   keywords: [
-    'CLIMGO CHAUFFAGE CLIMATISATION',
-    "INSTALLATION CHAUFFAGE BASSIN d'ARCACHON",
-    "INSTALLATION CLIMATISATION BASSIN D'ARCACHON",
-    'PLOMBERIE DÉPANNAGE MARCHEPRIME',
-    'POMPE A CHALEUR MARCHEPRIME',
-    'CLIMATISEUR CLIM CLIMATISATION CLIMATICIEN',
-    'RADIATEUR PLANCHER CHAUFFANT',
-    'RÉNOVATION ENERGÉTIQUE',
-    "aides financières chauffage climatisation",
-    "subventions pompe à chaleur et clim",
-    "devis chauffage climatisation Marcheprime",
-    "entretien pompe à chaleur Bordeaux",
-    "installateur climatisation certifié RGE",
-    "chauffagiste spécialisé Arcachon",
-    "installation PAC air/eau Gironde",
-    "services chauffage rénovation énergétique",
-    "chauffage éco-responsable Nouvelle-Aquitaine",
-    "installateur fiable bassin d'Arcachon",
-    "artisan certifié climatisation Marcheprime"
+    "installateur pompe à chaleur Marcheprime",
+    "chauffagiste certifié RGE Marcheprime",
+    "climatisation réversible Marcheprime",
+    "chauffe-eau thermodynamique Marcheprime",
+    "dépannage climatisation Marcheprime",
+    "entretien pompe à chaleur Marcheprime",
+    "installation clim air/air Marcheprime",
+    "plancher chauffant basse température Marcheprime",
+    "chauffage éco-responsable Marcheprime",
+    "artisan chauffage climatisation Marcheprime",
+    "pompe à chaleur air eau Marcheprime",
+    "devis pompe à chaleur Marcheprime",
+    "subventions chauffage climatisation Marcheprime",
+    "entreprise rénovation énergétique Marcheprime",
+    "installateur clim certifié Marcheprime",
+    "chauffagiste Bassin d'Arcachon",
+    "climatisation Bassin d'Arcachon",
+    "pompe à chaleur Bassin d'Arcachon",
+    "chauffe-eau Bassin d'Arcachon",
+    "installation chauffage Bassin d'Arcachon",
+    "artisan RGE Bassin d'Arcachon"
   ],
   authors: [{ name: 'ClimGO', url: 'https://www.climgo.fr' }],
   creator: 'ClimGO',
   publisher: 'ClimGO',
-  category: 'business',
 };
 
 export default function RootLayout({
@@ -64,7 +67,12 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        <link rel="robots" href="/robots.txt" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
