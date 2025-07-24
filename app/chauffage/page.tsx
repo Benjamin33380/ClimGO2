@@ -122,7 +122,7 @@ export default function ChauffagePage() {
                 }].map((item, i) => (
                   <div
                     key={i}
-                    className="group flex flex-col md:flex-row bg-gradient-to-br from-[#f8f9f4] via-[#ffffff] to-[#f0f2ec] border rounded-xl overflow-hidden transform-gpu transition-all duration-500 ease-in-out hover:bg-white/60 hover:backdrop-blur-sm p-4"
+                    className="group flex flex-col md:flex-row bg-[#f9f9f5] border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-4"
                   >
                     <div className="w-full md:w-1/2 flex items-center justify-center">
                       <div className="rounded-lg p-2 w-full h-full flex items-center justify-center" style={{ backgroundColor: '#f8f9f4' }}>
