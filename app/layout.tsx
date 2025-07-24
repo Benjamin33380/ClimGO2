@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: '/favicon/web-app-manifest-512x512.png'
+    icon: '/favicon/favicon.ico'
     ,
   },
   keywords: [
