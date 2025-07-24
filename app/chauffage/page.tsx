@@ -120,10 +120,13 @@ export default function ChauffagePage() {
                     </>
                   )
                 }].map((item, i) => (
-                  <div key={i} className="group flex flex-col md:flex-row bg-gradient-to-br from-[#f8f9f4] via-[#ffffff] to-[#f0f2ec] border border-[#e6e6e6] rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:bg-[#f6f7f2] p-4">
+                  <div
+                    key={i}
+                    className="group flex flex-col md:flex-row bg-gradient-to-br from-[#f8f9f4] via-[#ffffff] to-[#f0f2ec] border border-[#e6e6e6] rounded-xl overflow-hidden transform-gpu transition-all duration-500 ease-in-out hover:shadow-2xl hover:scale-[1.03] hover:-rotate-1 hover:-translate-y-1 hover:bg-white/60 hover:backdrop-blur-sm hover:ring-2 hover:ring-[#DC2626]/20 p-4"
+                  >
                     <div className="w-full md:w-1/2 flex items-center justify-center">
                       <div className="rounded-lg p-2 w-full h-full flex items-center justify-center" style={{ backgroundColor: '#f8f9f4' }}>
-                        <div className="w-[220px] h-[160px] relative">
+                        <div className="w-[220px] h-[160px] relative transition-transform duration-500 group-hover:rotate-2 group-hover:scale-105">
                           <Image src={item.image} alt={item.title} fill className="object-contain transition-transform duration-300 group-hover:scale-105" />
                         </div>
                       </div>
