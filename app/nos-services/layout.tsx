@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: '/favicon/favicon.svg'
+    icon: '/favicon/web-app-manifest-512x512.png'
   },
   keywords: [
     'CLIMGO SERVICES',
