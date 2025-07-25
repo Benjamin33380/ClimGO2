@@ -89,6 +89,36 @@ export default function MaintenancePage() {
               </div>
             ))}
 
+            {/* Bloc SEO enrichi */}
+            <section className="py-20 px-4 max-w-5xl mx-auto text-gray-800">
+              <h2 className="text-3xl font-bold text-center mb-6 text-[#03144a]">
+                Confier l'entretien de vos systèmes à ClimGO, c’est choisir l’expertise locale
+              </h2>
+              <p className="text-base leading-relaxed text-center mb-10">
+                ClimGO, spécialiste en maintenance de climatisation, chauffage et production d’eau chaude sanitaire en Gironde, vous accompagne tout au long de la vie de vos équipements. Nous intervenons à domicile pour garantir sécurité, durabilité et confort thermique dans chaque logement. Qu’il s’agisse d’une pompe à chaleur air/air, air/eau, d’un chauffe-eau thermodynamique ou d’un système de climatisation gainable, notre équipe assure un suivi technique rigoureux, conforme aux normes en vigueur.
+              </p>
+              <p className="text-base leading-relaxed text-center mb-6">
+                Nos contrats de maintenance personnalisés incluent les vérifications essentielles, le nettoyage, les contrôles de pression et l’ajustement des performances. Grâce à notre présence locale autour de Bordeaux, Arcachon, Marcheprime et leurs alentours, nous garantissons une réactivité optimale, avec un service client humain, précis et ponctuel.
+              </p>
+              <p className="text-base leading-relaxed text-center text-gray-600 italic">
+                Un entretien régulier, c’est l’assurance d’un équipement performant, économique et durable.
+              </p>
+            </section>
+
+            {/* Bloc SEO complémentaire 2 */}
+            <section className="py-20 px-4 max-w-5xl mx-auto text-gray-800">
+              <h3 className="text-2xl font-bold text-center mb-6 text-[#03144a]">Pourquoi choisir ClimGO pour votre maintenance ?</h3>
+              <p className="text-base leading-relaxed text-center mb-6">
+                Un savoir-faire fiable, au service de votre confort.
+              </p>
+              <p className="text-base leading-relaxed text-center mb-6">
+                Chez ClimGO, on ne se contente pas d’installer. On vous accompagne aussi dans le temps pour garantir la performance, la sécurité et la longévité de vos systèmes de chauffage, climatisation ou eau chaude.
+              </p>
+              <p className="text-base leading-relaxed text-center text-gray-600 italic">
+                Chez nous, le confort, c’est pas une option. C’est un engagement.
+              </p>
+            </section>
+
             {/* Pourquoi choisir ClimGO */}
 
             <section
@@ -117,6 +147,42 @@ export default function MaintenancePage() {
                   Chez nous, le confort, c’est pas une option. C’est un engagement.
                 </p>
             </div>
+            </section>
+
+            {/* Bloc SEO complémentaire */}
+            <section className="py-20 px-4 max-w-5xl mx-auto text-gray-800">
+              <h3 className="text-2xl font-bold text-center mb-6 text-[#03144a]">Pour quel type de logement ou bâtiment ?</h3>
+              <p className="text-base leading-relaxed text-center mb-10">
+                Que vous soyez en maison individuelle, en appartement, ou gestionnaire d’un petit local professionnel, ClimGO adapte ses contrats de maintenance à votre situation. Nous assurons l’entretien de vos équipements dans tout le Sud-Ouest, avec des solutions adaptées aux résidences principales, secondaires ou aux petits bâtiments tertiaires.
+              </p>
+
+              <h3 className="text-2xl font-bold text-center mb-6 text-[#03144a]">Questions fréquentes</h3>
+              <div className="space-y-6">
+                <div>
+                  <strong className="block text-md font-semibold mb-1">À quelle fréquence faut-il entretenir une pompe à chaleur ?</strong>
+                  <p className="text-sm text-gray-700">Il est recommandé de faire entretenir votre pompe à chaleur une fois par an. Cet entretien permet de maintenir son rendement, d’éviter les pannes et de prolonger sa durée de vie.</p>
+                </div>
+                <div>
+                  <strong className="block text-md font-semibold mb-1">L’entretien est-il obligatoire ?</strong>
+                  <p className="text-sm text-gray-700">Oui, pour les pompes à chaleur dont la charge gaz frigorifique est au dessus de 2kg, un entretien annuel est obligatoire selon la réglementation française.</p>
+                </div>
+                <div>
+                  <strong className="block text-md font-semibold mb-1">Proposez-vous des contrats annuels ?</strong>
+                  <p className="text-sm text-gray-700">Absolument. Nous proposons des contrats annuels sur-mesure incluant le déplacement, la main-d’œuvre et les vérifications techniques nécessaires.</p>
+                </div>
+              </div>
+
+              <div className="mt-12 text-center">
+                <p className="text-base text-gray-700 mb-4">
+                  Besoin d’un entretien rapide ou d’un contrat de maintenance personnalisé ? ClimGO intervient sur rendez-vous dans toute la Gironde, notamment à Bordeaux, Arcachon, Marcheprime, Biganos, Gujan-Mestras et alentours.
+                </p>
+                <Link href="/contact" className="inline-flex items-center px-5 py-3 bg-[#03144a] text-white text-sm rounded-md hover:bg-[#021035]">
+                  <span>Demander un devis personnalisé</span>
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
             </section>
           </div>
         </div>
