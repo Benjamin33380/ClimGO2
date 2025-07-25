@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FiHome, FiPhone, FiSettings, FiInfo, FiBookOpen, FiMail } from 'react-icons/fi';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -174,9 +175,9 @@ export default function Header() {
                 <Link 
                   href="/" 
                   onClick={closeMenu}
-                  className="text-[#03144a] text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
+                  className="flex items-center gap-2 text-[#03144a] text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
                 >
-                  Accueil
+                  <FiHome className="text-xl" /> Accueil
                 </Link>
 
                 <div>
@@ -188,7 +189,9 @@ export default function Header() {
                     }}
                     className="flex justify-between items-center w-full text-[#03144a] text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
                   >
-                    Nos Services
+                    <span className="flex items-center gap-2">
+                      <FiSettings className="text-xl" /> Nos Services
+                    </span>
                     <svg
                       className={`w-4 h-4 transform transition-transform duration-200 ${
                         isSubMenuOpen ? 'rotate-180' : ''
@@ -245,27 +248,31 @@ export default function Header() {
                 <Link 
                   href="/aides-etat" 
                   onClick={closeMenu}
-                  className="text-[#03144a]  text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
+                  className="flex items-center gap-2 text-[#03144a]  text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
                 >
-                  Aides d&apos;État
+                  <FiBookOpen className="text-xl" /> Aides d&apos;État
                 </Link>
                 
                 <Link 
                   href="/a-propos" 
                   onClick={closeMenu}
-                  className="text-[#03144a] text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
+                  className="flex items-center gap-2 text-[#03144a] text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
                 >
-                  À Propos
+                  <FiInfo className="text-xl" /> À Propos
                 </Link>
-                <Link href="/blog" className="text-[#03144a]  text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase">
-                  Blog
+                <Link 
+                  href="/blog"
+                  onClick={closeMenu}
+                  className="flex items-center gap-2 text-[#03144a]  text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
+                >
+                  <FiBookOpen className="text-xl" /> Blog
                 </Link>
                 <Link 
                   href="/contact" 
                   onClick={closeMenu}
-                  className="text-[#03144a] text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
+                  className="flex items-center gap-2 text-[#03144a] text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
                 >
-                  Contact
+                  <FiMail className="text-xl" /> Contact
                 </Link>
               </nav>
 
