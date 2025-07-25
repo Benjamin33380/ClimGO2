@@ -35,11 +35,11 @@ export default function ContactPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 bgPage bg-[radial-gradient(ellipse_at_center,_#c0c0c0_0%,_#1a1a1a_100%)]">
+      <section className="py-16 bg-[#F8F9F4]">
         <div className="px-6 md:px-12 lg:px-20">
           <div className="mx-auto">
             {/* Introduction */}
-            <div className="bg-[#f8f8f7] rounded-lg shadow-md p-8 mb-12 text-center">
+            <div className="bg-[#f8f9f4] rounded-lg shadow-md p-8 mb-12 text-center">
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 <strong>Contactez ClimGO</strong> : nous vous accompagnons avec écoute, réactivité et des solutions techniques sur mesure.
               </p>

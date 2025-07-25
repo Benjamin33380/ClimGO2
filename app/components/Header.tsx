@@ -117,7 +117,7 @@ export default function Header() {
                 </Link>
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="p-2 rounded-full bg-[#03144a] text-white hover:bg-[#d4af37] transition-colors"
+                  className="p-2 rounded-full bg-[#f8F9F4] text-[#03144a]"
                   aria-label="Ouvrir le menu"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -145,7 +145,7 @@ export default function Header() {
             />
             
             {/* Menu Panel */}
-            <div className={`fixed inset-0 h-full w-full bg-[#03144a] backdrop-blur-md shadow-lg transform transition-transform duration-300 ${
+            <div className={`fixed inset-0 h-full w-full bg-[#F8F9F4] backdrop-blur-md shadow-lg transform transition-transform duration-300 ${
               isMenuOpen ? 'translate-x-0' : 'translate-x-full'
             }`}>
               {/* Header du menu */}
@@ -156,12 +156,12 @@ export default function Header() {
                     alt="ClimGO Logo"
                     width={180}
                     height={72}
-                    className="h-12 w-auto"
+                    className="h-16 w-auto"
                   />
                 </div>
                 <button
                   onClick={closeMenu}
-                  className="p-2 rounded-full text-white hover:bg-[#2563EB] transition-colors"
+                  className="p-2 rounded-full text-white hover: bg-[#03144a] transition-colors"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -174,7 +174,7 @@ export default function Header() {
                 <Link 
                   href="/" 
                   onClick={closeMenu}
-                  className="text-white hover:text-[#d4af37] transition-colors text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
+                  className="text-[#03144a] text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
                 >
                   Accueil
                 </Link>
@@ -186,7 +186,7 @@ export default function Header() {
                       e.preventDefault();
                       setIsSubMenuOpen(!isSubMenuOpen);
                     }}
-                    className="flex justify-between items-center w-full text-white hover:text-[#d4af37] transition-colors text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
+                    className="flex justify-between items-center w-full text-[#03144a] text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
                   >
                     Nos Services
                     <svg
@@ -205,35 +205,35 @@ export default function Header() {
                     <div className="pl-4 space-y-3 border-t border-white/20 mt-2 pt-3">
                       <Link 
                         href="/nos-services" 
-                        className="block text-white text-sm tracking-wide uppercase hover:text-[#d4af37] transition-colors py-2"
+                        className="block text-[#03144a] text-sm tracking-wide uppercase py-2"
                         onClick={closeMenu}
                       >
                         Tous les Services
                       </Link>
                       <Link 
                         href="/chauffage" 
-                        className="block text-white text-sm tracking-wide uppercase hover:text-[#d4af37] transition-colors py-2"
+                        className="block text-[#03144a] text-sm tracking-wide uppercase py-2"
                         onClick={closeMenu}
                       >
                         Chauffage
                       </Link>
                       <Link 
                         href="/climatisation" 
-                        className="block text-white text-sm tracking-wide uppercase hover:text-[#d4af37] transition-colors py-2"
+                        className="block text-[#03144a] text-sm tracking-wide uppercase py-2"
                         onClick={closeMenu}
                       >
                         Climatisation
                       </Link>
                       <Link 
                         href="/eau-chaude-sanitaire" 
-                        className="block text-white text-sm tracking-wide uppercase hover:text-[#d4af37] transition-colors py-2"
+                        className="block text-[#03144a] text-sm tracking-wide uppercase py-2"
                         onClick={closeMenu}
                       >
                         Eau chaude sanitaire
                       </Link>
                       <Link 
                         href="/maintenance" 
-                        className="block text-white text-sm tracking-wide uppercase hover:text-[#d4af37] transition-colors py-2"
+                        className="block text-[#03144a] text-sm tracking-wide uppercase py-2"
                         onClick={closeMenu}
                       >
                         Maintenance
@@ -245,7 +245,7 @@ export default function Header() {
                 <Link 
                   href="/aides-etat" 
                   onClick={closeMenu}
-                  className="text-white hover:text-[#d4af37] transition-colors text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
+                  className="text-[#03144a]  text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
                 >
                   Aides d&apos;État
                 </Link>
@@ -253,17 +253,17 @@ export default function Header() {
                 <Link 
                   href="/a-propos" 
                   onClick={closeMenu}
-                  className="text-white hover:text-[#d4af37] transition-colors text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
+                  className="text-[#03144a] text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
                 >
                   À Propos
                 </Link>
-                <Link href="/blog" className="text-white hover:text-[#d4af37] transition-colors text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase">
+                <Link href="/blog" className="text-[#03144a]  text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase">
                   Blog
                 </Link>
                 <Link 
                   href="/contact" 
                   onClick={closeMenu}
-                  className="text-white hover:text-[#d4af37] transition-colors text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
+                  className="text-[#03144a] text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
                 >
                   Contact
                 </Link>

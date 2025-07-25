@@ -77,7 +77,7 @@ export default function Hero() {
                 />
               </Link>
             </div>
-            <nav className="flex flex-wrap justify-center gap-4 mt-12 text-center px-4 max-w-7xl mx-auto hidden md:flex">
+            <nav className=" flex-wrap justify-center gap-4 mt-12 text-center px-4 max-w-7xl mx-auto hidden md:flex">
               <Link href="/chauffage" className="text-center w-full sm:w-auto text-white font-semibold tracking-wide text-xl py-3 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
                 Chauffage
               </Link>
