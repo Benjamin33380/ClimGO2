@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FiHome, FiSettings, FiInfo, FiBookOpen, FiMail } from 'react-icons/fi';
+import { FiHome, FiSettings, FiInfo, FiBookOpen, FiMail , } from 'react-icons/fi';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -157,8 +157,7 @@ export default function Header() {
                     alt="ClimGO Logo"
                     width={180}
                     height={72}
-                    className="h-16 w-auto"
-                  />
+                    className="h-16 w-auto" />
                 </div>
                 <button
                   onClick={closeMenu}
@@ -171,7 +170,7 @@ export default function Header() {
               </div>
 
               {/* Navigation */}
-              <nav className="flex flex-col p-6 space-y-2">
+              <nav className="flex-col p-5 space-y-4">
                 <Link 
                   href="/" 
                   onClick={closeMenu}
