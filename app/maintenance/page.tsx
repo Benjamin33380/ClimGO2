@@ -92,7 +92,7 @@ export default function MaintenancePage() {
             {/* Bloc SEO enrichi */}
             <section className="py-20 px-4 max-w-5xl mx-auto text-gray-800">
               <h2 className="text-3xl font-bold text-center mb-6 text-[#03144a]">
-                Confier l'entretien de vos systèmes à ClimGO, c’est choisir l’expertise locale
+                Confier l&apos;entretien de vos systèmes à ClimGO, c’est choisir l’expertise locale
               </h2>
               <p className="text-base leading-relaxed text-center mb-10">
                 ClimGO, spécialiste en maintenance de climatisation, chauffage et production d’eau chaude sanitaire en Gironde, vous accompagne tout au long de la vie de vos équipements. Nous intervenons à domicile pour garantir sécurité, durabilité et confort thermique dans chaque logement. Qu’il s’agisse d’une pompe à chaleur air/air, air/eau, d’un chauffe-eau thermodynamique ou d’un système de climatisation gainable, notre équipe assure un suivi technique rigoureux, conforme aux normes en vigueur.
