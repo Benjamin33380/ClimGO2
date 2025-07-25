@@ -59,7 +59,7 @@ export default function Hero() {
               ClimGO
             </h2>
             <h1 className="text-2xl md:text-4xl font-bold mt-4 mb-6 text-white">
-              Installateur de Chauffage, Climatisation & Pompe à chaleur
+              Installateur de Chauffage, Climatisation & Pompe à chaleur.
             </h1>
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <Link href="/contact">
