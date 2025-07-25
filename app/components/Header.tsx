@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FiHome, FiPhone, FiSettings, FiInfo, FiBookOpen, FiMail } from 'react-icons/fi';
+import { FiHome, FiSettings, FiInfo, FiBookOpen, FiMail } from 'react-icons/fi';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
