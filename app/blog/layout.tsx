@@ -7,16 +7,20 @@ export const metadata: Metadata = {
   category: 'business',
   // Entre ici
   openGraph: {
+    type: 'website',
+    url: 'https://www.climgo.fr/blog', // Change l'URL
     title: 'Blog ClimGO | Conseils Chauffage, Climatisation à Marcheprime', // Change le titre
     description: 'Découvrez nos articles experts sur le chauffage, la climatisation et les solutions énergétiques. Conseils, actualités et guides techniques par ClimGO.', // Change la description
     images: ['/Logo.png'],
     locale: 'fr_FR',
     siteName: 'ClimGO',
-    type: 'website',
-    url: 'https://www.climgo.fr/blog' // Change l'URL
+     // Change l'URL
   },
   // Et ici
   twitter: {
+  card: 'summary_large_image',
+    site: '@ClimGO',
+    creator: '@ClimGO',
     title: 'Blog ClimGO | Conseils Chauffage, Climatisation à Marcheprime',
     description: 'Découvrez nos articles experts sur le chauffage, la climatisation et les solutions énergétiques. Conseils, actualités et guides techniques par ClimGO.',
     images: ['/Logo.png'],

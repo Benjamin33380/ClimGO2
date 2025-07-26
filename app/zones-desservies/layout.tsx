@@ -4,6 +4,8 @@ export const metadata: Metadata = {
   title: 'Zones desservies – ClimGO',
   description: 'ClimGO intervient en Gironde, sur le Bassin d’Arcachon et Bordeaux Métropole pour vos besoins en chauffage, climatisation et eau chaude.',
   openGraph: {
+    type: 'website',
+    url: 'https://www.climgo.fr/zones-desservies',
     title: 'Zones desservies – ClimGO',
     description: 'ClimGO intervient en Gironde, sur le Bassin d’Arcachon et Bordeaux Métropole pour vos besoins en chauffage, climatisation et eau chaude.',
     images: ['/Logo.png'],
@@ -11,6 +13,9 @@ export const metadata: Metadata = {
     siteName: 'ClimGO'
   },
   twitter: {
+    card: 'summary_large_image',
+    site: '@ClimGO',
+    creator: '@ClimGO',
     title: 'Zones desservies – ClimGO',
     description: 'ClimGO intervient en Gironde, sur le Bassin d’Arcachon et Bordeaux Métropole pour vos besoins en chauffage, climatisation et eau chaude.',
     images: ['/Logo.png'],

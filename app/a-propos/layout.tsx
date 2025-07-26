@@ -4,6 +4,8 @@ export const metadata: Metadata = {
   title: 'A propos de ClimGO',
   description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
   openGraph: {
+    type : 'website',
+    url: 'https://www.climgo.fr/a-propos',
     title: 'A propos de ClimGO',
     description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
     images: ['/Logo.png'],
@@ -11,6 +13,9 @@ export const metadata: Metadata = {
     siteName: 'ClimGO'
   },
   twitter: {
+    card : 'summary_large_image',
+    site: '@ClimGO',
+    creator: '@ClimGO',
     title: 'A propos de ClimGO',
     description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
     images: ['/Logo.png'],

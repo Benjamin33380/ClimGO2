@@ -4,6 +4,8 @@ export const metadata: Metadata = {
   title: 'Eau chaude sanitaire ClimGO',
   description: "Installation et entretien de chauffe-eau à Marcheprime et sur le Bassin d’Arcachon. Experts en eau chaude sanitaire.",
   openGraph: {
+    type: 'website',
+    url: 'https://www.climgo.fr/eau-chaude-sanitaire',
     title: 'Eau chaude sanitaire ClimGO',
     description: "Installation et entretien de chauffe-eau à Marcheprime et sur le Bassin d’Arcachon. Experts en eau chaude sanitaire, nous vous accompagnons pour des solutions performantes et économiques. Devis gratuit avec ClimGO.",
     images: ['/PylaCumulus.jpeg'],
@@ -11,9 +13,13 @@ export const metadata: Metadata = {
     siteName: 'ClimGO'
   },
   twitter: {
+  card: 'summary_large_image',
+    site: '@ClimGO',
+    creator: '@ClimGO',
     title: 'Eau chaude sanitaire ClimGO',
     description: "Installation et entretien de chauffe-eau à Marcheprime et sur le Bassin d’Arcachon. Experts en eau chaude sanitaire, nous vous accompagnons pour des solutions performantes et économiques. Devis gratuit avec ClimGO.",
     images: ['/PylaCumulus.jpeg'],
+  
   },
   alternates: {
     canonical: 'https://www.climgo.fr/eau-chaude-sanitaire',

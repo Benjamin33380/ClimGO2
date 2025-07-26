@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   title: 'ClimGO - Spécialiste Chauffage, Climatisation & Pompe à Chaleur',
   description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
   openGraph: {
+    type: 'website',
+    url: 'https://www.climgo.fr',
     title: 'ClimGO - Spécialiste Chauffage, Climatisation & Pompe à Chaleur',
     description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
     images: ['/Logo.png'],
@@ -17,6 +19,9 @@ export const metadata: Metadata = {
     siteName: 'ClimGO',
   },
   twitter: {
+    card: 'summary_large_image',
+    site: '@ClimGO',
+    creator: '@ClimGO',
     title: 'ClimGO - Spécialiste Chauffage, Climatisation & Pompe à Chaleur',
     description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
     images: ['/Logo.png'],
@@ -42,7 +47,7 @@ export const metadata: Metadata = {
     "dépannage climatisation Marcheprime",
     "entretien pompe à chaleur Marcheprime",
     "installation clim air/air Marcheprime",
-    "plancher chauffant basse température Marcheprime",
+    "Clim , Chauffage , Plomberie ",
     "chauffage éco-responsable Marcheprime",
     "artisan chauffage climatisation Marcheprime",
     "pompe à chaleur air eau Marcheprime",

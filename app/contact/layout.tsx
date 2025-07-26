@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   themeColor: '#ffffff',
   viewport: 'width=device-width, initial-scale=1.0',
   openGraph: {
+    type: 'website',
+    url: 'https://www.climgo.fr/contact',
     title: 'Contact ClimGO',
     description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
     images: ['/Logo.png'],
@@ -15,6 +17,9 @@ export const metadata: Metadata = {
     siteName: 'ClimGO',
   },
   twitter: {
+    card: 'summary_large_image',
+    site: '@ClimGO',
+    creator: '@ClimGO',
     title: 'Contact ClimGO',
     description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
     images: ['/Logo.png'],

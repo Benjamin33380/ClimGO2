@@ -4,6 +4,8 @@ export const metadata: Metadata = {
   title: 'Services ClimGO - Climatisation, Chauffage & Eau Chaude Sanitaire',
   description: 'ClimGO, spécialiste RGE en climatisation, chauffage et eau chaude sanitaire à Marcheprime et dans le Bassin d’Arcachon.',
   openGraph: {
+    type: 'website',
+    url: 'https://www.climgo.fr/nos-services',
     title: 'Nos services ClimGO - Climatisation, Chauffage & Eau Chaude Sanitaire | Marcheprime & Bassin d’Arcachon',
     description: 'ClimGO, spécialiste RGE en climatisation, chauffage et eau chaude sanitaire à Marcheprime et dans le Bassin d’Arcachon. Devis gratuit, intervention rapide, confort thermique assuré.',
     images: ['/Logo.png'],
@@ -11,6 +13,9 @@ export const metadata: Metadata = {
     siteName: 'ClimGO'
   },
   twitter: {
+    card: 'summary_large_image',
+    site: '@ClimGO',
+    creator: '@ClimGO',
     title: 'Nos services ClimGO - Climatisation, Chauffage & Eau Chaude Sanitaire | Marcheprime & Bassin d’Arcachon',
     description: 'ClimGO, spécialiste RGE en climatisation, chauffage et eau chaude sanitaire à Marcheprime et dans le Bassin d’Arcachon. Devis gratuit, intervention rapide, confort thermique assuré.',
     images: ['/Logo.png'],

@@ -4,6 +4,8 @@ export const metadata: Metadata = {
   title: 'Chauffage ClimGO',
   description: 'Installation et entretien de chauffage à Marcheprime et sur le Bassin d’Arcachon. Pompes à chaleur air/eau, planchers chauffants, radiateurs économiques.',
   openGraph: {
+    type: 'website',
+    url: 'https://www.climgo.fr/chauffage',
     title: 'Chauffage ClimGO',
     description: 'Installation et entretien de chauffage à Marcheprime et sur le Bassin d’Arcachon. Pompes à chaleur air/eau, planchers chauffants, radiateurs économiques. Artisan local, devis gratuit avec ClimGO.',
     images: ['/aepac.jpg'],
@@ -11,6 +13,9 @@ export const metadata: Metadata = {
     siteName: 'ClimGO'
   },
   twitter: {
+    card: 'summary_large_image',
+    site: '@ClimGO',
+    creator: '@ClimGO',
     title: 'Chauffage ClimGO',
     description: 'Installation et entretien de chauffage à Marcheprime et sur le Bassin d’Arcachon. Pompes à chaleur air/eau, planchers chauffants, radiateurs économiques. Artisan local, devis gratuit avec ClimGO.',
     images: ['/aepac.jpg'],

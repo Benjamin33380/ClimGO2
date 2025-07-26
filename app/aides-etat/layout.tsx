@@ -4,6 +4,8 @@ export const metadata: Metadata = {
   title: 'Aides & Subventions ClimGO',
   description: 'Bénéficiez des aides de l’État avec ClimGO pour vos travaux de chauffage, climatisation ou eau chaude : MaPrimeRénov’, CEE, TVA réduite, éco-PTZ, et plus.',
   openGraph: {
+    type: 'website',
+    url: 'https://www.climgo.fr/aides-etat',
     title: 'Aides & Subventions ClimGO',
     description: 'Bénéficiez des aides de l’État avec ClimGO pour vos travaux de chauffage, climatisation ou eau chaude : MaPrimeRénov’, CEE, TVA réduite, éco-PTZ, et plus. Accompagnement sur Marcheprime, Bassin d’Arcachon et alentours.',
     images: ['/Logo.png'],
@@ -11,6 +13,9 @@ export const metadata: Metadata = {
     siteName: 'ClimGO'
   },
   twitter: {
+    card: 'summary_large_image',
+    site: '@ClimGO',
+    creator: '@ClimGO',
     title: 'Aides & Subventions ClimGO',
     description: 'Bénéficiez des aides de l’État avec ClimGO pour vos travaux de chauffage, climatisation ou eau chaude : MaPrimeRénov’, CEE, TVA réduite, éco-PTZ, et plus. Accompagnement sur Marcheprime, Bassin d’Arcachon et alentours.',
     images: ['/Logo.png'],

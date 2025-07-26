@@ -4,6 +4,8 @@ export const metadata: Metadata = {
   title: 'Climatisation ClimGO',
   description: 'Installation, entretien et mise en service de climatisation à Marcheprime et sur le Bassin d’Arcachon. Systèmes muraux, gainables, consoles et cassettes.',
   openGraph: {
+    type: 'website',
+    url: 'https://www.climgo.fr/climatisation',
     title: 'Climatisation ClimGO',
     description: 'Installation, entretien et mise en service de climatisation à Marcheprime et sur le Bassin d’Arcachon. Spécialiste des systèmes muraux, gainables, consoles et cassettes. Artisan qualifié, devis gratuit avec ClimGO.',
     images: ['/climcauderan.jpeg'],
@@ -11,6 +13,9 @@ export const metadata: Metadata = {
     siteName: 'ClimGO'
   },
   twitter: {
+    card: 'summary_large_image',
+    site: '@ClimGO',
+    creator: '@ClimGO',
     title: 'Climatisation ClimGO',
     description: 'Installation, entretien et mise en service de climatisation à Marcheprime et sur le Bassin d’Arcachon. Spécialiste des systèmes muraux, gainables, consoles et cassettes. Artisan qualifié, devis gratuit avec ClimGO.',
     images: ['/climcauderan.jpeg'],

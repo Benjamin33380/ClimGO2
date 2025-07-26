@@ -4,6 +4,8 @@ export const metadata: Metadata = {
   title: 'Maintenance ClimGO',
   description: 'Entretien et maintenance de climatisation, chauffage et chauffe-eau à Marcheprime et sur le Bassin d’Arcachon.',
   openGraph: {
+    type: 'website',
+    url: 'https://www.climgo.fr/maintenance',
     title: 'Maintenance ClimGO',
     description: 'Entretien et maintenance de climatisation, chauffage et chauffe-eau à Marcheprime et sur le Bassin d’Arcachon. ClimGO assure la révision, le dépannage et le suivi technique de vos équipements. Devis gratuit.',
     images: ['/emd.jpeg'],
@@ -11,6 +13,9 @@ export const metadata: Metadata = {
     siteName: 'ClimGO'
   },
   twitter: {
+    card: 'summary_large_image',
+    site: '@ClimGO',
+    creator: '@ClimGO',
     title: 'Maintenance ClimGO',
     description: 'Entretien et maintenance de climatisation, chauffage et chauffe-eau à Marcheprime et sur le Bassin d’Arcachon. ClimGO assure la révision, le dépannage et le suivi technique de vos équipements. Devis gratuit.',
     images: ['/emd.jpeg'],
