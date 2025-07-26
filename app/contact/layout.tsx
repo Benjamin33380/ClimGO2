@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.climgo.fr'),
-  title: 'Contact ClimGO',
+  title: 'Page de Contact ClimGO',
   description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
   applicationName: 'ClimGO',
   themeColor: '#ffffff',

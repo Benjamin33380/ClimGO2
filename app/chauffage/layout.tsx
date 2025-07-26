@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Chauffage ClimGO',
-  description: 'Installation et entretien de chauffage à Marcheprime et sur le Bassin d’Arcachon. Pompes à chaleur air/eau, planchers chauffants, radiateurs économiques. Artisan local, devis gratuit avec ClimGO.',
+  description: 'Installation et entretien de chauffage à Marcheprime et sur le Bassin d’Arcachon. Pompes à chaleur air/eau, planchers chauffants, radiateurs économiques.',
   openGraph: {
     title: 'Chauffage ClimGO',
     description: 'Installation et entretien de chauffage à Marcheprime et sur le Bassin d’Arcachon. Pompes à chaleur air/eau, planchers chauffants, radiateurs économiques. Artisan local, devis gratuit avec ClimGO.',

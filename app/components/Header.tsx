@@ -42,7 +42,7 @@ export default function Header() {
       {/* Section navigation centrée avec logo intégré */}
       <div className="w-full bg-transparent">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center h-20 mt-4 relative">
+          <div className="flex items-center justify-center h-20 mt-4 relative z-10">
             {/* Navigation centrée avec logo intégré */}
             <div className="bg-[#F9F8F4] hover:bg-[#03144a] transition-colors duration-300 rounded-full px-4 py-0.5 backdrop-blur-md mt-4 group-hover:text-white">
               {/* Navigation Desktop */}
@@ -181,7 +181,7 @@ export default function Header() {
 
                 <div>
                   <Link
-                    href="/services"
+                    href="/nos-services"
                     onClick={(e) => {
                       e.preventDefault();
                       setIsSubMenuOpen(!isSubMenuOpen);

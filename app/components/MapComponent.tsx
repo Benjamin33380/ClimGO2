@@ -37,5 +37,5 @@ export default function MapComponent() {
     };
   }, []);
 
-  return <div ref={mapRef} className="w-full h-full rounded-lg" />;
+  return <div ref={mapRef} className="w-full h-full rounded-lg relative z-10" />;
 } 

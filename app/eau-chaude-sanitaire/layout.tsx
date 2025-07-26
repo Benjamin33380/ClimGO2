@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Eau chaude sanitaire ClimGO',
-  description: "Installation et entretien de chauffe-eau à Marcheprime et sur le Bassin d’Arcachon. Experts en eau chaude sanitaire, nous vous accompagnons pour des solutions performantes et économiques. Devis gratuit avec ClimGO.",
+  description: "Installation et entretien de chauffe-eau à Marcheprime et sur le Bassin d’Arcachon. Experts en eau chaude sanitaire.",
   openGraph: {
     title: 'Eau chaude sanitaire ClimGO',
     description: "Installation et entretien de chauffe-eau à Marcheprime et sur le Bassin d’Arcachon. Experts en eau chaude sanitaire, nous vous accompagnons pour des solutions performantes et économiques. Devis gratuit avec ClimGO.",
