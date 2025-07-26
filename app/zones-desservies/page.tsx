@@ -42,7 +42,7 @@ export default function ZonesDesservies() {
                   <div><Link href="/blog/audenge/">Audenge</Link></div>
                   <div><Link href="/blog/lanton/">Lanton</Link></div>
                   <div><Link href="/blog/andernos-les-bains/">Andernos-les-Bains</Link></div>
-                  <div><Link href="/blog/arès/">Arès</Link></div>
+                  <div><Link href="/blog/ares/">Arès</Link></div>
                   <div><Link href="/blog/cap-ferret/">Cap Ferret</Link></div>
                 </div>
               </div>
@@ -70,7 +70,7 @@ export default function ZonesDesservies() {
                 </div>
                 <div aria-label="Zones desservies dans l’agglomération de Bordeaux" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-x-4 gap-y-3">
                   <div><Link href="/blog/cestas/">Cestas</Link></div>
-                  <div><Link href="/blog/canéjan/">Canéjan</Link></div>
+                  <div><Link href="/blog/canejan/">Canéjan</Link></div>
                   <div><Link href="/blog/pessac/">Pessac</Link></div>
                   <div><Link href="/blog/gradignan/">Gradignan</Link></div>
                   <div><Link href="/blog/talence/">Talence</Link></div>
