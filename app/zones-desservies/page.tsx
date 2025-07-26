@@ -31,7 +31,7 @@ export default function ZonesDesservies() {
             <section className="text-left mb-10">
               <div className="bg-white shadow-md rounded-lg p-6 mb-8">
                 <div className="bg-[#F8F9F4] p-4 px-6 rounded-md mb-10 text-center shadow-sm mx-auto w-fit">
-                  <h2 className="text-2xl font-bold climText">🌊 Bassin d’Arcachon</h2>
+                  <h2 className="text-2xl font-bold climText">🌊 Bassin d’Arcachon<Link href="/blog//bassin-darcachon-chauffage-climatisation/"></Link></h2>
                 </div>
                 <div aria-label="Zones desservies sur le Bassin d'Arcachon" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-x-4 gap-y-3">
                   <div><Link href="/blog/arcachon/">Arcachon</Link></div>
