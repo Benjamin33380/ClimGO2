@@ -59,13 +59,16 @@ async function getArticle(slug: string): Promise<Article | null> {
   }
 }
 
-async function getPreviousArticles(currentArticleId: string): Promise<Article[]> {
+async function getPreviousArticles(currentArticleId: string, currentArticleDate: Date): Promise<Article[]> {
   try {
     const articles = await prisma.article.findMany({
       where: {
         published: true,
         id: {
           not: currentArticleId
+        },
+        createdAt: {
+          lt: currentArticleDate
         }
       },
       select: {
@@ -119,11 +122,12 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
 export default async function ArticlePage({ params }: ArticlePageProps) {
   const resolvedParams = await params
   const article = await getArticle(resolvedParams.id)
-  const previousArticles = await getPreviousArticles(article?.id || '')
 
   if (!article) {
     notFound()
   }
+
+  const previousArticles = await getPreviousArticles(article.id, article.createdAt)
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-24">
