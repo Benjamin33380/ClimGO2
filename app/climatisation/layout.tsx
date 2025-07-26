@@ -7,6 +7,8 @@ export const metadata: Metadata = {
     title: 'Climatisation ClimGO',
     description: 'Installation, entretien et mise en service de climatisation à Marcheprime et sur le Bassin d’Arcachon. Spécialiste des systèmes muraux, gainables, consoles et cassettes. Artisan qualifié, devis gratuit avec ClimGO.',
     images: ['/climcauderan.jpeg'],
+    locale: 'fr_FR',
+    siteName: 'ClimGO'
   },
   twitter: {
     title: 'Climatisation ClimGO',

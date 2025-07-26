@@ -7,6 +7,8 @@ export const metadata: Metadata = {
     title: 'Maintenance ClimGO',
     description: 'Entretien et maintenance de climatisation, chauffage et chauffe-eau à Marcheprime et sur le Bassin d’Arcachon. ClimGO assure la révision, le dépannage et le suivi technique de vos équipements. Devis gratuit.',
     images: ['/emd.jpeg'],
+    locale: 'fr_FR',
+    siteName: 'ClimGO'
   },
   twitter: {
     title: 'Maintenance ClimGO',

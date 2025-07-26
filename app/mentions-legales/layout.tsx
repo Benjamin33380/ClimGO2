@@ -7,6 +7,8 @@ export const metadata: Metadata = {
     title: 'Mentions légales ClimGO',
     description: 'Découvrez ClimGO, votre partenaire de confiance pour tous vos travaux de chauffage, climatisation ou eau chaude.',
     images: ['/Logo.png'],
+    locale: 'fr_FR',
+    siteName: 'ClimGO'
   },
   twitter: {
     title: 'Mentions légales ClimGO',
