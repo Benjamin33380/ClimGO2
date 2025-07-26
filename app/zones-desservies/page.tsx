@@ -108,7 +108,7 @@ export default function ZonesDesservies() {
                   <div><Link href="/blog/le-temple/">Le Temple</Link></div>
                   <div><Link href="/blog/saint-loubes/">Saint-Loubès</Link></div>
                   <div><Link href="/blog/saint-selve/">Saint-Selve</Link></div>
-                  <div><Link href="/blog/saint-jean-d-illac/">Saint-Jean-d&apos;Illac</Link></div>
+                  <div><Link href="/blog/saint-jean-dillac/">Saint-Jean-d&apos;Illac</Link></div>
                   <div><Link href="/blog/saint-medard-en-jalles/">Saint-Médard-en-Jalles</Link></div>
                   <div><Link href="/blog/saint-aubin-de-medoc/">Saint-Aubin-de-Médoc</Link></div>
                   <div><Link href="/blog/saucats/">Saucats</Link></div>
