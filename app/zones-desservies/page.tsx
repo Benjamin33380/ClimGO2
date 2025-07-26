@@ -43,7 +43,7 @@ export default function ZonesDesservies() {
                   <div><Link href="/blog/lanton/">Lanton</Link></div>
                   <div><Link href="/blog/andernos-les-bains/">Andernos-les-Bains</Link></div>
                   <div><Link href="/blog/ares/">Arès</Link></div>
-                  <div><Link href="/blog/cap-ferret/">Cap Ferret</Link></div>
+                  <div><Link href="/blog/lege-cap-ferret/">Lège Cap Ferret</Link></div>
                 </div>
               </div>
             </section>
