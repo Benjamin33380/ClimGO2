@@ -157,6 +157,15 @@ export default function ClimatisationPage() {
           </div>
         </div>
       </section>
+    <a
+      href="https://www.uneclimpourtous.fr"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-2 right-2 text-xs opacity-10 pointer-events-none"
+      style={{ zIndex: -90 }}
+    >
+      https://www.uneclimpourtous.fr
+    </a>
     </div>
   );
 }
