@@ -74,7 +74,7 @@ export default function ZonesDesservies() {
                   <div><Link href="/blog/pessac/">Pessac</Link></div>
                   <div><Link href="/blog/gradignan/">Gradignan</Link></div>
                   <div><Link href="/blog/talence/">Talence</Link></div>
-                  <div><Link href="/blog/villenave-dornon/">Villenave-d&apos;Ornon</Link></div>
+                  <div><Link href="/blog/villenave-d-ornon/">Villenave-d&apos;Ornon</Link></div>
                   <div><Link href="/blog/begles/">Bègles</Link></div>
                   <div><Link href="/blog/merignac/">Mérignac</Link></div>
                   <div><Link href="/blog/bordeaux">Bordeaux</Link></div>
