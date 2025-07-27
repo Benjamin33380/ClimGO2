@@ -6,7 +6,7 @@ Disallow: /_next/
 Disallow: /api/
 
 # Sitemap
-Sitemap: https://climgo.fr/sitemap.xml
+Sitemap: https://www.climgo.fr/sitemap.xml
 
 # Crawl-delay pour éviter la surcharge
 Crawl-delay: 1 
