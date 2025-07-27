@@ -103,26 +103,106 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   if (!article) {
     return {
       title: 'Article non trouvé - ClimGo',
-      description: 'L\'article que vous recherchez n\'existe pas ou n\'est plus disponible.'
+      description: 'L\'article que vous recherchez n\'existe pas ou n\'est plus disponible.',
+      robots: {
+        index: false,
+        follow: false
+      }
     }
   }
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.climgo.fr'
+  const articleUrl = `${baseUrl}/blog/${article.slug}`
+  
+  // Nettoyage strict des textes pour éviter les caractères problématiques
+  const cleanDescription = (article.metaDesc || article.excerpt || `Découvrez nos services ClimGo à ${article.slug}`)
+    .replace(/[\r\n\t]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .replace(/[""'']/g, '"') // Remplace les guillemets typographiques
+    .replace(/[–—]/g, '-') // Remplace les tirets longs
+    .trim()
+    .substring(0, 160)
 
-  return {
-    title: article.metaTitle || article.title,
-    description: article.metaDesc || article.excerpt || 'Découvrez cet article sur ClimGo',
+  const cleanTitle = (article.metaTitle || article.title)
+    .replace(/[\r\n\t]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .replace(/[""'']/g, '"')
+    .replace(/[–—]/g, '-')
+    .trim()
+    .substring(0, 60)
+
+  // Gestion stricte de l'image - URL complète obligatoire
+  const imageUrl = article.imageUrl && article.imageUrl.startsWith('http') 
+    ? article.imageUrl 
+    : null
+
+  // Construction des métadonnées avec validation stricte
+  const metadata: Metadata = {
+    title: cleanTitle,
+    description: cleanDescription,
     keywords: article.metaKeywords || undefined,
+    
     alternates: {
-      canonical: `${baseUrl}/blog/${article.slug}`,
+      canonical: articleUrl,
     },
+    
     openGraph: {
-      title: article.metaTitle || article.title,
-      description: article.metaDesc || article.excerpt || undefined,
-      images: article.imageUrl ? [article.imageUrl] : [],
-      url: `${baseUrl}/blog/${article.slug}`,
+      title: cleanTitle,
+      description: cleanDescription,
+      url: articleUrl,
+      siteName: 'ClimGo',
+      locale: 'fr_FR',
+      type: 'article',
+      publishedTime: article.createdAt.toISOString(),
+      modifiedTime: article.updatedAt.toISOString(),
+      authors: ['ClimGo'],
+      section: 'Chauffage et Climatisation',
+    },
+    
+    twitter: {
+      card: 'summary_large_image',
+      site: '@climgo',
+      creator: '@climgo',
+      title: cleanTitle,
+      description: cleanDescription,
+    },
+    
+    authors: [{ name: 'ClimGo', url: baseUrl }],
+    publisher: 'ClimGo',
+    category: 'Chauffage et Climatisation',
+    
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   }
+
+  // Ajouter l'image seulement si elle existe et est valide
+  if (imageUrl) {
+    metadata.openGraph!.images = [
+      {
+        url: imageUrl,
+        width: 1200,
+        height: 630,
+        alt: cleanTitle,
+        type: 'image/jpeg',
+      }
+    ]
+    
+    metadata.twitter!.images = [imageUrl]
+  }
+
+  // Ajouter les tags seulement s'ils existent
+  
+
+  return metadata
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
