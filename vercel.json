@@ -7,5 +7,38 @@
   "env": {
     "PRISMA_GENERATE_DATAPROXY": "true"
   },
-  "installCommand": "npm install && npx prisma generate"
-} 
+  "installCommand": "npm install && npx prisma generate",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "host",
+          "value": "climgo.fr"
+        }
+      ],
+      "destination": "https://www.climgo.fr/$1",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ]
+}
