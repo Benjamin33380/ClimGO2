@@ -107,14 +107,20 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     }
   }
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.climgo.fr'
+
   return {
     title: article.metaTitle || article.title,
     description: article.metaDesc || article.excerpt || 'Découvrez cet article sur ClimGo',
     keywords: article.metaKeywords || undefined,
+    alternates: {
+      canonical: `${baseUrl}/blog/${article.slug}`,
+    },
     openGraph: {
       title: article.metaTitle || article.title,
       description: article.metaDesc || article.excerpt || undefined,
       images: article.imageUrl ? [article.imageUrl] : [],
+      url: `${baseUrl}/blog/${article.slug}`,
     },
   }
 }
@@ -357,4 +363,24 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       </div>
     </div>
   )
+}
+
+export async function generateStaticParams() {
+  try {
+    const articles = await prisma.article.findMany({
+      where: {
+        published: true
+      },
+      select: {
+        slug: true
+      }
+    })
+    
+    return articles.map((article) => ({
+      id: article.slug,
+    }))
+  } catch (error) {
+    console.error('Erreur lors de la génération des paramètres statiques:', error)
+    return []
+  }
 }
