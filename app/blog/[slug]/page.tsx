@@ -14,7 +14,8 @@ const prisma = new PrismaClient()
 type ArticlePageProps = {
   params: {
     slug: string
-  }
+  },
+  searchParams?: { [key: string]: string | string[] | undefined }
 }
 
 type Article = {
