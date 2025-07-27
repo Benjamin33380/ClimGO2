@@ -54,7 +54,7 @@ export default function ZonesDesservies() {
                   <h2 className="text-2xl font-bold climText">🌳 Val de l’Eyre</h2>
                 </div>
                 <div aria-label="Zones desservies dans le Val de l’Eyre" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-x-4 gap-y-3">
-                  <div><Link href="/blog/Marcheprime/">Marcheprime</Link></div>
+                  <div><Link href="/blog/marcheprime/">Marcheprime</Link></div>
                   <div><Link href="/blog/le-barp/">Le Barp</Link></div>
                   <div><Link href="/blog/mios/">Mios</Link></div>
                   <div><Link href="/blog/salles/">Salles</Link></div>
