@@ -8,18 +8,4 @@
     "PRISMA_GENERATE_DATAPROXY": "true"
   },
   "installCommand": "npm install && npx prisma generate"
-  ,
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "climgo.fr"
-        }
-      ],
-      "destination": "https://www.climgo.fr/:1",
-      "permanent": true
-    }
-  ]
 } 
