@@ -12,9 +12,9 @@ export const revalidate = 60
 const prisma = new PrismaClient()
 
 type ArticlePageProps = {
-  params: Promise<{
-    id: string
-  }>
+  params: {
+    slug: string
+  }
 }
 
 type Article = {
@@ -97,8 +97,7 @@ async function getPreviousArticles(currentArticleId: string, currentArticleDate:
 }
 
 export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
-  const resolvedParams = await params
-  const article = await getArticle(resolvedParams.id)
+  const article = await getArticle(params.slug)
   
   if (!article) {
     return {
@@ -120,8 +119,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
-  const resolvedParams = await params
-  const article = await getArticle(resolvedParams.id)
+  const article = await getArticle(params.slug)
 
   if (!article) {
     notFound()
