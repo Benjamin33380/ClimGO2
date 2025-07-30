@@ -1,8 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import { MapPin, Phone, Clock, CheckCircle, ArrowRight, Users, Star , DraftingCompass } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ZonesDesservies() {
   const [activeZone, setActiveZone] = useState<string | null>(null);
@@ -107,19 +107,10 @@ export default function ZonesDesservies() {
   ];
 
   return (
-    <>
-      <Head>
-        <title>Zones desservies – ClimGO</title>
-        <meta
-          name="description"
-          content="Découvrez les zones desservies par ClimGO pour l'installation, l'entretien et le dépannage de vos systèmes de climatisation, chauffage et pompe à chaleur."
-        />
-      </Head>
-      
-      <div className="min-h-screen bg-[#F8F9F4]">
+    <div className="min-h-screen bg-[#F8F9F4] my-24">
         {/* Hero Section */}
         
-          {/* <div className="absolute inset-0 bg-gradient-to-r from-[#03144a]/30 to-transparent"></div> */}
+          {/* <div className="absolute inset-0 bg-linear-to-r from-[#03144a]/30 to-transparent"></div> */}
           
           <div className="relative max-w-7xl mx-auto px-4 pt-[300px] pb-24">
             <div className="text-center">
@@ -128,7 +119,7 @@ export default function ZonesDesservies() {
                 <span className="font-medium">Zone de couverture étendue</span>
               </div>
               
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-[#F8F9F4] bg-clip-text text-transparent climText">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-linear-to-r from-white to-[#F8F9F4] bg-clip-text text-transparent climText">
                 Zones Desservies
               </h1>
               
@@ -156,10 +147,12 @@ export default function ZonesDesservies() {
 
       {/* Decorative animated image after Hero */}
       <div className="relative h-[500px] overflow-hidden z-0">
-        <img
+        <Image
           src="/mo.png"
           alt="Effet décoratif"
           className="absolute top-0 left-1/2 transform -translate-x-1/2 scale-100 opacity-40 animate-scroll-move"
+          width={1000}
+          height={1000}
         />
       </div>
 
@@ -167,15 +160,15 @@ export default function ZonesDesservies() {
         <section className="py-16 ">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-[#03144a] mb-4 climText">Nos Services sur Toute la Zone</h2>
+              <h2 className="text-6xl font-bold text-[#03144a] mb-4 climText">Nos Services sur Toute la Zone</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Une expertise complète pour tous vos besoins en climatisation, chauffage et pompe à chaleur
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
-                <div key={index} className="group bg-gradient-to-br from-[#F8F9F4] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-[#03144a]/10">
-                  <div className="bg-gradient-to-r from-[#03144a] to-[#0a1f5e] w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div key={index} className="group bg-linear-to-br from-[#F8F9F4] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-[#03144a]/10">
+                  <div className="bg-linear-to-r from-[#03144a] to-[#0a1f5e] w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-7 h-7 text-[#F8F9F4]" />
                   </div>
                   <h3 className="text-xl font-bold text-[#03144a] mb-3">{service.title}</h3>
@@ -282,7 +275,7 @@ export default function ZonesDesservies() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-[#03144a] via-[#0a1f5e] to-[#03144a] text-[#03144a] relative overflow-hidden">
+        <section className="py-20 bg-linear-to-br from-[#03144a] via-[#0a1f5e] to-[#03144a] text-[#03144a] relative overflow-hidden">
           <div className="absolute inset-0 bg-black/10"></div>
           <div className="absolute inset-0">
             <div className="absolute top-0 left-0 w-72 h-72 bg-[#F8F9F4]/10 rounded-full blur-3xl"></div>
@@ -298,19 +291,19 @@ export default function ZonesDesservies() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <Link
                 href="tel:0766460008"
                 className="bg-[#F8F9F4] text-[#03144a] px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
               >
                 <Phone className="w-5 h-5 inline mr-2" />
                 Appeler Maintenant
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.climgo.fr/contact"
                 className="border-2 border-[#F8F9F4] text-[#03144a] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#F8F9F4] hover:text-[#03144a] transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
               >
                 Devis Gratuit
-              </a>
+              </Link>
             </div>
             
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -333,6 +326,5 @@ export default function ZonesDesservies() {
           </div>
         </section>
       </div>
-    </>
   );
 }

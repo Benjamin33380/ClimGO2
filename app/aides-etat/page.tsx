@@ -147,7 +147,7 @@ export default function AidesEtatPage() {
                             alt="TVA à taux réduit 5,5%"
                             width={120}
                             height={90}
-                            className="!bg-transparent !shadow-none !rounded-none"
+                            className="bg-transparent! shadow-none! rounded-none!"
                           />
                         </div>
                       </div>
@@ -206,7 +206,7 @@ export default function AidesEtatPage() {
                             alt="MaPrimeRénov'"
                             width={120}
                             height={90}
-                            className="!bg-transparent !shadow-none !rounded-none"
+                            className="bg-transparent! shadow-none! rounded-none!"
                           />
                         </div>
                       </div>
@@ -259,7 +259,7 @@ export default function AidesEtatPage() {
                             alt="Éco-PTZ prêt à taux zéro"
                             width={120}
                             height={90}
-                            className="!bg-transparent !shadow-none !rounded-none"
+                            className="bg-transparent! shadow-none! rounded-none!"
                           />
                         </div>
                       </div>
@@ -318,7 +318,7 @@ export default function AidesEtatPage() {
                             alt="ANIL Agence National Information Logement"
                             width={120}
                             height={90}
-                            className="!bg-transparent !shadow-none !rounded-none"
+                            className="bg-transparent! shadow-none! rounded-none!"
                           />
                         </div>
                       </div>
@@ -445,13 +445,13 @@ export default function AidesEtatPage() {
           transform: scale(1.05);
         }
         /* Suppression fond, bordure, ombre autour des logos */
-        .!bg-transparent {
+        .bg-transparent! {
           background: transparent !important;
         }
-        .!shadow-none {
+        .shadow-none! {
           box-shadow: none !important;
         }
-        .!rounded-none {
+        .rounded-none! {
           border-radius: 0 !important;
         }
         /* Container section "Comment ça se passe avec ClimGO" pour padding top mobile */

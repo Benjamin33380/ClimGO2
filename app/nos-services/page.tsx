@@ -254,7 +254,7 @@ export default function ServicesPage() {
       <section className="relative bg-[#f8f9f4] text-[#0a0f2c] py-24 overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('/epic-bg.jpg')] bg-cover bg-center"></div>
         <div className="relative z-10 container mx-auto px-6 text-center max-w-3xl">
-          <div className="h-1 w-32 mx-auto mb-10 bg-gradient-to-r from-[#1E40AF] via-[#dc2626] to-[#10B981] rounded-full"></div>
+          <div className="h-1 w-32 mx-auto mb-10 bg-linear-to-r from-[#1E40AF] via-[#dc2626] to-[#10B981] rounded-full"></div>
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight drop-shadow-lg">
             Vous avez un projet ?
             <br />

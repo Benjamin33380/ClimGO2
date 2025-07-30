@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@import 'tailwindcss' layer(utilities);
+
+@import 'tailwindcss/utilities' layer(utilities);
 
 :root {
   --background: #ffffff;
@@ -81,4 +83,21 @@ body {
   line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Animation pour la page zones-desservies */
+@keyframes scroll-move {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.animate-scroll-move {
+  animation: scroll-move 3s ease-in-out infinite;
 }

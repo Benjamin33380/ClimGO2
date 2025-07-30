@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 
 export const metadata: Metadata = {
   title: 'Eau chaude sanitaire ClimGO',
@@ -32,7 +32,6 @@ export const metadata: Metadata = {
     icon: '/favicon/favicon.ico'
   },
   themeColor: '#ffffff',
-  viewport: 'width=device-width, initial-scale=1',
   manifest: '/site.webmanifest',
   keywords: [
     'CHAUFFE-EAU THERMODYNAMIQUE MARCHÉPRIME',
@@ -60,6 +59,13 @@ export const metadata: Metadata = {
   creator: 'ClimGO',
   publisher: 'ClimGO',
   category: 'chauffe-eau, plomberie, climatisation, énergies renouvelables',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function EauChaudeSanitaireLayout({ children }: { children: React.ReactNode }) {

@@ -34,7 +34,7 @@ export default function Hero() {
   return (
     <div className="flex flex-col min-h-screen absolute top-0 left-0 w-full h-full">
       
-      <main className="flex-grow">
+      <main className="grow">
         {/* Hero Section avec carrousel d'images corrigé */}
         <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
           {/* Images de fond avec système de crossfade */}

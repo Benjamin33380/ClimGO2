@@ -77,13 +77,13 @@ export default function ContactPage() {
             {/* Contact Form and Info */}
             <div className="grid md:grid-cols-2 gap-12 place-items-center">
               {/* Formulaire */}
-              <div className="bg-white/10 backdrop-blur-[10px] border border-white/30 rounded-xl p-8 shadow-[inset_0_0_0.5px_rgba(255,255,255,0.2),_0_4px_30px_rgba(0,0,0,0.2)]">
+              <div className="bg-white/10 backdrop-blur-[10px] border border-white/30 rounded-xl p-8 shadow-[inset_0_0_0.5px_rgba(255,255,255,0.2),0_4px_30px_rgba(0,0,0,0.2)]">
                 <h3 className="text-2xl font-bold text-[#03144a] mb-6">Envoyez-nous un message</h3>
                 <ContactForm />
               </div>
 
               {/* Informations de contact */}
-              <div className="bg-white/10 backdrop-blur-[10px] border border-white/30 rounded-xl p-8 text-center w-fit h-fit shadow-[inset_0_0_0.5px_rgba(255,255,255,0.2),_0_4px_30px_rgba(0,0,0,0.2)]">
+              <div className="bg-white/10 backdrop-blur-[10px] border border-white/30 rounded-xl p-8 text-center w-fit h-fit shadow-[inset_0_0_0.5px_rgba(255,255,255,0.2),0_4px_30px_rgba(0,0,0,0.2)]">
                 <h3 className="text-2xl font-bold text-[#03144a] mb-6">Une question ? On est là pour vous répondre.</h3>
                 
                 <div className="space-y-6">
