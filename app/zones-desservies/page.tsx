@@ -119,7 +119,7 @@ export default function ZonesDesservies() {
                 <span className="font-medium">Zone de couverture étendue</span>
               </div>
               
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-linear-to-r from-white to-[#F8F9F4] bg-clip-text text-transparent climText">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-[#F8F9F4] bg-clip-text text-transparent climText">
                 Zones Desservies
               </h1>
               
@@ -168,7 +168,7 @@ export default function ZonesDesservies() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
                 <div key={index} className="group bg-linear-to-br from-[#F8F9F4] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-[#03144a]/10">
-                  <div className="bg-linear-to-r from-[#03144a] to-[#0a1f5e] w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="bg-gradient-to-r from-[#03144a] to-[#0a1f5e] w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-7 h-7 text-[#F8F9F4]" />
                   </div>
                   <h3 className="text-xl font-bold text-[#03144a] mb-3">{service.title}</h3>
