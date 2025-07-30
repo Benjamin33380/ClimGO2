@@ -1,18 +1,110 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { MapPin, Phone, Clock, CheckCircle, ArrowRight, Users, Star , DraftingCompass } from 'lucide-react';
 
 export default function ZonesDesservies() {
-  const cityCardStyle: React.CSSProperties = {
-    //backgroundColor: '#03144a', // blue-900
-    backgroundColor: '#F8F9F4',
-    color: '#03144a',
-    padding: '12px',
-    borderRadius: '8px',
-    textAlign: 'center',
-    transition: 'all 0.3s ease',
-    fontWeight: 'bold'
-  };
+  const [activeZone, setActiveZone] = useState<string | null>(null);
+
+  const zones = [
+    {
+      id: 'bassin',
+      title: "Bassin d'Arcachon",
+      description: 'Zone intervention, zone desservies par ClimGO',
+      cities: [
+        { name: 'Arcachon', url: 'https://www.climgo.fr/blog/arcachon/' },
+        { name: 'La Teste-de-Buch', url: 'https://www.climgo.fr/blog/la-teste-de-buch/' },
+        { name: 'Gujan-Mestras', url: 'https://www.climgo.fr/blog/gujan-mestras/' },
+        { name: 'Le Teich', url: 'https://www.climgo.fr/blog/le-teich/' },
+        { name: 'Biganos', url: 'https://www.climgo.fr/blog/biganos/' },
+        { name: 'Audenge', url: 'https://www.climgo.fr/blog/audenge/' },
+        { name: 'Lanton', url: 'https://www.climgo.fr/blog/lanton/' },
+        { name: 'Andernos-les-Bains', url: 'https://www.climgo.fr/blog/andernos-les-bains/' },
+        { name: 'Arès', url: 'https://www.climgo.fr/blog/ares/' },
+        { name: 'Lège Cap Ferret', url: 'https://www.climgo.fr/blog/lege-cap-ferret/' }
+      ],
+      span: 2
+    },
+    {
+      id: 'val-eyre',
+      title: "Val de l'Eyre",
+      description: 'Zone intervention, zone desservies par ClimGO',
+      cities: [
+        { name: 'Marcheprime', url: 'https://www.climgo.fr/blog/marcheprime/' },
+        { name: 'Le Barp', url: 'https://www.climgo.fr/blog/le-barp/' },
+        { name: 'Mios', url: 'https://www.climgo.fr/blog/mios/' },
+        { name: 'Salles', url: 'https://www.climgo.fr/blog/salles/' },
+        { name: 'Belin-Béliet', url: 'https://www.climgo.fr/blog/belin-beliet/' }
+      ],
+      span: 1
+    },
+    {
+      id: 'landes',
+      title: 'Nord des Landes',
+
+      description: 'Zone de pinèdes avec solutions adaptées',
+      cities: [
+        { name: 'Sanguinet', url: 'https://www.climgo.fr/blog/sanguinet/' },
+        { name: 'Parentis-en-Born', url: 'https://www.climgo.fr/blog/parentis-en-born/' },
+        { name: 'Biscarrosse', url: 'https://www.climgo.fr/blog/biscarrosse/' },
+        { name: 'Cazaux', url: 'https://www.climgo.fr/blog/cazaux/' },
+        { name: 'Mimizan', url: 'https://www.climgo.fr/blog/mimizan/' }
+      ],
+      span: 1
+    },
+    {
+      id: 'bordeaux',
+      title: 'Agglomération Bordelaise',
+
+      description: 'Zone intervention, zone desservies par ClimGO',
+      cities: [
+        { name: 'Bordeaux', url: 'https://www.climgo.fr/blog/bordeaux/' },
+        { name: 'Mérignac', url: 'https://www.climgo.fr/blog/merignac/' },
+        { name: 'Pessac', url: 'https://www.climgo.fr/blog/pessac/' },
+        { name: 'Talence', url: 'https://www.climgo.fr/blog/talence/' },
+        { name: 'Gradignan', url: 'https://www.climgo.fr/blog/gradignan/' },
+        { name: 'Cestas', url: 'https://www.climgo.fr/blog/cestas/' },
+        { name: 'Canéjan', url: 'https://www.climgo.fr/blog/canejan/' },
+        { name: "Villenave-d'Ornon", url: 'https://www.climgo.fr/blog/villenave-d-ornon/' },
+        { name: 'Bègles', url: 'https://www.climgo.fr/blog/begles/' }
+      ],
+      span: 2
+    },
+    {
+      id: 'gironde',
+      title: 'Autres communes de Gironde',
+
+      description: 'Zone intervention, zone desservies par ClimGO',
+      cities: [
+        { name: 'Le Porge', url: 'https://www.climgo.fr/blog/le-porge/' },
+        { name: 'Lacanau', url: 'https://www.climgo.fr/blog/lacanau/' },
+        { name: 'Le Temple', url: 'https://www.climgo.fr/blog/le-temple/' },
+        { name: 'Saint-Loubès', url: 'https://www.climgo.fr/blog/saint-loubes/' },
+        { name: 'Saint-Selve', url: 'https://www.climgo.fr/blog/saint-selve/' },
+        { name: "Saint-Jean-d'Illac", url: 'https://www.climgo.fr/blog/saint-jean-dillac/' },
+        { name: "Saint-Médard-en-Jalles", url: 'https://www.climgo.fr/blog/saint-medard-en-jalles/' },
+        { name: "Saint-Aubin-de-Médoc", url: 'https://www.climgo.fr/blog/saint-aubin-de-medoc/' },
+        { name: 'Saucats', url: 'https://www.climgo.fr/blog/saucats/' },
+        { name: 'Martignas-sur-Jalle', url: 'https://www.climgo.fr/blog/martignas-sur-jalle/' },
+        { name: 'Saint-Savin', url: 'https://www.climgo.fr/blog/saint-savin/' }
+      ],
+      span: 3
+    }
+  ];
+
+  const services = [
+    { icon: DraftingCompass, title: 'Installation', desc: 'Pose professionnelle' },
+    { icon: CheckCircle, title: 'Entretien', desc: 'Maintenance préventive' },
+    { icon: Clock, title: 'Dépannage', desc: 'Urgence 24/7' },
+    { icon: Star, title: 'Garantie', desc: 'Service après-vente' }
+  ];
+
+  const stats = [
+    { number: '50+', label: 'Communes desservies' },
+    { number: '100%', label: 'Gironde couverte' },
+    { number: '24/7', label: 'Service d\'urgence' }
+  ];
 
   return (
     <>
@@ -23,203 +115,224 @@ export default function ZonesDesservies() {
           content="Découvrez les zones desservies par ClimGO pour l'installation, l'entretien et le dépannage de vos systèmes de climatisation, chauffage et pompe à chaleur."
         />
       </Head>
-      <main>
-        <section className="py-20 bg-[#FAFAF6] text-center px-4">
-          <div className="max-w-7xl mx-auto px-4">
-            <h1 className="text-3xl md:text-4xl font-bold climText mb-6 mt-24">Zones desservies</h1>
-            <p className="text-xl md:text-2xl font-semibold climText mb-12 max-w-3xl mx-auto">
-              Nous intervenons en Gironde, sur tout le Bassin d&apos;Arcachon et Bordeaux Métropole
-            </p>
-            <p className="mb-6 text-lg text-justify max-w-2xl mx-auto">
-              Nous intervenons pour la pose, l&apos;installation, l&apos;entretien et la maintenance de systèmes de climatisation,
-              chauffage, pompes à chaleur, chauffe-eau et ventilation sur l&apos;ensemble du Bassin d&apos;Arcachon, du Val de l&apos;Eyre
-              jusqu&apos;à la métropole bordelaise.
-            </p>
-            <p className="mb-12 max-w-2xl mx-auto">
-              Découvrez les villes desservies par ClimGO :
-            </p>
-            
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '16px', width: '100%' }}>
-              {/* Bassin d'Arcachon */}
-              <section style={{ textAlign: 'left', marginBottom: '40px', padding: '0 16px', gridColumn: 'span 2' }}>
-                <div style={{ backgroundColor: '#03144a', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', borderRadius: '8px', padding: '24px', marginBottom: '32px' }}>
-                  <div style={{ backgroundColor: '#F8F9F4', padding: '16px 24px', borderRadius: '6px', marginBottom: '40px', textAlign: 'center', boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)', margin: '0 auto 40px auto', width: 'fit-content' }}>
-                    <h2 style={{ fontSize: '24px', fontWeight: 'bold', margin: 0 }}>
-                      <Link href="/blog/bassin-darcachon-chauffage-climatisation/">🌊 Bassin d&apos;Arcachon</Link>
-                    </h2>
-                  </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/arcachon/" style={{ color: '#03144a', textDecoration: 'none' }}>Arcachon</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/la-teste-de-buch/" style={{ color: '#03144a', textDecoration: 'none' }}>La Teste-de-Buch</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/gujan-mestras/" style={{ color: '#03144a', textDecoration: 'none' }}>Gujan-Mestras</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/le-teich/" style={{ color: '#03144a', textDecoration: 'none' }}>Le Teich</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/biganos/" style={{ color: '#03144a', textDecoration: 'none' }}>Biganos</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/audenge/" style={{ color: '#03144a', textDecoration: 'none' }}>Audenge</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/lanton/" style={{ color: '#03144a', textDecoration: 'none' }}>Lanton</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/andernos-les-bains/" style={{ color: '#03144a', textDecoration: 'none' }}>Andernos-les-Bains</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/ares/" style={{ color: '#03144a', textDecoration: 'none' }}>Arès</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/lege-cap-ferret/" style={{ color: '#03144a', textDecoration: 'none' }}>Lège Cap Ferret</Link>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              {/* Val de l'Eyre */}
-              <section style={{ textAlign: 'left', marginBottom: '40px', padding: '0 16px' }}>
-                <div style={{ backgroundColor: '#03144a', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', borderRadius: '8px', padding: '24px', marginBottom: '32px' }}>
-                  <div style={{ backgroundColor: '#F8F9F4', padding: '16px 24px', borderRadius: '6px', marginBottom: '40px', textAlign: 'center', boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)', margin: '0 auto 40px auto', width: 'fit-content' }}>
-                    <h2 style={{ fontSize: '24px', fontWeight: 'bold', margin: 0 }}>🌳 Val de l&apos;Eyre</h2>
-                  </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px' }}>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/marcheprime/" style={{ color: '#03144a', textDecoration: 'none' }}>Marcheprime</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/le-barp/" style={{ color: '#03144a', textDecoration: 'none' }}>Le Barp</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/mios/" style={{ color: '#03144a', textDecoration: 'none' }}>Mios</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/salles/" style={{ color: '#03144a', textDecoration: 'none' }}>Salles</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/belin-beliet/" style={{ color: '#03144a', textDecoration: 'none' }}>Belin-Béliet</Link>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              {/* Nord des Landes */}
-              <section style={{ textAlign: 'left', marginBottom: '40px', padding: '0 16px' }}>
-                <div style={{ backgroundColor: '#03144a', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', borderRadius: '8px', padding: '24px', marginBottom: '32px' }}>
-                  <div style={{ backgroundColor: '#F8F9F4', padding: '16px 24px', borderRadius: '6px', marginBottom: '40px', textAlign: 'center', boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)', margin: '0 auto 40px auto', width: 'fit-content' }}>
-                    <h2 style={{ fontSize: '24px', fontWeight: 'bold', margin: 0 }}>🌲 Nord des Landes</h2>
-                  </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px' }}>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/sanguinet/" style={{ color: '#03144a', textDecoration: 'none' }}>Sanguinet</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/parentis-en-born/" style={{ color: '#03144a', textDecoration: 'none' }}>Parentis-en-Born</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/biscarrosse/" style={{ color: '#03144a', textDecoration: 'none' }}>Biscarrosse</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/cazaux/" style={{ color: '#03144a', textDecoration: 'none' }}>Cazaux</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/mimizan/" style={{ color: '#03144a', textDecoration: 'none' }}>Mimizan</Link>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              {/* Agglomération Bordelaise */}
-              <section style={{ textAlign: 'left', marginBottom: '40px', padding: '0 16px', gridColumn: 'span 2' }}>
-                <div style={{ backgroundColor: '#03144a', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', borderRadius: '8px', padding: '24px', marginBottom: '32px' }}>
-                  <div style={{ backgroundColor: '#F8F9F4', padding: '16px 24px', borderRadius: '6px', marginBottom: '40px', textAlign: 'center', boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)', margin: '0 auto 40px auto', width: 'fit-content' }}>
-                    <h2 style={{ fontSize: '24px', fontWeight: 'bold', margin: 0 }}>🏙 Agglomération Bordelaise</h2>
-                  </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/cestas/" style={{ color: '#03144a', textDecoration: 'none' }}>Cestas</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/canejan/" style={{ color: '#03144a', textDecoration: 'none' }}>Canéjan</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/pessac/" style={{ color: '#03144a', textDecoration: 'none' }}>Pessac</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/gradignan/" style={{ color: '#03144a', textDecoration: 'none' }}>Gradignan</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/talence/" style={{ color: '#03144a', textDecoration: 'none' }}>Talence</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/villenave-d-ornon/" style={{ color: '#03144a', textDecoration: 'none' }}>Villenave-d&apos;Ornon</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/begles/" style={{ color: '#03144a', textDecoration: 'none' }}>Bègles</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/merignac/" style={{ color: '#03144a', textDecoration: 'none' }}>Mérignac</Link>
-                    </div>
-                    <div style={cityCardStyle}>
-                      <Link href="/blog/bordeaux" style={{ color: '#03144a', textDecoration: 'none' }}>Bordeaux</Link>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-
-            {/* Section Gironde - Prend toute la largeur sur 3 colonnes */}
-            <section style={{ textAlign: 'center', marginBottom: '40px', padding: '0 16px', marginTop: '32px', gridColumn: 'span 3' }}>
-              <div style={{ backgroundColor: '#03144a', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', borderRadius: '8px', padding: '24px', marginBottom: '32px', width: '100%' }}>
-                <div style={{ backgroundColor: '#F8F9F4', padding: '16px 24px', borderRadius: '6px', marginBottom: '40px', textAlign: 'center', boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)', margin: '0 auto 40px auto', width: 'fit-content' }}>
-                  <h2 style={{ fontSize: '24px', fontWeight: 'bold', margin: 0 }}>🌾 Gironde</h2>
-                </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px', width: '100%' }}>
-                  <div style={cityCardStyle}>
-                    <Link href="/blog/le-porge/" style={{ color: '#03144a', textDecoration: 'none' }}>Le Porge</Link>
-                  </div>
-                  <div style={cityCardStyle}>
-                    <Link href="/blog/lacanau/" style={{ color: '#03144a', textDecoration: 'none' }}>Lacanau</Link>
-                  </div>
-                  <div style={cityCardStyle}>
-                    <Link href="/blog/le-temple/" style={{ color: '#03144a', textDecoration: 'none' }}>Le Temple</Link>
-                  </div>
-                  <div style={cityCardStyle}>
-                    <Link href="/blog/saint-loubes/" style={{ color: '#03144a', textDecoration: 'none' }}>Saint-Loubès</Link>
-                  </div>
-                  <div style={cityCardStyle}>
-                    <Link href="/blog/saint-selve/" style={{ color: '#03144a', textDecoration: 'none' }}>Saint-Selve</Link>
-                  </div>
-                  <div style={cityCardStyle}>
-                    <Link href="/blog/saint-jean-dillac/" style={{ color: '#03144a', textDecoration: 'none' }}>Saint-Jean-d&apos;Illac</Link>
-                  </div>
-                  <div style={cityCardStyle}>
-                    <Link href="/blog/saint-medard-en-jalles/" style={{ color: '#03144a', textDecoration: 'none' }}>Saint-Médard-en-Jalles</Link>
-                  </div>
-                  <div style={cityCardStyle}>
-                    <Link href="/blog/saint-aubin-de-medoc/" style={{ color: '#03144a', textDecoration: 'none' }}>Saint-Aubin-de-Médoc</Link>
-                  </div>
-                  <div style={cityCardStyle}>
-                    <Link href="/blog/saucats/" style={{ color: '#03144a', textDecoration: 'none' }}>Saucats</Link>
-                  </div>
-                  <div style={cityCardStyle}>
-                    <Link href="/blog/martignas-sur-jalle/" style={{ color: '#03144a', textDecoration: 'none' }}>Martignas-sur-Jalle</Link>
-                  </div>
-                  <div style={cityCardStyle}>
-                    <Link href="/blog/saint-savin/" style={{ color: '#03144a', textDecoration: 'none' }}>Saint-Savin</Link>
-                  </div>
-                </div>
+      
+      <div className="min-h-screen bg-[#F8F9F4]">
+        {/* Hero Section */}
+        
+          {/* <div className="absolute inset-0 bg-gradient-to-r from-[#03144a]/30 to-transparent"></div> */}
+          
+          <div className="relative max-w-7xl mx-auto px-4 pt-[300px] pb-24">
+            <div className="text-center">
+              <div className="inline-flex items-center gap-2 bg-[#F8F9F4]/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8">
+                <MapPin className="w-5 h-5" />
+                <span className="font-medium">Zone de couverture étendue</span>
               </div>
-            </section>
+              
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-[#F8F9F4] bg-clip-text text-transparent climText">
+                Zones Desservies
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-[#03144a] mb-8 max-w-4xl mx-auto leading-relaxed font-semibold">
+                Nous intervenons en Gironde, sur tout le Bassin d&apos;Arcachon et 
+                <span className="font-bold text-[#03144a]"> Bordeaux Métropole</span>
+              </p>
+              
+              <p className="mb-12 text-lg text-[#03144a]/80 max-w-3xl mx-auto">
+                Nous intervenons pour la pose, l&apos;installation, l&apos;entretien et la maintenance de systèmes de climatisation,
+                chauffage, pompes à chaleur, chauffe-eau et ventilation sur l&apos;ensemble du Bassin d&apos;Arcachon, du Val de l&apos;Eyre
+                jusqu&apos;à la métropole bordelaise.
+              </p>
+              
+              <div className="flex flex-wrap justify-center gap-4 mb-12">
+                {stats.map((stat, index) => (
+                  <div key={index} className="bg-[#F8F9F4]/10 backdrop-blur-sm rounded-lg px-6 py-4 text-center border border-[#F8F9F4]/20">
+                    <div className="text-2xl font-bold text-[#03144a]">{stat.number}</div>
+                    <div className="text-sm text-[#03144a]/80">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+      {/* Decorative animated image after Hero */}
+      <div className="relative h-[500px] overflow-hidden z-0">
+        <img
+          src="/mo.png"
+          alt="Effet décoratif"
+          className="absolute top-0 left-1/2 transform -translate-x-1/2 scale-100 opacity-40 animate-scroll-move"
+        />
+      </div>
+
+        {/* Services Section */}
+        <section className="py-16 ">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-[#03144a] mb-4 climText">Nos Services sur Toute la Zone</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Une expertise complète pour tous vos besoins en climatisation, chauffage et pompe à chaleur
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="group bg-gradient-to-br from-[#F8F9F4] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-[#03144a]/10">
+                  <div className="bg-gradient-to-r from-[#03144a] to-[#0a1f5e] w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-7 h-7 text-[#F8F9F4]" />
+                  </div>
+                  <h3 className="text-xl font-bold text-[#03144a] mb-3">{service.title}</h3>
+                  <p className="text-gray-600">{service.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
-      </main>
+
+        {/* Zones Section */}
+        <section className="py-20 bg-[#F8F9F4]">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-[#03144a] mb-6 climText">Découvrez Nos Zones d&apos;Intervention</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Cliquez sur une zone pour découvrir toutes les communes desservies et nos spécificités locales
+              </p>
+            </div>
+            
+            <div className="flex flex-col gap-6">
+              {zones.map((zone) => {
+                const isActive = activeZone === zone.id;
+                return (
+                  <div
+                    key={zone.id}
+                    className={`group cursor-pointer transition-all duration-500 transform hover:-translate-y-2 hover:bg-[#F8F9F4] ${
+                      isActive ? 'scale-105' : 'scale-100'
+                    } ${zone.span === 2 ? 'lg:col-span-2' : zone.span === 3 ? 'lg:col-span-3' : ''}`}
+                    onClick={() => {
+                      setActiveZone(isActive ? null : zone.id);
+                    }}
+                  >
+                    <div className="relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 bg-white border-2 border-[#03144a]/10">
+                      {/* Header */}
+                      <div className="bg-white p-8 relative overflow-hidden">
+                        <div className="absolute top-0 right-0 text-6xl opacity-20 transform rotate-12 translate-x-4 -translate-y-2">
+                        </div>
+                        <div className="relative z-10">
+                          <h3 className={`text-2xl font-bold mb-3 ${isActive ? '' : ''} text-[#03144a]`}>
+                            <Link
+                              href={zone.cities?.[0]?.url || '#'}
+                              className="hover:text-[#03144a] transition-colors text-[#03144a]"
+                            >
+                              {zone.title}
+                            </Link>
+                          </h3>
+                          <p className="text-sm leading-relaxed text-gray-700">{zone.description}</p>
+                        </div>
+                      </div>
+
+                      {/* Cities Grid */}
+                      <div
+                        className={`p-6 transition-all duration-500 ${
+                          isActive ? 'max-h-[1000px] opacity-100' : 'max-h-20 opacity-70'
+                        } overflow-hidden bg-white rounded-b-3xl`}
+                      >
+                        <div className="flex items-center justify-between mb-4">
+                          <span className="text-sm font-semibold text-gray-700">
+                            {zone.cities.length} communes
+                          </span>
+                          <ArrowRight
+                            className={`w-4 h-4 text-[#03144a]/60 transition-transform duration-300 ${
+                              isActive ? 'rotate-90' : ''
+                            }`}
+                          />
+                        </div>
+                        <div
+                          className={`grid gap-3 ${
+                            zone.span === 3
+                              ? 'grid-cols-2 md:grid-cols-4 lg:grid-cols-6'
+                              : zone.span === 2
+                              ? 'grid-cols-2 md:grid-cols-3'
+                              : 'grid-cols-1'
+                          }`}
+                        >
+                          {zone.cities.map((city, cityIndex) => (
+                            <Link
+                              key={cityIndex}
+                              href={city.url}
+                              className={`group/city bg-white rounded-lg p-3 shadow-sm hover:shadow-md transition-all duration-300 hover:bg-[#03144a] border border-[#03144a]/10 hover:border-[#03144a]/30 text-[#03144a] hover:text-white`}
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              <div className="flex items-center justify-between">
+                                <span
+                                  className="text-sm font-bold transition-colors text-[#03144a] group-hover/city:text-white"
+                                >
+                                  {city.name}
+                                </span>
+                                <ArrowRight
+                                  className="w-3 h-3 text-[#03144a]/60 group-hover/city:text-white transform group-hover/city:translate-x-1 transition-all duration-200"
+                                />
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-br from-[#03144a] via-[#0a1f5e] to-[#03144a] text-[#03144a] relative overflow-hidden">
+          <div className="absolute inset-0 bg-black/10"></div>
+          <div className="absolute inset-0">
+            <div className="absolute top-0 left-0 w-72 h-72 bg-[#F8F9F4]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#F8F9F4]/10 rounded-full blur-3xl"></div>
+          </div>
+          
+          <div className="relative max-w-4xl mx-auto px-4 text-center">
+            <Users className="w-16 h-16 mx-auto mb-8 text-[#03144a]" />
+            <h2 className="text-4xl font-bold mb-6 climText">Besoin d&apos;une Intervention ?</h2>
+            <p className="text-xl text-[#03144a]/90 mb-8 leading-relaxed">
+              Notre équipe d&apos;experts est à votre disposition dans toute la région. 
+              Devis gratuit et intervention rapide garantie !
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:0766460008"
+                className="bg-[#F8F9F4] text-[#03144a] px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
+              >
+                <Phone className="w-5 h-5 inline mr-2" />
+                Appeler Maintenant
+              </a>
+              <a
+                href="https://www.climgo.fr/contact"
+                className="border-2 border-[#F8F9F4] text-[#03144a] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#F8F9F4] hover:text-[#03144a] transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
+              >
+                Devis Gratuit
+              </a>
+            </div>
+            
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-[#F8F9F4]/10 backdrop-blur-sm rounded-lg p-6 border border-[#F8F9F4]/20">
+                <DraftingCompass className="w-8 h-8 text-[#03144a] mx-auto mb-4" />
+                <h3 className="font-bold text-lg mb-2">Installation sur mesure</h3>
+                <p className="text-[#03144a]/80 text-sm">projet personnalisé sur-mesure</p>
+              </div>
+              <div className="bg-[#F8F9F4]/10 backdrop-blur-sm rounded-lg p-6 border border-[#F8F9F4]/20">
+                <CheckCircle className="w-8 h-8 text-[#03144a] mx-auto mb-4" />
+                <h3 className="font-bold text-lg mb-2">Devis Gratuit</h3>
+                <p className="text-[#03144a]/80 text-sm">Estimation précise sans engagement</p>
+              </div>
+              <div className="bg-[#F8F9F4]/10 backdrop-blur-sm rounded-lg p-6 border border-[#F8F9F4]/20">
+                <Star className="w-8 h-8 text-[#03144a] mx-auto mb-4" />
+                <h3 className="font-bold text-lg mb-2">Garantie Qualité</h3>
+                <p className="text-[#03144a]/80 text-sm">Service après-vente</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 }
