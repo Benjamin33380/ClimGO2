@@ -110,8 +110,8 @@ export default function ZonesDesservies() {
         
           {/* <div className="absolute inset-0 bg-linear-to-r from-[#03144a]/30 to-transparent"></div> */}
           
-       <div
-          className="relative w-full h-[85vh] flex items-center justify-center px-4 pt-48 mb-20"
+    <div
+          className="relative w-full min-h-[100dvh] flex flex-col justify-between pt-[180px] px-4 pb-12"
           style={{
             backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/mo.png')",
             backgroundSize: 'cover',
@@ -119,7 +119,7 @@ export default function ZonesDesservies() {
             backgroundPosition: 'center',
           }}
         >
-            <div className="text-center">
+            <div className="text-center mt-auto">
               <div className="inline-flex items-center gap-2 bg-[#F8F9F4] backdrop-blur-sm rounded-full px-8 py-4 mb-12">
               <MapPin className="w-5 h-5" />
               </div>
