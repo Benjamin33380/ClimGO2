@@ -111,7 +111,7 @@ export default function ZonesDesservies() {
           {/* <div className="absolute inset-0 bg-linear-to-r from-[#03144a]/30 to-transparent"></div> */}
           
     <div
-          className="relative w-full min-h-[100dvh] flex flex-col justify-between pt-[180px] px-4 pb-12"
+          className="relative w-full min-h-[100dvh] flex flex-col justify-between pt-80 px-4 pb-12"
           style={{
             backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/mo.png')",
             backgroundSize: 'cover',
@@ -119,12 +119,12 @@ export default function ZonesDesservies() {
             backgroundPosition: 'center',
           }}
         >
-            <div className="text-center mt-auto">
+            <div className="text-center">
               <div className="inline-flex items-center gap-2 bg-[#F8F9F4] backdrop-blur-sm rounded-full px-8 py-4 mb-12">
               <MapPin className="w-5 h-5" />
               </div>
               
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#F8F9F4] climText">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#F8F9F4]">
                 Zones Desservies
               </h1>
               
@@ -205,7 +205,7 @@ export default function ZonesDesservies() {
                     }`}
                   >
                     {/* Header */}
-                    <div className="bg-white p-8 relative overflow-hidden">
+                    <div className="p-8 relative overflow-hidden">
                       <div className="absolute top-0 right-0 text-6xl opacity-20 transform rotate-12 translate-x-4 -translate-y-2">
                       </div>
                       <div className="relative z-10">
@@ -222,12 +222,11 @@ export default function ZonesDesservies() {
                     </div>
 
                     {/* Cities Grid */}
-                    <div className="p-6 transition-all duration-500 max-h-20 opacity-70 overflow-hidden bg-white rounded-b-3xl">
+                    <div className=" p-6 transition-all duration-500 opacity-70 overflow-hidden bg-white rounded-b-3xl">
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-sm font-semibold text-gray-700">
                           {zone.cities.length} communes
                         </span>
-                        <ArrowRight className="w-4 h-4 text-[#03144a]/60 transition-transform duration-300" />
                       </div>
                       <div className="grid gap-3 grid-cols-2 md:grid-cols-3">
                         {zone.cities.map((city, cityIndex) => (
