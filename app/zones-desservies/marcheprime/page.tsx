@@ -1,182 +1,160 @@
-export const metadata = {
-  title: "Chauffage, Climatisation et PAC à Marcheprime - ClimGO",
-  description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Marcheprime. Profitez d'un service local, certifié RGE.",
-  keywords: [
-    "chauffage Marcheprime",
-    "climatisation Marcheprime",
-    "installation clim Marcheprime",
-    "chauffe-eau Marcheprime",
-    "pompe à chaleur Marcheprime",
-    "entretien clim Marcheprime",
-    "installateur RGE Marcheprime",
-    "chauffagiste Marcheprime",
-    "climatisation réversible Marcheprime",
-    "PAC air eau Marcheprime",
-    "PAC air air Marcheprime",
-    "chauffe-eau thermodynamique Marcheprime",
-    "dépannage chauffage Marcheprime",
-    "entretien pompe à chaleur Marcheprime",
-    "installateur clim Marcheprime",
-    "clim gainable Marcheprime",
-    "clim mural Marcheprime",
-    "économie énergie Marcheprime",
-    "artisan RGE Marcheprime",
-    "clim cassette Marcheprime",
-    "devis chauffage Marcheprime",
-    "devis climatisation Marcheprime",
-    "maintenance chauffage Marcheprime",
-    "solution thermique Marcheprime",
-    "installation RGE Marcheprime",
-    "confort thermique Marcheprime",
-    "entreprise chauffage Marcheprime"
-  ],
-  openGraph: {
-    title: "Chauffage, Climatisation et PAC à Marcheprime - ClimGO",
-    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Marcheprime. Profitez d'un service local, certifié RGE.",
-    url: "https://www.climgo.fr/zones-desservies/marcheprime",
-    siteName: "ClimGO",
-    locale: "fr_FR",
-    type: "website",
-    images: [
-      {
-        url: "https://www.climgo.fr/images/og-image-marcheprime.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Chauffage et climatisation à Marcheprime - ClimGO"
-      }
-    ]
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Chauffage, Climatisation et PAC à Marcheprime - ClimGO",
-    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Marcheprime. Profitez d'un service local, certifié RGE.",
-    images: ["https://www.climgo.fr/images/og-image-marcheprime.jpg"]
-  },
-  metadataBase: new URL("https://www.climgo.fr"),
-  alternates: {
-    canonical: "/zones-desservies/marcheprime"
-  }
-};
+import GoogleReviews from "../components/GoogleReviews";
+import Testimonials from "../components/Testimonials";
+import Faq from "../components/Faq";
+import Hero from "../components/Hero";
+import Partenaires from "../components/Partenaires";
 
-export default function Marcheprime() {
+export default function Mios() {
   return (
-    <main>
-      <section className="ville-hero">
-        <h1>Installation de chauffage et climatisation à Marcheprime</h1>
-        <p>
-          ClimGO intervient à Marcheprime pour l’installation, l’entretien et la maintenance de vos systèmes de chauffage, climatisation, chauffe-eau et pompes à chaleur. Nous accompagnons particuliers et professionnels avec un service local, fiable et de qualité.
-        </p>
-        <p>
-          Située dans les Landes, à proximité du bassin d’Arcachon, la commune de Marcheprime bénéficie d’un cadre naturel remarquable, entre forêts de pins landaises et zones humides. Le parc immobilier est majoritairement constitué de maisons individuelles, souvent bien isolées mais nécessitant des solutions énergétiques adaptées au climat océanique. Les hivers doux mais humides et les étés parfois chauds engendrent des besoins spécifiques en chauffage et climatisation. Les habitants de Marcheprime recherchent donc des systèmes performants, économiques et respectueux de l’environnement pour garantir leur confort toute l’année.
-        </p>
+    <main className="px-0">
+      <section className="w-full">
+        <Hero ville="Mios" backgroundImage="/villes/mios.jpg" />
       </section>
 
-      <section className="interventions-mios">
-        <h2>Découvrez nos interventions à Marcheprime</h2>
-        <p>
-          Notre expertise couvre l’ensemble des quartiers de Marcheprime, desservant aussi bien les lotissements récents que les secteurs plus anciens et traditionnels. Que vous viviez dans un lotissement moderne ou dans une maison traditionnelle nécessitant une rénovation énergétique, ClimGO propose des solutions adaptées à chaque habitat. Nous intervenons également dans les zones en développement, où les besoins en équipements performants et durables sont cruciaux pour assurer un confort optimal.
-        </p>
-        <p>
-          Cette diversité de contextes locaux nous permet d’offrir des installations parfaitement adaptées aux caractéristiques de chaque logement, en tenant compte des contraintes architecturales et des exigences énergétiques propres à chaque quartier. Notre connaissance approfondie du territoire de Marcheprime nous permet d’assurer une intervention rapide et efficace, tout en respectant les normes environnementales et de sécurité en vigueur.
-        </p>
-        <p>
-          Forts de cette expérience, nous vous invitons à découvrir nos services, conçus pour répondre aux besoins variés des habitants de Marcheprime, qu’il s’agisse d’installations neuves, de rénovations ou de maintenance régulière.
-        </p>
+      <section className="my-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Val de l&apos;Eyre, Habitant de Mios</h2>
+          <p className="text-gray-800 leading-relaxed text-center">
+            Située au cœur du Val de l&apos;Eyre, la commune de Mios se distingue par son environnement naturel remarquable, entre forêts de pins, rivières et sentiers boisés. Ce secteur, prisé pour son calme et sa qualité de vie, attire aussi bien les familles que les jeunes actifs souhaitant conjuguer confort et nature.
+          </p>
+          <p className="text-gray-800 leading-relaxed text-center">
+            Que vous résidiez à Lacanau-de-Mios, au Bourg, Lillet ou dans les hameaux périphériques, ClimGO vous propose des solutions de chauffage, climatisation et eau chaude sanitaire pensées pour répondre aux besoins spécifiques des maisons du Val de l&apos;Eyre, tout en respectant les normes énergétiques les plus exigeantes.
+          </p>
+          <p className="text-gray-800 leading-relaxed text-center">
+            Grâce à notre proximité géographique et notre connaissance du tissu local, nous vous accompagnons dans chaque étape de votre projet, en prenant en compte les contraintes d&apos;isolation, de consommation et de configuration de votre logement typique de Mios ou de ses alentours.
+          </p>
+        </div>
       </section>
 
-      <section className="services-proposes">
-        <h2>Nos services à Marcheprime</h2>
-        <p>
-          Que vous soyez propriétaire d’une maison neuve dans un lotissement récent ou d’une bâtisse traditionnelle rénovée, ClimGO adapte ses services à tous les profils de logement à Marcheprime.
-        </p>
-        <p>
-          Nous proposons une gamme complète de solutions adaptées aux besoins spécifiques des habitants de Marcheprime, alliant efficacité énergétique et respect de l’environnement.
-        </p>
-        <p>
-          <strong>Pompes à chaleur air/eau :</strong> Ces systèmes captent les calories de l’air extérieur pour chauffer votre eau sanitaire et vos radiateurs. Ils sont particulièrement adaptés au climat tempéré de Marcheprime, offrant une solution économique et écologique pour le chauffage de votre maison, tout en réduisant significativement votre facture énergétique.
-        </p>
-        <p>
-          <strong>Pompes à chaleur air/air (clim réversible) :</strong> Parfaites pour les maisons individuelles de Marcheprime, ces pompes à chaleur permettent de chauffer ou rafraîchir l’air intérieur selon la saison. Elles offrent un confort optimal toute l’année, avec une installation rapide et un impact environnemental limité.
-        </p>
-        <p>
-          <strong>Chauffe-eau thermodynamique :</strong> Ce système utilise les calories de l’air pour chauffer efficacement l’eau sanitaire. Il convient parfaitement aux foyers de Marcheprime souhaitant réduire leur consommation d’énergie tout en bénéficiant d’une eau chaude sanitaire fiable et économique.
-        </p>
-        <p>
-          <strong>Chauffe-eau électrique :</strong> Pour les habitations où l’installation d’une pompe à chaleur n’est pas envisageable, nous proposons des chauffe-eaux électriques modernes, performants et adaptés aux besoins quotidiens des ménages de Marcheprime.
-        </p>
-        <p>
-          <strong>Climatisation (murale, gainable, cassette...) :</strong> Nous installons des systèmes de climatisation variés, adaptés à chaque type d’habitat à Marcheprime. Que ce soit pour une solution discrète et esthétique à mur, un système gainable pour une diffusion homogène, ou une cassette encastrée dans un faux plafond, nous garantissons un confort thermique optimal durant les périodes chaudes.
-        </p>
-        <p>
-          <strong>Entretien &amp; maintenance :</strong> Pour assurer la longévité et la performance de vos équipements, nous proposons des contrats d’entretien adaptés. Nos techniciens interviennent régulièrement pour vérifier, nettoyer et optimiser vos installations, garantissant ainsi un fonctionnement fiable et durable.
-        </p>
+      <section className="my-20">
+  
+        <GoogleReviews />
       </section>
 
-      <section className="pourquoi-choisir">
-        <h2>Pourquoi choisir ClimGO à Marcheprime ?</h2>
-        <p>
-          En faisant appel à ClimGO, vous bénéficiez d’un accompagnement de proximité, pensé pour les spécificités de Marcheprime et ses environs.
-        </p>
-        <p>
-          Nos techniciens sont certifiés RGE (Reconnu Garant de l’Environnement) et QualiPAC, gages de notre expertise et de notre engagement dans la qualité et la durabilité des installations. Ces certifications vous permettent également de bénéficier d’aides financières pour vos travaux.
-        </p>
-        <p>
-          Nous utilisons uniquement du matériel de qualité, rigoureusement sélectionné pour sa fiabilité et sa performance. Chaque installation est réalisée avec soin, en respectant les normes en vigueur et en veillant à l’esthétique de votre habitat.
-        </p>
-        <p>
-          Situés à proximité, nous intervenons rapidement autour de Marcheprime, limitant ainsi les délais d’attente et garantissant une prise en charge efficace de vos demandes, qu’il s’agisse d’une installation neuve ou d’une intervention de maintenance.
-        </p>
-        <p>
-          Nous accompagnons également nos clients dans leurs démarches pour l’obtention des aides financières telles que MaPrimeRénov&apos;, les Certificats d’Économies d’Énergie (CEE), la TVA réduite ou l’Éco-PTZ. Notre objectif est de rendre vos projets accessibles et avantageux.
-        </p>
+      <section
+        className="relative bg-fixed bg-center bg-cover bg-no-repeat py-20 mb-12"
+        style={{ backgroundImage: "url('/mo.png')" }}
+      >
+        <div className="absolute inset-0 bg-black/30 z-0" />
+        <div className="relative z-10 bg-white/70 backdrop-blur-lg p-8 rounded-xl shadow-xl max-w-3xl mx-auto">
+          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Nos interventions à Mios</h2>
+          <p className="text-gray-800 leading-relaxed text-center">
+            Notre expertise couvre l’ensemble des quartiers de Mios, des lotissements récents aux secteurs traditionnels. Que vous habitiez dans une maison neuve ou ancienne, nous adaptons nos solutions à chaque type d’habitat. Nous intervenons aussi dans les zones en développement, garantissant un confort optimal grâce à des équipements performants et durables.
+          </p>
+        </div>
       </section>
 
-      <section className="liens-internes">
-        <h2>Nos autres services</h2>
-        <ul>
-          <li><a href="/chauffage">Voir nos solutions de chauffage</a></li>
-          <li><a href="/climatisation">Voir nos systèmes de climatisation</a></li>
-          <li><a href="/entretien">Voir nos services d&apos;entretien</a></li>
-          <li><a href="/chauffe-eau">Voir nos chauffe-eaux</a></li>
-          <li><a href="/aides-et-subventions">Voir les aides financières disponibles</a></li>
-          <li><a href="/zones-desservies">Retour à la carte des zones desservies</a></li>
-        </ul>
+      <section className="mb-12">
+        <Testimonials />
       </section>
 
-      <section className="faq">
-        <h2>Questions fréquentes</h2>
-        <h3>Est-ce que je peux bénéficier d&apos;aides à Marcheprime ?</h3>
-        <p>Oui. Nous vous accompagnons pour bénéficier de MaPrimeRénov&apos;, CEE, TVA réduite ou encore Éco-PTZ selon votre situation.</p>
+      <div
+        className="relative bg-fixed bg-center bg-cover bg-no-repeat py-20"
+        style={{ backgroundImage: "url('/fond3.png')" }}
+      >
+        <div className="absolute inset-0 bg-black/30 z-0" />
+        <div className="relative z-10 bg-white/80 backdrop-blur-md p-6 rounded-lg max-w-4xl mx-auto">
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Pourquoi choisir ClimGO à Mios ?</h2>
+            <p className="text-gray-800 leading-relaxed mb-4 text-center">
+              En faisant appel à ClimGO, vous bénéficiez d’un accompagnement de proximité, pensé pour les spécificités de Mios et ses alentours. Nos techniciens sont certifiés RGE et QualiPAC, garantissant qualité et durabilité des installations.
+            </p>
+            <p className="text-gray-800 leading-relaxed mb-4 text-center">
+              Nous utilisons uniquement du matériel rigoureusement sélectionné pour sa fiabilité et performance. Chaque installation est réalisée avec soin, en respectant les normes en vigueur et l’esthétique de votre habitat.
+            </p>
+            <p className="text-gray-800 leading-relaxed text-center">
+              Situés à proximité, nous intervenons rapidement, limitant les délais d’attente pour une prise en charge efficace, qu’il s’agisse d’une installation neuve ou d’une maintenance.
+            </p>
+          </section>
+        </div>
+      </div>
 
-        <h3>Combien coûte une installation de pompe à chaleur ?</h3>
-        <p>Le prix varie selon le modèle, la configuration de votre logement et les aides obtenues. Nous proposons un devis gratuit et détaillé.</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+        <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-white mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          </svg>
+          <h2 className="text-xl font-semibold text-white mb-4 text-center">Types de logements desservis</h2>
+          <p className="text-white leading-relaxed text-center">
+            Nous intervenons aussi bien dans les maisons individuelles neuves que dans les bâtisses traditionnelles rénovées. Notre expérience nous permet d’adapter nos solutions aux contraintes architecturales et énergétiques propres à chaque logement.
+          </p>
+        </div>
 
-        <h3>Quels sont les délais d’intervention à Marcheprime ?</h3>
-        <p>Nous nous engageons à intervenir dans les meilleurs délais, généralement sous une semaine pour les diagnostics et interventions courantes. En cas d’urgence, notre équipe locale peut organiser une intervention rapide pour limiter les désagréments.</p>
+        <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 text-[#03144a] mx-auto mb-4">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+          </svg>
+          <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Processus d’installation</h2>
+          <p className="text-gray-800 leading-relaxed text-center">
+            Après une étude personnalisée de votre habitat, nous vous proposons un devis gratuit et détaillé. Nos équipes assurent ensuite une installation soignée, en respectant les délais convenus et les normes en vigueur.
+          </p>
+        </div>
 
-        <h3>Proposez-vous des contrats d’entretien pour les équipements installés ?</h3>
-        <p>Oui, nous proposons des contrats d’entretien personnalisés qui garantissent la maintenance régulière de vos équipements. Ces contrats permettent d’optimiser leur performance, de prolonger leur durée de vie et d’éviter les pannes imprévues.</p>
+        <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 text-[#03144a] mx-auto mb-4">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+          </svg>
+          <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Entretien &amp; maintenance</h2>
+          <p className="text-gray-800 leading-relaxed text-center">
+            Pour garantir la performance et la durabilité de vos équipements, nous proposons des contrats d’entretien personnalisés avec des visites régulières pour vérification, nettoyage et optimisation.
+          </p>
+        </div>
 
-        <h3>Faites-vous des installations dans les hameaux ou quartiers excentrés de Marcheprime ?</h3>
-        <p>Oui, notre équipe couvre l’ensemble du territoire de Marcheprime, y compris les hameaux et zones plus rurales, comme Croix d’Hins, Cassadote ou le Bourg.</p>
+        <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 text-white mx-auto mb-4">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z" />
+          </svg>
+          <h2 className="text-xl font-semibold text-white mb-4 text-center">Aides financières à Mios</h2>
+          <p className="text-white leading-relaxed text-center">
+            Nous vous accompagnons dans l’obtention des aides telles que MaPrimeRénov’, les Certificats d’Économies d’Énergie (CEE), la TVA réduite ou l’Éco-PTZ, afin de rendre vos projets plus accessibles et avantageux.
+          </p>
+        </div>
+      </div>
+
+      <div
+        className="relative bg-fixed bg-center bg-cover bg-no-repeat py-20 mb-12"
+        style={{ backgroundImage: "url('/faq.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black/30 z-0" />
+        <div className="relative z-10 bg-white/60 backdrop-blur-md p-6 rounded-lg max-w-4xl mx-auto px-4">
+          <section>
+            <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Mini FAQ locale</h2>
+            <Faq
+              questions={[
+                {
+                  question: "Quels services proposez-vous à Mios ?",
+                  answer: "Nous proposons l'installation, l'entretien et la maintenance de systèmes de chauffage, climatisation, chauffe-eau et pompes à chaleur à Mios.",
+                },
+                {
+                  question: "Travaillez-vous avec des aides financières ?",
+                  answer: "Oui, nous vous accompagnons pour bénéficier de MaPrimeRénov', des CEE, de la TVA réduite ou encore de l'Éco-PTZ.",
+                },
+                {
+                  question: "Intervenez-vous dans les zones rurales autour de Mios ?",
+                  answer: "Tout à fait. Nous couvrons Mios et ses alentours pour assurer un service de proximité.",
+                }
+              ]}
+            />
+          </section>
+        </div>
+      </div>
+
+
+     <section className="text-center my-20">
+        <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Mios ?</h2>
+        <p className="text-gray-800 leading-relaxed mb-6 text-center">
+          Faites confiance à ClimGO pour vos projets. Contactez-nous dès maintenant pour un devis gratuit et personnalisé.
+        </p>
+        <a
+          href="/contact"
+          className="inline-block bg-[#03144a] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#021037] transition"
+        >
+          Demandez votre devis gratuit à Mios
+        </a>
       </section>
 
-      <section className="cta">
-        <h2>Besoin d&apos;un devis à Marcheprime ?</h2>
-        <p>Faites confiance à ClimGO pour vos projets. Contactez-nous dès maintenant pour un devis gratuit et personnalisé.</p>
-        <a href="/contact" className="cta-button">Demandez votre devis gratuit à Marcheprime</a>
-      </section>
-
-      <section className="avis-mios">
-        <h2>Avis de nos clients à Marcheprime</h2>
-        <blockquote>
-          <p>Intervention rapide et professionnelle. ClimGO a parfaitement compris nos attentes. Merci à toute l’équipe !</p>
-          <footer>— Mme D., quartier de Croix d’Hins</footer>
-        </blockquote>
-        <blockquote>
-          <p>Très satisfait du service pour notre pompe à chaleur. Travail soigné et efficace.</p>
-          <footer>— M. B., centre de Marcheprime</footer>
-        </blockquote>
+      <section className="my-20">
+        <Partenaires />
       </section>
     </main>
   );
