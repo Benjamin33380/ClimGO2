@@ -80,7 +80,7 @@ export default function ClimatisationPage() {
           <div className="max-w-6xl mx-auto flex flex-col gap-16">
 
             {solutions.map((item) => (
-              <div key={item.title} className="group flex p-4 flex-col md:flex-row bg-linear-to-br from-[#f8f9f4] via-[#ffffff] to-[#f0f2ec] border border-gray-200 rounded-xl shadow-md overflow-hidden transition-all duration-300 group hover:shadow-lg">
+              <div key={item.title} className="group flex p-4 flex-col md:flex-row bg-gradient-to-br from-[#f8f9f4] via-[#ffffff] to-[#f0f2ec] border border-gray-200 rounded-xl shadow-md overflow-hidden transition-all duration-300 group hover:shadow-lg">
                 <div className="w-full md:w-1/2 flex items-center justify-center bg-[#f8f9f4]">
                   <div className="w-[220px] h-[160px] relative">
                     <Image src={item.image} alt={item.title} fill className="object-contain transition-transform duration-300 group-hover:scale-105" />

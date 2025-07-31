@@ -1,11 +1,9 @@
-'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { MapPin, Phone, Clock, CheckCircle, ArrowRight, Users, Star , DraftingCompass } from 'lucide-react';
 import Image from 'next/image';
 
 export default function ZonesDesservies() {
-  const [activeZone, setActiveZone] = useState<string | null>(null);
 
   const zones = [
     {
@@ -107,7 +105,7 @@ export default function ZonesDesservies() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F8F9F4] my-24">
+    <div className="min-h-screen bg-[#F8F9F4]">
         {/* Hero Section */}
         
           {/* <div className="absolute inset-0 bg-linear-to-r from-[#03144a]/30 to-transparent"></div> */}
@@ -120,7 +118,7 @@ export default function ZonesDesservies() {
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-[#F8F9F4] bg-clip-text text-transparent climText">
-                Zones Desservies
+                Zones Desservies zerazkhrjiazjhirhazr
               </h1>
               
               <p className="text-xl md:text-2xl text-[#03144a] mb-8 max-w-4xl mx-auto leading-relaxed font-semibold">
@@ -146,13 +144,14 @@ export default function ZonesDesservies() {
           </div>
 
       {/* Decorative animated image after Hero */}
-      <div className="relative h-[500px] overflow-hidden z-0">
+      <div className="relative h-[500px] overflow-hidden z-10 w-full flex justify-center items-center">
         <Image
           src="/mo.png"
           alt="Effet décoratif"
-          className="absolute top-0 left-1/2 transform -translate-x-1/2 scale-100 opacity-40 animate-scroll-move"
+          className="absolute top-0 left-1/2 transform -translate-x-1/2 scale-100 animate-scroll-move"
           width={1000}
           height={1000}
+          priority
         />
       </div>
 
@@ -167,7 +166,7 @@ export default function ZonesDesservies() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
-                <div key={index} className="group bg-linear-to-br from-[#F8F9F4] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-[#03144a]/10">
+                <div key={index} className="group bg-gradient-to-br from-[#F8F9F4] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-[#03144a]/10">
                   <div className="bg-gradient-to-r from-[#03144a] to-[#0a1f5e] w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-7 h-7 text-[#F8F9F4]" />
                   </div>
@@ -183,99 +182,70 @@ export default function ZonesDesservies() {
         <section className="py-20 bg-[#F8F9F4]">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-[#03144a] mb-6 climText">Découvrez Nos Zones d&apos;Intervention</h2>
+              <h2 className="text-4xl font-bold text-[#03144a] mb-6 climText">Découvrez Nos Zones d&apos;Interventions</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Cliquez sur une zone pour découvrir toutes les communes desservies et nos spécificités locales
               </p>
             </div>
             
             <div className="flex flex-col gap-6">
-              {zones.map((zone) => {
-                const isActive = activeZone === zone.id;
-                return (
-                  <div
-                    key={zone.id}
-                    className={`group cursor-pointer transition-all duration-500 transform hover:-translate-y-2 hover:bg-[#F8F9F4] ${
-                      isActive ? 'scale-105' : 'scale-100'
-                    } ${zone.span === 2 ? 'lg:col-span-2' : zone.span === 3 ? 'lg:col-span-3' : ''}`}
-                    onClick={() => {
-                      setActiveZone(isActive ? null : zone.id);
-                    }}
-                  >
-                    <div className="relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 bg-white border-2 border-[#03144a]/10">
-                      {/* Header */}
-                      <div className="bg-white p-8 relative overflow-hidden">
-                        <div className="absolute top-0 right-0 text-6xl opacity-20 transform rotate-12 translate-x-4 -translate-y-2">
-                        </div>
-                        <div className="relative z-10">
-                          <h3 className={`text-2xl font-bold mb-3 ${isActive ? '' : ''} text-[#03144a]`}>
-                            <Link
-                              href={zone.cities?.[0]?.url || '#'}
-                              className="hover:text-[#03144a] transition-colors text-[#03144a]"
-                            >
-                              {zone.title}
-                            </Link>
-                          </h3>
-                          <p className="text-sm leading-relaxed text-gray-700">{zone.description}</p>
-                        </div>
+              {zones.map((zone) => (
+                <div
+                  key={zone.id}
+                  className="group cursor-pointer transition-all duration-500 transform hover:-translate-y-2 hover:bg-[#F8F9F4] scale-100"
+                >
+                  <div className="relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 bg-white border-2 border-[#03144a]/10">
+                    {/* Header */}
+                    <div className="bg-white p-8 relative overflow-hidden">
+                      <div className="absolute top-0 right-0 text-6xl opacity-20 transform rotate-12 translate-x-4 -translate-y-2">
                       </div>
+                      <div className="relative z-10">
+                        <h3 className="text-2xl font-bold mb-3 text-[#03144a]">
+                          <Link
+                            href={zone.cities?.[0]?.url || '#'}
+                            className="hover:text-[#03144a] transition-colors text-[#03144a]"
+                          >
+                            {zone.title}
+                          </Link>
+                        </h3>
+                        <p className="text-sm leading-relaxed text-gray-700">{zone.description}</p>
+                      </div>
+                    </div>
 
-                      {/* Cities Grid */}
-                      <div
-                        className={`p-6 transition-all duration-500 ${
-                          isActive ? 'max-h-[1000px] opacity-100' : 'max-h-20 opacity-70'
-                        } overflow-hidden bg-white rounded-b-3xl`}
-                      >
-                        <div className="flex items-center justify-between mb-4">
-                          <span className="text-sm font-semibold text-gray-700">
-                            {zone.cities.length} communes
-                          </span>
-                          <ArrowRight
-                            className={`w-4 h-4 text-[#03144a]/60 transition-transform duration-300 ${
-                              isActive ? 'rotate-90' : ''
-                            }`}
-                          />
-                        </div>
-                        <div
-                          className={`grid gap-3 ${
-                            zone.span === 3
-                              ? 'grid-cols-2 md:grid-cols-4 lg:grid-cols-6'
-                              : zone.span === 2
-                              ? 'grid-cols-2 md:grid-cols-3'
-                              : 'grid-cols-1'
-                          }`}
-                        >
-                          {zone.cities.map((city, cityIndex) => (
-                            <Link
-                              key={cityIndex}
-                              href={city.url}
-                              className={`group/city bg-white rounded-lg p-3 shadow-sm hover:shadow-md transition-all duration-300 hover:bg-[#03144a] border border-[#03144a]/10 hover:border-[#03144a]/30 text-[#03144a] hover:text-white`}
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              <div className="flex items-center justify-between">
-                                <span
-                                  className="text-sm font-bold transition-colors text-[#03144a] group-hover/city:text-white"
-                                >
-                                  {city.name}
-                                </span>
-                                <ArrowRight
-                                  className="w-3 h-3 text-[#03144a]/60 group-hover/city:text-white transform group-hover/city:translate-x-1 transition-all duration-200"
-                                />
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
+                    {/* Cities Grid */}
+                    <div className="p-6 transition-all duration-500 max-h-20 opacity-70 overflow-hidden bg-white rounded-b-3xl">
+                      <div className="flex items-center justify-between mb-4">
+                        <span className="text-sm font-semibold text-gray-700">
+                          {zone.cities.length} communes
+                        </span>
+                        <ArrowRight className="w-4 h-4 text-[#03144a]/60 transition-transform duration-300" />
+                      </div>
+                      <div className="grid gap-3 grid-cols-2 md:grid-cols-3">
+                        {zone.cities.map((city, cityIndex) => (
+                          <Link
+                            key={cityIndex}
+                            href={city.url}
+                            className="group/city bg-white rounded-lg p-3 shadow-sm hover:shadow-md transition-all duration-300 hover:bg-[#03144a] border border-[#03144a]/10 hover:border-[#03144a]/30 text-[#03144a] hover:text-white"
+                          >
+                            <div className="flex items-center justify-between">
+                              <span className="text-sm font-bold transition-colors text-[#03144a] group-hover/city:text-white">
+                                {city.name}
+                              </span>
+                              <ArrowRight className="w-3 h-3 text-[#03144a]/60 group-hover/city:text-white transform group-hover/city:translate-x-1 transition-all duration-200" />
+                            </div>
+                          </Link>
+                        ))}
                       </div>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-linear-to-br from-[#03144a] via-[#0a1f5e] to-[#03144a] text-[#03144a] relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-br from-[#03144a] via-[#0a1f5e] to-[#03144a] text-[#03144a] relative overflow-hidden">
           <div className="absolute inset-0 bg-black/10"></div>
           <div className="absolute inset-0">
             <div className="absolute top-0 left-0 w-72 h-72 bg-[#F8F9F4]/10 rounded-full blur-3xl"></div>

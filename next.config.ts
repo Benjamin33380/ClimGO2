@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
     }
     return config
   },
+  // Configuration pour éviter les conflits avec les bloqueurs et forcer le rechargement des styles
+  experimental: {
+    optimizePackageImports: ['@uiw/react-md-editor'],
+    forceSwcTransforms: true,
+  },
   images: {
     remotePatterns: [
       {
@@ -15,10 +20,6 @@ const nextConfig: NextConfig = {
         hostname: '**',
       },
     ],
-  },
-  // Configuration pour éviter les conflits avec les bloqueurs
-  experimental: {
-    optimizePackageImports: ['@uiw/react-md-editor'],
   },
   async redirects() {
     return [
@@ -50,23 +51,6 @@ const nextConfig: NextConfig = {
       {
         source: '/(.*)',
         headers: [
-          {
-            key: 'Content-Security-Policy',
-            value: [
-              "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.climgo.fr https://localhost:3000 http://192.168.1.135:3000 http://localhost:3000",
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-              "font-src 'self' https://fonts.gstatic.com",
-              "img-src 'self' data: https: blob:",
-              "connect-src 'self' https://www.climgo.fr https://localhost:3000 http://192.168.1.135:3000 http://localhost:3000",
-              "frame-src 'self'",
-              "object-src 'none'",
-              "base-uri 'self'",
-              "form-action 'self'",
-              "frame-ancestors 'self'",
-              "upgrade-insecure-requests"
-            ].join('; '),
-          },
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff',

@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* Force le rechargement des styles en développement */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
