@@ -114,7 +114,6 @@ const nextConfig: NextConfig = {
         source: '/chauffage-climatisation-gradignan',
         destination: '/zones-desservies/gradignan',
       },
-      // Added missing cities
       {
         source: '/chauffage-climatisation-lanton',
         destination: '/zones-desservies/lanton',
@@ -191,7 +190,6 @@ const nextConfig: NextConfig = {
         source: '/chauffage-climatisation-saint-selve',
         destination: '/zones-desservies/saint-selve',
       },
-
       {
         source: '/chauffage-climatisation-saint-aubin-de-medoc',
         destination: '/zones-desservies/saint-aubin-de-medoc',
