@@ -57,7 +57,7 @@ export default function ZonesDesservies() {
 
       description: 'Zone intervention, zone desservies par ClimGO',
       cities: [
-        { name: 'Bordeaux', url: 'https://www.climgo.fr/blog/bordeaux/' },
+        { name: 'Bordeaux', url: 'https://www.climgo.fr/chauffage-climatisation-bordeaux' },
         { name: 'Mérignac', url: 'https://www.climgo.fr/blog/merignac/' },
         { name: 'Pessac', url: 'https://www.climgo.fr/blog/pessac/' },
         { name: 'Talence', url: 'https://www.climgo.fr/blog/talence/' },
