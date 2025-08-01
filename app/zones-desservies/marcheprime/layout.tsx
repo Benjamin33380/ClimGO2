@@ -33,7 +33,7 @@ export const metadata = {
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Marcheprime - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Marcheprime. Profitez d'un service local, certifié RGE.",
-    url: "https://www.climgo.fr/chauffage-climatisation/marcheprime",
+    url: "https://www.climgo.fr/zones-desservies/marcheprime",
     siteName: "ClimGO",
     locale: "fr_FR",
     type: "website",

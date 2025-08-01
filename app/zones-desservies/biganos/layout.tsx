@@ -33,7 +33,7 @@ export const metadata = {
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Biganos - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Biganos. Profitez d'un service local, certifié RGE.",
-    url: "https://www.climgo.fr/chauffage-climatisation/biganos",
+    url: "https://www.climgo.fr/zones-desservies/biganos",
     siteName: "ClimGO",
     locale: "fr_FR",
     type: "website",

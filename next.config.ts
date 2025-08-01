@@ -36,6 +36,22 @@ const nextConfig: NextConfig = {
       },
     ]
   },
+  async rewrites() {
+    return [
+      {
+        source: '/chauffage-climatisation-mios',
+        destination: '/zones-desservies/mios',
+      },
+      {
+        source: '/chauffage-climatisation-marcheprime',
+        destination: '/zones-desservies/marcheprime',
+      },
+      {
+        source: '/chauffage-climatisation-biganos',
+        destination: '/zones-desservies/biganos',
+      },
+    ];
+  },
   // Headers pour éviter les blocages et CSP
   async headers() {
     return [
