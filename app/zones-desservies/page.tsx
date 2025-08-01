@@ -46,9 +46,27 @@ export default function ZonesDesservies() {
         { name: 'Sanguinet', url: 'https://www.climgo.fr/chauffage-climatisation-sanguinet' },
         { name: 'Parentis-en-Born', url: 'https://www.climgo.fr/chauffage-climatisation-parentis-en-born' },
         { name: 'Biscarrosse', url: 'https://www.climgo.fr/chauffage-climatisation-biscarrosse' },
-        { name: 'Cazaux', url: 'https://www.climgo.fr/chauffage-climatisation-cazaux' },
+        { name: 'Parentis', url: 'https://www.climgo.fr/chauffage-climatisation-parentis' },
         { name: 'Mimizan', url: 'https://www.climgo.fr/chauffage-climatisation-mimizan' }
       ],
+      span: 1
+    },
+    {
+      id: 'pays-graves',
+      title: 'Pays des Graves',
+      description: 'Zone intervention, zone desservies par ClimGO',
+      cities: [
+        { name: 'Canéjan', url: 'https://www.climgo.fr/chauffage-climatisation-canejan' },
+        { name: 'Gradignan', url: 'https://www.climgo.fr/chauffage-climatisation-gradignan' },
+        { name: 'Saucats', url: 'https://www.climgo.fr/chauffage-climatisation-saucats' },
+        { name: 'Saint-Selve', url: 'https://www.climgo.fr/chauffage-climatisation-saint-selve' },
+        { name: 'Martillac', url: 'https://www.climgo.fr/chauffage-climatisation-martillac' },
+        { name: 'Léognan', url: 'https://www.climgo.fr/chauffage-climatisation-leognan' },
+        { name: 'La Brède', url: 'https://www.climgo.fr/chauffage-climatisation-la-brede' },
+        { name: 'Cadaujac', url: 'https://www.climgo.fr/chauffage-climatisation-cadaujac' },
+        { name: 'Cestas', url: 'https://www.climgo.fr/chauffage-climatisation-cestas' }
+    
+     ],
       span: 1
     },
     {
@@ -57,13 +75,18 @@ export default function ZonesDesservies() {
 
       description: 'Zone intervention, zone desservies par ClimGO',
       cities: [
-        { name: 'Bordeaux', url: 'https://www.climgo.fr/chauffage-climatisation-bordeaux' }, // Bordeaux reste inchangé
+        { name: 'Bordeaux', url: 'https://www.climgo.fr/chauffage-climatisation-bordeaux' }, 
+        { name: 'Le Haillan', url: 'https://www.climgo.fr/chauffage-climatisation-le-haillan' },
+        { name: 'Le Bouscat', url: 'https://www.climgo.fr/chauffage-climatisation-le-bouscat' },
+        { name: 'Bruges', url: 'https://www.climgo.fr/chauffage-climatisation-bruges' },
+        { name: 'Eysines', url: 'https://www.climgo.fr/chauffage-climatisation-eysines' },
+        { name: 'Cenon', url: 'https://www.climgo.fr/chauffage-climatisation-cenon' },
+        { name: 'Lormont', url: 'https://www.climgo.fr/chauffage-climatisation-lormont' },
+        { name: 'Floirac', url: 'https://www.climgo.fr/chauffage-climatisation-floirac' },
+        { name: 'Bouliac', url: 'https://www.climgo.fr/chauffage-climatisation-bouliac' },
         { name: 'Mérignac', url: 'https://www.climgo.fr/chauffage-climatisation-merignac' },
         { name: 'Pessac', url: 'https://www.climgo.fr/chauffage-climatisation-pessac' },
         { name: 'Talence', url: 'https://www.climgo.fr/chauffage-climatisation-talence' },
-        { name: 'Gradignan', url: 'https://www.climgo.fr/chauffage-climatisation-gradignan' },
-        { name: 'Cestas', url: 'https://www.climgo.fr/chauffage-climatisation-cestas' },
-        { name: 'Canéjan', url: 'https://www.climgo.fr/chauffage-climatisation-canejan' },
         { name: "Villenave-d'Ornon", url: 'https://www.climgo.fr/chauffage-climatisation-villenave-d-ornon' },
         { name: 'Bègles', url: 'https://www.climgo.fr/chauffage-climatisation-begles' }
       ],
@@ -75,17 +98,12 @@ export default function ZonesDesservies() {
 
       description: 'Zone intervention, zone desservies par ClimGO',
       cities: [
-        { name: 'Le Porge', url: 'https://www.climgo.fr/chauffage-climatisation-le-porge' },
         { name: 'Lacanau', url: 'https://www.climgo.fr/chauffage-climatisation-lacanau' },
-        { name: 'Le Temple', url: 'https://www.climgo.fr/chauffage-climatisation-le-temple' },
         { name: 'Saint-Loubès', url: 'https://www.climgo.fr/chauffage-climatisation-saint-loubes' },
-        { name: 'Saint-Selve', url: 'https://www.climgo.fr/chauffage-climatisation-saint-selve' },
         { name: "Saint-Jean-d'Illac", url: 'https://www.climgo.fr/chauffage-climatisation-saint-jean-dillac' },
         { name: "Saint-Médard-en-Jalles", url: 'https://www.climgo.fr/chauffage-climatisation-saint-medard-en-jalles' },
         { name: "Saint-Aubin-de-Médoc", url: 'https://www.climgo.fr/chauffage-climatisation-saint-aubin-de-medoc' },
-        { name: 'Saucats', url: 'https://www.climgo.fr/chauffage-climatisation-saucats' },
         { name: 'Martignas-sur-Jalle', url: 'https://www.climgo.fr/chauffage-climatisation-martignas-sur-jalle' },
-        { name: 'Saint-Savin', url: 'https://www.climgo.fr/chauffage-climatisation-saint-savin' }
       ],
       span: 3
     }
@@ -201,6 +219,7 @@ export default function ZonesDesservies() {
                       zone.id === 'landes' ? 'bg-[#FFF5E1]' :
                       zone.id === 'bordeaux' ? 'bg-[#E3F2FD]' :
                       zone.id === 'gironde' ? 'bg-[#F3E5F5]' :
+                      zone.id === 'other' ? 'bg-white' :
                       'bg-white'
                     }`}
                   >
@@ -240,6 +259,7 @@ export default function ZonesDesservies() {
                                 zone.id === 'landes' ? 'bg-[#FFF5E1] hover:bg-[#F4A261] hover:text-white border border-[#F4A261]/30 text-[#264653]' :
                                 zone.id === 'bordeaux' ? 'bg-[#E3F2FD] hover:bg-[#2196F3] hover:text-white border border-[#2196F3]/30 text-[#0D47A1]' :
                                 zone.id === 'gironde' ? 'bg-[#F3E5F5] hover:bg-[#9C27B0] hover:text-white border border-[#9C27B0]/30 text-[#4A148C]' :
+                                zone.id === 'graves' ? 'bg-white border border-[#03144a]/10 text-[#03144a] hover:bg-[#03144a] hover:text-white' :
                                 'bg-white border border-[#03144a]/10 text-[#03144a] hover:bg-[#03144a] hover:text-white'
                               }`}
                           >
