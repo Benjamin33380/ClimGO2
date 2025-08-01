@@ -61,5 +61,41 @@ export const metadata: Metadata = {
 };
 
 export default function AProposLayout({ children }: { children: React.ReactNode }) {
-  return <div>{children}</div>;
+  return (
+    <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "ClimGO",
+            "url": "https://www.climgo.fr",
+            "logo": "https://www.climgo.fr/Logo.png",
+            "description": "ClimGO est une entreprise spécialisée dans l'installation de chauffage, climatisation et production d'eau chaude sanitaire en Gironde.",
+            "sameAs": [
+              "https://www.instagram.com/climgo_climatisation_chauffage/",
+              "https://www.facebook.com/people/Climgo/61578576031066/",
+              "https://www.linkedin.com/company/climgo"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Marcheprime",
+              "addressRegion": "Nouvelle-Aquitaine",
+              "postalCode": "33380",
+              "addressCountry": "FR"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+33 7 66 46 00 08",
+              "contactType": "customer service",
+              "areaServed": "FR",
+              "availableLanguage": ["French"]
+            }
+          })
+        }}
+      />
+      {children}
+    </div>
+  );
 }
