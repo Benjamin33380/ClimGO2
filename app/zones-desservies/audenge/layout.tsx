@@ -74,15 +74,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "telephone": "+33 7 66 46 00 08",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "28 rue de Cantelaude",
-            "addressLocality": "Marcheprime",
-            "postalCode": "33380",
+            "streetAddress": "Place Laurent-Barrière",
+            "addressLocality": "Audenge",
+            "postalCode": "33980",
             "addressCountry": "FR"
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 44.8378,
-            "longitude": -0.5792
+            "latitude": 44.6843,
+            "longitude": -1.0133
           },
           "sameAs": [
             "https://www.instagram.com/climgo_climatisation_chauffage/",

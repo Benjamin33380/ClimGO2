@@ -74,15 +74,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "telephone": "+33 7 66 46 00 08",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "28 rue de Cantelaude",
-            "addressLocality": "Marcheprime",
-            "postalCode": "33380",
+            "streetAddress": "Place du Souvenir",
+            "addressLocality": "Le Teich",
+            "postalCode": "33470",
             "addressCountry": "FR"
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 44.645,
-            "longitude": -1.005
+            "latitude": 44.6288,
+            "longitude": -1.0212
           },
           "sameAs": [
             "https://www.instagram.com/climgo_climatisation_chauffage/",

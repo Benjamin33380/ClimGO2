@@ -74,15 +74,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "telephone": "+33 7 66 46 00 08",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "28 rue de Cantelaude",
-            "addressLocality": "Marcheprime",
+            "streetAddress": "2 Rue Jules Ferry",
+            "addressLocality": "Biganos",
             "postalCode": "33380",
             "addressCountry": "FR"
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 44.6526,
-            "longitude": -1.0211
+            "latitude": 44.6462,
+            "longitude": -0.9808
           },
           "sameAs": [
             "https://www.instagram.com/climgo_climatisation_chauffage/",

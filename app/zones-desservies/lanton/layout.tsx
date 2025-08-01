@@ -74,15 +74,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "telephone": "+33 7 66 46 00 08",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "28 rue de Cantelaude",
-            "addressLocality": "Marcheprime",
-            "postalCode": "33380",
+            "streetAddress": "1 Place de la Mairie",
+            "addressLocality": "Lanton",
+            "postalCode": "33138",
             "addressCountry": "FR"
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 44.645,
-            "longitude": -1.005
+            "latitude": 44.715,
+            "longitude": -1.031
           },
           "sameAs": [
             "https://www.instagram.com/climgo_climatisation_chauffage/",

@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 export const metadata = {
   title: "Chauffage, Climatisation et PAC à Mios - ClimGO",
   description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Mios. Profitez d'un service local, certifié RGE.",
@@ -59,5 +61,37 @@ export const metadata = {
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "ClimGO",
+          "image": "https://www.climgo.fr/images/og-image-mios.jpg",
+          "@id": "https://www.climgo.fr/zones-desservies/mios",
+          "url": "https://www.climgo.fr/zones-desservies/mios",
+          "telephone": "+33 7 66 46 00 08",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Place Alexandre Austre",
+            "addressLocality": "Mios",
+            "postalCode": "33380",
+            "addressCountry": "FR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.5797,
+            "longitude": -0.9739
+          },
+          "sameAs": [
+            "https://www.instagram.com/climgo_climatisation_chauffage/",
+            "https://www.facebook.com/people/Climgo/61578576031066/",
+            "https://www.linkedin.com/company/climgo"
+          ]
+        })}
+      </Script>
+      {children}
+    </>
+  );
 }

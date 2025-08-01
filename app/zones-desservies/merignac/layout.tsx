@@ -74,15 +74,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "telephone": "+33 7 66 46 00 08",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "28 rue de Cantelaude",
-            "addressLocality": "Marcheprime",
-            "postalCode": "33380",
+            "streetAddress": "60 Avenue du Maréchal de Lattre de Tassigny",
+            "addressLocality": "Mérignac",
+            "postalCode": "33700",
             "addressCountry": "FR"
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 44.8412,
-            "longitude": -0.6561
+            "latitude": 44.8307,
+            "longitude": -0.6337
           },
           "sameAs": [
             "https://www.instagram.com/climgo_climatisation_chauffage/",

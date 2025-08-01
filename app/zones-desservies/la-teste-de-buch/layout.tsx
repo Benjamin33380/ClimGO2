@@ -74,15 +74,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "telephone": "+33 7 66 46 00 08",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "28 rue de Cantelaude",
-            "addressLocality": "Marcheprime",
-            "postalCode": "33380",
+            "streetAddress": "Place Jean Hameau",
+            "addressLocality": "La Teste-de-Buch",
+            "postalCode": "33260",
             "addressCountry": "FR"
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 44.6184,
-            "longitude": -1.1373
+            "latitude": 44.6255,
+            "longitude": -1.1439
           },
           "sameAs": [
             "https://www.instagram.com/climgo_climatisation_chauffage/",
