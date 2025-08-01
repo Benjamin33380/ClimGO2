@@ -56,7 +56,7 @@ export const metadata = {
   },
   metadataBase: new URL("https://www.climgo.fr"),
   alternates: {
-    canonical: "/zones-desservies/salles"
+    canonical: "/chauffage-climatisation-salles"
   }
 };
 
@@ -69,8 +69,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "@type": "LocalBusiness",
           "name": "ClimGO",
           "image": "https://www.climgo.fr/images/og-image-salles.jpg",
-          "@id": "https://www.climgo.fr/zones-desservies/salles",
-          "url": "https://www.climgo.fr/zones-desservies/salles",
+          "@id": "https://www.climgo.fr/chauffage-climatisation-salles",
+          "url": "https://www.climgo.fr/chauffage-climatisation-salles",
           "telephone": "+33 7 66 46 00 08",
           "address": {
             "@type": "PostalAddress",

@@ -54,7 +54,7 @@ export const metadata = {
   },
   metadataBase: new URL("https://www.climgo.fr"),
   alternates: {
-    canonical: "/zones-desservies/marcheprime"
+    canonical: "/chauffage-climatisation-marcheprime"
   }
 };
 
@@ -69,8 +69,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "@type": "LocalBusiness",
           "name": "ClimGO",
           "image": "https://www.climgo.fr/images/og-image-marcheprime.jpg",
-          "@id": "https://www.climgo.fr/zones-desservies/marcheprime",
-          "url": "https://www.climgo.fr/zones-desservies/marcheprime",
+          "@id": "https://www.climgo.fr/chauffage-climatisation-marcheprime",
+          "url": "https://www.climgo.fr/chauffage-climatisation-marcheprime",
           "telephone": "+33 7 66 46 00 08",
           "address": {
             "@type": "PostalAddress",

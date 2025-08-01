@@ -54,7 +54,7 @@ export const metadata = {
   },
   metadataBase: new URL("https://www.climgo.fr"),
   alternates: {
-    canonical: "/zones-desservies/pessac"
+    canonical: "/chauffage-climatisation-pessac"
   }
 };
 
@@ -69,8 +69,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "@type": "LocalBusiness",
           "name": "ClimGO",
           "image": "https://www.climgo.fr/images/og-image-pessac.jpg",
-          "@id": "https://www.climgo.fr/zones-desservies/pessac",
-          "url": "https://www.climgo.fr/zones-desservies/pessac",
+          "@id": "https://www.climgo.fr/chauffage-climatisation-pessac",
+          "url": "https://www.climgo.fr/chauffage-climatisation-pessac",
           "telephone": "+33 7 66 46 00 08",
           "address": {
             "@type": "PostalAddress",

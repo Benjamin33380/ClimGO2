@@ -54,7 +54,7 @@ export const metadata = {
   },
   metadataBase: new URL("https://www.climgo.fr"),
   alternates: {
-    canonical: "/zones-desservies/merignac"
+    canonical: "/chauffage-climatisation-merignac"
   }
 };
 
@@ -69,8 +69,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "@type": "LocalBusiness",
           "name": "ClimGO",
           "image": "https://www.climgo.fr/images/og-image-merignac.jpg",
-          "@id": "https://www.climgo.fr/zones-desservies/merignac",
-          "url": "https://www.climgo.fr/zones-desservies/merignac",
+          "@id": "https://www.climgo.fr/chauffage-climatisation-merignac",
+          "url": "https://www.climgo.fr/chauffage-climatisation-merignac",
           "telephone": "+33 7 66 46 00 08",
           "address": {
             "@type": "PostalAddress",

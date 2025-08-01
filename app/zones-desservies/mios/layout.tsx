@@ -56,7 +56,7 @@ export const metadata = {
   },
   metadataBase: new URL("https://www.climgo.fr"),
   alternates: {
-    canonical: "/zones-desservies/mios"
+    canonical: "/chauffage-climatisation-mios"
   }
 };
 
@@ -69,8 +69,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "@type": "LocalBusiness",
           "name": "ClimGO",
           "image": "https://www.climgo.fr/images/og-image-mios.jpg",
-          "@id": "https://www.climgo.fr/zones-desservies/mios",
-          "url": "https://www.climgo.fr/zones-desservies/mios",
+          "@id": "https://www.climgo.fr/chauffage-climatisation-mios",
+          "url": "https://www.climgo.fr/chauffage-climatisation-mios",
           "telephone": "+33 7 66 46 00 08",
           "address": {
             "@type": "PostalAddress",
