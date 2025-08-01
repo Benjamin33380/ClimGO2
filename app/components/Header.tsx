@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiHome, FiSettings, FiInfo, FiBookOpen, FiMail , } from 'react-icons/fi';
+import { ImMap } from 'react-icons/im';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,12 +40,19 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Bannière défilante */}
+      <div className="scrolling-banner" role="alert" aria-live="polite">
+        <p>
+         Website en plein réglage. Si une page vous claque la porte, c’est qu’on est en train de la visser. L&apos;entreprise est également fermer du 11/08 au 22/08 inclut.
+        </p>
+      </div>
+
       {/* Section navigation centrée avec logo intégré */}
       <div className="w-full bg-transparent">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center h-20 mt-4 relative z-10">
+          <div className="flex items-center justify-center h-20 relative z-10">
             {/* Navigation centrée avec logo intégré */}
-            <div className="bg-[#F9F8F4] hover:bg-[#03144a] transition-colors duration-300 rounded-full px-4 py-0.5 backdrop-blur-md mt-4 group-hover:text-white">
+            <div className="bg-[#F9F8F4] hover:bg-[#03144a] transition-colors duration-300 rounded-full px-4 py-0.5 backdrop-blur-md group-hover:text-white">
               {/* Navigation Desktop */}
               <nav className="hidden md:flex items-center space-x-6 text-[#03144a] group bg-transparent">
                 <Link href="/" className="flex items-center">
@@ -91,17 +99,20 @@ export default function Header() {
                     </div>
                   </div>
                 </div>
-                <Link href="/aides-etat" className="group-hover:text-white transition-colors text-base font-semibold">
-                  Aides d&apos;État
+                <Link href="/zones-desservies" className="group-hover:text-white transition-colors text-base font-semibold">
+                  Z.I
                 </Link>
                 <Link href="/a-propos" className="group-hover:text-white transition-colors text-base font-semibold">
                   À Propos
                 </Link>
-                <Link href="/blog" className="group-hover:text-white transition-colors text-base font-semibold">
-                  Blog
-                </Link>
                 <Link href="/contact" className="group-hover:text-white transition-colors text-base font-semibold">
                   Contact
+                </Link>
+                <Link href="/aides-etat" className="group-hover:text-white transition-colors text-base font-semibold">
+                  Aides d&apos;État
+                </Link>
+                <Link href="/blog" className="group-hover:text-white transition-colors text-base font-semibold">
+                  Blog
                 </Link>
               </nav>
 
@@ -244,14 +255,16 @@ export default function Header() {
                   )}
                 </div>
 
-                <Link 
-                  href="/aides-etat" 
+                <Link
+                  href="/zones-desservies"
                   onClick={closeMenu}
-                  className="flex items-center gap-2 text-[#03144a]  text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
+                  className="flex items-center gap-2 text-[#03144a] text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
                 >
-                  <FiBookOpen className="text-xl" /> Aides d&apos;État
+                  <span className="flex items-center gap-2">
+                    <ImMap className="text-[16px]" />
+                    Z.I
+                  </span>
                 </Link>
-                
                 <Link 
                   href="/a-propos" 
                   onClick={closeMenu}
@@ -260,18 +273,25 @@ export default function Header() {
                   <FiInfo className="text-xl" /> À Propos
                 </Link>
                 <Link 
-                  href="/blog"
-                  onClick={closeMenu}
-                  className="flex items-center gap-2 text-[#03144a]  text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
-                >
-                  <FiBookOpen className="text-xl" /> Blog
-                </Link>
-                <Link 
                   href="/contact" 
                   onClick={closeMenu}
                   className="flex items-center gap-2 text-[#03144a] text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
                 >
                   <FiMail className="text-xl" /> Contact
+                </Link>
+                <Link 
+                  href="/aides-etat" 
+                  onClick={closeMenu}
+                  className="flex items-center gap-2 text-[#03144a]  text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
+                >
+                  <FiBookOpen className="text-xl" /> Aides d&apos;État
+                </Link>
+                <Link 
+                  href="/blog"
+                  onClick={closeMenu}
+                  className="flex items-center gap-2 text-[#03144a]  text-base font-medium py-2 border-b border-white/10 tracking-wide uppercase"
+                >
+                  <FiBookOpen className="text-xl" /> Blog
                 </Link>
               </nav>
 
