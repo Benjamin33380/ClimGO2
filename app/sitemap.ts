@@ -125,8 +125,68 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }))
 
+  // Pages locales par ville
+  const villesLocales = [
+    'arcachon',
+    'la-teste-de-buch',
+    'gujan-mestras',
+    'le-teich',
+    'biganos',
+    'audenge',
+    'lanton',
+    'andernos-les-bains',
+    'ares',
+    'lege-cap-ferret',
+    'marcheprime',
+    'le-barp',
+    'mios',
+    'salles',
+    'belin-beliet',
+    'sanguinet',
+    'parentis-en-born',
+    'biscarrosse',
+    'parentis',
+    'mimizan',
+    'canejan',
+    'gradignan',
+    'saucats',
+    'saint-selve',
+    'martillac',
+    'leognan',
+    'la-brede',
+    'cadaujac',
+    'cestas',
+    'bordeaux',
+    'le-haillan',
+    'le-bouscat',
+    'bruges',
+    'eysines',
+    'cenon',
+    'lormont',
+    'floirac',
+    'bouliac',
+    'merignac',
+    'pessac',
+    'talence',
+    'villenave-d-ornon',
+    'begles',
+    'lacanau',
+    'saint-loubes',
+    'saint-jean-dillac',
+    'saint-medard-en-jalles',
+    'saint-aubin-de-medoc',
+    'martignas-sur-jalle'
+  ]
+
+  const pagesLocales: MetadataRoute.Sitemap = villesLocales.map((ville) => ({
+    url: `${baseUrl}/chauffage-climatisation-${ville}`,
+    lastModified: new Date('2025-07-31'),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }))
+
   // Retour du sitemap complet
-  return [...staticPages, ...blogPages]
+  return [...staticPages, ...blogPages, ...pagesLocales]
 }
 
 // Si tu préfères utiliser app/sitemap.xml/route.ts (alternative)
