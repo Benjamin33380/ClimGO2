@@ -1,8 +1,8 @@
-import GoogleReviews from "../components/GoogleReviews";
-import Testimonials from "../components/Testimonials";
-import Faq from "../components/Faq";
-import Hero from "../components/Hero";
-import Partenaires from "../components/Partenaires";
+import GoogleReviews from "../component/GoogleReviews";
+import Testimonials from "../component/Testimonials";
+import Faq from "../component/Faq";
+import Hero from "../component/Hero";
+import Partenaires from "../component/Partenaires";
 
 export default function Mios() {
   return (

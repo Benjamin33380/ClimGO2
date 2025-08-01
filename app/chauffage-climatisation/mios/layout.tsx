@@ -33,7 +33,7 @@ export const metadata = {
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Mios - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Mios. Profitez d'un service local, certifié RGE.",
-    url: "https://www.climgo.fr/zones-desservies/mios",
+    url: "https://www.climgo.fr/chauffage-climatisation/mios",
     siteName: "ClimGO",
     locale: "fr_FR",
     type: "website",
