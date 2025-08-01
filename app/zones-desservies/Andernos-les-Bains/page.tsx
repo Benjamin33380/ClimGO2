@@ -4,24 +4,24 @@ import Faq from "../component/Faq";
 import Hero from "../component/Hero";
 import Partenaires from "../component/Partenaires";
 
-export default function Mios() {
+export default function Andernos() {
   return (
     <main className="px-0">
       <section className="w-full">
-        <Hero ville="Mios" backgroundImage="/villes/mios.jpg" />
+        <Hero ville="Andernos-les-Bains" backgroundImage="/villes/andernos.jpg" />
       </section>
 
       <section className="my-20">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Val de l&apos;Eyre, Habitant de Mios</h2>
+          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Bassin d&apos;Arcachon, Habitant d&apos;Andernos-les-Bains</h2>
           <p className="text-gray-800 leading-relaxed text-center">
-            Située au cœur du Val de l&apos;Eyre, la commune de Mios se distingue par son environnement naturel remarquable, entre forêts de pins, rivières et sentiers boisés. Ce secteur, prisé pour son calme et sa qualité de vie, attire aussi bien les familles que les jeunes actifs souhaitant conjuguer confort et nature.
+            Située au bord du bassin, Andernos-les-Bains séduit par son cadre maritime et ses quartiers variés, du centre-ville animé au Bétey paisible. ClimGO adapte ses solutions à chaque type d’habitat pour garantir votre confort thermique toute l’année.
           </p>
           <p className="text-gray-800 leading-relaxed text-center">
-            Que vous résidiez à Lacanau-de-Mios, au Bourg, Lillet ou dans les hameaux périphériques, ClimGO vous propose des solutions de chauffage, climatisation et eau chaude sanitaire pensées pour répondre aux besoins spécifiques des maisons du Val de l&apos;Eyre, tout en respectant les normes énergétiques les plus exigeantes.
+            Nous accompagnons les familles, retraités et nouveaux arrivants dans leurs projets d’installation, en tenant compte des spécificités locales et des réglementations environnementales.
           </p>
           <p className="text-gray-800 leading-relaxed text-center">
-            Grâce à notre proximité géographique et notre connaissance du tissu local, nous vous accompagnons dans chaque étape de votre projet, en prenant en compte les contraintes d&apos;isolation, de consommation et de configuration de votre logement typique de Mios ou de ses alentours.
+            Chaque intervention vise à optimiser la performance énergétique de votre logement tout en respectant l’intégration harmonieuse dans ce cadre naturel et urbain.
           </p>
         </div>
       </section>
@@ -32,14 +32,14 @@ export default function Mios() {
       </section>
 
       <section
-        className="relative bg-fixed bg-[50%_30%] bg-cover bg-no-repeat py-20 mb-12 transition-all duration-700 ease-out"
+        className="relative bg-fixed bg-center bg-cover bg-no-repeat py-20 mb-12"
         style={{ backgroundImage: "url('/mo.png')" }}
       >
         <div className="absolute inset-0 bg-black/30 z-0" />
         <div className="relative z-10 bg-white/70 backdrop-blur-lg p-8 rounded-xl shadow-xl max-w-3xl mx-auto">
-          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Nos interventions à Mios</h2>
+          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Nos interventions à Andernos-les-Bains</h2>
           <p className="text-gray-800 leading-relaxed text-center">
-            Notre expertise couvre l’ensemble des quartiers de Mios, des lotissements récents aux secteurs traditionnels. Que vous habitiez dans une maison neuve ou ancienne, nous adaptons nos solutions à chaque type d’habitat. Nous intervenons aussi dans les zones en développement, garantissant un confort optimal grâce à des équipements performants et durables.
+            Du centre-ville au Bétey, nous couvrons tous les secteurs d’Andernos. Nos solutions s’adaptent aux constructions neuves comme aux maisons anciennes, avec un souci constant d’efficacité et de durabilité. Où que vous soyez, nous vous garantissons un service réactif et personnalisé.
           </p>
         </div>
       </section>
@@ -49,21 +49,21 @@ export default function Mios() {
       </section>
 
       <div
-        className="relative bg-fixed bg-[50%_30%] bg-cover bg-no-repeat py-20 transition-all duration-700 ease-out"
+        className="relative bg-fixed bg-center bg-cover bg-no-repeat py-20"
         style={{ backgroundImage: "url('/fond3.png')" }}
       >
         <div className="absolute inset-0 bg-black/30 z-0" />
         <div className="relative z-10 bg-white/80 backdrop-blur-md p-6 rounded-lg max-w-4xl mx-auto">
           <section className="mb-12">
-            <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Pourquoi choisir ClimGO à Mios ?</h2>
+            <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Pourquoi choisir ClimGO à Andernos-les-Bains ?</h2>
             <p className="text-gray-800 leading-relaxed mb-4 text-center">
-              En faisant appel à ClimGO, vous bénéficiez d’un accompagnement de proximité, pensé pour les spécificités de Mios et ses alentours. Nos techniciens sont certifiés RGE et QualiPAC, garantissant qualité et durabilité des installations.
+              Choisir ClimGO à Andernos-les-Bains, c’est faire appel à des experts qui connaissent les contraintes spécifiques du climat local et la richesse environnementale de la commune.
             </p>
             <p className="text-gray-800 leading-relaxed mb-4 text-center">
-              Nous utilisons uniquement du matériel rigoureusement sélectionné pour sa fiabilité et performance. Chaque installation est réalisée avec soin, en respectant les normes en vigueur et l’esthétique de votre habitat.
+              Matériaux performants, normes rigoureuses et finitions impeccables : chaque projet est traité avec la plus grande exigence, du premier contact à la mise en service.
             </p>
             <p className="text-gray-800 leading-relaxed text-center">
-              Situés à proximité, nous intervenons rapidement, limitant les délais d’attente pour une prise en charge efficace, qu’il s’agisse d’une installation neuve ou d’une maintenance.
+              Notre proximité nous permet d&apos;intervenir rapidement sur tout Andernos, pour des dépannages ou des installations urgentes sans attente.
             </p>
           </section>
         </div>
@@ -104,7 +104,7 @@ export default function Mios() {
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 text-white mx-auto mb-4">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z" />
           </svg>
-          <h2 className="text-xl font-semibold text-white mb-4 text-center">Aides financières à Mios</h2>
+          <h2 className="text-xl font-semibold text-white mb-4 text-center">Aides financières à Andernos-les-Bains</h2>
           <p className="text-white leading-relaxed text-center">
             Nous vous accompagnons dans l’obtention des aides telles que MaPrimeRénov’, les Certificats d’Économies d’Énergie (CEE), la TVA réduite ou l’Éco-PTZ, afin de rendre vos projets plus accessibles et avantageux.
           </p>
@@ -112,7 +112,7 @@ export default function Mios() {
       </div>
 
       <div
-        className="relative bg-fixed bg-[50%_30%] bg-cover bg-no-repeat py-20 mb-12 transition-all duration-700 ease-out"
+        className="relative bg-fixed bg-center bg-cover bg-no-repeat py-20 mb-12"
         style={{ backgroundImage: "url('/faq.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/30 z-0" />
@@ -122,16 +122,16 @@ export default function Mios() {
             <Faq
               questions={[
                 {
-                  question: "Quels services proposez-vous à Mios ?",
-                  answer: "Nous proposons l'installation, l'entretien et la maintenance de systèmes de chauffage, climatisation, chauffe-eau et pompes à chaleur à Mios.",
+                  question: "Quels sont vos services à Andernos-les-Bains ?",
+                  answer: "Nous assurons l’installation, l’entretien et le dépannage de systèmes de chauffage, climatisation et production d’eau chaude à Andernos et ses alentours.",
                 },
                 {
-                  question: "Travaillez-vous avec des aides financières ?",
-                  answer: "Oui, nous vous accompagnons pour bénéficier de MaPrimeRénov', des CEE, de la TVA réduite ou encore de l'Éco-PTZ.",
+                  question: "Proposez-vous un accompagnement pour les aides ?",
+                  answer: "Oui. Nous vous guidons dans les démarches pour obtenir MaPrimeRénov’, les CEE, la TVA réduite ou l’Éco-PTZ, selon votre projet.",
                 },
                 {
-                  question: "Intervenez-vous dans les zones rurales autour de Mios ?",
-                  answer: "Tout à fait. Nous couvrons Mios et ses alentours pour assurer un service de proximité.",
+                  question: "Intervenez-vous dans les quartiers d’Andernos ?",
+                  answer: "Absolument. Nos techniciens se déplacent dans tous les quartiers d’Andernos, notamment le centre-ville, le Bétey, la Jetée ou encore les zones pavillonnaires.",
                 }
               ]}
             />
@@ -141,7 +141,7 @@ export default function Mios() {
 
 
      <section className="text-center my-20">
-        <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Mios ?</h2>
+        <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Andernos-les-Bains ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">
           Faites confiance à ClimGO pour vos projets. Contactez-nous dès maintenant pour un devis gratuit et personnalisé.
         </p>
@@ -149,7 +149,7 @@ export default function Mios() {
           href="/contact"
           className="inline-block bg-[#03144a] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#021037] transition"
         >
-          Demandez votre devis gratuit à Mios
+          Demandez votre devis gratuit à Andernos-les-Bains
         </a>
       </section>
 

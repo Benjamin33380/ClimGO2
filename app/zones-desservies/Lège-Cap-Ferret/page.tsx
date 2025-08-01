@@ -4,24 +4,24 @@ import Faq from "../component/Faq";
 import Hero from "../component/Hero";
 import Partenaires from "../component/Partenaires";
 
-export default function Mios() {
+export default function LegeCapFerret() {
   return (
     <main className="px-0">
       <section className="w-full">
-        <Hero ville="Mios" backgroundImage="/villes/mios.jpg" />
+        <Hero ville="Lège-Cap-Ferret" backgroundImage="/villes/lege.jpg" />
       </section>
 
       <section className="my-20">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Val de l&apos;Eyre, Habitant de Mios</h2>
+          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Bassin d&apos;Arcachon, Habitant de Lège-Cap-Ferret</h2>
           <p className="text-gray-800 leading-relaxed text-center">
-            Située au cœur du Val de l&apos;Eyre, la commune de Mios se distingue par son environnement naturel remarquable, entre forêts de pins, rivières et sentiers boisés. Ce secteur, prisé pour son calme et sa qualité de vie, attire aussi bien les familles que les jeunes actifs souhaitant conjuguer confort et nature.
+            Nichée entre l’océan Atlantique et le bassin d’Arcachon, Lège-Cap-Ferret offre un cadre de vie exceptionnel. Entre villas en bois, cabanes ostréicoles et maisons d’architecte, nous adaptons chaque projet thermique à l’environnement marin et forestier.
           </p>
           <p className="text-gray-800 leading-relaxed text-center">
-            Que vous résidiez à Lacanau-de-Mios, au Bourg, Lillet ou dans les hameaux périphériques, ClimGO vous propose des solutions de chauffage, climatisation et eau chaude sanitaire pensées pour répondre aux besoins spécifiques des maisons du Val de l&apos;Eyre, tout en respectant les normes énergétiques les plus exigeantes.
+            De Claouey au Cap Ferret, en passant par Le Canon ou La Vigne, nous accompagnons les résidences principales comme secondaires avec des solutions adaptées au climat salin, à la végétation dense et aux contraintes d’accès.
           </p>
           <p className="text-gray-800 leading-relaxed text-center">
-            Grâce à notre proximité géographique et notre connaissance du tissu local, nous vous accompagnons dans chaque étape de votre projet, en prenant en compte les contraintes d&apos;isolation, de consommation et de configuration de votre logement typique de Mios ou de ses alentours.
+            Chaque installation est pensée pour conjuguer efficacité énergétique, discrétion esthétique et durabilité, dans le respect du cadre unique du Cap.
           </p>
         </div>
       </section>
@@ -32,14 +32,14 @@ export default function Mios() {
       </section>
 
       <section
-        className="relative bg-fixed bg-[50%_30%] bg-cover bg-no-repeat py-20 mb-12 transition-all duration-700 ease-out"
+        className="relative bg-fixed bg-center bg-cover bg-no-repeat py-20 mb-12"
         style={{ backgroundImage: "url('/mo.png')" }}
       >
         <div className="absolute inset-0 bg-black/30 z-0" />
         <div className="relative z-10 bg-white/70 backdrop-blur-lg p-8 rounded-xl shadow-xl max-w-3xl mx-auto">
-          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Nos interventions à Mios</h2>
+          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Nos interventions à Lège-Cap-Ferret</h2>
           <p className="text-gray-800 leading-relaxed text-center">
-            Notre expertise couvre l’ensemble des quartiers de Mios, des lotissements récents aux secteurs traditionnels. Que vous habitiez dans une maison neuve ou ancienne, nous adaptons nos solutions à chaque type d’habitat. Nous intervenons aussi dans les zones en développement, garantissant un confort optimal grâce à des équipements performants et durables.
+            Du Four à La Vigne, nous couvrons tous les hameaux de Lège-Cap-Ferret. Nos installations s’intègrent harmonieusement dans chaque quartier, en respectant les exigences techniques et esthétiques de la presqu’île.
           </p>
         </div>
       </section>
@@ -49,21 +49,21 @@ export default function Mios() {
       </section>
 
       <div
-        className="relative bg-fixed bg-[50%_30%] bg-cover bg-no-repeat py-20 transition-all duration-700 ease-out"
+        className="relative bg-fixed bg-center bg-cover bg-no-repeat py-20"
         style={{ backgroundImage: "url('/fond3.png')" }}
       >
         <div className="absolute inset-0 bg-black/30 z-0" />
         <div className="relative z-10 bg-white/80 backdrop-blur-md p-6 rounded-lg max-w-4xl mx-auto">
           <section className="mb-12">
-            <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Pourquoi choisir ClimGO à Mios ?</h2>
+            <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Pourquoi choisir ClimGO à Lège-Cap-Ferret ?</h2>
             <p className="text-gray-800 leading-relaxed mb-4 text-center">
-              En faisant appel à ClimGO, vous bénéficiez d’un accompagnement de proximité, pensé pour les spécificités de Mios et ses alentours. Nos techniciens sont certifiés RGE et QualiPAC, garantissant qualité et durabilité des installations.
+              Choisir ClimGO à Lège-Cap-Ferret, c’est faire confiance à une équipe qui connaît parfaitement les spécificités du littoral, les contraintes liées au sel, au vent et aux normes environnementales locales.
             </p>
             <p className="text-gray-800 leading-relaxed mb-4 text-center">
-              Nous utilisons uniquement du matériel rigoureusement sélectionné pour sa fiabilité et performance. Chaque installation est réalisée avec soin, en respectant les normes en vigueur et l’esthétique de votre habitat.
+              Isolation renforcée, appareils silencieux et matériaux résistants aux embruns : nous veillons à la qualité et à la longévité de chaque installation.
             </p>
             <p className="text-gray-800 leading-relaxed text-center">
-              Situés à proximité, nous intervenons rapidement, limitant les délais d’attente pour une prise en charge efficace, qu’il s’agisse d’une installation neuve ou d’une maintenance.
+              Grâce à notre proximité, nous intervenons rapidement à Claouey, Grand Piquey, Le Canon, ou Cap Ferret pour toute installation ou dépannage.
             </p>
           </section>
         </div>
@@ -104,7 +104,7 @@ export default function Mios() {
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 text-white mx-auto mb-4">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z" />
           </svg>
-          <h2 className="text-xl font-semibold text-white mb-4 text-center">Aides financières à Mios</h2>
+          <h2 className="text-xl font-semibold text-white mb-4 text-center">Aides financières au Teich</h2>
           <p className="text-white leading-relaxed text-center">
             Nous vous accompagnons dans l’obtention des aides telles que MaPrimeRénov’, les Certificats d’Économies d’Énergie (CEE), la TVA réduite ou l’Éco-PTZ, afin de rendre vos projets plus accessibles et avantageux.
           </p>
@@ -112,7 +112,7 @@ export default function Mios() {
       </div>
 
       <div
-        className="relative bg-fixed bg-[50%_30%] bg-cover bg-no-repeat py-20 mb-12 transition-all duration-700 ease-out"
+        className="relative bg-fixed bg-center bg-cover bg-no-repeat py-20 mb-12"
         style={{ backgroundImage: "url('/faq.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/30 z-0" />
@@ -122,16 +122,16 @@ export default function Mios() {
             <Faq
               questions={[
                 {
-                  question: "Quels services proposez-vous à Mios ?",
-                  answer: "Nous proposons l'installation, l'entretien et la maintenance de systèmes de chauffage, climatisation, chauffe-eau et pompes à chaleur à Mios.",
+                  question: "Quels sont vos services à Lège-Cap-Ferret ?",
+                  answer: "Nous assurons l’installation, l’entretien et le dépannage de systèmes de chauffage, climatisation et production d’eau chaude sur toute la presqu’île de Lège-Cap-Ferret.",
                 },
                 {
-                  question: "Travaillez-vous avec des aides financières ?",
-                  answer: "Oui, nous vous accompagnons pour bénéficier de MaPrimeRénov', des CEE, de la TVA réduite ou encore de l'Éco-PTZ.",
+                  question: "Installez-vous des systèmes adaptés aux résidences secondaires ?",
+                  answer: "Oui. Nos systèmes sont connectés et conçus pour une gestion à distance, idéale pour les maisons secondaires sur la presqu’île.",
                 },
                 {
-                  question: "Intervenez-vous dans les zones rurales autour de Mios ?",
-                  answer: "Tout à fait. Nous couvrons Mios et ses alentours pour assurer un service de proximité.",
+                  question: "Travaillez-vous dans les villages comme Le Canon ou La Vigne ?",
+                  answer: "Absolument. Nous intervenons dans tous les quartiers de Lège-Cap-Ferret, de Claouey à La Vigne, pour vos projets thermiques.",
                 }
               ]}
             />
@@ -141,7 +141,7 @@ export default function Mios() {
 
 
      <section className="text-center my-20">
-        <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Mios ?</h2>
+        <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Lège-Cap-Ferret ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">
           Faites confiance à ClimGO pour vos projets. Contactez-nous dès maintenant pour un devis gratuit et personnalisé.
         </p>
@@ -149,7 +149,7 @@ export default function Mios() {
           href="/contact"
           className="inline-block bg-[#03144a] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#021037] transition"
         >
-          Demandez votre devis gratuit à Mios
+          Demandez votre devis gratuit à Lège-Cap-Ferret
         </a>
       </section>
 

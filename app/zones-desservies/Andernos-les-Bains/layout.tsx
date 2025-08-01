@@ -1,0 +1,97 @@
+export const metadata = {
+  title: "Chauffage, Climatisation et PAC à Andernos-les-Bains",
+  description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Andernos-les-Bains. Profitez d'un service local, certifié RGE.",
+  keywords: [
+    "chauffage Andernos-les-Bains",
+    "climatisation Andernos-les-Bains",
+    "installation clim Andernos-les-Bains",
+    "chauffe-eau Andernos-les-Bains",
+    "pompe à chaleur Andernos-les-Bains",
+    "entretien clim Andernos-les-Bains",
+    "installateur RGE Andernos-les-Bains",
+    "chauffagiste Andernos-les-Bains",
+    "climatisation réversible Andernos-les-Bains",
+    "PAC air eau Andernos-les-Bains",
+    "PAC air air Andernos-les-Bains",
+    "chauffe-eau thermodynamique Andernos-les-Bains",
+    "dépannage chauffage Andernos-les-Bains",
+    "entretien pompe à chaleur Andernos-les-Bains",
+    "installateur clim Andernos-les-Bains",
+    "clim gainable Andernos-les-Bains",
+    "clim mural Andernos-les-Bains",
+    "prix pompe a chaleur Andernos-les-Bains",
+    "artisan RGE Andernos-les-Bains",
+    "clim cassette Andernos-les-Bains",
+    "devis chauffage Andernos-les-Bains",
+    "devis climatisation Andernos-les-Bains",
+    "maintenance chauffage Andernos-les-Bains",
+    "solution thermique Andernos-les-Bains",
+    "installation RGE Andernos-les-Bains",
+    "confort thermique Andernos-les-Bains",
+    "entreprise chauffage Andernos-les-Bains"
+  ],
+  openGraph: {
+    title: "Chauffage, Climatisation et PAC à Andernos-les-Bains - ClimGO",
+    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Andernos-les-Bains. Profitez d'un service local, certifié RGE.",
+    url: "https://www.climgo.fr/zones-desservies/andernos-les-bains",
+    siteName: "ClimGO",
+    locale: "fr_FR",
+    type: "website",
+    images: [
+      {
+        url: "https://www.climgo.fr/images/og-image-andernos-les-bains.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Chauffage et climatisation à Andernos-les-Bains - ClimGO"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Chauffage, Climatisation et PAC à Andernos-les-Bains - ClimGO",
+    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Andernos-les-Bains. Profitez d'un service local, certifié RGE.",
+    images: ["https://www.climgo.fr/images/og-image-andernos-les-bains.jpg"]
+  },
+  metadataBase: new URL("https://www.climgo.fr"),
+  alternates: {
+    canonical: "/zones-desservies/andernos-les-bains"
+  }
+};
+
+import Script from 'next/script';
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "ClimGO",
+          "image": "https://www.climgo.fr/images/og-image-andernos-les-bains.jpg",
+          "@id": "https://www.climgo.fr/zones-desservies/andernos-les-bains",
+          "url": "https://www.climgo.fr/zones-desservies/andernos-les-bains",
+          "telephone": "+33 7 66 46 00 08",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "28 rue de Cantelaude",
+            "addressLocality": "Marcheprime",
+            "postalCode": "33380",
+            "addressCountry": "FR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.645,
+            "longitude": -1.005
+          },
+          "sameAs": [
+            "https://www.instagram.com/climgo_climatisation_chauffage/",
+            "https://www.facebook.com/people/Climgo/61578576031066/",
+            "https://www.linkedin.com/company/climgo"
+          ]
+        })}
+      </Script>
+      {children}
+    </>
+  );
+}
