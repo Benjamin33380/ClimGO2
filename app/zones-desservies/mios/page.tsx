@@ -32,7 +32,7 @@ export default function Mios() {
       </section>
 
       <section
-        className="relative bg-fixed sm:bg-scroll bg-center bg-cover bg-no-repeat py-20 mb-12"
+        className="relative bg-scroll bg-[50%_30%] bg-cover bg-no-repeat py-20 mb-12 transition-all duration-700 ease-out"
         style={{ backgroundImage: "url('/mo.png')" }}
       >
         <div className="absolute inset-0 bg-black/30 z-0" />
@@ -49,7 +49,7 @@ export default function Mios() {
       </section>
 
       <div
-        className="relative bg-fixed sm:bg-scroll bg-center bg-cover bg-no-repeat py-20"
+        className="relative bg-scroll bg-[50%_30%] bg-cover bg-no-repeat py-20 transition-all duration-700 ease-out"
         style={{ backgroundImage: "url('/fond3.png')" }}
       >
         <div className="absolute inset-0 bg-black/30 z-0" />
@@ -112,7 +112,7 @@ export default function Mios() {
       </div>
 
       <div
-        className="relative bg-fixed sm:bg-scroll bg-center bg-cover bg-no-repeat py-20 mb-12"
+        className="relative bg-scroll bg-[50%_30%] bg-cover bg-no-repeat py-20 mb-12 transition-all duration-700 ease-out"
         style={{ backgroundImage: "url('/faq.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/30 z-0" />

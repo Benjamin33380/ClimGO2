@@ -50,6 +50,26 @@ const nextConfig: NextConfig = {
         source: '/chauffage-climatisation-biganos',
         destination: '/zones-desservies/biganos',
       },
+      {
+        source: '/chauffage-climatisation-arcachon',
+        destination: '/zones-desservies/arcachon',
+      },
+      {
+        source: '/chauffage-climatisation-bordeaux',
+        destination: '/zones-desservies/bordeaux',
+      },
+      {
+        source: '/chauffage-climatisation-audenge',
+        destination: '/zones-desservies/audenge',
+      },
+      {
+        source: '/chauffage-climatisation-pessac',
+        destination: '/zones-desservies/pessac',
+      },
+      {
+        source: '/chauffage-climatisation-merignac',
+        destination: '/zones-desservies/merignac',
+      },
     ];
   },
   // Headers pour éviter les blocages et CSP

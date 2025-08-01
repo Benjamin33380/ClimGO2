@@ -4,24 +4,24 @@ import Faq from "../component/Faq";
 import Hero from "../component/Hero";
 import Partenaires from "../component/Partenaires";
 
-export default function Arcachon() {
+export default function Bordeaux() {
   return (
     <main className="px-0">
       <section className="w-full">
-        <Hero ville="Arcachon" backgroundImage="/villes/arcachon.jpg" />
+        <Hero ville="Mérignac" backgroundImage="/villes/merignac.jpg" />
       </section>
 
       <section className="my-20">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Arcachon, élégance balnéaire et confort toute l’année</h2>
+          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Mérignac, ville résidentielle dynamique et confort thermique toute l’année</h2>
           <p className="text-gray-800 leading-relaxed text-center">
-            Connue pour son front de mer emblématique, ses villas typiques et ses plages de sable fin, Arcachon est une destination prisée autant pour la résidence principale que secondaire. 
+            Située à proximité de Bordeaux et de son aéroport, Mérignac est une ville aux quartiers variés, mêlant zones pavillonnaires, maisons familiales et espaces verts. Son ambiance conviviale nécessite des solutions thermiques adaptées et personnalisées.
           </p>
           <p className="text-gray-800 leading-relaxed text-center">
-            Que vous soyez du centre-ville, du Moulleau ou du quartier de l’Aiguillon, ClimGO adapte ses solutions à l’architecture variée d’Arcachon.
+            Que vous résidiez dans le centre-ville, aux Capeyron ou à Beutre, ClimGO conçoit chaque installation en tenant compte des spécificités de votre habitat mérignacais.
           </p>
           <p className="text-gray-800 leading-relaxed text-center">
-            Grâce à notre expertise locale, nous concevons des installations performantes, esthétiques et adaptées à l’humidité et au climat océanique.
+            Grâce à notre expertise locale et nos certifications, nous assurons des systèmes performants, discrets et économes, parfaitement intégrés au cadre de vie mérignacais.
           </p>
         </div>
       </section>
@@ -37,9 +37,9 @@ export default function Arcachon() {
       >
         <div className="absolute inset-0 bg-black/30 z-0" />
         <div className="relative z-10 bg-white/70 backdrop-blur-lg p-8 rounded-xl shadow-xl max-w-3xl mx-auto">
-          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Nos interventions à Arcachon</h2>
+          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Nos interventions à Mérignac</h2>
           <p className="text-gray-800 leading-relaxed text-center">
-            De la Ville d’Hiver à la jetée Thiers, nous intervenons dans tous les quartiers d’Arcachon. Chaque projet bénéficie d’un accompagnement personnalisé, avec des équipements performants et discrets.
+            De Beutre aux quartiers résidentiels en périphérie, nous intervenons dans toute la commune de Mérignac. Chaque projet est réalisé avec soin, pour un confort optimal en toutes saisons.
           </p>
         </div>
       </section>
@@ -55,15 +55,15 @@ export default function Arcachon() {
         <div className="absolute inset-0 bg-black/30 z-0" />
         <div className="relative z-10 bg-white/80 backdrop-blur-md p-6 rounded-lg max-w-4xl mx-auto">
           <section className="mb-12">
-            <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Pourquoi choisir ClimGO à Arcachon ?</h2>
+            <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Pourquoi choisir ClimGO à Mérignac ?</h2>
             <p className="text-gray-800 leading-relaxed mb-4 text-center">
-              Choisir ClimGO, c’est faire confiance à une équipe réactive, ancrée localement. Nos interventions à Arcachon s’appuient sur des solutions éprouvées et un savoir-faire certifié RGE & QualiPAC.
+              Faire appel à ClimGO à Mérignac, c’est choisir une entreprise qui connaît bien les spécificités d’une ville résidentielle dynamique, proche de Bordeaux et de son aéroport.
             </p>
             <p className="text-gray-800 leading-relaxed mb-4 text-center">
-              Nos installations sont pensées pour durer, avec un matériel haut de gamme sélectionné pour répondre aux exigences climatiques et architecturales de la région.
+              Nos pompes à chaleur, climatiseurs et chauffe-eaux sont sélectionnés pour assurer efficacité, discrétion et durabilité, que vous habitiez en maison individuelle ou en lotissement.
             </p>
             <p className="text-gray-800 leading-relaxed text-center">
-              Proches de chez vous, nous vous assurons une grande réactivité, un accompagnement clair, et des chantiers menés avec exigence et professionnalisme.
+              Notre proximité et notre rigueur garantissent un service rapide, des finitions soignées, et un accompagnement administratif complet.
             </p>
           </section>
         </div>
@@ -76,7 +76,7 @@ export default function Arcachon() {
           </svg>
           <h2 className="text-xl font-semibold text-white mb-4 text-center">Types de logements desservis</h2>
           <p className="text-white leading-relaxed text-center">
-            Maisons traditionnelles, extensions bois, pavillons récents : nos solutions s’adaptent à tous les styles présents à Arcachon. Nous savons composer avec les défis thermiques des bâtis neufs comme anciens.
+            Maisons individuelles, pavillons familiaux, lotissements modernes : nous maîtrisons les contraintes thermiques de tous les types d’habitat à Mérignac.
           </p>
         </div>
 
@@ -104,9 +104,9 @@ export default function Arcachon() {
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 text-white mx-auto mb-4">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z" />
           </svg>
-          <h2 className="text-xl font-semibold text-white mb-4 text-center">Aides financières à Arcachon</h2>
+          <h2 className="text-xl font-semibold text-white mb-4 text-center">Aides financières à Mérignac</h2>
           <p className="text-white leading-relaxed text-center">
-            Nos experts vous accompagnent pour bénéficier des aides disponibles à Arcachon : MaPrimeRénov’, CEE, Éco-PTZ, TVA réduite… Nous simplifions les démarches pour vous.
+            MaPrimeRénov’, CEE, Éco-PTZ… à Mérignac, de nombreuses aides sont accessibles. Nous vous aidons à maximiser vos subventions sans vous perdre dans la paperasse.
           </p>
         </div>
       </div>
@@ -122,16 +122,16 @@ export default function Arcachon() {
             <Faq
               questions={[
                 {
-                  question: "Quels équipements installez-vous à Arcachon ?",
-                  answer: "Nous installons pompes à chaleur, climatiseurs, chauffe-eaux thermodynamiques et systèmes de chauffage à Arcachon.",
+                  question: "Quels équipements installez-vous à Mérignac ?",
+                  answer: "Pompes à chaleur air/eau, climatisation réversible, chauffe-eaux thermodynamiques, radiateurs performants… Nous intervenons dans toute la commune de Mérignac.",
                 },
                 {
-                  question: "Puis-je bénéficier d’aides pour mon installation ?",
-                  answer: "Oui, ClimGO vous guide pour obtenir MaPrimeRénov’, les CEE, la TVA réduite et d’autres aides en vigueur.",
+                  question: "Puis-je bénéficier d’aides locales à Mérignac ?",
+                  answer: "Oui, en plus des aides nationales comme MaPrimeRénov’, certaines subventions locales sont parfois disponibles. Nous vous guidons pas à pas.",
                 },
                 {
-                  question: "Vous déplacez-vous dans toute la ville d’Arcachon ?",
-                  answer: "Bien sûr. Nous intervenons dans tous les quartiers d’Arcachon, y compris Le Moulleau, l’Aiguillon ou la Ville d’Hiver.",
+                  question: "Intervenez-vous dans les différents quartiers de Mérignac ?",
+                  answer: "Absolument. Nous intervenons dans tous les quartiers, en adaptant notre logistique pour garantir la qualité sans compromis.",
                 }
               ]}
             />
@@ -141,15 +141,15 @@ export default function Arcachon() {
 
 
      <section className="text-center my-20">
-        <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Arcachon ?</h2>
+        <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Mérignac ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">
-          Vous avez un projet à Arcachon ? Bénéficiez d’un devis gratuit pour une solution adaptée à votre logement.
+          Votre logement mérignacais mérite une installation fiable et adaptée. Obtenez un devis gratuit en quelques clics.
         </p>
         <a
           href="/contact"
           className="inline-block bg-[#03144a] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#021037] transition"
         >
-          Demandez votre devis gratuit à Arcachon
+          Demandez votre devis gratuit à Mérignac
         </a>
       </section>
 

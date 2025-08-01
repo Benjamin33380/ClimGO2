@@ -4,24 +4,24 @@ import Faq from "../component/Faq";
 import Hero from "../component/Hero";
 import Partenaires from "../component/Partenaires";
 
-export default function Arcachon() {
+export default function Audenge() {
   return (
     <main className="px-0">
       <section className="w-full">
-        <Hero ville="Arcachon" backgroundImage="/villes/arcachon.jpg" />
+        <Hero ville="Audenge" backgroundImage="/villes/audenge.jpg" />
       </section>
 
       <section className="my-20">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Arcachon, élégance balnéaire et confort toute l’année</h2>
+          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Audenge, nature, confort et performance énergétique au cœur du Bassin</h2>
           <p className="text-gray-800 leading-relaxed text-center">
-            Connue pour son front de mer emblématique, ses villas typiques et ses plages de sable fin, Arcachon est une destination prisée autant pour la résidence principale que secondaire. 
+            Située entre forêt, bassin et tranquillité, Audenge est une commune prisée pour sa qualité de vie. Ses maisons individuelles, ses lotissements récents et ses bâtisses anciennes demandent des solutions thermiques bien pensées. Nous intervenons aussi dans les lieux-dits voisins comme Hougueyra, Lubec, la Pointe Émile ou encore Bas-Vallon, pour garantir le même niveau de confort et d&apos;exigence.
           </p>
           <p className="text-gray-800 leading-relaxed text-center">
-            Que vous soyez du centre-ville, du Moulleau ou du quartier de l’Aiguillon, ClimGO adapte ses solutions à l’architecture variée d’Arcachon.
+            Que vous soyez à proximité du port d’Audenge, du Domaine de Certes ou en plein cœur de la commune, ClimGO vous accompagne avec des installations adaptées à chaque configuration.
           </p>
           <p className="text-gray-800 leading-relaxed text-center">
-            Grâce à notre expertise locale, nous concevons des installations performantes, esthétiques et adaptées à l’humidité et au climat océanique.
+            Avec notre connaissance du secteur et nos certifications, nous garantissons un confort optimal en toutes saisons, sans dénaturer l’esthétique de votre maison.
           </p>
         </div>
       </section>
@@ -37,9 +37,9 @@ export default function Arcachon() {
       >
         <div className="absolute inset-0 bg-black/30 z-0" />
         <div className="relative z-10 bg-white/70 backdrop-blur-lg p-8 rounded-xl shadow-xl max-w-3xl mx-auto">
-          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Nos interventions à Arcachon</h2>
+          <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Nos interventions à Audenge</h2>
           <p className="text-gray-800 leading-relaxed text-center">
-            De la Ville d’Hiver à la jetée Thiers, nous intervenons dans tous les quartiers d’Arcachon. Chaque projet bénéficie d’un accompagnement personnalisé, avec des équipements performants et discrets.
+            Du centre-ville aux abords du Domaine de Certes, nous intervenons dans tous les quartiers d’Audenge du centre ville au Domaines de Certes. Chaque projet bénéficie de notre expertise pour conjuguer performance et discrétion. Nous couvrons également les secteurs périphériques comme Hougueyra, Lubec, la Pointe Émile ou Bas-Vallon, où notre réactivité fait la différence.
           </p>
         </div>
       </section>
@@ -55,15 +55,15 @@ export default function Arcachon() {
         <div className="absolute inset-0 bg-black/30 z-0" />
         <div className="relative z-10 bg-white/80 backdrop-blur-md p-6 rounded-lg max-w-4xl mx-auto">
           <section className="mb-12">
-            <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Pourquoi choisir ClimGO à Arcachon ?</h2>
+            <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Pourquoi choisir ClimGO à Audenge ?</h2>
             <p className="text-gray-800 leading-relaxed mb-4 text-center">
-              Choisir ClimGO, c’est faire confiance à une équipe réactive, ancrée localement. Nos interventions à Arcachon s’appuient sur des solutions éprouvées et un savoir-faire certifié RGE & QualiPAC.
+              Choisir ClimGO à Audenge, c’est faire confiance à un expert local qui comprend les besoins thermiques des foyers audengeois.
             </p>
             <p className="text-gray-800 leading-relaxed mb-4 text-center">
-              Nos installations sont pensées pour durer, avec un matériel haut de gamme sélectionné pour répondre aux exigences climatiques et architecturales de la région.
+              Nos équipements sont sélectionnés pour garantir efficacité, discrétion et respect de l’environnement, qu’il s’agisse de maisons en zone pavillonnaire ou de bâtis plus anciens.
             </p>
             <p className="text-gray-800 leading-relaxed text-center">
-              Proches de chez vous, nous vous assurons une grande réactivité, un accompagnement clair, et des chantiers menés avec exigence et professionnalisme.
+              Notre proximité et notre savoir-faire vous assurent une intervention soignée, rapide et conforme aux dernières normes.
             </p>
           </section>
         </div>
@@ -76,7 +76,7 @@ export default function Arcachon() {
           </svg>
           <h2 className="text-xl font-semibold text-white mb-4 text-center">Types de logements desservis</h2>
           <p className="text-white leading-relaxed text-center">
-            Maisons traditionnelles, extensions bois, pavillons récents : nos solutions s’adaptent à tous les styles présents à Arcachon. Nous savons composer avec les défis thermiques des bâtis neufs comme anciens.
+            Maisons de lotissement, pavillons individuels, bâtisses en pierre : nous maîtrisons les contraintes thermiques des habitats à Audenge.
           </p>
         </div>
 
@@ -104,9 +104,9 @@ export default function Arcachon() {
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 text-white mx-auto mb-4">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z" />
           </svg>
-          <h2 className="text-xl font-semibold text-white mb-4 text-center">Aides financières à Arcachon</h2>
+          <h2 className="text-xl font-semibold text-white mb-4 text-center">Aides financières à Audenge</h2>
           <p className="text-white leading-relaxed text-center">
-            Nos experts vous accompagnent pour bénéficier des aides disponibles à Arcachon : MaPrimeRénov’, CEE, Éco-PTZ, TVA réduite… Nous simplifions les démarches pour vous.
+            MaPrimeRénov’, CEE, Éco-PTZ… À Audenge, nous vous accompagnons pour obtenir les aides disponibles et optimiser votre investissement.
           </p>
         </div>
       </div>
@@ -122,16 +122,16 @@ export default function Arcachon() {
             <Faq
               questions={[
                 {
-                  question: "Quels équipements installez-vous à Arcachon ?",
-                  answer: "Nous installons pompes à chaleur, climatiseurs, chauffe-eaux thermodynamiques et systèmes de chauffage à Arcachon.",
+                  question: "Quels équipements installez-vous à Audenge ?",
+                  answer: "Pompes à chaleur air/eau, climatisations réversibles, chauffe-eaux thermodynamiques, radiateurs économiques… Nous intervenons sur toute la commune d’Audenge.",
                 },
                 {
-                  question: "Puis-je bénéficier d’aides pour mon installation ?",
-                  answer: "Oui, ClimGO vous guide pour obtenir MaPrimeRénov’, les CEE, la TVA réduite et d’autres aides en vigueur.",
+                  question: "Puis-je bénéficier d’aides locales à Audenge ?",
+                  answer: "Oui, et nous vous accompagnons dans chaque démarche, de la simulation au montage du dossier.",
                 },
                 {
-                  question: "Vous déplacez-vous dans toute la ville d’Arcachon ?",
-                  answer: "Bien sûr. Nous intervenons dans tous les quartiers d’Arcachon, y compris Le Moulleau, l’Aiguillon ou la Ville d’Hiver.",
+                  question: "Intervenez-vous sur des maisons individuelles à Audenge ?",
+                  answer: "Oui, nous sommes spécialisés dans l’adaptation de nos équipements aux maisons individuelles, même avec des contraintes spécifiques.",
                 }
               ]}
             />
@@ -141,15 +141,15 @@ export default function Arcachon() {
 
 
      <section className="text-center my-20">
-        <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Arcachon ?</h2>
+        <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Audenge ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">
-          Vous avez un projet à Arcachon ? Bénéficiez d’un devis gratuit pour une solution adaptée à votre logement.
+          Votre maison audengeoise mérite une installation performante, économe et adaptée. Obtenez un devis gratuit dès aujourd’hui.
         </p>
         <a
           href="/contact"
           className="inline-block bg-[#03144a] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#021037] transition"
         >
-          Demandez votre devis gratuit à Arcachon
+          Demandez votre devis gratuit à Audenge
         </a>
       </section>
 

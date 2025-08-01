@@ -1,60 +1,60 @@
 export const metadata = {
-  title: "Chauffage, Climatisation et PAC à Marcheprime - ClimGO",
-  description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Marcheprime. Profitez d'un service local, certifié RGE.",
+  title: "Chauffage, Climatisation et PAC à Arcachon",
+  description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Arcachon. Profitez d'un service local, certifié RGE.",
   keywords: [
-    "chauffage Marcheprieme",
-    "climatisation Marcheprime",
-    "installation clim Marcheprime",
-    "chauffe-eau Marcheprime",
-    "pompe à chaleur Marcheprime",
-    "entretien clim Marcheprime",
-    "installateur RGE Marcheprime",
-    "chauffagiste Marcheprime",
-    "climatisation réversible Marcheprime",
-    "PAC air eau Marcheprime",
-    "PAC air air Marcheprime",
-    "chauffe-eau thermodynamique Marcheprime",
-    "dépannage chauffage Marcheprime",
-    "entretien pompe à chaleur Marcheprime",
-    "installateur clim Marcheprime",
-    "clim gainable Marcheprime",
-    "clim mural Marcheprime",
-    "économie énergie Marcheprime",
-    "artisan RGE Marcheprime",
-    "clim cassette Marcheprime",
-    "devis chauffage Marcheprime",
-    "devis climatisation Marcheprime",
-    "maintenance chauffage Marcheprime",
-    "solution thermique Marcheprime",
-    "installation RGE Marcheprime",
-    "confort thermique Marcheprime",
-    "entreprise chauffage Marcheprime"
+    "chauffage Arcachon",
+    "climatisation Arcachon",
+    "installation clim Arcachon",
+    "chauffe-eau Arcachon",
+    "pompe à chaleur Arcachon",
+    "entretien clim Arcachon",
+    "installateur RGE Arcachon",
+    "chauffagiste Arcachon",
+    "climatisation réversible Arcachon",
+    "PAC air eau Arcachon",
+    "PAC air air Arcachon",
+    "chauffe-eau thermodynamique Arcachon",
+    "dépannage chauffage Arcachon",
+    "entretien pompe à chaleur Arcachon",
+    "installateur clim Arcachon",
+    "clim gainable Arcachon",
+    "clim mural Arcachon",
+    "économie énergie Arcachon",
+    "artisan RGE Arcachon",
+    "clim cassette Arcachon",
+    "devis chauffage Arcachon",
+    "devis climatisation Arcachon",
+    "maintenance chauffage Arcachon",
+    "solution thermique Arcachon",
+    "installation RGE Arcachon",
+    "confort thermique Arcachon",
+    "entreprise chauffage Arcachon"
   ],
   openGraph: {
-    title: "Chauffage, Climatisation et PAC à Marcheprime - ClimGO",
-    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Marcheprime. Profitez d'un service local, certifié RGE.",
-    url: "https://www.climgo.fr/zones-desservies/marcheprime",
+    title: "Chauffage, Climatisation et PAC à Arcachon - ClimGO",
+    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Arcachon. Profitez d'un service local, certifié RGE.",
+    url: "https://www.climgo.fr/zones-desservies/arcachon",
     siteName: "ClimGO",
     locale: "fr_FR",
     type: "website",
     images: [
       {
-        url: "https://www.climgo.fr/images/og-image-marcheprime.jpg",
+        url: "https://www.climgo.fr/images/og-image-arcachon.jpg",
         width: 1200,
         height: 630,
-        alt: "Chauffage et climatisation à Marcheprime - ClimGO"
+        alt: "Chauffage et climatisation à Arcachon - ClimGO"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chauffage, Climatisation et PAC à Marcheprime - ClimGO",
-    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Marcheprime. Profitez d'un service local, certifié RGE.",
-    images: ["https://www.climgo.fr/images/og-image-marcheprime.jpg"]
+    title: "Chauffage, Climatisation et PAC à Arcachon - ClimGO",
+    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Arcachon. Profitez d'un service local, certifié RGE.",
+    images: ["https://www.climgo.fr/images/og-image-arcachon.jpg"]
   },
   metadataBase: new URL("https://www.climgo.fr"),
   alternates: {
-    canonical: "/zones-desservies/marcheprime"
+    canonical: "/zones-desservies/arcachon"
   }
 };
 
@@ -68,9 +68,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "ClimGO",
-          "image": "https://www.climgo.fr/images/og-image-marcheprime.jpg",
-          "@id": "https://www.climgo.fr/zones-desservies/marcheprime",
-          "url": "https://www.climgo.fr/zones-desservies/marcheprime",
+          "image": "https://www.climgo.fr/images/og-image-arcachon.jpg",
+          "@id": "https://www.climgo.fr/zones-desservies/arcachon",
+          "url": "https://www.climgo.fr/zones-desservies/arcachon",
           "telephone": "+33 7 66 46 00 08",
           "address": {
             "@type": "PostalAddress",
@@ -81,8 +81,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 44.6931,
-            "longitude": -0.9555
+            "latitude": 44.6583,
+            "longitude": -1.1696
           },
           "sameAs": [
             "https://www.instagram.com/climgo_climatisation_chauffage/",
