@@ -50,7 +50,7 @@ const villesLocales = [
   'begles',
   'lacanau',
   'saint-loubes',
-  'saint-jean-dillac',
+  'saint-jean-d-illac',
   'saint-medard-en-jalles',
   'saint-aubin-de-medoc',
   'martignas-sur-jalle',
