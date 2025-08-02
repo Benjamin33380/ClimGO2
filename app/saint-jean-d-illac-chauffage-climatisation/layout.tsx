@@ -1,0 +1,97 @@
+export const metadata = {
+  title: "Chauffage, Climatisation et PAC à Saint-Jean-d'Illac",
+  description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Jean-d'Illac. Profitez d'un service local, certifié RGE.",
+  keywords: [
+    "chauffage Saint-Jean-d'Illac",
+    "climatisation Saint-Jean-d'Illac",
+    "installation clim Saint-Jean-d'Illac",
+    "chauffe-eau Saint-Jean-d'Illac",
+    "pompe à chaleur Saint-Jean-d'Illac",
+    "entretien clim Saint-Jean-d'Illac",
+    "installateur RGE Saint-Jean-d'Illac",
+    "chauffagiste Saint-Jean-d'Illac",
+    "climatisation réversible Saint-Jean-d'Illac",
+    "PAC air eau Saint-Jean-d'Illac",
+    "PAC air air Saint-Jean-d'Illac",
+    "chauffe-eau thermodynamique Saint-Jean-d'Illac",
+    "dépannage chauffage Saint-Jean-d'Illac",
+    "entretien pompe à chaleur Saint-Jean-d'Illac",
+    "installateur clim Saint-Jean-d'Illac",
+    "clim gainable Saint-Jean-d'Illac",
+    "clim mural Saint-Jean-d'Illac",
+    "économie énergie Saint-Jean-d'Illac",
+    "artisan RGE Saint-Jean-d'Illac",
+    "clim cassette Saint-Jean-d'Illac",
+    "devis chauffage Saint-Jean-d'Illac",
+    "devis climatisation Saint-Jean-d'Illac",
+    "maintenance chauffage Saint-Jean-d'Illac",
+    "solution thermique Saint-Jean-d'Illac",
+    "installation RGE Saint-Jean-d'Illac",
+    "confort thermique Saint-Jean-d'Illac",
+    "entreprise chauffage Saint-Jean-d'Illac"
+  ],
+  openGraph: {
+    title: "Chauffage, Climatisation et PAC à Saint-Jean-d'Illac - ClimGO",
+    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Jean-d'Illac. Profitez d'un service local, certifié RGE.",
+    url: "https://www.climgo.fr/saint-jean-d-illac-chauffage-climatisation",
+    siteName: "ClimGO",
+    locale: "fr_FR",
+    type: "website",
+    images: [
+      {
+        url: "https://www.climgo.fr/villes/sji.webp",
+        width: 1200,
+        height: 630,
+        alt: "Chauffage et climatisation à Saint-Jean-d'Illac - ClimGO"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Chauffage, Climatisation et PAC à Saint-Jean-d'Illac - ClimGO",
+    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Jean-d'Illac. Profitez d'un service local, certifié RGE.",
+    images: ["https://www.climgo.fr/villes/sji.webp"]
+  },
+  metadataBase: new URL("https://www.climgo.fr"),
+  alternates: {
+    canonical: "/saint-jean-d-illac-chauffage-climatisation"
+  }
+};
+
+import Script from 'next/script';
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "ClimGO",
+          "image": "https://www.climgo.fr/villes/sji.webp",
+          "@id": "https://www.climgo.fr/saint-jean-d-illac-chauffage-climatisation",
+          "url": "https://www.climgo.fr/saint-jean-d-illac-chauffage-climatisation",
+          "telephone": "+33 7 66 46 00 08",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "120 Av. du Las",
+            "addressLocality": "Saint-Jean-d'Illac",
+            "postalCode": "33127",
+            "addressCountry": "FR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.8036851,
+            "longitude": -0.8157354
+          },
+          "sameAs": [
+            "https://www.instagram.com/climgo_climatisation_chauffage/",
+            "https://www.facebook.com/people/Climgo/61578576031066/",
+            "https://www.linkedin.com/company/climgo"
+          ]
+        })}
+      </Script>
+      {children}
+    </>
+  );
+}

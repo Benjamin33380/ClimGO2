@@ -1,0 +1,97 @@
+export const metadata = {
+  title: "Chauffage, Climatisation et PAC à Martignas-sur-Jalle",
+  description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Martignas-sur-Jalle. Profitez d'un service local, certifié RGE.",
+  keywords: [
+    "chauffage Martignas-sur-Jalle",
+    "climatisation Martignas-sur-Jalle",
+    "installation clim Martignas-sur-Jalle",
+    "chauffe-eau Martignas-sur-Jalle",
+    "pompe à chaleur Martignas-sur-Jalle",
+    "entretien clim Martignas-sur-Jalle",
+    "installateur RGE Martignas-sur-Jalle",
+    "chauffagiste Martignas-sur-Jalle",
+    "climatisation réversible Martignas-sur-Jalle",
+    "PAC air eau Martignas-sur-Jalle",
+    "PAC air air Martignas-sur-Jalle",
+    "chauffe-eau thermodynamique Martignas-sur-Jalle",
+    "dépannage chauffage Martignas-sur-Jalle",
+    "entretien pompe à chaleur Martignas-sur-Jalle",
+    "installateur clim Martignas-sur-Jalle",
+    "clim gainable Martignas-sur-Jalle",
+    "clim mural Martignas-sur-Jalle",
+    "économie énergie Martignas-sur-Jalle",
+    "artisan RGE Martignas-sur-Jalle",
+    "clim cassette Martignas-sur-Jalle",
+    "devis chauffage Martignas-sur-Jalle",
+    "devis climatisation Martignas-sur-Jalle",
+    "maintenance chauffage Martignas-sur-Jalle",
+    "solution thermique Martignas-sur-Jalle",
+    "installation RGE Martignas-sur-Jalle",
+    "confort thermique Martignas-sur-Jalle",
+    "entreprise chauffage Martignas-sur-Jalle"
+  ],
+  openGraph: {
+    title: "Chauffage, Climatisation et PAC à Martignas-sur-Jalle - ClimGO",
+    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Martignas-sur-Jalle. Profitez d'un service local, certifié RGE.",
+    url: "https://www.climgo.fr/martignas-sur-jalle-chauffage-climatisation",
+    siteName: "ClimGO",
+    locale: "fr_FR",
+    type: "website",
+    images: [
+      {
+        url: "https://www.climgo.fr/villes/marti.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Chauffage et climatisation à Martignas-sur-Jalle - ClimGO"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Chauffage, Climatisation et PAC à Martignas-sur-Jalle - ClimGO",
+    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Martignas-sur-Jalle. Profitez d'un service local, certifié RGE.",
+    images: ["https://www.climgo.fr/villes/marti.jpg"]
+  },
+  metadataBase: new URL("https://www.climgo.fr"),
+  alternates: {
+    canonical: "/martignas-sur-jalle-chauffage-climatisation"
+  }
+};
+
+import Script from 'next/script';
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "ClimGO",
+          "image": "https://www.climgo.fr/villes/marti.jpg",
+          "@id": "https://www.climgo.fr/martignas-sur-jalle-chauffage-climatisation",
+          "url": "https://www.climgo.fr/martignas-sur-jalle-chauffage-climatisation",
+          "telephone": "+33 7 66 46 00 08",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "3 Av. de la Républiquue",
+            "addressLocality": "Martignas-sur-Jalle",
+            "postalCode": "33127",
+            "addressCountry": "FR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.83898,
+            "longitude": -0.775593
+          },
+          "sameAs": [
+            "https://www.instagram.com/climgo_climatisation_chauffage/",
+            "https://www.facebook.com/people/Climgo/61578576031066/",
+            "https://www.linkedin.com/company/climgo"
+          ]
+        })}
+      </Script>
+      {children}
+    </>
+  );
+}
