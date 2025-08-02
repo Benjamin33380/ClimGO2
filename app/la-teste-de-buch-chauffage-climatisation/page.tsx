@@ -1,8 +1,8 @@
-import GoogleReviews from "../component/GoogleReviews";
-import Testimonials from "../component/Testimonials";
-import Faq from "../component/Faq";
-import Hero from "../component/Hero";
-import Partenaires from "../component/Partenaires";
+import GoogleReviews from "../zones-desservies/component/GoogleReviews";
+import Testimonials from "../zones-desservies/component/Testimonials";
+import Faq from "../zones-desservies/component/Faq";
+import Hero from "../zones-desservies/component/Hero";
+import Partenaires from "../zones-desservies/component/Partenaires";
 
 export default function LaTesteDeBuch() {
   return (
