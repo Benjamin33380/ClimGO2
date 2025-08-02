@@ -44,9 +44,8 @@ export default function ZonesDesservies() {
       description: 'Zone de pinèdes avec solutions adaptées',
       cities: [
         { name: 'Sanguinet', url: 'https://www.climgo.fr/sanguinet-chauffage-climatisation' },
-        { name: 'Parentis-en-Born', url: 'https://www.climgo.fr/parentis-en-born-chauffage-climatisation' },
+        { name: 'Parentis-en-Born', url: 'https://www.climgo.fr/parentis-chauffage-climatisation' },
         { name: 'Biscarrosse', url: 'https://www.climgo.fr/biscarrosse-chauffage-climatisation' },
-        { name: 'Parentis', url: 'https://www.climgo.fr/parentis-chauffage-climatisation' },
         { name: 'Mimizan', url: 'https://www.climgo.fr/mimizan-chauffage-climatisation' }
       ],
       span: 1

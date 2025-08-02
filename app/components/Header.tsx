@@ -41,9 +41,9 @@ export default function Header() {
       </div>
 
       {/* Bannière défilante */}
-      <div className="scrolling-banner" role="alert" aria-live="polite">
+      <div className="scrolling-banner">
         <p>
-         Website en plein réglage. Si une page vous claque la porte, c’est qu’on est en train de la visser. L&apos;entreprise est également fermer du 11/08 au 22/08 inclut.
+         Website en plein réglage. Si une page vous claque la porte, c’est qu’on est en train de la visser. L&apos;entreprise est également fermée du 11/08 au 22/08 inclus.
         </p>
       </div>
 
