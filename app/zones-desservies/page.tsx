@@ -96,7 +96,7 @@ export default function ZonesDesservies() {
       cities: [
         { name: 'Lacanau', url: 'https://www.climgo.fr/lacanau-chauffage-climatisation' },
         { name: 'Saint-Loubès', url: 'https://www.climgo.fr/saint-loubes-chauffage-climatisation' },
-        { name: "Saint-Jean-d'Illac", url: 'https://www.climgo.fr/saint-jean-dillac-chauffage-climatisation' },
+        { name: "Saint-Jean-d'Illac", url: 'https://www.climgo.fr/saint-jean-d-illac-chauffage-climatisation' },
         { name: "Saint-Médard-en-Jalles", url: 'https://www.climgo.fr/saint-medard-en-jalles-chauffage-climatisation' },
         { name: "Saint-Aubin-de-Médoc", url: 'https://www.climgo.fr/saint-aubin-de-medoc-chauffage-climatisation' },
         { name: 'Martignas-sur-Jalle', url: 'https://www.climgo.fr/martignas-sur-jalle-chauffage-climatisation' },

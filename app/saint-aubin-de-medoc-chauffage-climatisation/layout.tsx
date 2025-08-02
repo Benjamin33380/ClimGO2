@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Chauffage, Climatisation et PAC à Saint-Aubin-de-Médoc",
-  description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Aubin-de-Médoc. Profitez d'un service local, certifié RGE.",
+  description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Aubin-de-Médoc. Certifié RGE.",
   keywords: [
     "chauffage Saint-Aubin-de-Médoc",
     "climatisation Saint-Aubin-de-Médoc",
@@ -32,7 +32,7 @@ export const metadata = {
   ],
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Saint-Aubin-de-Médoc - ClimGO",
-    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Aubin-de-Médoc. Profitez d'un service local, certifié RGE.",
+    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Aubin-de-Médoc. Certifié RGE.",
     url: "https://www.climgo.fr/saint-aubin-de-medoc-chauffage-climatisation",
     siteName: "ClimGO",
     locale: "fr_FR",
@@ -49,7 +49,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Chauffage, Climatisation et PAC à Saint-Aubin-de-Médoc - ClimGO",
-    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Aubin-de-Médoc. Profitez d'un service local, certifié RGE.",
+    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Aubin-de-Médoc. Certifié RGE.",
     images: ["https://www.climgo.fr/villes/sadm.jpg"]
   },
   metadataBase: new URL("https://www.climgo.fr"),
