@@ -138,7 +138,53 @@ export default function BelinBeliet() {
           </section>
         </div>
       </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un village nature au cœur du Val de l’Eyre</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Située entre forêts et rivières, Belin-Béliet séduit par son cadre verdoyant, son calme et ses traditions gasconnes. Avec près de 5 000 habitants, la commune accueille de plus en plus de familles venues chercher la tranquillité tout en restant proches de Bordeaux et d’Arcachon.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          La commune est marquée par son tissu résidentiel mêlant quartiers anciens (Le Bourg, Guiton, Le Puch) et lotissements récents comme Les Pins ou Le Télegraphe. Le patrimoine y est préservé, entre vieilles bâtisses en pierre et maisons à colombages.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          ClimGO intervient à Belin-Béliet dans tous les secteurs, en tenant compte du type de construction, des contraintes d’isolation et de l’exposition au soleil. Nos solutions s’adaptent aussi bien aux longères traditionnelles qu’aux pavillons RT2012.
+        </p>
+      </div>
 
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Interventions techniques locales à Belin</h2>
+        <p className="text-white leading-relaxed text-center">
+          • Le Puch : installation d’une PAC air/eau haute température sur plancher chauffant pour une maison ancienne rénovée.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Quartier du Bourg : pose d’un multisplit mural Daikin dans une maison de ville des années 90 avec isolation par l’intérieur.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Lieu-dit Pernaud : remplacement d’un chauffe-eau classique par un thermodynamique Atlantic, avec déport sur vide sanitaire.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Route de Bayonne : entretien annuel d’un gainable Mitsubishi dans une maison neuve de 2021.
+        </p>
+      </div>
+
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire adapté à Belin-Béliet</h2>
+        <p className="text-white leading-relaxed text-center">
+          Belin-Béliet impose des critères techniques précis liés à la forêt environnante : risques de résine, humidité des sols, accès parfois difficiles. Nous prévoyons des installations sur plots ou rehausses, avec un dimensionnement sur-mesure selon l’usage.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          Nos équipes connaissent les particularités du secteur et adaptent chaque intervention au rythme et à la configuration du logement : résidence principale, secondaire ou en location.
+        </p>
+      </div>
+
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Échangeons sur votre confort à Belin-Béliet</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Vous habitez Belin-Béliet ou ses hameaux ? Contactez-nous pour un projet thermique sur-mesure. ClimGO se déplace chez vous pour étudier vos besoins et vous proposer une solution fiable, économe et adaptée à votre cadre de vie.
+        </p>
+      </div>
+    </div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Belin-Béliet ?</h2>

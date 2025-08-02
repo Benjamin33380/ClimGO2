@@ -137,7 +137,54 @@ export default function Canejan() {
           </section>
         </div>
       </div>
+    {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Saint-Jean-d’Illac ?" */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Canéjan, entre calme résidentiel et vitalité urbaine</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Située aux portes de la métropole bordelaise, Canéjan est une commune en pleine expansion, appréciée pour son équilibre entre nature et accessibilité. Bordée par la forêt, elle offre à ses habitants un cadre de vie verdoyant, tout en étant connectée aux grands axes via la rocade ou la D1250.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Les quartiers du Bourg, de Gazinet ou encore de Camparian accueillent des maisons familiales, des résidences neuves et des logements plus anciens. Ce tissu urbain varié nécessite des solutions thermiques sur-mesure, adaptées aux contraintes d’espace, d’isolation et de consommation.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Chez ClimGO, nous connaissons les typologies de maisons de Canéjan : constructions des années 70, lotissements récents ou habitations rénovées. Notre approche est toujours personnalisée, avec une attention portée à l’efficacité, au silence et à l’esthétique de l’installation.
+        </p>
+      </div>
 
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Canéjan</h2>
+        <p className="text-white leading-relaxed text-center">
+          • Rue du Pont de la Mouline : installation d’une pompe à chaleur air/eau sur une maison en plain-pied, avec adaptation aux contraintes d’accès au jardin.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Lotissement du Haut Camparian : remplacement de trois climatisations monoblocs par des splits Daikin haut rendement pour une résidence secondaire.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Quartier Gazinet : entretien annuel d’un plancher chauffant alimenté par une PAC installée il y a 5 ans, avec contrôle de la régulation et nettoyage du circuit hydraulique.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Allée des Grives : remplacement d’un chauffe-eau électrique vieillissant par un modèle thermodynamique, avec gain de place dans un placard technique.
+        </p>
+      </div>
+
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Nos spécificités techniques à Canéjan</h2>
+        <p className="text-white leading-relaxed text-center">
+          Les terrains en pente douce et la forte présence végétale exigent une installation rigoureuse des groupes extérieurs : sur dalle béton, avec ancrages spécifiques ou plots antivibratiles.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          Nous prenons aussi en compte l’exposition ouest fréquente des façades pour éviter toute surchauffe estivale, en dimensionnant au mieux la climatisation réversible.
+        </p>
+      </div>
+
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un projet thermique à Canéjan ?</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Vous venez d’emménager à Canéjan ? Vous rénovez votre maison ou souhaitez réduire votre facture énergétique ? Contactez ClimGO : nous intervenons rapidement avec une étude personnalisée, un devis clair et un accompagnement administratif complet.
+        </p>
+      </div>
+    </div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Canéjan ?</h2>

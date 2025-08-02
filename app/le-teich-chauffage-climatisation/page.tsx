@@ -139,7 +139,54 @@ export default function LeTeich() {
         </div>
       </div>
 
+{/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis au Teich ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune nature entre bassin et forêt</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Situé en plein cœur du parc naturel régional des Landes de Gascogne, Le Teich séduit par son cadre de vie verdoyant, ses pistes cyclables, sa réserve ornithologique renommée et sa proximité immédiate du bassin d’Arcachon.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Avec plus de 8 000 habitants, la commune se développe tout en gardant son identité nature. Les familles et les actifs y trouvent un équilibre parfait entre tranquillité, accessibilité et confort moderne.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient sur l’ensemble du territoire teichois, que ce soit dans les quartiers pavillonnaires comme le Bourg, Lamothe ou La Cassadote, ou dans les zones plus rurales. Nos équipements s’intègrent aussi bien dans les maisons anciennes que dans les constructions RT2012.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions au Teich</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue des Écureuils : installation d’une pompe à chaleur air/air dans une maison en bois, pour un confort thermique été comme hiver.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue de la Côte d’Argent : remplacement d’un chauffe-eau électrique par un modèle thermodynamique performant.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Lotissement Les Genêts : entretien annuel de plusieurs climatisations dans des maisons familiales récentes.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Quartier Lamothe : pose d’une PAC air/eau sur dalle ventilée avec création de réseau plancher chauffant.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire adapté au climat du Teich</h2>
+    <p className="text-white leading-relaxed text-center">
+      Le climat océanique du Teich, humide l’hiver et très chaud en été, demande des équipements capables de réguler efficacement la température toute l’année. Nous prévoyons des systèmes réversibles adaptés à l’humidité et à la proximité du bassin.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Chaque installation prend en compte l’exposition du logement, la végétation environnante et les contraintes acoustiques pour garantir performance et discrétion.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Prêt à faire évoluer votre confort au Teich ?</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Que vous soyez en rénovation ou dans une maison neuve, notre équipe est disponible pour vous conseiller sur la solution idéale au Teich. Demandez votre étude gratuite et sans engagement via notre formulaire ou par téléphone.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis au Teich ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

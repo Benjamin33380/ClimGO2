@@ -140,7 +140,56 @@ export default function Pessac() {
       </div>
 
 
-     <section className="text-center my-20">
+    {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Saint-Jean-d’Illac ?" */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une ville en pleine évolution résidentielle</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Saint-Jean-d’Illac attire chaque année de nouveaux habitants grâce à sa position stratégique entre Bordeaux, Mérignac et le bassin d’Arcachon. Avec plus de 8 000 habitants, la commune allie qualité de vie, calme forestier et dynamisme immobilier.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Les familles apprécient les infrastructures scolaires (collège Montaigne, écoles communales), les équipements sportifs et la proximité de la D106 pour rejoindre rapidement l’aéroport ou la rocade.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          ClimGO intervient dans tous les quartiers : Le Las, Les Badines, Les Pins ou encore les nouvelles zones pavillonnaires près du centre. Nos équipements s’intègrent aussi bien dans les maisons neuves que dans les habitations traditionnelles des années 80 à 2000.
+        </p>
+      </div>
+
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Illac</h2>
+        <p className="text-white leading-relaxed text-center">
+          • Rue François Mauriac : remplacement d’un ancien système électrique par une pompe à chaleur air/air discrète, avec option réversible.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Avenue du Las : installation d’un plancher chauffant pour une maison RT2012, couplé à une PAC air/eau haut rendement.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Résidence Les Chênes : maintenance annuelle de plusieurs splits Mitsubishi dans une copropriété récente.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Allée des Mimosas : remplacement d’un chauffe-eau électrique par un chauffe-eau thermodynamique, avec gain de place et économies sur la facture EDF.
+        </p>
+      </div>
+
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire adapté au territoire illacais</h2>
+        <p className="text-white leading-relaxed text-center">
+          Le sol sablonneux et les nombreuses zones boisées imposent une vigilance particulière pour les installations extérieures. Chez ClimGO, chaque PAC est installée sur plots ou dalle béton ventilée pour garantir stabilité, silence et longévité.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          Nous tenons aussi compte de l’exposition des logements illacais, souvent orientés nord/sud avec peu de protections solaires, pour adapter la puissance et le type d’équipements.
+        </p>
+      </div>
+
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Et si on discutait de votre projet à Illac ?</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Que vous soyez propriétaire, primo-accédant ou en rénovation, notre équipe se tient à votre disposition pour échanger sur votre confort thermique à Saint-Jean-d’Illac. Vous pouvez nous joindre en quelques clics via notre formulaire ou par téléphone.
+        </p>
+      </div>
+    </div>
+
+    <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Saint-Jean-d’Illac ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">
           Vous habitez à Saint-Jean-d’Illac ? Offrez-vous un confort thermique sur-mesure. Demandez votre devis personnalisé.

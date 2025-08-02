@@ -138,7 +138,54 @@ export default function Saucats() {
           </section>
         </div>
       </div>
+{/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Saucats ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un cadre naturel et résidentiel préservé</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      À seulement 25 minutes de Bordeaux, Saucats offre un environnement paisible en lisière de la forêt des Landes. Cette commune de près de 2 500 habitants séduit les familles recherchant calme, espace et qualité de vie.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Entre maisons individuelles avec grands terrains, lotissements récents et bâtis traditionnels, Saucats présente une diversité architecturale idéale pour l’intégration de systèmes de chauffage et climatisation discrets et performants.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Chez ClimGO, nous adaptons chaque solution aux spécificités locales : nature du sol, accès, réglementation thermique et respect de l’environnement résidentiel saucattais.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Saucats</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Chemin de la Forge : installation d’une pompe à chaleur air/eau pour une maison neuve en zone Bbio.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Route de Léognan : pose d’un climatiseur mural Daikin dans un salon cathédrale, avec gestion domotique.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Allée du Bosquet : entretien annuel d’une installation multisplit dans une maison de 200 m² avec étage.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue de l’Église : remplacement d’un ancien chauffe-eau électrique par un modèle thermodynamique plus économique.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Une expertise pensée pour le secteur saucattais</h2>
+    <p className="text-white leading-relaxed text-center">
+      À Saucats, les distances entre habitations, la végétation abondante et les zones à l’écart du réseau urbain nécessitent des installations robustes et bien dimensionnées. Nos équipements sont prévus pour résister aux conditions extérieures tout en assurant un confort optimal.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous veillons également à l’intégration esthétique de nos systèmes, notamment dans les maisons ossature bois ou à bardage, très présentes dans la commune.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Discutons ensemble de votre projet à Saucats</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Que vous habitiez le centre de Saucats ou ses hameaux environnants, nous sommes à votre écoute pour tous vos besoins en chauffage, climatisation ou chauffe-eau. Demandez votre devis personnalisé en quelques clics ou appelez-nous directement.
+    </p>
+  </div>
+</div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Saucats ?</h2>

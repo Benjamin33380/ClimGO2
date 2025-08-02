@@ -139,7 +139,54 @@ export default function Mios() {
         </div>
       </div>
 
+  {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Mios ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune nature entre Bordeaux et le Bassin</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Mios séduit par son cadre de vie calme, verdoyant et bien connecté. Avec plus de 9 000 habitants, la commune connaît un développement résidentiel important tout en conservant son identité forestière.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Les familles apprécient la proximité de la gare SNCF, les écoles (Jean Zay, groupe scolaire de Lacanau-de-Mios), les équipements sportifs et la vie associative locale très active.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient sur tout le territoire miot : du centre-bourg aux lotissements du Val de l’Eyre, en passant par Lacanau-de-Mios ou la route de Salles. Nos installations sont pensées pour les maisons bois, contemporaines ou traditionnelles.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Mios</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue de l&apos;Église : pose d’une pompe à chaleur air/air dans une maison de plain-pied avec combles aménagés.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Quartier Lacanau-de-Mios : installation d’un chauffe-eau thermodynamique dans une résidence familiale récente.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Route de Salles : remplacement d’un vieux radiateur électrique par un système de chauffage central PAC air/eau.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Lotissement Les Genêts : entretien de climatisations monosplit dans plusieurs maisons individuelles.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Des équipements adaptés à l’environnement miot</h2>
+    <p className="text-white leading-relaxed text-center">
+      À Mios, la présence de zones humides et boisées nécessite une attention particulière sur l’installation extérieure des PAC. ClimGO installe systématiquement sur dalles ventilées ou plots stabilisés pour éviter l’humidité au sol.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous ajustons également nos réglages en fonction de l’orientation des façades et de l’absence fréquente de protections solaires pour maximiser votre confort thermique toute l’année.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Et si on parlait de votre projet à Mios ?</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous habitez Mios ou ses environs ? Nos équipes se déplacent rapidement pour étudier votre projet de climatisation, chauffage ou production d’eau chaude. Profitez de nos conseils personnalisés et d’un devis clair, sans engagement.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Mios ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

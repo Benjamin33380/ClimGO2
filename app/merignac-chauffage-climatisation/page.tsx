@@ -138,7 +138,54 @@ export default function Bordeaux() {
           </section>
         </div>
       </div>
+ {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Mérignac ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une métropole dynamique et résidentielle</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Avec plus de 70 000 habitants, Mérignac est la deuxième plus grande ville de Gironde, combinant activité économique, pôles d&apos;affaires, et zones résidentielles très recherchées. 
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Grâce à sa proximité immédiate avec Bordeaux et à son accessibilité (tramway A, rocade, aéroport), la ville attire aussi bien les familles que les actifs en quête de confort de vie.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient régulièrement dans les quartiers d&apos;Arlac, Capeyron, Beaudésert ou Bourranville. Nos installations s’intègrent aussi bien dans les maisons des années 60 que dans les programmes neufs ou rénovés.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Mérignac</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue du Truc : remplacement d’une ancienne chaudière fioul par une pompe à chaleur air/eau éco-performante.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue Paul Cézanne : installation d’un système gainable pour un appartement rénové avec combles aménagés.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Boulevard Marcel Dassault : entretien de climatiseurs muraux dans des bureaux professionnels.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue René Coty : pose d’un chauffe-eau thermodynamique dans une maison en rénovation énergétique.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Des solutions adaptées à l’urbanisme mérignacais</h2>
+    <p className="text-white leading-relaxed text-center">
+      La diversité des habitats à Mérignac impose une expertise fine : maisons mitoyennes, immeubles collectifs, lotissements récents... Chez ClimGO, chaque projet est dimensionné sur mesure.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nos techniciens prennent aussi en compte la densité urbaine et les contraintes acoustiques pour garantir un confort maximal et une intégration discrète des équipements.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Et si on lançait votre projet à Mérignac ?</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Que ce soit pour une installation neuve, un remplacement ou un entretien régulier, notre équipe vous accompagne à chaque étape. Profitez de notre expertise locale pour votre logement ou votre local professionnel à Mérignac.
+    </p>
+  </div>
+</div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Mérignac ?</h2>

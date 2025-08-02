@@ -139,6 +139,54 @@ ClimGO vous accompagne dans vos démarches pour bénéficier des aides disponibl
         </div>
       </div>
 
+ {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Sanguinet ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un village lacustre en forte croissance</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Sanguinet séduit par son cadre de vie paisible au bord du lac, sa forêt environnante et sa proximité avec Biscarrosse et le Bassin d’Arcachon. Avec plus de 4 000 habitants, la commune attire de nombreux projets de construction et de rénovation.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Les résidents profitent d’un environnement naturel protégé, de commerces de proximité, d’équipements scolaires, et d’activités nautiques toute l’année. Le tissu pavillonnaire s’étend dans les quartiers comme le Lac, Canteloup ou les résidences autour du centre-bourg.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient régulièrement à Sanguinet pour installer des systèmes de climatisation, pompes à chaleur ou chauffe-eaux thermodynamiques, adaptés à des habitations secondaires comme principales.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Sanguinet</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue des Arbousiers : installation d’un split mural Mitsubishi dans une maison bois de 100 m².
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue des Grands Lacs : remplacement d’un ancien chauffe-eau électrique par un modèle thermodynamique compact.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Chemin de Canteloup : pose d’une pompe à chaleur air/eau avec plancher chauffant pour une résidence principale neuve.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Lotissement du Lac : entretien saisonnier d’une climatisation gainable dans une villa secondaire.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Des installations pensées pour le climat landais</h2>
+    <p className="text-white leading-relaxed text-center">
+      Le climat océanique humide et la proximité du lac nécessitent des équipements résistants à la corrosion et à la salinité. ClimGO sélectionne des modèles performants, traités pour durer dans ces conditions particulières.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nos techniciens adaptent chaque installation au type de sol sableux typique de la région, avec des fixations renforcées et des emplacements étudiés pour limiter les nuisances sonores.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Et si on parlait de votre projet à Sanguinet ?</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous habitez Sanguinet ou vous y avez une résidence secondaire ? Contactez-nous pour une étude personnalisée de vos besoins en chauffage, climatisation ou production d’eau chaude. Notre équipe est à votre écoute pour optimiser votre confort toute l’année.
+    </p>
+  </div>
+</div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Sanguinet ?</h2>

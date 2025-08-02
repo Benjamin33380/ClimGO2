@@ -139,7 +139,54 @@ ClimGO vous accompagne pour obtenir les aides disponibles à Parentis-en-Born : 
         </div>
       </div>
 
+ {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Parentis-en-Born ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune dynamique au cœur des Landes</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Parentis-en-Born se distingue par son cadre naturel exceptionnel entre lacs, forêts et océan. Avec près de 6 000 habitants, la ville attire aussi bien les familles locales que les nouveaux arrivants en quête de calme et d’espace.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Sa proximité avec Biscarrosse, les établissements scolaires, le port et les plages du lac en font un lieu de vie recherché. La commune connaît un essor résidentiel régulier avec de nombreuses constructions neuves.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient sur tout Parentis : du centre-ville aux quartiers de Lahitte, de Mounetou ou des bords du lac. Nous équipons aussi bien les maisons individuelles des années 80 que les villas modernes RT2012.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Parentis</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Quartier Lahitte : remplacement d’un ancien climatiseur par un modèle mural Inverter Daikin, faible consommation.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue Jean-Jacques Rousseau : installation d’un plancher chauffant basse température avec PAC air/eau.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Lotissement Les Aigrettes : pose d’un chauffe-eau thermodynamique pour une maison de 110 m² avec 4 occupants.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Route de Gastes : entretien annuel de splits multisplit Mitsubishi dans une résidence secondaire.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Des solutions pensées pour le climat landais</h2>
+    <p className="text-white leading-relaxed text-center">
+      Entre humidité, vents d’ouest et amplitudes thermiques saisonnières, nos équipements sont adaptés au climat local. Les groupes extérieurs sont toujours protégés par dalle surélevée ou structure ventilée.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous ajustons également les puissances selon l’exposition des maisons de Parentis, souvent à toit plat ou sans casquette de protection solaire.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Et si on parlait de votre projet à Parentis ?</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous résidez à Parentis-en-Born ou dans les alentours ? Que ce soit pour une rénovation, une construction ou une amélioration énergétique, ClimGO est à votre écoute pour vous proposer une solution fiable et performante. Contactez-nous sans attendre.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Parentis-en-Born ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

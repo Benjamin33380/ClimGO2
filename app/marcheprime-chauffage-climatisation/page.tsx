@@ -139,7 +139,54 @@ Profitez de notre accompagnement dans vos démarches pour réduire vos coûts : 
         </div>
       </div>
 
+ {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Marcheprime ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un cadre résidentiel prisé entre ville et nature</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Nichée entre Bordeaux et le bassin d’Arcachon, Marcheprime séduit par son environnement boisé, ses pistes cyclables et sa proximité avec la N250. Avec plus de 5 000 habitants, la commune attire des familles en quête de calme, de maisons avec jardin et de solutions de confort thermique adaptées.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Le tissu résidentiel se compose de lotissements récents, d’habitations individuelles et de bâtis plus anciens à rénover. ClimGO intervient dans tous les secteurs : autour de la gare, route de Lacanau, quartier du Bourg, ou près du collège Aliénor d’Aquitaine.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Nos solutions s’adaptent aux maisons RT2012, aux logements de plain-pied ou à étage, avec une attention particulière portée à la consommation énergétique et à l’intégration visuelle des équipements.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Marcheprime</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue des Palombes : remplacement d’un système fioul par une pompe à chaleur air/eau nouvelle génération.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Lotissement du Bourg : installation de splits muraux silencieux pour une maison familiale avec mezzanine.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue du Stade : entretien complet d’un chauffe-eau thermodynamique avec vérification des performances.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Impasse des Genêts : installation d’un plancher chauffant relié à une PAC double service pour chauffage et eau chaude.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire taillé pour les habitations de Marcheprime</h2>
+    <p className="text-white leading-relaxed text-center">
+      La nature sableuse du sol et la présence fréquente de pins imposent une attention particulière à l’emplacement des unités extérieures. Chez ClimGO, nous installons sur plots ou dalles isolées pour préserver les performances acoustiques et thermiques.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous tenons compte des expositions sud/ouest typiques de la commune et des besoins de rafraîchissement l’été, surtout dans les maisons à grande baie vitrée ou orientées plein soleil.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Parlons de votre projet à Marcheprime</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Que vous soyez résident de longue date ou nouvel arrivant, nous étudions votre logement pour vous proposer une solution sur mesure. Demandez votre devis en ligne ou contactez-nous pour planifier une visite technique à Marcheprime.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Marcheprime ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

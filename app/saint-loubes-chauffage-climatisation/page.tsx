@@ -138,7 +138,54 @@ export default function Pessac() {
           </section>
         </div>
       </div>
+  {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Saint-Loubès ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune entre vignobles, patrimoine et dynamisme</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située à une vingtaine de kilomètres de Bordeaux, Saint-Loubès attire les familles en quête d’un cadre de vie paisible et verdoyant. Forte de plus de 8 000 habitants, la ville se distingue par son ambiance villageoise et ses domaines viticoles réputés.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Les habitants profitent d’un accès rapide via la D670, d’une gare TER et d’équipements scolaires variés (collège Max Linder, écoles publiques). Le tissu associatif local est très actif.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient à Saint-Loubès dans tous les quartiers : La Poste, Le Bourg, La Chapelle, Les Gravières ou les lotissements proches de l’avenue de la République. Nos solutions s’adaptent aussi bien aux maisons anciennes en pierre qu’aux pavillons des années 2000.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Saint-Loubès</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue des Écoles : installation d’une climatisation gainable dans une maison rénovée en R+1 avec isolation renforcée.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Chemin des Loubèsiens : remplacement d’un ancien radiateur électrique par une PAC air/air réversible Daikin.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Lotissement Les Vergers : entretien annuel de quatre unités extérieures pour une petite copropriété.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Allée des Vignes : mise en place d’un chauffe-eau thermodynamique vertical pour optimiser l’espace buanderie.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Des installations pensées pour Saint-Loubès</h2>
+    <p className="text-white leading-relaxed text-center">
+      Le climat océanique loubésien et les variations de température entre hiver humide et été sec nécessitent des systèmes performants. Chez ClimGO, nous privilégions des solutions réversibles et silencieuses adaptées aux contraintes locales.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nos techniciens prennent en compte la configuration des bâtiments loubésiens pour assurer un confort optimal toute l’année, sans dénaturer le charme architectural.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un projet sur Saint-Loubès ? Parlons-en</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous êtes loubésien et souhaitez améliorer votre confort thermique ? ClimGO vous accompagne avec sérieux et réactivité. Contactez-nous pour une étude gratuite et personnalisée de votre habitation.
+    </p>
+  </div>
+</div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Saint-Loubès ?</h2>

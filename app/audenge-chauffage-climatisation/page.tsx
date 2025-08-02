@@ -139,7 +139,54 @@ export default function Audenge() {
         </div>
       </div>
 
+    {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Saint-Jean-d’Illac ?" */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune entre bassin et nature</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Audenge charme ses habitants par sa douceur de vivre entre forêt domaniale et rives du bassin. Cette situation privilégiée attire de plus en plus de familles, de retraités actifs et de jeunes propriétaires à la recherche d’un équilibre entre calme et accessibilité.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Son port typique, sa plage aménagée, ses pistes cyclables et la réserve ornithologique du Domaine de Certes soulignent l’importance de préserver un confort thermique discret, économe et respectueux de l’environnement. 
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Nous intervenons à Lubec, la Pointe Émile, Hougueyra, Bas-Vallon ou autour du centre-ville pour adapter nos installations à chaque typologie de logement : maisons contemporaines, bâtisses de charme ou extensions modernes.
+        </p>
+      </div>
 
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets à Audenge</h2>
+        <p className="text-white leading-relaxed text-center">
+          • Rue des Lauriers : remplacement d’un système à convecteurs par une pompe à chaleur air/air discrète, adaptée à un séjour cathédrale.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Quartier de Lubec : installation d’une PAC air/eau pour une maison familiale, avec plancher chauffant sur dalle neuve.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Avenue du Parc : maintenance annuelle de quatre unités split Mitsubishi dans une résidence secondaire.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Hameau de la Pointe Émile : remplacement d’un chauffe-eau électrique mural par un modèle thermodynamique, avec redimensionnement du ballon.
+        </p>
+      </div>
+
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire au rythme du bassin</h2>
+        <p className="text-white leading-relaxed text-center">
+          Le climat du Bassin d’Arcachon nécessite des équipements adaptés aux variations douces mais humides. Nos installations sont conçues pour durer et fonctionner efficacement en mi-saison comme en été.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          Grâce à notre connaissance du secteur audengeois, nous positionnons les unités extérieures à l’abri du vent marin, sur des plots anti-humidité, tout en préservant l’esthétique des façades.
+        </p>
+      </div>
+
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un projet à Audenge ?</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Que vous soyez propriétaire d’une résidence principale, secondaire ou en rénovation, ClimGO est votre partenaire local pour un confort maîtrisé. Contactez-nous et obtenez une étude gratuite adaptée à votre habitation audengeoise.
+        </p>
+      </div>
+    </div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Audenge ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

@@ -137,7 +137,54 @@ export default function Eysines() {
           </section>
         </div>
       </div>
+{/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Eysines ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Eysines, entre urbanisme et nature</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située au nord-ouest de Bordeaux, Eysines bénéficie d’un développement résidentiel continu tout en conservant ses espaces verts, comme le parc du Vigean ou le bois de Migelane. Sa proximité avec les boulevards et le tram D attire de nombreuses familles et jeunes actifs.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Les habitants profitent d’un cadre de vie équilibré, avec des infrastructures modernes, des écoles réputées et un accès rapide vers Mérignac ou le centre de Bordeaux. Le tissu pavillonnaire, ancien et récent, permet des interventions variées en chauffage et climatisation.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Chez ClimGO, nous intervenons dans tous les secteurs : Le Vigean, Migelane, La Forêt, La Lescombes… Nos solutions s’adaptent aux maisons mitoyennes, aux résidences des années 90 ou aux nouvelles constructions BBC.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Eysines</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue du Médoc : installation d’une climatisation split inverter dans une maison mitoyenne en rénovation énergétique.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Chemin de Lescombes : remplacement d’un ancien chauffe-eau gaz par un modèle thermodynamique performant.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Résidence Les Cèdres : maintenance annuelle de plusieurs unités murales dans une copropriété de standing.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue de l’Hippodrome : pose d’une PAC air/eau couplée à un plancher chauffant pour une maison neuve.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire pensé pour les logements eysinais</h2>
+    <p className="text-white leading-relaxed text-center">
+      Le bâti à Eysines est très hétérogène : pavillons des années 60, logements en bande, maisons neuves RT2012… Chaque situation demande une étude personnalisée de la puissance, de l’emplacement et du type d’équipement.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous tenons également compte des contraintes de voisinage pour minimiser le bruit extérieur, tout en garantissant confort et performance énergétique toute l’année.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Vous avez un projet thermique à Eysines ?</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Que vous soyez propriétaire, en extension de maison ou en réhabilitation, ClimGO vous propose des solutions adaptées aux réalités d’Eysines. Parlons-en et obtenez un devis rapide et précis.
+    </p>
+  </div>
+</div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Eysines ?</h2>

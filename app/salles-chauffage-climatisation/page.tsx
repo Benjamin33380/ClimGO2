@@ -138,7 +138,54 @@ export default function Salles() {
           </section>
         </div>
       </div>
+ {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Salles ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune forestière en plein essor</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située entre le bassin d’Arcachon et le Parc naturel régional des Landes de Gascogne, Salles attire de nombreuses familles et actifs en quête de nature et de tranquillité. Sa croissance démographique continue accompagne un dynamisme immobilier fort.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Les habitants profitent d’un cadre verdoyant, de nombreuses pistes cyclables, d’un tissu associatif actif, ainsi que d’écoles, collèges et commerces de proximité bien répartis dans la commune.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient aussi bien dans le centre-bourg que dans les quartiers de Lavignolle, La Cassadotte, Le Caplanne ou encore aux abords de la Leyre. Nos solutions s’adaptent aux maisons récentes comme aux bâtis anciens rénovés.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Salles</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue du Val de l’Eyre : installation d’une pompe à chaleur air/eau dans une maison de 140 m² avec plancher chauffant existant.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Route de Belin : pose d’une climatisation réversible multisplit dans un pavillon de plain-pied exposé sud.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Quartier La Cassadotte : entretien annuel d’un chauffe-eau thermodynamique installé en 2022.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue des Écoles : remplacement d’un ancien radiateur électrique par un radiateur basse température connecté.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Des installations pensées pour le climat et le sol de Salles</h2>
+    <p className="text-white leading-relaxed text-center">
+      En zone forestière, l’humidité et les sols sablonneux imposent des normes d’ancrage spécifiques. Nos PAC sont fixées sur des supports ventilés ou plots béton pour garantir stabilité et performance.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      L’ensoleillement généreux de la région nous permet également de vous conseiller des solutions économes en énergie, avec un excellent confort été comme hiver.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un projet thermique à Salles ? Parlons-en</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous habitez Salles, vous venez d’acheter ou vous envisagez des travaux de rénovation ? ClimGO vous accompagne pour trouver la solution la plus performante et adaptée à votre logement. Un simple appel suffit.
+    </p>
+  </div>
+</div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Salles ?</h2>

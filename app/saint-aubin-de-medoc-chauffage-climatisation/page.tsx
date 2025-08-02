@@ -139,7 +139,54 @@ export default function SaintAubinDeMedoc() {
         </div>
       </div>
 
+{/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Saint-Aubin-de-Médoc ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un environnement privilégié entre pinède et modernité</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      À moins de 30 minutes de Bordeaux, Saint-Aubin-de-Médoc séduit par son cadre boisé, ses grands terrains et son ambiance résidentielle haut de gamme. Avec un peu plus de 7 000 habitants, la commune attire les familles et cadres en quête de tranquillité et d’espace.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Villas d’architecte, maisons traditionnelles ou nouvelles constructions RT2012, chaque projet demande une attention particulière. Chez ClimGO, nous adaptons nos solutions aux exigences thermiques et esthétiques du secteur.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Nos installations répondent parfaitement aux attentes des foyers saint-aubinois, soucieux d’allier performance, discrétion et intégration paysagère.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Saint-Aubin-de-Médoc</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Allée du Bourdieu : installation d’une pompe à chaleur air/eau pour une maison en ossature bois.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue de la Gravière : pose d’une climatisation gainable discrète dans une villa contemporaine.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Lotissement Les Chênes : maintenance annuelle de systèmes multi-split Mitsubishi.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Route de Castelnau : remplacement d’un ancien chauffe-eau électrique par un modèle thermodynamique compact.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Des solutions pensées pour le cadre boisé de Saint-Aubin</h2>
+    <p className="text-white leading-relaxed text-center">
+      Le relief plat, les haies hautes et l’ombre permanente influencent le choix des équipements à Saint-Aubin-de-Médoc. Nos techniciens prennent en compte l’orientation, l’ensoleillement et l’accessibilité pour une installation optimale.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous veillons à préserver la tranquillité sonore et l’esthétique extérieure, souvent recherchées dans les zones pavillonnaires entourées de pins.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Discutons de votre confort thermique à Saint-Aubin</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous envisagez une rénovation, une construction ou un simple remplacement d’équipement ? ClimGO vous accompagne à Saint-Aubin-de-Médoc avec des solutions sur mesure. Contactez-nous pour un devis clair et une étude personnalisée.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Saint-Aubin-de-Médoc ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

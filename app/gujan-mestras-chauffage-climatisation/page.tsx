@@ -139,7 +139,54 @@ export default function GujanMestras() {
         </div>
       </div>
 
+{/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Gujan-Mestras ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Gujan-Mestras, entre bassin et modernité</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Gujan-Mestras séduit de plus en plus d’habitants grâce à sa situation idéale sur le bassin d’Arcachon. Cette commune dynamique de près de 22 000 habitants combine tradition ostréicole, cadre naturel préservé et habitat en plein essor.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Les quartiers comme Meyran, La Hume, Chante-Cigale ou les Prés Salés accueillent chaque année de nouveaux projets de construction ou de rénovation énergétique. La proximité des plages et de la voie rapide facilite la vie des familles actives.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Chez ClimGO, nous connaissons bien la diversité des logements gujanais : maisons en bois typiques du bassin, lotissements récents ou villas modernes. Nos systèmes s’adaptent à chaque typologie.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples d’installations à Gujan-Mestras</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Quartier de La Hume : mise en place d’une climatisation gainable invisible pour une maison secondaire en location saisonnière.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue Edmond Daubric : remplacement d’un vieux système fioul par une pompe à chaleur air/eau performante avec plancher chauffant.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Résidence Les Voiles : maintenance annuelle de splits Mitsubishi dans plusieurs appartements locatifs.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Chemin du Pas de Madame : installation d’un chauffe-eau thermodynamique dans une maison bois RT2012.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire adapté au climat du bassin</h2>
+    <p className="text-white leading-relaxed text-center">
+      L’air salin et les conditions climatiques spécifiques du bassin exigent une installation rigoureuse et du matériel adapté. ClimGO privilégie des équipements traités anticorrosion et une pose en hauteur sur plots ou mur pour éviter les remontées humides.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nos équipes prennent aussi en compte les ouvertures traversantes et les besoins de rafraîchissement en été, fréquents sur Gujan-Mestras, pour ajuster précisément la puissance.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Votre confort thermique à Gujan ? On s’en occupe.</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous habitez Gujan-Mestras ou prévoyez d’y rénover une résidence ? ClimGO vous accompagne de l’étude de vos besoins à l’entretien annuel de vos équipements. Profitez d’un accompagnement local, réactif et maîtrisé.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Gujan-Mestras ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

@@ -139,7 +139,54 @@ export default function Pessac() {
         </div>
       </div>
 
+ {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Pessac ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une ville stratégique entre nature et innovation</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située au cœur de la métropole bordelaise, Pessac conjugue patrimoine, modernité et attractivité. Forte de plus de 65 000 habitants, la commune séduit par ses quartiers résidentiels, ses espaces verts et sa proximité immédiate avec Bordeaux.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      C’est aussi une ville universitaire et scientifique dynamique (Université de Bordeaux, technopole Bordeaux InnoCampus), avec un réseau de transports performant (tram B, rocade, gare SNCF).
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient dans tous les secteurs de Pessac : Saige, Alouette, Toctoucau, Noès, France Alouette ou encore Bellegrave. Nos installations s’adaptent aussi bien aux maisons anciennes en pierre qu’aux logements récents ou collectifs.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Pessac</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue Pasteur : installation d’une PAC air/eau avec plancher chauffant dans une maison des années 90.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Résidence Le Monteil : maintenance complète de splits muraux dans un appartement T4 loué à l’année.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue des Poilus : remplacement d’un chauffe-eau classique par un chauffe-eau thermodynamique pour une famille de 5 personnes.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Quartier Cap de Bos : pose d’un gainable Mitsubishi invisible dans les combles d’une maison de plain-pied.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Des installations pensées pour l’habitat pessacais</h2>
+    <p className="text-white leading-relaxed text-center">
+      Le bâti pessacais est très varié, allant de l’ancien pavillonnaire aux nouvelles résidences BBC. Chez ClimGO, chaque projet est adapté aux contraintes thermiques du logement et aux règles d’urbanisme en vigueur.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous privilégions des solutions discrètes, performantes et adaptées aux espaces réduits, en tenant compte de l’exposition et de l’isolation existante.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Votre projet énergétique sur Pessac commence ici</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous habitez Pessac ou ses environs ? Nos techniciens ClimGO vous accompagnent dans le choix, l’installation et l’entretien de vos équipements thermiques. Contactez-nous dès aujourd’hui pour un devis ou un diagnostic gratuit.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Pessac ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

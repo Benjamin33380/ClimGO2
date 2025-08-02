@@ -138,7 +138,53 @@ ClimGO vous accompagne dans les démarches pour bénéficier des aides disponibl
           </section>
         </div>
       </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une station entre lacs et océan</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Biscarrosse séduit par son cadre naturel unique : dunes, forêt landaise, plages de sable fin et grands lacs. Elle attire aussi bien les familles en quête de calme que les sportifs et amoureux de la nature.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          La ville se divise entre Biscarrosse-Bourg, cœur de vie locale, et Biscarrosse-Plage, plus touristique, avec une forte activité estivale. ClimGO adapte ses interventions à ces contextes variés.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Nous connaissons bien les zones résidentielles autour du lac Nord, les lotissements récents comme Naouas, et les maisons typiques de l’avenue Georges Clemenceau ou du quartier du Vivier.
+        </p>
+      </div>
 
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’installations à Biscarrosse</h2>
+        <p className="text-white leading-relaxed text-center">
+          • Quartier de Navarrosse : installation d’une PAC air/eau avec ballon tampon dans une maison secondaire.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Rue de la Forêt : remplacement d’un ancien système de chauffage fioul par une solution split réversible plus écologique.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Résidence les Cottages du Lac : maintenance annuelle sur plusieurs unités extérieures, avec nettoyage et contrôle des performances.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Zone du Vivier : climatisation gainable dans une villa de plain-pied, avec intégration discrète dans les combles.
+        </p>
+      </div>
+
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Une expertise adaptée à l’environnement biscarrossais</h2>
+        <p className="text-white leading-relaxed text-center">
+          Entre humidité marine et variations de température, chaque installation nécessite un dimensionnement précis. Nos solutions sont pensées pour résister à la corrosion et à l’air salin, avec des unités extérieures surélevées et ventilées.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          Les vents d’ouest fréquents nous incitent à privilégier des emplacements abrités pour préserver les performances des équipements tout en garantissant une faible nuisance sonore.
+        </p>
+      </div>
+
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Parlons de votre projet à Biscarrosse</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Vous êtes propriétaire, bailleur saisonnier ou résident à l’année ? Nous vous accompagnons avec écoute et professionnalisme. N’hésitez pas à nous contacter pour une étude sur mesure, sans engagement.
+        </p>
+      </div>
+    </div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Biscarrosse ?</h2>

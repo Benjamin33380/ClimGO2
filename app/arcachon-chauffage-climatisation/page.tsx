@@ -138,7 +138,53 @@ export default function Arcachon() {
           </section>
         </div>
       </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un art de vivre entre bassin et pinède</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Arcachon séduit par son élégance naturelle, sa baie aux reflets changeants et son patrimoine architectural. Des quartiers paisibles de l’Aiguillon aux villas cossues de la Ville d’Hiver, chaque recoin d’Arcachon raconte une histoire.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Avec plus de 11 000 habitants, la ville voit fleurir des projets de rénovation et de modernisation, mêlant charme d’antan et exigences thermiques actuelles. ClimGO s’y adapte avec finesse et rigueur.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Nos interventions s’étendent de la place des Marquises au front de mer, sans oublier les résidences secondaires nichées près des forêts domaniales ou les logements collectifs récents autour de la gare.
+        </p>
+      </div>
 
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Zoom sur nos interventions à Arcachon</h2>
+        <p className="text-white leading-relaxed text-center">
+          • Boulevard de la Plage : remplacement d’un ancien système de chauffage au fioul par une pompe à chaleur air/eau haut rendement.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Allée des Bougainvillées : installation discrète d’un split mural dans une villa classée, sans dénaturer les volumes intérieurs.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Rue du Maréchal de Lattre : mise en place d’un chauffe-eau thermodynamique dans une résidence secondaire, avec surveillance à distance.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Quartier Pereire : entretien préventif de plusieurs consoles Daikin installées en bord de mer.
+        </p>
+      </div>
+
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire affiné pour le climat océanique</h2>
+        <p className="text-white leading-relaxed text-center">
+          Le climat arcachonnais, entre embruns salins, humidité et vents marins, nécessite un dimensionnement précis et des équipements durables. Nos installations sont pensées pour résister aux variations climatiques tout en restant discrètes.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          Nous privilégions des unités extérieures en matériaux traités anticorrosion et des systèmes réversibles optimisés pour les résidences secondaires, souvent inhabitées plusieurs mois par an.
+        </p>
+      </div>
+
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Discutons de votre projet à Arcachon</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Que votre logement soit en centre-ville, au Moulleau ou vers Abatilles, notre équipe s’engage à vous proposer une solution sur-mesure, respectueuse du bâti et de vos attentes. Contactez-nous pour un devis ou une simple prise d’informations.
+        </p>
+      </div>
+    </div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Arcachon ?</h2>

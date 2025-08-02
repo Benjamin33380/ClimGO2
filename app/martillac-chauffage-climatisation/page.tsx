@@ -138,7 +138,54 @@ export default function Martillac() {
         </div>
       </div>
 
+  {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Martillac ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune viticole entre tradition et modernité</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Nichée au cœur des prestigieux vignobles des Graves, Martillac offre un cadre paisible et authentique à ses habitants. Située à seulement 20 minutes de Bordeaux, la ville séduit autant les amateurs de nature que les familles recherchant un environnement calme.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Martillac se développe autour d’un tissu résidentiel varié, entre chais anciens rénovés, maisons traditionnelles et nouvelles zones pavillonnaires proches du centre ou du Château Smith Haut Lafitte.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient dans toute la commune : rue du Bourg, chemin de la Forge, lotissements près de la mairie ou du lycée de la Sauque. Nos solutions s’intègrent avec discrétion dans ce patrimoine local.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples d’installations réalisées à Martillac</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue de la Brède : installation d’une PAC air/air dans une maison en pierre avec isolation intérieure.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Lotissement Les Graves : pose d’un plancher chauffant connecté avec pompe à chaleur air/eau.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Route du Castera : entretien saisonnier de deux splits Daikin dans un pavillon des années 90.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Chemin des Vignes : remplacement d’un chauffe-eau électrique par un modèle thermodynamique nouvelle génération.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Une expertise en phase avec le territoire martillacais</h2>
+    <p className="text-white leading-relaxed text-center">
+      Entre humidité matinale des vignes et variations thermiques, nous adaptons nos installations aux exigences spécifiques du climat martillacais. Nos PAC sont conçues pour garantir un fonctionnement optimal, même en hiver.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      L’esthétique locale étant un enjeu majeur, nous privilégions des installations sobres, efficaces et silencieuses, parfaitement intégrées aux façades en pierre ou enduit clair typiques de la région.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Vous avez un projet à Martillac ?</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Que vous soyez viticulteur, propriétaire d’un bien ancien ou acquéreur d’une maison neuve, ClimGO vous accompagne pour optimiser votre confort thermique. Contactez-nous pour une étude personnalisée sur Martillac et ses alentours.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Martillac ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

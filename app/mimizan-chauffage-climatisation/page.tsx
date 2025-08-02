@@ -139,7 +139,54 @@ ClimGO vous accompagne dans vos démarches pour bénéficier des aides disponibl
         </div>
       </div>
 
+{/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Mimizan ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un cadre de vie entre forêt et océan</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située au cœur des Landes, Mimizan séduit par son cadre naturel exceptionnel, entre pins maritimes, plages de sable fin et étangs paisibles. La commune compte environ 7 000 habitants et attire chaque année de nouveaux résidents et vacanciers.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Les familles apprécient la tranquillité du centre-ville, les écoles (Paul Bert, Jean Jaurès), ainsi que les activités sportives et culturelles proposées tout au long de l’année, notamment autour du lac et de la plage.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient aussi bien dans le centre de Mimizan-Bourg que dans les quartiers résidentiels proches de Mimizan-Plage ou de la route de Bias. Nos solutions s’adaptent à l’architecture typique des maisons landaises et aux constructions récentes.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Mimizan</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue des Goëlands : installation d’une climatisation gainable dans une résidence secondaire proche de la plage.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue de Woolsack : remplacement d’un ancien cumulus par un chauffe-eau thermodynamique performant.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Lotissement du Born : pose d’une PAC air/eau avec plancher chauffant dans une maison RT2012 neuve.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Quartier du lac : entretien annuel de climatisations murales dans plusieurs logements loués en saison.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Une expertise adaptée au climat landais</h2>
+    <p className="text-white leading-relaxed text-center">
+      À Mimizan, l’humidité de l’air et le vent marin exigent des équipements résistants à la corrosion et un entretien rigoureux. Nos PAC sont sélectionnées pour leur fiabilité en bord de mer.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous anticipons aussi les fortes amplitudes thermiques entre été et hiver pour dimensionner au mieux les systèmes de chauffage et de climatisation.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Votre projet confort à Mimizan ?</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Que ce soit pour votre résidence principale, une location saisonnière ou une maison de vacances, ClimGO est votre partenaire de confiance à Mimizan. Contactez-nous pour un devis personnalisé et adapté à vos besoins locaux.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Mimizan ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

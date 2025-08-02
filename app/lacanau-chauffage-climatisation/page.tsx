@@ -138,7 +138,54 @@ export default function Lacanau() {
           </section>
         </div>
       </div>
+ {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Lacanau ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un cadre naturel très prisé</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Entre lac, océan et forêt, Lacanau séduit de plus en plus de résidents et de propriétaires de résidences secondaires. Cette commune du littoral girondin connaît un développement constant tout en préservant son environnement exceptionnel.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Des zones comme Lacanau-Océan, le centre-ville, le Huga ou le Moutchic accueillent des logements très variés. Les habitants profitent d’un cadre de vie apaisant, d’activités nautiques et de pistes cyclables à proximité.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient sur l’ensemble du territoire canaulais, pour équiper les maisons de plain-pied, villas bois, constructions neuves RT2012 ou logements rénovés à proximité du lac ou de l’océan.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Lacanau</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Quartier du Moutchic : installation d’un split mural silencieux pour un studio loué en saison estivale.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue de l’Europe : remplacement d’un chauffage électrique par une pompe à chaleur air/air avec contrôle à distance.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue du Général Leclerc : entretien d’un chauffe-eau thermodynamique dans une résidence principale.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Zone Lacanau-Océan : pose de splits dans une maison secondaire avec mode déshumidification intégré.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Nos solutions techniques pour le climat côtier</h2>
+    <p className="text-white leading-relaxed text-center">
+      Le climat océanique humide de Lacanau nécessite des installations résistantes au sel, aux vents et aux variations de température. Nous privilégions des modèles adaptés au bord de mer, avec protections renforcées et fixations anti-corrosion.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Pour les résidences secondaires, nous proposons également des systèmes programmables à distance, pour un confort dès l’arrivée et des économies en votre absence.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Discutons de votre projet à Lacanau</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous envisagez une installation thermique sur Lacanau ou Lacanau-Océan ? Notre équipe se déplace sur place pour vous proposer la solution la plus adaptée à votre logement, votre usage et votre budget. Contactez-nous simplement en ligne.
+    </p>
+  </div>
+</div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Lacanau ?</h2>

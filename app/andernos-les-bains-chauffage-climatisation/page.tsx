@@ -139,7 +139,54 @@ export default function Andernos() {
         </div>
       </div>
 
+    {/* Ajout des sections enrichies pour Andernos-les-Bains */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un cadre de vie recherché au bord du Bassin</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Située entre plages, forêt et piste cyclable, Andernos-les-Bains séduit par son cadre naturel privilégié. Avec ses 12 000 habitants, la ville attire aussi bien les familles en quête de tranquillité que les retraités ou jeunes actifs souhaitant s’installer à proximité de Bordeaux.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Le centre-ville dynamique, le port ostréicole typique, les établissements scolaires et les nombreuses pistes cyclables font d’Andernos une commune vivante toute l’année. La zone de la Jetée, le quartier du Bétey ou encore Coubertin accueillent une diversité de logements adaptés à tous les styles de vie.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          ClimGO intervient dans tous les quartiers d’Andernos, des villas contemporaines du port aux maisons typiques du centre, en passant par les nouvelles constructions côté Mauret ou Grand Large.
+        </p>
+      </div>
 
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Andernos</h2>
+        <p className="text-white leading-relaxed text-center">
+          • Quartier du Bétey : installation d’une pompe à chaleur air/air dans une maison secondaire, avec optimisation acoustique pour le voisinage.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Avenue Pasteur : remplacement d’un ancien chauffage au gaz par une PAC air/eau haute performance pour une résidence principale de plain-pied.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Rue du Port : entretien annuel d’un système multisplit Mitsubishi dans une maison rénovée avec vue sur le Bassin.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Lotissement Coubertin : pose d’un chauffe-eau thermodynamique compact dans une construction neuve RT2012.
+        </p>
+      </div>
+
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire adapté à l’environnement andernosien</h2>
+        <p className="text-white leading-relaxed text-center">
+          L’air marin, l’humidité du Bassin et la proximité des pins exigent des installations robustes et bien pensées. Chez ClimGO, chaque PAC est installée avec des supports surélevés et des traitements anticorrosion pour résister aux conditions locales.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          Nous tenons compte des expositions souvent plein ouest, de l’ombre partielle liée aux grands arbres, et des contraintes de voisinage, pour assurer un confort optimal en toute saison.
+        </p>
+      </div>
+
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un projet thermique à Andernos ? On en parle ?</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Vous habitez Andernos-les-Bains ou venez d’acquérir un bien ? Nos conseillers sont à votre écoute pour définir ensemble une solution de chauffage, climatisation ou production d’eau chaude parfaitement adaptée à votre logement. Contactez-nous pour un diagnostic gratuit.
+        </p>
+      </div>
+    </div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Andernos-les-Bains ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

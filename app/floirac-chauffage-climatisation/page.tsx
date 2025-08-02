@@ -138,7 +138,54 @@ export default function Bruges() {
         </div>
       </div>
 
+ {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Floirac ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Floirac, un équilibre entre ville et nature</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située sur la rive droite de la Garonne, Floirac connaît une forte dynamique résidentielle grâce à son lien direct avec Bordeaux et ses projets de réaménagement urbain. Avec plus de 18 000 habitants, la commune attire les jeunes actifs, familles et retraités.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Le tram A, le pont Simone Veil et la proximité immédiate de l’Arena et des berges font de Floirac un secteur à fort potentiel. Les écoles, les équipements sportifs et les commerces de proximité complètent un cadre de vie urbain, mais aéré.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient dans tous les quartiers : Dravemont, Domaine de la Burthe, Carriet ou La Souys. Que ce soit pour des maisons de ville anciennes, des résidences récentes ou des logements sociaux rénovés, nous adaptons nos solutions à chaque cas.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Floirac</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue Jules Guesde : remplacement d’un système électrique vieillissant par une climatisation air/air multisplit performante.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Quartier La Burthe : installation d’une pompe à chaleur air/eau dans une maison traditionnelle en pierre.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Résidence Les Horizons : maintenance annuelle des systèmes de chauffage dans un immeuble collectif.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Chemin de Carriet : pose d’un chauffe-eau thermodynamique en remplacement d’un ancien cumulus hors d’usage.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire local adapté à Floirac</h2>
+    <p className="text-white leading-relaxed text-center">
+      Le relief de Floirac, avec ses zones hautes et basses, et la diversité des habitats nécessitent une adaptation précise des puissances et technologies utilisées. Nous optimisons chaque installation en fonction de l’exposition et de l’isolation réelle du logement.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nos équipes maîtrisent aussi les contraintes d’intégration en milieu urbain dense, avec des solutions discrètes, performantes et conformes aux normes d’urbanisme locales.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Votre projet thermique à Floirac mérite notre expertise</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Que vous soyez en train de rénover une maison de ville ou d’emménager dans une résidence neuve, ClimGO vous accompagne avec des conseils sur-mesure à Floirac. Un simple appel ou un formulaire suffit pour obtenir un devis gratuit.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Floirac ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

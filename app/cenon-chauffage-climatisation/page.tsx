@@ -137,7 +137,54 @@ export default function Bruges() {
           </section>
         </div>
       </div>
+    {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Saint-Jean-d’Illac ?" */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune tournée vers l’avenir</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Avec ses 25 000 habitants, Cenon est une commune dynamique de la métropole bordelaise, connue pour ses projets urbains modernes, ses équipements culturels comme le Rocher de Palmer et ses quartiers en pleine mutation.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Des Hauts de Cenon jusqu’au Bas-Cenon, les familles bénéficient d’une bonne desserte en transports (tram A, bus TBM), d’établissements scolaires de qualité et d’un tissu associatif vivant.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          ClimGO intervient dans l’ensemble de la commune, du secteur Palmer à la Marègue, avec des solutions adaptées aux résidences récentes comme aux habitats collectifs des années 70.
+        </p>
+      </div>
 
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples d’installations réalisées à Cenon</h2>
+        <p className="text-white leading-relaxed text-center">
+          • Rue René Cassagne : installation d’une pompe à chaleur air/eau pour une maison individuelle de plain-pied.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Avenue Jean Jaurès : remplacement d’un ancien climatiseur par un split réversible Daikin dernière génération.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Résidence Les Maronniers : maintenance annuelle de plusieurs unités intérieures dans un immeuble collectif.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Rue Émile Combes : installation d’un chauffe-eau thermodynamique dans une maison rénovée avec combles aménagés.
+        </p>
+      </div>
+
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire calibré pour Cenon</h2>
+        <p className="text-white leading-relaxed text-center">
+          Cenon possède une diversité architecturale qui nécessite une approche sur-mesure : résidences en bande, logements sociaux, immeubles en terrasse ou pavillons modernes.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          Chez ClimGO, nous analysons chaque configuration (exposition, orientation, ventilation naturelle) pour garantir des installations efficaces, silencieuses et durables, y compris dans des copropriétés denses.
+        </p>
+      </div>
+
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un projet thermique à Cenon ?</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Vous habitez Cenon ou y investissez ? Nos équipes vous conseillent et se déplacent rapidement pour étudier votre logement et vous proposer la solution la plus adaptée à votre confort et à votre budget.
+        </p>
+      </div>
+    </div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Cenon ?</h2>

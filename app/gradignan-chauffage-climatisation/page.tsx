@@ -137,7 +137,54 @@ export default function Gradignan() {
           </section>
         </div>
       </div>
+{/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Gradignan ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Gradignan, ville verte et familiale au sud de Bordeaux</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située à la lisière de Pessac et Talence, Gradignan séduit par ses nombreux parcs, ses infrastructures scolaires réputées et son cadre de vie arboré. Avec plus de 25 000 habitants, la ville attire autant les familles que les seniors à la recherche de tranquillité.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Entre les écoles Jean Vilar, le lycée des Graves, les zones pavillonnaires calmes et les résidences modernes proches du centre-ville, Gradignan se modernise tout en gardant son cachet naturel et résidentiel.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient à Mandavit, Laurenzane, Beausoleil ou encore Saint-Albe, en neuf comme en rénovation. Nos systèmes s’intègrent parfaitement aux maisons des années 70-80 comme aux constructions BBC récentes.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Gradignan</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue des Pins : installation d’une PAC air/eau dans une maison traditionnelle avec radiateurs basse température.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue F. Mauriac : remplacement d’un chauffe-eau par un modèle thermodynamique compact et économique.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Lotissement Laurenzane : mise en place d’un système multisplit pour climatiser plusieurs pièces d’un pavillon rénové.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Résidence Les Terrasses de Gradignan : contrat annuel de maintenance sur des équipements collectifs Daikin.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Des installations pensées pour Gradignan</h2>
+    <p className="text-white leading-relaxed text-center">
+      À Gradignan, les grands jardins ombragés nécessitent des installations extérieures silencieuses et bien positionnées. Nos équipes prennent en compte chaque contrainte : mitoyenneté, orientation, espace technique ou esthétique.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous proposons des équipements discrets et efficaces, adaptés aux besoins thermiques spécifiques de Gradignan, tout en respectant les normes environnementales.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un projet à Gradignan ? On est là.</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous habitez à Gradignan ou vous venez d’acheter dans le secteur ? Contactez ClimGO pour des conseils adaptés à votre habitation. On vous accompagne de l’étude à l’entretien, avec la transparence et la qualité d’un partenaire local.
+    </p>
+  </div>
+</div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Gradignan ?</h2>

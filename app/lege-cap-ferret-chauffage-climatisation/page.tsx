@@ -138,7 +138,54 @@ export default function LegeCapFerret() {
           </section>
         </div>
       </div>
+{/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Lège-Cap-Ferret ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une presqu’île prisée et préservée</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Lège-Cap-Ferret, joyau de la côte girondine, attire aussi bien les résidents permanents que les vacanciers en quête d’authenticité. Avec ses villages ostréicoles, ses plages océanes et son cadre naturel unique, la commune connaît un essor maîtrisé.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Les familles apprécient ses écoles, sa vie de quartier paisible à Lège, ainsi que les commodités locales accessibles même en saison. Les constructions neuves comme les villas traditionnelles y cohabitent harmonieusement.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient sur toute la presqu’île : du Grand Crohot à Claouey, du Four au Canon jusqu’au mythique Cap-Ferret. Nos équipements s’adaptent aux contraintes architecturales locales et aux exigences esthétiques imposées par les zones classées.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples d’interventions à Lège-Cap-Ferret</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue de Bordeaux à Lège : pose d’une PAC air/air Daikin dans une maison secondaire rénovée, avec télécommande connectée.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Quartier des Jacquets : remplacement d’un chauffe-eau électrique par un modèle thermodynamique silencieux, adapté à la proximité du bassin.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue des Goélands (Cap-Ferret) : installation d’un système gainable pour climatiser sans dénaturer l’esthétique intérieure d’une villa de prestige.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Impasse des Tourterelles : maintenance annuelle d’un split Mitsubishi dans une résidence secondaire occupée l’été.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Savoir-faire local adapté aux contraintes du Cap</h2>
+    <p className="text-white leading-relaxed text-center">
+      Le climat océanique et l’air salin imposent des précautions particulières pour préserver la durabilité des installations. Nos équipements sont traités anti-corrosion et posés sur supports spécifiques pour éviter l’encrassement.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous respectons scrupuleusement les règles d’urbanisme locales, et proposons des solutions intégrées discrètes pour ne pas dénaturer les façades ou toitures en zone sensible.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Votre projet énergétique au Ferret ?</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous avez un projet de rénovation, de location saisonnière ou de résidence principale à Lège-Cap-Ferret ? Contactez-nous pour une étude personnalisée. Notre équipe s’adapte à vos contraintes et vous accompagne avec sérieux et discrétion.
+    </p>
+  </div>
+</div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Lège-Cap-Ferret ?</h2>

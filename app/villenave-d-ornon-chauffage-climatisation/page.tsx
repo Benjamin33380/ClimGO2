@@ -137,8 +137,54 @@ export default function VillenaveDornon() {
           </section>
         </div>
       </div>
+{/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Villenave-d'Ornon ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune en pleine mutation entre ville et nature</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située au sud de Bordeaux, Villenave-d&apos;Ornon compte plus de 35 000 habitants et connaît une forte croissance résidentielle. Grâce à sa proximité avec la rocade, la gare de Bègles et les zones d’activités, elle attire aussi bien des familles que des actifs.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Entre les quartiers du Pont-de-la-Maye, Chambéry, Bocage ou Courrejean, les styles de logements sont variés : maisons de lotissements, bâtis anciens rénovés ou résidences neuves. Une diversité à laquelle ClimGO s’adapte avec des solutions sur-mesure.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Nos interventions s’inscrivent parfaitement dans les projets de rénovation énergétique et d’amélioration du confort, en respectant les spécificités locales et les contraintes urbanistiques.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Villenave-d&apos;Ornon</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue Jules Ferry : remplacement d’un ancien système de chauffage par une PAC air/eau haute performance.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue du Maréchal Leclerc : installation d’une climatisation réversible dans un appartement récent.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Résidence Les Jardins de Courrejean : maintenance annuelle de climatiseurs muraux en copropriété.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue du Bocage : mise en place d’un chauffe-eau thermodynamique pour une maison RT2012.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Une expertise locale adaptée au cadre urbain et pavillonnaire</h2>
+    <p className="text-white leading-relaxed text-center">
+      À Villenave-d&apos;Ornon, nos équipes prennent en compte les différences de terrains (zones inondables, terrains argileux), les règles de mitoyenneté et les accès parfois étroits dans les lotissements.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nos installations sont pensées pour s’intégrer discrètement à l’environnement urbain, tout en offrant performance, confort acoustique et économies d’énergie.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Votre projet thermique à Villenave-d&apos;Ornon</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous habitez Villenave-d&apos;Ornon ou venez d’y acquérir un bien ? Notre équipe vous accompagne dans vos projets de chauffage, climatisation ou production d’eau chaude. Contactez-nous pour un devis gratuit et un accompagnement personnalisé.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Villenave-d&apos;Ornon ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

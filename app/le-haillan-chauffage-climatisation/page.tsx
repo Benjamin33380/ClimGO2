@@ -138,7 +138,54 @@ export default function LeHaillan() {
         </div>
       </div>
 
+ {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis au Haillan ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune dynamique et bien desservie</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Situé à l’ouest de Bordeaux, Le Haillan bénéficie d’un cadre de vie recherché, mêlant zones pavillonnaires, commerces de proximité et espaces verts. La ville attire de nombreux actifs grâce à sa proximité avec Mérignac, l’aéroport et la rocade.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Avec ses écoles, ses installations sportives modernes et ses zones résidentielles en plein essor (quartier La Luzerne, route de Saint-Médard), Le Haillan offre un environnement idéal pour les familles et les projets immobiliers récents ou à rénover.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO accompagne les habitants du Haillan dans tous leurs projets de chauffage, climatisation ou production d’eau chaude, en s’adaptant aux spécificités des maisons traditionnelles et des constructions neuves.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples d’interventions au Haillan</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue Pasteur : installation d’une pompe à chaleur air/eau pour une maison familiale de 120 m² avec plancher chauffant.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue Jean Mermoz : remplacement d’un ancien chauffe-eau par un modèle thermodynamique dernière génération.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue du Médoc : entretien complet d’un système multi-split dans une habitation avec combles aménagés.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Chemin de la Morandière : installation d’une climatisation gainable dans une maison de plain-pied orientée plein sud.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire adapté au climat et aux logements du Haillan</h2>
+    <p className="text-white leading-relaxed text-center">
+      Le Haillan est soumis à des étés de plus en plus chauds et à des intersaisons humides. Nos équipements sont pensés pour garantir un confort thermique optimal tout au long de l’année, avec une consommation maîtrisée.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous analysons l’isolation de chaque logement pour proposer une solution sur-mesure, en tenant compte des combles, des orientations et des volumes à chauffer ou climatiser.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Votre projet énergétique au Haillan mérite un expert</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Pour toute demande d’installation, d’entretien ou de remplacement d’équipement thermique au Haillan, ClimGO se tient à votre disposition. Demandez votre étude personnalisée, gratuite et sans engagement.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis au Haillan ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

@@ -137,7 +137,54 @@ export default function Leognan() {
           </section>
         </div>
       </div>
+ {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Léognan ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune viticole aux portes de Bordeaux</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située au cœur des Graves, Léognan offre un cadre de vie recherché mêlant tradition viticole, nature préservée et proximité urbaine. Avec plus de 10 000 habitants, la ville séduit autant les familles que les actifs bordelais.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Les habitants profitent de nombreux services : établissements scolaires, zones commerciales, infrastructures sportives et un accès rapide à la rocade via la D1010. Le tissu résidentiel mêle maisons neuves, lotissements des années 90 et bâtisses anciennes en pierre.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient dans tous les quartiers : centre-ville, Château Haut-Bailly, route de Saucats, les Portes du Médoc, ou encore les hameaux plus calmes vers Malartic. Chaque projet est pensé pour respecter l’environnement architectural local.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Léognan</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue du Bourg : pose d’un split Daikin dans un appartement rénové, avec régulation intelligente.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Lotissement des Graves : installation d’une PAC air/eau avec plancher chauffant sur maison RT2012.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Chemin de Malartic : maintenance annuelle sur une pompe à chaleur air/air utilisée en mode réversible été/hiver.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Proximité Château Olivier : remplacement d’un ancien chauffe-eau par un modèle thermodynamique performant.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Expertise technique adaptée au secteur léognanais</h2>
+    <p className="text-white leading-relaxed text-center">
+      À Léognan, les variations de températures entre vignes et forêts, ainsi que l’humidité ambiante, exigent des installations robustes et bien dimensionnées. Nous veillons à la bonne aération des unités extérieures et à leur intégration discrète dans les jardins paysagers.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous adaptons nos systèmes en fonction de l’exposition des maisons et des contraintes énergétiques, pour garantir un confort optimal toute l’année, été comme hiver.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un projet à Léognan ?</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Que vous soyez viticulteur, famille installée ou jeune propriétaire, nous vous accompagnons dans vos projets de chauffage, climatisation ou chauffe-eau à Léognan. Prenez contact avec notre équipe pour une étude gratuite et sans engagement.
+    </p>
+  </div>
+</div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Léognan ?</h2>

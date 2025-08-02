@@ -138,7 +138,54 @@ export default function Bruges() {
         </div>
       </div>
 
+    {/* Bloc Bruges personnalisé */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune en pleine mutation urbaine</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Située à deux pas de Bordeaux, Bruges connaît une croissance soutenue depuis plusieurs années. Avec ses quartiers modernes comme Ausone, Tasta ou Grand Darnal, la commune attire jeunes actifs, familles et seniors.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Le tram D, la rocade et les nombreux aménagements cyclables facilitent les déplacements. Côté équipements, Bruges se distingue par son stade, sa médiathèque et ses zones boisées préservées comme le parc Ausone.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Nous intervenons dans toutes les zones, des pavillons anciens proches de la mairie aux nouvelles résidences côté Ginko. Nos systèmes s’adaptent à chaque besoin, du confort minimaliste au haut de gamme éco-performant.
+        </p>
+      </div>
 
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Bruges</h2>
+        <p className="text-white leading-relaxed text-center">
+          • Avenue Charles de Gaulle : installation d’une pompe à chaleur air/eau pour une maison des années 70 avec plancher chauffant.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Rue de Campilleau : remplacement d’un vieux climatiseur par un split mural Daikin silencieux dans un appartement moderne.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Allée du Vieux Bourg : entretien annuel d’un chauffe-eau thermodynamique dans une copropriété BBC.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Quartier Ausone : pose d’un gainable Mitsubishi avec régulation multizone dans une maison neuve RT2012.
+        </p>
+      </div>
+
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire sur mesure pour Bruges</h2>
+        <p className="text-white leading-relaxed text-center">
+          Bruges combine habitat dense et zones pavillonnaires. Nos techniciens s’adaptent à l’urbanisme local, à la proximité des voies ferrées ou aux règles des copropriétés.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          Nous prenons en compte les performances thermiques des bâtiments brégeais, l’exposition, le vis-à-vis, les contraintes de bruit ou d’esthétique pour concevoir des installations optimales.
+        </p>
+      </div>
+
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un projet thermique sur Bruges ?</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Que vous habitiez une résidence récente, une échoppe rénovée ou une maison de lotissement, ClimGO vous accompagne pour améliorer votre confort thermique à Bruges. Contactez-nous dès maintenant.
+        </p>
+      </div>
+    </div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Bruges ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

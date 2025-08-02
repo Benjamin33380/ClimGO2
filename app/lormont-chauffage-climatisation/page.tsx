@@ -138,7 +138,54 @@ export default function LeBouscat() {
         </div>
       </div>
 
+{/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Lormont ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une ville dynamique aux portes de Bordeaux</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située sur la rive droite de la Garonne, Lormont connaît une véritable transformation urbaine tout en conservant son patrimoine historique. Proche du pont d’Aquitaine et bien desservie par les transports, la ville attire familles, retraités et jeunes actifs.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      La diversité des quartiers — Carriet, Génicart, La Ramade ou Vieux Lormont — permet à chaque profil d’habitat de trouver une solution de confort thermique adaptée. Les maisons de ville, les pavillons des années 70 et les logements sociaux rénovés offrent un large champ d’intervention.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient dans toute la commune, en adaptant chaque installation aux contraintes techniques locales : orientation, isolation, espace disponible, accessibilité. Notre priorité : conjuguer performance, esthétique et économies d’énergie.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Lormont</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Résidence Lauriers Roses : pose d’un split mural silencieux avec régulation automatique.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue de Paris : remplacement d’un chauffe-eau vieillissant par un modèle thermodynamique haute efficacité.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue du Général de Gaulle : entretien complet d’un système air/air multisplit sur maison mitoyenne.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Quartier Génicart : installation d’une pompe à chaleur air/eau avec plancher chauffant sur maison rénovée.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire calibré pour Lormont</h2>
+    <p className="text-white leading-relaxed text-center">
+      Entre bâtiments anciens en pierre, immeubles collectifs et maisons en bande, chaque logement à Lormont présente des défis uniques. Nos équipes dimensionnent chaque appareil selon les spécificités du bâti et des besoins réels.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous veillons également à optimiser la discrétion des unités extérieures, notamment dans les zones plus denses ou les copropriétés, tout en garantissant efficacité énergétique et durabilité.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un projet à Lormont ? Parlons-en</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous êtes propriétaire, bailleur ou gestionnaire de biens à Lormont ? ClimGO vous accompagne dans l’étude, l’installation et l’entretien de vos équipements. Contactez-nous pour un devis gratuit, rapide et sur mesure.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Lormont ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

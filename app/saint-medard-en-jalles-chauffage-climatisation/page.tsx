@@ -139,7 +139,54 @@ export default function Pessac() {
         </div>
       </div>
 
+ {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Saint-Médard-en-Jalles ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune en pleine transformation urbaine</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Saint-Médard-en-Jalles, à seulement 15 km de Bordeaux, séduit de plus en plus de ménages avec son équilibre entre vie résidentielle, pôles économiques (Dassault, ArianeGroup) et cadre boisé. Forte de plus de 30 000 habitants, elle offre un tissu urbain diversifié et un fort potentiel immobilier.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Les familles apprécient ses infrastructures complètes : établissements scolaires (collège François Mauriac, lycée Sud Médoc), équipements culturels et sportifs (Carré des Jalles, médiathèque, stades) ainsi qu’un accès direct à la rocade et à la D1215.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient à Magudas, Hastignan, Gajac, ou encore Cérillan. Nos solutions s’intègrent aussi bien dans les zones pavillonnaires neuves que dans les maisons plus anciennes à rénover.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Saint-Médard</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Allée François Arago : installation d’une climatisation gainable dans une maison en ossature bois RT2012.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue du Commandant Charcot : remplacement d’un ancien chauffage au gaz par une pompe à chaleur air/eau pour un foyer de quatre personnes.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Résidence des Écureuils : entretien annuel de plusieurs PAC Mitsubishi pour une copropriété boisée.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue Montaigne : installation d’un chauffe-eau thermodynamique mural, avec isolation renforcée du ballon pour réduire les pertes.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Une expertise adaptée aux conditions jallaises</h2>
+    <p className="text-white leading-relaxed text-center">
+      Entre les zones boisées, les sols argileux et la proximité des forêts, les installations nécessitent une approche sur-mesure. Nos équipes maîtrisent les contraintes locales : bruit, ventilation, sécurité et longévité des équipements.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous proposons des systèmes réversibles discrets et performants, compatibles avec les contraintes d’urbanisme propres à Saint-Médard-en-Jalles.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un projet à Saint-Médard-en-Jalles ? On vous rappelle</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Que ce soit pour un projet de rénovation énergétique ou d’installation dans une maison neuve, notre équipe locale vous accompagne. Contactez ClimGO pour un diagnostic sur place à Saint-Médard et un devis rapide.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Saint-Médard-en-Jalles ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

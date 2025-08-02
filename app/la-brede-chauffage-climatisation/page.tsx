@@ -138,7 +138,54 @@ export default function LaBrede() {
         </div>
       </div>
 
+  {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à La Brède ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune prisée au sud de Bordeaux</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située à une vingtaine de minutes de Bordeaux, La Brède attire les familles en quête de calme, de verdure et d’une vraie qualité de vie. Forte d’un patrimoine historique (château de Montesquieu) et d’un tissu associatif vivant, la ville dépasse aujourd’hui les 4 000 habitants.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Les établissements scolaires (école du bourg, collège Montesquieu), les zones résidentielles comme Lestonat ou La Pelouse et la proximité de l’A62 rendent la commune particulièrement attractive.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient sur tout le territoire brédois : lotissements neufs, maisons de caractère ou constructions des années 90. Nous adaptons nos solutions à chaque style de logement.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples d’interventions à La Brède</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue de Cérons : installation d’une PAC air/air monosplit pour un salon avec grande baie vitrée plein sud.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Lotissement du Château : remplacement d’un chauffe-eau classique par un modèle thermodynamique vertical, installé dans un cellier étroit.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue Charles de Gaulle : maintenance annuelle sur une installation existante Daikin dans une maison en L.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue Montesquieu : pose d’une climatisation gainable avec grilles discrètes dans un logement neuf RT2012.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Des installations pensées pour La Brède</h2>
+    <p className="text-white leading-relaxed text-center">
+      Le climat tempéré de la région et les contraintes architecturales des quartiers brédois imposent des solutions à la fois performantes et discrètes. Nous intégrons toujours nos équipements dans le respect de l’environnement paysager.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nos équipes veillent également à dimensionner chaque installation en fonction de l’isolation réelle du logement, souvent variable entre les maisons anciennes et les programmes récents.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Besoin d’un accompagnement à La Brède ?</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous habitez à La Brède ou envisagez des travaux de rénovation énergétique ? L’équipe ClimGO est à votre écoute pour étudier votre projet et vous proposer une solution sur mesure. Un seul appel suffit pour démarrer.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à La Brède ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

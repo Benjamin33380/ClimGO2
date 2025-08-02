@@ -138,7 +138,54 @@ export default function SaintAubinDeMedoc() {
           </section>
         </div>
       </div>
+  {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Martignas-sur-Jalle ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un cadre de vie recherché entre ville et nature</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située entre Bordeaux, Mérignac et Saint-Jean-d’Illac, Martignas-sur-Jalle connaît un véritable essor résidentiel. Avec près de 7 500 habitants, cette commune paisible offre un équilibre idéal entre dynamisme local, environnement naturel et proximité des grands axes.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Les familles y trouvent des infrastructures modernes, des établissements scolaires appréciés et un tissu pavillonnaire varié, allant des maisons neuves RT2012 aux constructions plus anciennes à rénover.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient à Martignas dans tous les secteurs : quartier de la Jalle, chemin du Blayais, avenue du 18 Juin, ou près du collège Aliénor d’Aquitaine. Nos solutions s’adaptent à chaque typologie de logement.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Interventions techniques à Martignas</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue de Capeyron : installation d’un système gainable pour une maison familiale à étage avec combles isolés.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Quartier des Palombes : remplacement d’un ancien chauffage électrique par une PAC air/eau avec plancher chauffant.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue Jean Moulin : maintenance annuelle d’une climatisation multisplit dans un pavillon des années 2000.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Chemin de la Jalle : pose d’un chauffe-eau thermodynamique avec gestion connectée pour optimiser la consommation.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Une expertise adaptée aux contraintes locales</h2>
+    <p className="text-white leading-relaxed text-center">
+      Le sol argilo-sableux et les haies denses typiques des quartiers résidentiels de Martignas nécessitent des précautions spécifiques pour les unités extérieures. Nos équipes anticipent les risques d’humidité et de vibration pour chaque installation.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Grâce à une étude d’ensoleillement précise, nous ajustons la puissance des équipements selon l’exposition réelle du logement, souvent orientée est/ouest dans la région.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Votre projet énergétique à Martignas-sur-Jalle</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous habitez Martignas ou vous venez d’y acquérir un bien ? Faites confiance à ClimGO pour moderniser votre confort thermique. Nos experts se déplacent gratuitement pour évaluer vos besoins et vous proposer un devis clair et personnalisé.
+    </p>
+  </div>
+</div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Martignas-sur-Jalle ?</h2>

@@ -139,7 +139,54 @@ export default function LeBarp() {
         </div>
       </div>
 
+ {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Le Barp ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un village nature entre Bordeaux et Landes</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Situé entre Cestas et Salles, Le Barp bénéficie d’une situation privilégiée aux portes du parc naturel régional des Landes de Gascogne. Avec plus de 5 000 habitants, la commune séduit par sa tranquillité, ses espaces boisés et son accessibilité directe via la RN250.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Le centre-bourg, les lotissements comme Le Bourdieu ou Les Ecureuils, ainsi que les zones pavillonnaires récentes profitent d’un bon dynamisme résidentiel. Les familles apprécient la vie de village avec ses écoles, ses commerces et son esprit convivial.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient au Barp pour tout type de logements : maisons anciennes à rénover, constructions neuves, extensions. Nos solutions s’adaptent aux contraintes du territoire forestier.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions au Barp</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Quartier Le Bourg : installation d’un système de climatisation gainable dans une maison en pierre.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Lotissement Les Chênes : pose d’un chauffe-eau thermodynamique dans une maison neuve RT2012.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Chemin de Caudos : remplacement d’un ancien split par une PAC air/air silencieuse et performante.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Route de Salles : maintenance complète d’une installation chauffage-clim multi-marques.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Une approche technique pour un environnement forestier</h2>
+    <p className="text-white leading-relaxed text-center">
+      Entre humidité, résine de pins et sols instables, Le Barp exige une installation précise et soignée. Chez ClimGO, nous prévoyons plots béton adaptés, gaines protégées et équipements traités anticorrosion.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nos systèmes sont conçus pour durer dans le temps, avec des solutions compatibles maison à étage, plain-pied, ou extension bois.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Votre projet au Barp mérite une solution ClimGO</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Pour une climatisation réversible, une pompe à chaleur ou un chauffe-eau performant, contactez notre équipe. Nous vous accompagnons pas à pas dans votre projet thermique au Barp.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis au Barp ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

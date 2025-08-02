@@ -138,7 +138,54 @@ export default function Bordeaux() {
           </section>
         </div>
       </div>
+    {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Saint-Jean-d’Illac ?" */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+        <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+          <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une métropole entre histoire et modernité</h2>
+          <p className="text-[#03144a] leading-relaxed text-center">
+            Bordeaux, joyau d’Aquitaine, séduit autant par son patrimoine que par sa dynamique urbaine. Avec plus de 250 000 habitants, la ville conjugue art de vivre, innovation et exigence thermique, notamment dans ses quartiers emblématiques.
+          </p>
+          <p className="text-[#03144a] leading-relaxed text-center">
+            Entre les ruelles pavées de Saint-Pierre, les boulevards animés de Gambetta ou les zones résidentielles calmes de Caudéran, chaque logement nécessite une approche technique adaptée à ses contraintes architecturales.
+          </p>
+          <p className="text-[#03144a] leading-relaxed text-center">
+            ClimGO s’adapte à la diversité du bâti bordelais : maisons en pierre de taille, échoppes du XIXe, appartements récents ou rénovés, nous maîtrisons les subtilités thermiques du territoire urbain bordelais.
+          </p>
+        </div>
 
+        <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+          <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Bordeaux</h2>
+          <p className="text-white leading-relaxed text-center">
+            • Rue Judaïque : remplacement complet d’un système de chauffage gaz par une pompe à chaleur air/eau avec ballon thermodynamique.
+          </p>
+          <p className="text-white leading-relaxed text-center">
+            • Quartier Bacalan : pose de splits gainables dans un loft industriel reconverti, avec régulation par pièce.
+          </p>
+          <p className="text-white leading-relaxed text-center">
+            • Rue Notre-Dame aux Chartrons : installation d’une climatisation murale discrète dans un appartement haussmannien classé.
+          </p>
+          <p className="text-white leading-relaxed text-center">
+            • Résidence Belvédère : maintenance annuelle de PAC dans un ensemble immobilier neuf avec label BBC.
+          </p>
+        </div>
+
+        <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+          <h2 className="text-xl font-semibold text-white mb-4 text-center">Une expertise au service du tissu urbain bordelais</h2>
+          <p className="text-white leading-relaxed text-center">
+            Bordeaux impose souvent des contraintes spécifiques : ventilation dans les échoppes, insonorisation dans les immeubles collectifs, respect de la pierre bordelaise pour les fixations extérieures. Nos équipes interviennent avec rigueur et soin.
+          </p>
+          <p className="text-white leading-relaxed text-center">
+            Chaque PAC est posée avec attention aux normes de copropriété, aux gaines existantes et aux possibilités de raccordement électrique, souvent complexes dans l’hyper-centre historique.
+          </p>
+        </div>
+
+        <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+          <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Et si on lançait votre projet bordelais ?</h2>
+          <p className="text-[#03144a] leading-relaxed text-center">
+            Vous êtes propriétaire à Bordeaux ou vous venez d’acquérir un bien à rénover ? ClimGO vous accompagne dans vos démarches d’amélioration énergétique. Demandez une étude gratuite pour une solution thermique à la hauteur de votre cadre de vie.
+          </p>
+        </div>
+      </div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Bordeaux ?</h2>

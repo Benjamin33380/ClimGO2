@@ -138,7 +138,53 @@ export default function Begles() {
         </div>
       </div>
 
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+    <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+      <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune urbaine aux visages multiples</h2>
+      <p className="text-[#03144a] leading-relaxed text-center">
+        Située aux portes de Bordeaux, Bègles est une ville en constante mutation, entre habitat ancien en pierre bordelaise et programmes immobiliers modernes autour de la ZAC des Sècheries ou du quartier Terre Sud.
+      </p>
+      <p className="text-[#03144a] leading-relaxed text-center">
+        Connue pour sa ligne de tram C, ses établissements scolaires (Lycée Vaclav Havel, écoles Albert Camus), ses équipements culturels (Le Carré-Colonnes), Bègles attire de plus en plus de jeunes familles et de professionnels en quête de confort urbain.
+      </p>
+      <p className="text-[#03144a] leading-relaxed text-center">
+        Nos interventions couvrent tous les secteurs, des échoppes proches de la gare de Bègles aux résidences neuves du côté du parc de Mussonville ou du centre commercial Rives d’Arcin.
+      </p>
+    </div>
 
+    <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+      <h2 className="text-xl font-semibold text-white mb-4 text-center">Chantiers réalisés récemment à Bègles</h2>
+      <p className="text-white leading-relaxed text-center">
+        • Rue Léon Gambetta : pose d’une pompe à chaleur air/eau pour une maison de ville en pierre, avec circuit radiateurs existant.
+      </p>
+      <p className="text-white leading-relaxed text-center">
+        • Quartier Terre Sud : climatisation gainable sur un logement T4 neuf RT2012, avec coffrage discret et module connecté.
+      </p>
+      <p className="text-white leading-relaxed text-center">
+        • Boulevard Jean-Jacques Bosc : remplacement d’un chauffe-eau électrique par un modèle thermodynamique de 270 L.
+      </p>
+      <p className="text-white leading-relaxed text-center">
+        • Avenue Salvador Allende : maintenance d’un système split Mitsubishi avec nettoyage complet et contrôle de rendement.
+      </p>
+    </div>
+
+    <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+      <h2 className="text-xl font-semibold text-white mb-4 text-center">Des solutions pensées pour le tissu urbain béglais</h2>
+      <p className="text-white leading-relaxed text-center">
+        Entre mitoyenneté forte, petits jardins et fortes amplitudes thermiques, chaque installation à Bègles demande un diagnostic précis. Nos équipes adaptent les solutions selon l’orientation, l’espace disponible et les habitudes de vie.
+      </p>
+      <p className="text-white leading-relaxed text-center">
+        Les PAC sont fixées sur plots ou supports muraux pour limiter les nuisances sonores, et les unités intérieures sont choisies pour leur discrétion et leur efficacité énergétique.
+      </p>
+    </div>
+
+    <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+      <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Et votre projet à Bègles, on en parle ?</h2>
+      <p className="text-[#03144a] leading-relaxed text-center">
+        Vous envisagez de moderniser votre système de chauffage, d’ajouter une climatisation réversible ou de remplacer un chauffe-eau à Bègles ? Faites appel à ClimGO. Un technicien peut se déplacer rapidement pour évaluer les besoins sur place.
+      </p>
+    </div>
+  </div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Bègles ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

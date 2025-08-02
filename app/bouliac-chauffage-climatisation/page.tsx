@@ -137,7 +137,54 @@ export default function Bruges() {
           </section>
         </div>
       </div>
+    {/* Section personnalisée pour Bouliac */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune en belvédère sur Bordeaux</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Bouliac, surnommée le balcon de Bordeaux, offre un panorama exceptionnel sur la ville tout en conservant une ambiance de village résidentiel haut de gamme. Sa situation sur les coteaux attire des familles en quête de tranquillité et de qualité de vie.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Entre demeures en pierre, lotissements récents et maisons d’architectes, la diversité des logements à Bouliac exige des solutions de chauffage et climatisation personnalisées.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          ClimGO intervient sur l’ensemble de la commune, du centre-bourg aux hauteurs du chemin de Carbonnieu, avec des équipements discrets, performants et parfaitement intégrés à l’environnement.
+        </p>
+      </div>
 
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples d’interventions à Bouliac</h2>
+        <p className="text-white leading-relaxed text-center">
+          • Rue de la Garenne : remplacement d’un système fioul par une pompe à chaleur air/eau avec plancher chauffant basse température.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Lotissement du Hameau : climatisation réversible installée dans une maison de plain-pied récente.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Chemin de la Burthe : entretien annuel et détartrage d’un chauffe-eau thermodynamique dans une maison familiale.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Rue de la Libération : installation d’un split gainable avec régulation pièce par pièce.
+        </p>
+      </div>
+
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Une expertise locale adaptée aux coteaux</h2>
+        <p className="text-white leading-relaxed text-center">
+          Le relief prononcé de Bouliac et la nature argilo-calcaire du sol imposent une attention particulière à la stabilité et au positionnement des unités extérieures.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          ClimGO adapte chaque installation selon l’exposition, le vis-à-vis et les contraintes architecturales du quartier, tout en préservant l’esthétique des façades.
+        </p>
+      </div>
+
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Et si on parlait de votre projet à Bouliac ?</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Vous vivez à Bouliac ou venez d’acquérir une maison sur les hauteurs ? Nos équipes sont disponibles pour vous conseiller et établir un devis gratuit, adapté à votre confort et à votre budget.
+        </p>
+      </div>
+    </div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Bouliac ?</h2>

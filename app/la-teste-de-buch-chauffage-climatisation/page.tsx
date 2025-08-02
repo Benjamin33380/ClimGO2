@@ -139,7 +139,54 @@ export default function LaTesteDeBuch() {
         </div>
       </div>
 
+ {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à La Teste-de-Buch ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un cadre de vie entre océan et forêt</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située entre le Bassin d’Arcachon, les plages océanes et la forêt landaise, La Teste-de-Buch offre un équilibre rare entre nature, animation et qualité de vie. Avec plus de 27 000 habitants, la commune est l&apos;une des plus vastes de France.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Les quartiers comme Pyla-sur-Mer, le Port, La Hume ou le centre-ville attirent familles, retraités et vacanciers. La ville bénéficie d’un fort dynamisme immobilier, d’écoles, d’un lycée et d’un tissu associatif développé.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient sur tous types d’habitations : maisons de bord de mer, logements boisés, résidences secondaires ou principales, en neuf comme en rénovation.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Chantiers récents à La Teste-de-Buch</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Quartier de La Hume : pose d’un système gainable dans une villa de vacances pour climatiser l’ensemble des pièces.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue du Port : remplacement d’un ancien chauffe-eau par un modèle thermodynamique avec gestion intelligente de la consommation.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue Charles de Gaulle : mise en service d’une pompe à chaleur air/eau pour chauffer un pavillon à l’année.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Zone du Pyla : installation de splits muraux dans une maison bois orientée plein sud, avec forte exposition au soleil.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire pensé pour le littoral</h2>
+    <p className="text-white leading-relaxed text-center">
+      Entre humidité saline, vents côtiers et variations de température, les installations à La Teste demandent une vraie expertise. Chez ClimGO, nous utilisons des matériaux anticorrosion et des supports renforcés pour garantir durabilité et sécurité.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous adaptons aussi les puissances et les modes de fonctionnement pour des logements utilisés en continu ou de façon saisonnière.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Discutons de votre projet à La Teste</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous vivez à l’année à La Teste-de-Buch ou vous souhaitez équiper votre résidence secondaire ? ClimGO vous accompagne avec des solutions sur mesure, adaptées à votre mode de vie et à votre budget. Contactez-nous facilement.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à La Teste-de-Buch ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

@@ -138,7 +138,53 @@ export default function Biganos() {
           </section>
         </div>
       </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un cadre de vie recherché sur le Bassin</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Biganos attire de nombreux foyers grâce à sa situation centrale entre Arcachon, le Teich et Mios. Avec ses forêts, son port typique et sa zone commerciale dynamique, la ville combine nature et commodités modernes.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Les familles trouvent leur équilibre entre écoles accessibles, tranquillité résidentielle et proximité des grands axes. ClimGO accompagne cette diversité d’habitats avec des solutions sur mesure, de la résidence contemporaine à la maison bois typique du bassin.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Nous intervenons dans tous les quartiers : Lacanau de Mios, les Sables, le centre-ville ou les hameaux du nord de la commune.
+        </p>
+      </div>
 
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Nos réalisations concrètes à Biganos</h2>
+        <p className="text-white leading-relaxed text-center">
+          • Avenue de la Côte d’Argent : installation d’une PAC air/eau dans une maison de plain-pied des années 90, avec remplacement du ballon ECS.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Rue du Port : climatisation gainable dans une maison d’architecte récente avec grande baie vitrée plein sud.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Rue des Ecureuils : maintenance annuelle de trois splits Daikin dans une villa bois en zone boisée.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Lotissement du Bosquet : plancher chauffant couplé à une pompe à chaleur basse température dans une construction neuve RT2012.
+        </p>
+      </div>
+
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Une expertise locale adaptée à Biganos</h2>
+        <p className="text-white leading-relaxed text-center">
+          Le sol sablonneux de Biganos et la présence fréquente de nappes phréatiques imposent des précautions spécifiques pour l’installation des équipements extérieurs. Nos équipes prévoient systématiquement plots, dalles ou supports ventilés.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          Le microclimat du Bassin, avec ses hivers doux mais humides et ses étés chauds, est également pris en compte pour dimensionner au mieux votre PAC ou système de climatisation.
+        </p>
+      </div>
+
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Votre projet mérite notre attention</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Que vous soyez propriétaire d’une résidence secondaire, d’un logement principal ou bailleur à Biganos, nous vous accompagnons avec des solutions adaptées à vos attentes. Un projet ? Une question ? Contactez notre équipe basée à proximité.
+        </p>
+      </div>
+    </div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Biganos ?</h2>

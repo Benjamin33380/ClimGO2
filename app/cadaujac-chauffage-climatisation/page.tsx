@@ -138,7 +138,53 @@ export default function Cadaujac() {
         </div>
       </div>
 
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune en plein essor résidentiel</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Cadaujac, à la fois paisible et connectée, attire de plus en plus de familles souhaitant vivre à proximité de Bordeaux tout en profitant d’un cadre de vie plus naturel. Avec ses berges de Garonne, ses pistes cyclables et ses zones pavillonnaires calmes, elle séduit autant les actifs que les retraités.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          La commune bénéficie d’un tissu associatif dynamique, d’un accès rapide à la rocade bordelaise via la D1113, et d’infrastructures publiques bien entretenues. C’est dans ce cadre que ClimGO intervient, en adaptant chaque projet à l’environnement résidentiel cadaujacais.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Du quartier du Bourg à la route de Beautiran, nous proposons des équipements pensés pour les maisons neuves comme pour les habitations traditionnelles.
+        </p>
+      </div>
 
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples d&apos;interventions à Cadaujac</h2>
+        <p className="text-white leading-relaxed text-center">
+          • Rue Georges Clémenceau : pose d’une climatisation gainable dans une maison de plain-pied de 200 m² avec régulation pièce par pièce.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Avenue de Toulouse : remplacement d’un ancien chauffe-eau gaz par un modèle thermodynamique silencieux et performant.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Impasse des Vignes : installation d’une pompe à chaleur air/eau pour une villa en rénovation énergétique complète.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Chemin du Port : mise en place d’un contrat de maintenance pour un lot de 3 splits dans une maison secondaire.
+        </p>
+      </div>
+
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Expertise locale et solutions durables</h2>
+        <p className="text-white leading-relaxed text-center">
+          Les constructions cadaujacaises, souvent dotées de combles peu isolés ou de murs anciens en moellon, demandent une approche sur mesure. Chez ClimGO, nous effectuons une étude thermique complète pour garantir confort et économie.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          Nos unités extérieures sont posées sur plots béton isolés du sol, avec une attention portée à l’évacuation des condensats et à la discrétion visuelle dans les jardins ou allées.
+        </p>
+      </div>
+
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Discutons ensemble de votre projet à Cadaujac</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Vous avez un projet de rénovation thermique ou souhaitez améliorer votre confort ? Que vous soyez près de la mairie, du cimetière paysager ou du lycée Toulouse-Lautrec, notre équipe répond rapidement et vous propose un accompagnement sur mesure.
+        </p>
+      </div>
+    </div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Cadaujac ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

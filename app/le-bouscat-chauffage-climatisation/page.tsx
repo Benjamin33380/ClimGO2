@@ -137,7 +137,54 @@ export default function LeBouscat() {
           </section>
         </div>
       </div>
+{/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis au Bouscat ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune urbaine et arborée aux portes de Bordeaux</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Le Bouscat séduit par son équilibre entre urbanité et nature. Proche du centre de Bordeaux, la commune offre un cadre résidentiel recherché, entre échoppes rénovées, maisons bourgeoises et résidences contemporaines. Elle attire autant les familles que les actifs bordelais.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Bien desservi par le tram D, les lignes de bus et la rocade, Le Bouscat est prisé pour sa qualité de vie, ses commerces de proximité et ses équipements culturels comme l’Hippodrome ou la médiathèque.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient dans tous les quartiers : Parc Marceau, Barrière du Médoc, avenue Victor Hugo ou secteur Saint-Amand. Nos solutions s’intègrent aussi bien dans les logements anciens que dans les projets de rénovation thermique ou d’extension.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions au Bouscat</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue Thérèse : installation d’un système gainable avec régulation multi-zone dans une échoppe rénovée.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue de la Libération : remplacement d’un chauffe-eau vétuste par un modèle thermodynamique haute performance.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Boulevard Pierre 1er : mise en service d’une pompe à chaleur air/air pour un appartement en duplex avec combles aménagés.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue des Marronniers : contrat de maintenance annuel pour un ensemble climatisation + chauffage existant.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Une expertise pensée pour le bâti Bouscatais</h2>
+    <p className="text-white leading-relaxed text-center">
+      L’architecture du Bouscat demande des installations discrètes et efficaces. Chez ClimGO, nous adaptons nos systèmes aux surfaces vitrées, aux murs épais typiques des échoppes, et aux contraintes des rénovations urbaines.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nos équipements sont sélectionnés pour leur faible nuisance sonore et leur design, répondant parfaitement aux exigences des habitats du Bouscat.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Parlons de votre projet au Bouscat</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous envisagez une rénovation énergétique, une installation de climatisation ou un entretien de PAC au Bouscat ? ClimGO vous accompagne avec sérieux et réactivité. Contactez-nous pour une étude personnalisée.
+    </p>
+  </div>
+</div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis au Bouscat ?</h2>

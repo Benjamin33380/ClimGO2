@@ -138,7 +138,54 @@ export default function Cestas() {
         </div>
       </div>
 
+ {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Cestas ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Cestas, un cadre de vie résidentiel prisé</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située entre Bordeaux, Canéjan et le bassin d’Arcachon, Cestas offre un environnement privilégié mêlant forêts, grands terrains et quartiers résidentiels calmes. Avec plus de 17 000 habitants, la commune attire les familles et les actifs recherchant confort et accessibilité.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Les habitants apprécient la proximité de la gare de Gazinet, l&apos;accès rapide à l’A63 et les établissements scolaires variés. Le tissu associatif y est très actif, et l’urbanisme reste à taille humaine malgré le développement.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient sur toute la commune : quartier Gazinet, Bourg, Pierroton ou Toctoucau. Nos équipements s’adaptent à tous types de logements, du pavillon des années 80 aux constructions neuves RT2012.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Cestas</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue de la Forêt : installation d’une pompe à chaleur air/eau sur dalle ventilée pour une maison de plain-pied.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Quartier Gazinet : climatisation gainable Daikin posée en faux plafond, solution discrète et performante.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Avenue du Baron Haussmann : entretien annuel de PAC air/air dans une maison individuelle de 2007.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Chemin de Pierroton : remplacement d’un chauffe-eau classique par un chauffe-eau thermodynamique à faible consommation.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire adapté aux particularités de Cestas</h2>
+    <p className="text-white leading-relaxed text-center">
+      Les terrains sablonneux, les expositions sud-ouest fréquentes et les toitures inclinées imposent une vraie précision dans nos installations. Chaque projet est dimensionné selon l’orientation, la surface et l’isolation du logement.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous portons aussi une attention particulière à l’intégration esthétique des équipements, souvent posés sur terrasse, en façade ou en local technique.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Vous avez un projet thermique à Cestas ?</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Que vous envisagiez une rénovation énergétique ou une installation dans une maison neuve, ClimGO vous accompagne à chaque étape. Contactez-nous pour obtenir un devis adapté à votre maison à Cestas.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Cestas ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

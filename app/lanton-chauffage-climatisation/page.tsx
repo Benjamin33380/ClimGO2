@@ -139,7 +139,54 @@ export default function Lanton() {
         </div>
       </div>
 
+ {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Lanton ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Un village côtier entre tradition et modernité</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située au bord du bassin d’Arcachon, Lanton est une commune calme et prisée pour son authenticité et sa qualité de vie. Avec ses hameaux (Cassy, Taussat, Blagon, Grand Lanton), elle séduit aussi bien les familles que les retraités ou les jeunes actifs.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      On y trouve un bon équilibre entre maisons anciennes, villas récentes et programmes neufs. Les habitants profitent de plages paisibles, de pistes cyclables et de nombreux commerces de proximité.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Chez ClimGO, nous intervenons dans toutes les zones de Lanton, pour des installations sur mesure adaptées aux contraintes du littoral et aux besoins des résidents à l’année comme en résidence secondaire.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Lanton</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Cassy : installation d’une pompe à chaleur air/air pour un pavillon des années 90.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Taussat : pose d’un chauffe-eau thermodynamique dans une maison secondaire près du port.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Blagon : entretien annuel d’un système multisplit dans une résidence principale.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Grand Lanton : remplacement d’un ancien climatiseur par un modèle plus silencieux et économe.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Une expertise pensée pour le Bassin</h2>
+    <p className="text-white leading-relaxed text-center">
+      L’humidité de l’air marin, la proximité des pins et les variations de température imposent une sélection rigoureuse des équipements. Nous choisissons des PAC et climatiseurs spécialement traités pour résister aux conditions côtières.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Pour les maisons secondaires, nous proposons des systèmes avec pilotage à distance, afin de gérer confort et consommation énergétique même à distance.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Envie d’un projet bien pensé à Lanton ?</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Faites appel à ClimGO pour votre projet de chauffage, climatisation ou chauffe-eau à Lanton. Nous vous conseillons avec précision et intervenons rapidement, que vous habitiez Cassy, Taussat ou Grand Lanton.
+    </p>
+  </div>
+</div>
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Lanton ?</h2>
         <p className="text-gray-800 leading-relaxed mb-6 text-center">

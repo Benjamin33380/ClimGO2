@@ -137,7 +137,54 @@ export default function SaintSelve() {
           </section>
         </div>
       </div>
+ {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Saint-Selve ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune en développement maîtrisé</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située au cœur de l’Entre-Deux-Mers, Saint-Selve connaît une croissance résidentielle douce tout en conservant son cadre de vie rural. Avec près de 3 500 habitants, elle attire les familles en quête de tranquillité, à seulement 25 minutes de Bordeaux.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Les habitants bénéficient d’un tissu associatif dynamique, d’un groupe scolaire récent, d’un pôle santé et de la proximité de la D1113 pour accéder à Langon, La Brède ou Villenave-d’Ornon.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient dans tous les quartiers : du centre-bourg historique aux zones pavillonnaires de la route de Beautiran, en passant par les hameaux de Veyrines ou de Naudet. Nous adaptons nos solutions à tous types d’habitat local.
+    </p>
+  </div>
 
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Saint-Selve</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Chemin de la Sablière : installation d’une pompe à chaleur air/eau pour remplacer une chaudière fioul, avec plancher chauffant intégré.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Lotissement Le Hameau des Vignes : pose d’une climatisation réversible dans une maison récente, avec unité extérieure discrète côté jardin.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Route de la Brède : remplacement d’un chauffe-eau électrique par un modèle thermodynamique à haut rendement.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue du Stade : maintenance annuelle d’un système multi-split Mitsubishi dans une résidence principale de 110 m².
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire adapté aux maisons de Saint-Selve</h2>
+    <p className="text-white leading-relaxed text-center">
+      Entre les bâtis anciens en pierre et les maisons récentes BBC, nos installations sont toujours dimensionnées sur mesure. Le climat tempéré et l’exposition des logements à la chaleur estivale guident nos préconisations techniques.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Nous privilégions les systèmes silencieux, peu énergivores et discrets, pour un confort durable sans dénaturer l’environnement naturel de Saint-Selve.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Discutons ensemble de votre projet à Saint-Selve</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous habitez Saint-Selve ou vous y faites construire ? Notre équipe est disponible pour vous proposer un accompagnement sur mesure en chauffage, climatisation ou eau chaude. Contactez-nous pour un premier échange gratuit.
+    </p>
+  </div>
+</div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d’un devis à Saint-Selve ?</h2>

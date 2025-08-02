@@ -138,7 +138,54 @@ export default function Ares() {
           </section>
         </div>
       </div>
+    {/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Arès ?" */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une ville entre bassin et nature</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Arès charme ses habitants avec ses plages paisibles, sa réserve naturelle des prés salés, ses marchés traditionnels et son port ostréicole. Ici, l’authenticité du bassin se mêle à un mode de vie doux et tourné vers la nature.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Les quartiers comme Jane de Boy, Les Quinconces ou Le Coulin abritent des maisons de style arcachonnais, des villas contemporaines et des résidences familiales. ClimGO s’adapte à chaque typologie de logement.
+        </p>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Entre jeunes familles en quête de confort moderne et retraités attentifs aux économies d’énergie, les profils sont variés. Nous accompagnons chacun avec précision et respect du cadre naturel.
+        </p>
+      </div>
 
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Arès</h2>
+        <p className="text-white leading-relaxed text-center">
+          • Rue du Temple : installation d’une pompe à chaleur air/eau pour une maison bois en bordure de forêt, avec chauffage au sol basse température.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Chemin des Pêcheurs : remplacement d’un ancien climatiseur par une console double flux Mitsubishi dans une villa secondaire.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Avenue de la Libération : maintenance annuelle d’un chauffe-eau thermodynamique dans une maison louée à l’année.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          • Quartier des Quinconces : intervention en urgence pour fuite sur circuit frigorifique d’un split Daikin.
+        </p>
+      </div>
+
+      <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 text-center">Un savoir-faire local et engagé</h2>
+        <p className="text-white leading-relaxed text-center">
+          À Arès, le vent marin, la proximité de la pinède et les conditions salines imposent un choix rigoureux de matériel extérieur. Nous utilisons des unités renforcées anticorrosion, fixées sur plots surélevés.
+        </p>
+        <p className="text-white leading-relaxed text-center">
+          Nos conseils prennent aussi en compte les zones inondables et la proximité des zones protégées pour des installations respectueuses de la réglementation locale.
+        </p>
+      </div>
+
+      <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Discutons ensemble de votre projet à Arès</h2>
+        <p className="text-[#03144a] leading-relaxed text-center">
+          Vous habitez à Arès ou vous y investissez dans une résidence secondaire ? ClimGO vous accompagne du conseil à l’entretien. N’hésitez pas à nous contacter pour échanger sur votre projet.
+        </p>
+      </div>
+    </div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Arès ?</h2>

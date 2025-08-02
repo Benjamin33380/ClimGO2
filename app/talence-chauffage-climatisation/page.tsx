@@ -138,6 +138,54 @@ export default function Talence() {
         </div>
       </div>
 
+{/* Ajout des sections enrichies juste avant le bloc "Besoin d’un devis à Talence ?" */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Une commune dynamique et urbaine aux portes de Bordeaux</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Située à deux pas de Bordeaux, Talence se distingue par son fort tissu résidentiel, ses nombreux campus universitaires et son dynamisme culturel. Avec plus de 42 000 habitants, elle attire aussi bien des familles que des étudiants ou des jeunes actifs.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Les quartiers de Thouars, Médoquine ou encore Peixotto combinent maisons de ville, résidences récentes et bâtis anciens. Une diversité qui exige des solutions de confort thermique sur-mesure, tant en rénovation qu’en installation neuve.
+    </p>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      ClimGO intervient régulièrement à Talence pour adapter ses équipements aux contraintes d’accessibilité, aux règles d’urbanisme strictes, et à la cohabitation en zone urbaine dense.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Exemples concrets d’interventions à Talence</h2>
+    <p className="text-white leading-relaxed text-center">
+      • Rue Lestonnat : pose d’un climatiseur split pour un appartement en location étudiante avec optimisation sonore.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue Camille Pelletan : installation d’une pompe à chaleur air/eau pour une maison de ville en rénovation thermique.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Résidence Les Jardins de Gambetta : entretien annuel d’une PAC gainable en copropriété avec terrasse technique.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      • Rue de Suzon : remplacement d’un chauffe-eau vieillissant par un modèle thermodynamique discret et économique.
+    </p>
+  </div>
+
+  <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-white mb-4 text-center">Des solutions adaptées au tissu urbain talençais</h2>
+    <p className="text-white leading-relaxed text-center">
+      Talence étant une commune dense, nos techniciens tiennent compte des contraintes d’espace, de bruit et d’esthétique en milieu urbain. Nos installations privilégient la discrétion, la performance et le respect des règles de voisinage.
+    </p>
+    <p className="text-white leading-relaxed text-center">
+      Que ce soit pour une maison des années 50, un studio étudiant ou une copropriété, nous adaptons chaque projet avec soin, en respectant les règles locales d’urbanisme.
+    </p>
+  </div>
+
+  <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
+    <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Et si on échangeait sur votre projet à Talence ?</h2>
+    <p className="text-[#03144a] leading-relaxed text-center">
+      Vous avez un projet à Talence ? Que ce soit pour rafraîchir un appartement, rénover une vieille bâtisse ou optimiser une résidence principale, ClimGO est à votre écoute. Contactez-nous facilement pour un devis ou une visite technique rapide.
+    </p>
+  </div>
+</div>
 
      <section className="text-center my-20">
         <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Besoin d&apos;un devis à Talence ?</h2>
