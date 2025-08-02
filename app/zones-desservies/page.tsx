@@ -5,20 +5,6 @@ import { MapPin, Phone, Clock, CheckCircle, ArrowRight, Users, Star , DraftingCo
 
 export default function ZonesDesservies() {
 
-  // Helper to reformat the url as requested
-  function reformatUrl(url: string): string {
-    // If already in the correct format, return as is
-    if (/^https:\/\/www\.climgo\.fr\/[^/]+-chauffage-climatisation$/.test(url)) {
-      return url;
-    }
-    // If matches https://www.climgo.fr/chauffage-climatisation-[slug]
-    const match = url.match(/^https:\/\/www\.climgo\.fr\/chauffage-climatisation-(.+)$/);
-    if (match) {
-      return `https://www.climgo.fr/${match[1]}-chauffage-climatisation`;
-    }
-    // Otherwise, return as is
-    return url;
-  }
 
   const zones = [
     {
@@ -26,16 +12,16 @@ export default function ZonesDesservies() {
       title: "Bassin d'Arcachon",
       description: 'Zone intervention, zone desservies par ClimGO',
       cities: [
-        { name: 'Arcachon', url: reformatUrl('https://www.climgo.fr/arcachon-chauffage-climatisation') },
-        { name: 'La Teste-de-Buch', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-la-teste-de-buch') },
-        { name: 'Gujan-Mestras', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-gujan-mestras') },
-        { name: 'Le Teich', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-le-teich') },
-        { name: 'Biganos', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-biganos') },
-        { name: 'Audenge', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-audenge') },
-        { name: 'Lanton', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-lanton') },
-        { name: 'Andernos-les-Bains', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-andernos-les-bains') },
-        { name: 'Arès', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-ares') },
-        { name: 'Lège Cap Ferret', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-lege-cap-ferret') }
+        { name: 'Arcachon', url: 'https://www.climgo.fr/arcachon-chauffage-climatisation' },
+        { name: 'La Teste-de-Buch', url: 'https://www.climgo.fr/la-teste-de-buch-chauffage-climatisation' },
+        { name: 'Gujan-Mestras', url: 'https://www.climgo.fr/gujan-mestras-chauffage-climatisation' },
+        { name: 'Le Teich', url: 'https://www.climgo.fr/le-teich-chauffage-climatisation' },
+        { name: 'Biganos', url: 'https://www.climgo.fr/biganos-chauffage-climatisation' },
+        { name: 'Audenge', url: 'https://www.climgo.fr/audenge-chauffage-climatisation' },
+        { name: 'Lanton', url: 'https://www.climgo.fr/lanton-chauffage-climatisation' },
+        { name: 'Andernos-les-Bains', url: 'https://www.climgo.fr/andernos-les-bains-chauffage-climatisation' },
+        { name: 'Arès', url: 'https://www.climgo.fr/ares-chauffage-climatisation' },
+        { name: 'Lège Cap Ferret', url: 'https://www.climgo.fr/lege-cap-ferret-chauffage-climatisation' }
       ],
       span: 2
     },
@@ -44,25 +30,24 @@ export default function ZonesDesservies() {
       title: "Val de l'Eyre",
       description: 'Zone intervention, zone desservies par ClimGO',
       cities: [
-        { name: 'Marcheprime', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-marcheprime') },
-        { name: 'Le Barp', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-le-barp') },
-        { name: 'Mios', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-mios') },
-        { name: 'Salles', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-salles') },
-        { name: 'Belin-Béliet', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-belin-beliet') }
+        { name: 'Marcheprime', url: 'https://www.climgo.fr/marcheprime-chauffage-climatisation' },
+        { name: 'Le Barp', url: 'https://www.climgo.fr/le-barp-chauffage-climatisation' },
+        { name: 'Mios', url: 'https://www.climgo.fr/mios-chauffage-climatisation' },
+        { name: 'Salles', url: 'https://www.climgo.fr/salles-chauffage-climatisation' },
+        { name: 'Belin-Béliet', url: 'https://www.climgo.fr/belin-beliet-chauffage-climatisation' }
       ],
       span: 1
     },
     {
       id: 'landes',
       title: 'Nord des Landes',
-
       description: 'Zone de pinèdes avec solutions adaptées',
       cities: [
-        { name: 'Sanguinet', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-sanguinet') },
-        { name: 'Parentis-en-Born', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-parentis-en-born') },
-        { name: 'Biscarrosse', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-biscarrosse') },
-        { name: 'Parentis', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-parentis') },
-        { name: 'Mimizan', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-mimizan') }
+        { name: 'Sanguinet', url: 'https://www.climgo.fr/sanguinet-chauffage-climatisation' },
+        { name: 'Parentis-en-Born', url: 'https://www.climgo.fr/parentis-en-born-chauffage-climatisation' },
+        { name: 'Biscarrosse', url: 'https://www.climgo.fr/biscarrosse-chauffage-climatisation' },
+        { name: 'Parentis', url: 'https://www.climgo.fr/parentis-chauffage-climatisation' },
+        { name: 'Mimizan', url: 'https://www.climgo.fr/mimizan-chauffage-climatisation' }
       ],
       span: 1
     },
@@ -71,54 +56,51 @@ export default function ZonesDesservies() {
       title: 'Pays des Graves',
       description: 'Zone intervention, zone desservies par ClimGO',
       cities: [
-        { name: 'Canéjan', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-canejan') },
-        { name: 'Gradignan', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-gradignan') },
-        { name: 'Saucats', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-saucats') },
-        { name: 'Saint-Selve', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-saint-selve') },
-        { name: 'Martillac', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-martillac') },
-        { name: 'Léognan', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-leognan') },
-        { name: 'La Brède', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-la-brede') },
-        { name: 'Cadaujac', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-cadaujac') },
-        { name: 'Cestas', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-cestas') }
-    
-     ],
+        { name: 'Canéjan', url: 'https://www.climgo.fr/canejan-chauffage-climatisation' },
+        { name: 'Gradignan', url: 'https://www.climgo.fr/gradignan-chauffage-climatisation' },
+        { name: 'Saucats', url: 'https://www.climgo.fr/saucats-chauffage-climatisation' },
+        { name: 'Saint-Selve', url: 'https://www.climgo.fr/saint-selve-chauffage-climatisation' },
+        { name: 'Martillac', url: 'https://www.climgo.fr/martillac-chauffage-climatisation' },
+        { name: 'Léognan', url: 'https://www.climgo.fr/leognan-chauffage-climatisation' },
+        { name: 'La Brède', url: 'https://www.climgo.fr/la-brede-chauffage-climatisation' },
+        { name: 'Cadaujac', url: 'https://www.climgo.fr/cadaujac-chauffage-climatisation' },
+        { name: 'Cestas', url: 'https://www.climgo.fr/cestas-chauffage-climatisation' }
+      ],
       span: 1
     },
     {
       id: 'bordeaux',
       title: 'Agglomération Bordelaise',
-
       description: 'Zone intervention, zone desservies par ClimGO',
       cities: [
-        { name: 'Bordeaux', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-bordeaux') }, 
-        { name: 'Le Haillan', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-le-haillan') },
-        { name: 'Le Bouscat', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-le-bouscat') },
-        { name: 'Bruges', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-bruges') },
-        { name: 'Eysines', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-eysines') },
-        { name: 'Cenon', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-cenon') },
-        { name: 'Lormont', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-lormont') },
-        { name: 'Floirac', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-floirac') },
-        { name: 'Bouliac', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-bouliac') },
-        { name: 'Mérignac', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-merignac') },
-        { name: 'Pessac', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-pessac') },
-        { name: 'Talence', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-talence') },
-        { name: "Villenave-d'Ornon", url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-villenave-d-ornon') },
-        { name: 'Bègles', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-begles') }
+        { name: 'Bordeaux', url: 'https://www.climgo.fr/bordeaux-chauffage-climatisation' },
+        { name: 'Le Haillan', url: 'https://www.climgo.fr/le-haillan-chauffage-climatisation' },
+        { name: 'Le Bouscat', url: 'https://www.climgo.fr/le-bouscat-chauffage-climatisation' },
+        { name: 'Bruges', url: 'https://www.climgo.fr/bruges-chauffage-climatisation' },
+        { name: 'Eysines', url: 'https://www.climgo.fr/eysines-chauffage-climatisation' },
+        { name: 'Cenon', url: 'https://www.climgo.fr/cenon-chauffage-climatisation' },
+        { name: 'Lormont', url: 'https://www.climgo.fr/lormont-chauffage-climatisation' },
+        { name: 'Floirac', url: 'https://www.climgo.fr/floirac-chauffage-climatisation' },
+        { name: 'Bouliac', url: 'https://www.climgo.fr/bouliac-chauffage-climatisation' },
+        { name: 'Mérignac', url: 'https://www.climgo.fr/merignac-chauffage-climatisation' },
+        { name: 'Pessac', url: 'https://www.climgo.fr/pessac-chauffage-climatisation' },
+        { name: 'Talence', url: 'https://www.climgo.fr/talence-chauffage-climatisation' },
+        { name: "Villenave-d'Ornon", url: 'https://www.climgo.fr/villenave-d-ornon-chauffage-climatisation' },
+        { name: 'Bègles', url: 'https://www.climgo.fr/begles-chauffage-climatisation' }
       ],
       span: 2
     },
     {
       id: 'gironde',
       title: 'Autres communes de Gironde',
-
       description: 'Zone intervention, zone desservies par ClimGO',
       cities: [
-        { name: 'Lacanau', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-lacanau') },
-        { name: 'Saint-Loubès', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-saint-loubes') },
-        { name: "Saint-Jean-d'Illac", url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-saint-jean-dillac') },
-        { name: "Saint-Médard-en-Jalles", url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-saint-medard-en-jalles') },
-        { name: "Saint-Aubin-de-Médoc", url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-saint-aubin-de-medoc') },
-        { name: 'Martignas-sur-Jalle', url: reformatUrl('https://www.climgo.fr/chauffage-climatisation-martignas-sur-jalle') },
+        { name: 'Lacanau', url: 'https://www.climgo.fr/lacanau-chauffage-climatisation' },
+        { name: 'Saint-Loubès', url: 'https://www.climgo.fr/saint-loubes-chauffage-climatisation' },
+        { name: "Saint-Jean-d'Illac", url: 'https://www.climgo.fr/saint-jean-dillac-chauffage-climatisation' },
+        { name: "Saint-Médard-en-Jalles", url: 'https://www.climgo.fr/saint-medard-en-jalles-chauffage-climatisation' },
+        { name: "Saint-Aubin-de-Médoc", url: 'https://www.climgo.fr/saint-aubin-de-medoc-chauffage-climatisation' },
+        { name: 'Martignas-sur-Jalle', url: 'https://www.climgo.fr/martignas-sur-jalle-chauffage-climatisation' },
       ],
       span: 3
     }
