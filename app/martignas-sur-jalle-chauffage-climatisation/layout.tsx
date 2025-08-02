@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Chauffage, Climatisation et PAC à Martignas-sur-Jalle",
-  description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Martignas-sur-Jalle. Profitez d'un service local, certifié RGE.",
+  description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Martignas-sur-Jalle. Certifié RGE.",
   keywords: [
     "chauffage Martignas-sur-Jalle",
     "climatisation Martignas-sur-Jalle",
@@ -32,7 +32,7 @@ export const metadata = {
   ],
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Martignas-sur-Jalle - ClimGO",
-    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Martignas-sur-Jalle. Profitez d'un service local, certifié RGE.",
+    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Martignas-sur-Jalle. Certifié RGE.",
     url: "https://www.climgo.fr/martignas-sur-jalle-chauffage-climatisation",
     siteName: "ClimGO",
     locale: "fr_FR",
@@ -49,7 +49,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Chauffage, Climatisation et PAC à Martignas-sur-Jalle - ClimGO",
-    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Martignas-sur-Jalle. Profitez d'un service local, certifié RGE.",
+    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Martignas-sur-Jalle. Certifié RGE.",
     images: ["https://www.climgo.fr/villes/marti.jpg"]
   },
   metadataBase: new URL("https://www.climgo.fr"),

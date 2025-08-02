@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Chauffage, Climatisation et PAC à Saint-Jean-d'Illac",
-  description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Jean-d'Illac. Profitez d'un service local, certifié RGE.",
+  description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Jean-d'Illac. Certifié RGE.",
   keywords: [
     "chauffage Saint-Jean-d'Illac",
     "climatisation Saint-Jean-d'Illac",
@@ -32,7 +32,7 @@ export const metadata = {
   ],
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Saint-Jean-d'Illac - ClimGO",
-    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Jean-d'Illac. Profitez d'un service local, certifié RGE.",
+    description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Jean-d'Illac. Certifié RGE.",
     url: "https://www.climgo.fr/saint-jean-d-illac-chauffage-climatisation",
     siteName: "ClimGO",
     locale: "fr_FR",
