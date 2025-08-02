@@ -68,7 +68,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-6 pt-4 text-center text-xs text-gray-800 mx-6">
           © 2025 ClimGO · Artisan RGE · Garantie décennale · Tous Droits Réservés © <br />
-          WebMentor  <a href="https://www.oxelya.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#1e40af]">Oxelya</a>
+          WebMentor  <a href="https://www.oxelya.com/services/pentest-cybersecurite" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#1e40af]">Oxelya</a>
         </div>
       </footer>
     </>
