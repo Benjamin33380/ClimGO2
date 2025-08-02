@@ -22,7 +22,6 @@ const villesLocales = [
   'salles',
   'belin-beliet',
   'sanguinet',
-  'parentis-en-born',
   'biscarrosse',
   'parentis',
   'mimizan',

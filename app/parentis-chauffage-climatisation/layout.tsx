@@ -54,7 +54,7 @@ export const metadata = {
   },
   metadataBase: new URL("https://www.climgo.fr"),
   alternates: {
-    canonical: "/parentis-en-born-chauffage-climatisation"
+    canonical: "/parentis-chauffage-climatisation"
   }
 };
 
