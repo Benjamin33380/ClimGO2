@@ -11,6 +11,13 @@
   "redirects": [
     {
       "source": "/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "host",
+          "value": "climgo.fr"
+        }
+      ],
       "destination": "https://www.climgo.fr/$1",
       "permanent": true
     }
