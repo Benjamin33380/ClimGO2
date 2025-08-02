@@ -68,15 +68,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "ClimGO",
-          "image": "https://www.climgo.fr/villes/villenave-d-ornon.jpg",
-          "@id": "https://www.climgo.fr/villenave-d-ornon-chauffage-climatisation",
+          "image": "https://www.climgo.fr/Logo.png",
           "url": "https://www.climgo.fr/villenave-d-ornon-chauffage-climatisation",
-          "telephone": "+33 7 66 46 00 08",
+          "telephone": "+33-7-66-46-00-08",
+          "priceRange": "€€",
+          "description": "ClimGO est une entreprise spécialisée en installation, entretien et dépannage de pompes à chaleur, climatisation, chauffe-eau et systèmes de chauffage à Villenave-d'Ornon et en Gironde.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Place Ferdinand Buisson",
             "addressLocality": "Villenave-d'Ornon",
             "postalCode": "33140",
+            "addressRegion": "Nouvelle-Aquitaine",
             "addressCountry": "FR"
           },
           "geo": {
@@ -84,11 +86,52 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             "latitude": 44.782535552978516,
             "longitude": -0.570515513420105
           },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "18:30"
+            }
+          ],
+          "areaServed": [
+            { "@type": "Place", "name": "Villenave-d'Ornon" },
+            { "@type": "Place", "name": "Bègles" },
+            { "@type": "Place", "name": "Cadaujac" },
+            { "@type": "Place", "name": "Talence" },
+            { "@type": "Place", "name": "Bordeaux" }
+          ],
+          "foundingDate": "2025",
+          "founder": {
+            "@type": "Person",
+            "name": "Benjamin Cardoso"
+          },
           "sameAs": [
+            "https://www.climgo.fr",
             "https://www.instagram.com/climgo_climatisation_chauffage/",
             "https://www.facebook.com/people/Climgo/61578576031066/",
             "https://www.linkedin.com/company/climgo"
-          ]
+          ],
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.climgo.fr/Logo.png",
+            "width": 512,
+            "height": 512
+          },
+          "serviceType": [
+            "Installation de climatisation",
+            "Installation de pompe à chaleur",
+            "Entretien PAC et clim",
+            "Installation chauffe-eau thermodynamique",
+            "Plomberie et chauffage"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+33-7-66-46-00-08",
+            "contactType": "customer service",
+            "areaServed": "FR",
+            "availableLanguage": ["French"]
+          }
         })}
       </Script>
       {children}

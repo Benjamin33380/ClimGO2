@@ -63,34 +63,76 @@ import Script from 'next/script';
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "ClimGO",
-          "image": "https://www.climgo.fr/villes/liac.jpg",
-          "@id": "https://www.climgo.fr/bouliac-chauffage-climatisation",
-          "url": "https://www.climgo.fr/bouliac-chauffage-climatisation",
-          "telephone": "+33 7 66 46 00 08",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "20 Pl. Camille Hostein",
-            "addressLocality": "Bouliac",
-            "postalCode": "33270",
-            "addressCountry": "FR"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 44.814239501953125,
-            "longitude": -0.5036646723747253
-          },
-          "sameAs": [
-            "https://www.instagram.com/climgo_climatisation_chauffage/",
-            "https://www.facebook.com/people/Climgo/61578576031066/",
-            "https://www.linkedin.com/company/climgo"
-          ]
-        })}
-      </Script>
+<Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ClimGO",
+    "image": "https://www.climgo.fr/villes/liac.jpg",
+    "@id": "https://www.climgo.fr/bouliac-chauffage-climatisation",
+    "url": "https://www.climgo.fr/bouliac-chauffage-climatisation",
+    "telephone": "+33 7 66 46 00 08",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "20 Pl. Camille Hostein",
+      "addressLocality": "Bouliac",
+      "postalCode": "33270",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.814239501953125,
+      "longitude": -0.5036646723747253
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:30"
+      }
+    ],
+    "priceRange": "€€",
+    "areaServed": [
+      { "@type": "Place", "name": "Bouliac" },
+      { "@type": "Place", "name": "Floirac" },
+      { "@type": "Place", "name": "Bègles" },
+      { "@type": "Place", "name": "Cenon" }
+    ],
+    "description": "ClimGO intervient à Bouliac pour vos besoins en chauffage, climatisation, pompe à chaleur et chauffe-eau. Installation, entretien, maintenance – entreprise certifiée RGE et réactive dans toute la région.",
+    "sameAs": [
+      "https://www.instagram.com/climgo_climatisation_chauffage/",
+      "https://www.facebook.com/people/Climgo/61578576031066/",
+      "https://www.linkedin.com/company/climgo"
+    ],
+    "foundingDate": "2025",
+    "founder": {
+      "@type": "Person",
+      "name": "Benjamin Cardoso"
+    },
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.climgo.fr/Logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "serviceType": [
+      "Climatisation réversible",
+      "Pompes à chaleur air/air et air/eau",
+      "Chauffe-eau thermodynamique",
+      "Entretien et dépannage",
+      "Installation de chauffage",
+      "Maintenance des systèmes"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33 7 66 46 00 08",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": ["French"]
+    }
+  })}
+</Script>
       {children}
     </>
   );

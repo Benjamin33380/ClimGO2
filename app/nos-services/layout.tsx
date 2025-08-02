@@ -66,6 +66,71 @@ export const metadata: Metadata = {
 export default function NosServicesLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Nos services",
+      "description": "Découvrez les services proposés par ClimGO : installation de chauffage, climatisation, chauffe-eau, entretien et maintenance sur Marcheprime et le Bassin d’Arcachon.",
+      "url": "https://www.climgo.fr/nos-services",
+      "mainEntity": [
+        {
+          "@type": "Service",
+          "name": "Installation de chauffage",
+          "description": "Pompe à chaleur air/eau, plancher chauffant, radiateurs économiques."
+        },
+        {
+          "@type": "Service",
+          "name": "Climatisation",
+          "description": "Climatisation murale, gainable, console ou cassette, adaptée à votre logement."
+        },
+        {
+          "@type": "Service",
+          "name": "Production d'eau chaude",
+          "description": "Chauffe-eau thermodynamique ou électrique, pour répondre à tous les besoins sanitaires."
+        },
+        {
+          "@type": "Service",
+          "name": "Entretien & Maintenance",
+          "description": "Contrat d’entretien et dépannage de vos systèmes pour garantir leur longévité."
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "ClimGO",
+        "url": "https://www.climgo.fr",
+        "logo": "https://www.climgo.fr/Logo.png",
+        "founder": {
+          "@type": "Person",
+          "name": "Benjamin Cardoso"
+        },
+        "foundingDate": "2025",
+        "sameAs": [
+          "https://www.instagram.com/climgo_climatisation_chauffage/",
+          "https://www.facebook.com/people/Climgo/61578576031066/",
+          "https://www.linkedin.com/company/climgo"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "28 Rue de Cantelaude",
+          "addressLocality": "Marcheprime",
+          "addressRegion": "Nouvelle-Aquitaine",
+          "postalCode": "33380",
+          "addressCountry": "FR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+33 7 66 46 00 08",
+          "contactType": "customer service",
+          "areaServed": "FR",
+          "availableLanguage": ["French"]
+        }
+      }
+    })
+  }}
+/>
       {children}
     </div>
   );

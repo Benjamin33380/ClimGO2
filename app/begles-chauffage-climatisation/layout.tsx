@@ -63,34 +63,76 @@ import Script from 'next/script';
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "ClimGO",
-          "image": "https://www.climgo.fr/villes/begles.jpg",
-          "@id": "https://www.climgo.fr/begles-chauffage-climatisation",
-          "url": "https://www.climgo.fr/begles-chauffage-climatisation",
-          "telephone": "+33 7 66 46 00 08",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Rue Calixte Camelle",
-            "addressLocality": "Bègles",
-            "postalCode": "33130",
-            "addressCountry": "FR"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 44.8031084,
-            "longitude": -0.5492643
-          },
-          "sameAs": [
-            "https://www.instagram.com/climgo_climatisation_chauffage/",
-            "https://www.facebook.com/people/Climgo/61578576031066/",
-            "https://www.linkedin.com/company/climgo"
-          ]
-        })}
-      </Script>
+ <Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ClimGO",
+    "image": "https://www.climgo.fr/villes/begles.jpg",
+    "@id": "https://www.climgo.fr/begles-chauffage-climatisation",
+    "url": "https://www.climgo.fr/begles-chauffage-climatisation",
+    "telephone": "+33 7 66 46 00 08",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rue Calixte Camelle",
+      "addressLocality": "Bègles",
+      "postalCode": "33130",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.8031084,
+      "longitude": -0.5492643
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:30"
+      }
+    ],
+    "priceRange": "€€",
+    "areaServed": [
+      { "@type": "Place", "name": "Bègles" },
+      { "@type": "Place", "name": "Bordeaux" },
+      { "@type": "Place", "name": "Villenave-d'Ornon" },
+      { "@type": "Place", "name": "Talence" }
+    ],
+    "description": "ClimGO intervient à Bègles pour l'installation de climatisation, pompe à chaleur, chauffe-eau et chauffage. Entreprise certifiée RGE, devis rapide et accompagnement aux aides d’État.",
+    "sameAs": [
+      "https://www.instagram.com/climgo_climatisation_chauffage/",
+      "https://www.facebook.com/people/Climgo/61578576031066/",
+      "https://www.linkedin.com/company/climgo"
+    ],
+    "foundingDate": "2025",
+    "founder": {
+      "@type": "Person",
+      "name": "Benjamin Cardoso"
+    },
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.climgo.fr/Logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "serviceType": [
+      "Climatisation réversible",
+      "Pompe à chaleur air/eau",
+      "Pompe à chaleur air/air",
+      "Chauffe-eau thermodynamique",
+      "Entretien et maintenance",
+      "Installation chauffage & climatisation"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33 7 66 46 00 08",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": ["French"]
+    }
+  })}
+</Script>
       {children}
     </>
   );

@@ -72,6 +72,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "@id": "https://www.climgo.fr/saucats-chauffage-climatisation",
           "url": "https://www.climgo.fr/saucats-chauffage-climatisation",
           "telephone": "+33 7 66 46 00 08",
+          "priceRange": "€€",
+          "description": "ClimGO intervient à Saucats pour l’installation, l’entretien et le dépannage de systèmes de chauffage, de climatisation, de chauffe-eau et de pompes à chaleur. Profitez d’un service de proximité, certifié RGE.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "4 Chem. de la Mairie",
@@ -84,11 +86,54 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             "latitude": 44.6833,
             "longitude": -0.5333
           },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "18:30"
+            }
+          ],
+          "areaServed": [
+            { "@type": "Place", "name": "Saucats" },
+            { "@type": "Place", "name": "Cestas" },
+            { "@type": "Place", "name": "Léognan" },
+            { "@type": "Place", "name": "La Brède" },
+            { "@type": "Place", "name": "Canéjan" },
+            { "@type": "Place", "name": "Marcheprime" },
+            { "@type": "Place", "name": "Biganos" }
+          ],
+          "foundingDate": "2025",
+          "founder": {
+            "@type": "Person",
+            "name": "Benjamin Cardoso"
+          },
           "sameAs": [
+            "https://www.climgo.fr",
             "https://www.instagram.com/climgo_climatisation_chauffage/",
             "https://www.facebook.com/people/Climgo/61578576031066/",
             "https://www.linkedin.com/company/climgo"
-          ]
+          ],
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.climgo.fr/Logo.png",
+            "width": 512,
+            "height": 512
+          },
+          "serviceType": [
+            "Installation de climatisation",
+            "Installation de pompe à chaleur",
+            "Entretien PAC et clim",
+            "Installation chauffe-eau thermodynamique",
+            "Plomberie et chauffage"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+33 7 66 46 00 08",
+            "contactType": "customer service",
+            "areaServed": "FR",
+            "availableLanguage": ["French"]
+          }
         })}
       </Script>
       {children}

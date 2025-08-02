@@ -63,34 +63,76 @@ import Script from 'next/script';
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "ClimGO",
-          "image": "https://www.climgo.fr/villes/merignac.jpg",
-          "@id": "https://www.climgo.fr/merignac-chauffage-climatisation",
-          "url": "https://www.climgo.fr/merignac-chauffage-climatisation",
-          "telephone": "+33 7 66 46 00 08",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "60 Avenue du Maréchal de Lattre de Tassigny",
-            "addressLocality": "Mérignac",
-            "postalCode": "33700",
-            "addressCountry": "FR"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 44.84524154663086,
-            "longitude": -0.6531892418861389
-          },
-          "sameAs": [
-            "https://www.instagram.com/climgo_climatisation_chauffage/",
-            "https://www.facebook.com/people/Climgo/61578576031066/",
-            "https://www.linkedin.com/company/climgo"
-          ]
-        })}
-      </Script>
+<Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ClimGO",
+    "image": "https://www.climgo.fr/villes/merignac.jpg",
+    "@id": "https://www.climgo.fr/merignac-chauffage-climatisation",
+    "url": "https://www.climgo.fr/merignac-chauffage-climatisation",
+    "telephone": "+33 7 66 46 00 08",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "60 Avenue du Maréchal de Lattre de Tassigny",
+      "addressLocality": "Mérignac",
+      "postalCode": "33700",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.84524154663086,
+      "longitude": -0.6531892418861389
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:30"
+      }
+    ],
+    "priceRange": "€€",
+    "areaServed": [
+      { "@type": "Place", "name": "Mérignac" },
+      { "@type": "Place", "name": "Pessac" },
+      { "@type": "Place", "name": "Eysines" },
+      { "@type": "Place", "name": "Le Haillan" },
+      { "@type": "Place", "name": "Bordeaux" }
+    ],
+    "description": "Installation, entretien et dépannage de systèmes de chauffage, climatisation et pompes à chaleur à Mérignac. Intervention rapide et professionnelle par ClimGO, artisan certifié RGE.",
+    "sameAs": [
+      "https://www.instagram.com/climgo_climatisation_chauffage/",
+      "https://www.facebook.com/people/Climgo/61578576031066/",
+      "https://www.linkedin.com/company/climgo"
+    ],
+    "foundingDate": "2025",
+    "founder": {
+      "@type": "Person",
+      "name": "Benjamin Cardoso"
+    },
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.climgo.fr/Logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "serviceType": [
+      "Installation de climatisation",
+      "Installation de pompe à chaleur",
+      "Entretien PAC et climatisation",
+      "Installation chauffe-eau thermodynamique",
+      "Plomberie et chauffage"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33 7 66 46 00 08",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": ["French"]
+    }
+  })}
+</Script>
       {children}
     </>
   );

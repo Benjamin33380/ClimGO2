@@ -63,34 +63,76 @@ import Script from 'next/script';
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "ClimGO",
-          "image": "https://www.climgo.fr/villes/pessac.png",
-          "@id": "https://www.climgo.fr/pessac-chauffage-climatisation",
-          "url": "https://www.climgo.fr/pessac-chauffage-climatisation",
-          "telephone": "+33 7 66 46 00 08",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Pl. de la 5ème République",
-            "addressLocality": "Pessac",
-            "postalCode": "33600",
-            "addressCountry": "FR"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 444.792415618896484,
-            "longitude": -0.7051652073860168
-          },
-          "sameAs": [
-            "https://www.instagram.com/climgo_climatisation_chauffage/",
-            "https://www.facebook.com/people/Climgo/61578576031066/",
-            "https://www.linkedin.com/company/climgo"
-          ]
-        })}
-      </Script>
+<Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ClimGO",
+    "image": "https://www.climgo.fr/villes/pessac.png",
+    "@id": "https://www.climgo.fr/pessac-chauffage-climatisation",
+    "url": "https://www.climgo.fr/pessac-chauffage-climatisation",
+    "telephone": "+33 7 66 46 00 08",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Pl. de la 5ème République",
+      "addressLocality": "Pessac",
+      "postalCode": "33600",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.7924156,
+      "longitude": -0.7051652
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:30"
+      }
+    ],
+    "priceRange": "€€",
+    "areaServed": [
+      { "@type": "Place", "name": "Pessac" },
+      { "@type": "Place", "name": "Talence" },
+      { "@type": "Place", "name": "Gradignan" },
+      { "@type": "Place", "name": "Bègles" },
+      { "@type": "Place", "name": "Mérignac" }
+    ],
+    "description": "ClimGO intervient à Pessac pour l'installation, l'entretien et le dépannage de climatisations, pompes à chaleur et chauffe-eaux. Service certifié RGE, réactif et de proximité.",
+    "sameAs": [
+      "https://www.instagram.com/climgo_climatisation_chauffage/",
+      "https://www.facebook.com/people/Climgo/61578576031066/",
+      "https://www.linkedin.com/company/climgo"
+    ],
+    "foundingDate": "2025",
+    "founder": {
+      "@type": "Person",
+      "name": "Benjamin Cardoso"
+    },
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.climgo.fr/Logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "serviceType": [
+      "Installation de climatisation",
+      "Installation de pompe à chaleur",
+      "Entretien PAC et climatisation",
+      "Installation chauffe-eau thermodynamique",
+      "Plomberie et chauffage"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33 7 66 46 00 08",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": ["French"]
+    }
+  })}
+</Script>
       {children}
     </>
   );

@@ -40,6 +40,49 @@ export const metadata: Metadata = {
 export default function PrivacyLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Politique de confidentialité",
+      "description": "Découvrez comment ClimGO collecte, utilise et protège vos données personnelles lors de votre navigation sur le site.",
+      "url": "https://www.climgo.fr/politique-confidentialite",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ClimGO",
+        "url": "https://www.climgo.fr",
+        "logo": "https://www.climgo.fr/Logo.png",
+        "founder": {
+          "@type": "Person",
+          "name": "Benjamin Cardoso"
+        },
+        "foundingDate": "2025",
+        "sameAs": [
+          "https://www.instagram.com/climgo_climatisation_chauffage/",
+          "https://www.facebook.com/people/Climgo/61578576031066/",
+          "https://www.linkedin.com/company/climgo"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "28 Rue de Cantelaude",
+          "addressLocality": "Marcheprime",
+          "addressRegion": "Nouvelle-Aquitaine",
+          "postalCode": "33380",
+          "addressCountry": "FR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+33 7 66 46 00 08",
+          "contactType": "customer service",
+          "areaServed": "FR",
+          "availableLanguage": ["French"]
+        }
+      }
+    })
+  }}
+/>
       {children}
     </div>
   );

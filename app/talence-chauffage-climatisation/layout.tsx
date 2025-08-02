@@ -71,12 +71,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "image": "https://www.climgo.fr/villes/talence.jpg",
           "@id": "https://www.climgo.fr/talence-chauffage-climatisation",
           "url": "https://www.climgo.fr/talence-chauffage-climatisation",
-          "telephone": "+33 7 66 46 00 08",
+          "telephone": "+33-7-66-46-00-08",
+          "priceRange": "€€",
+          "description": "ClimGO propose l'installation, l'entretien et le dépannage de systèmes de chauffage, climatisation, chauffe-eau et pompes à chaleur à Talence et ses environs.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Rue du Professeur Arnozan",
             "addressLocality": "Talence",
             "postalCode": "33400",
+            "addressRegion": "Nouvelle-Aquitaine",
             "addressCountry": "FR"
           },
           "geo": {
@@ -84,11 +87,52 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             "latitude": 44.8087043762207,
             "longitude": -0.587873637676239
           },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "18:30"
+            }
+          ],
+          "areaServed": [
+            { "@type": "Place", "name": "Talence" },
+            { "@type": "Place", "name": "Bordeaux" },
+            { "@type": "Place", "name": "Pessac" },
+            { "@type": "Place", "name": "Bègles" },
+            { "@type": "Place", "name": "Gradignan" }
+          ],
+          "foundingDate": "2025",
+          "founder": {
+            "@type": "Person",
+            "name": "Benjamin Cardoso"
+          },
           "sameAs": [
+            "https://www.climgo.fr",
             "https://www.instagram.com/climgo_climatisation_chauffage/",
             "https://www.facebook.com/people/Climgo/61578576031066/",
             "https://www.linkedin.com/company/climgo"
-          ]
+          ],
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.climgo.fr/Logo.png",
+            "width": 512,
+            "height": 512
+          },
+          "serviceType": [
+            "Installation de climatisation",
+            "Installation de pompe à chaleur",
+            "Entretien PAC et climatisation",
+            "Installation chauffe-eau thermodynamique",
+            "Plomberie et chauffage"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+33-7-66-46-00-08",
+            "contactType": "customer service",
+            "areaServed": "FR",
+            "availableLanguage": ["French"]
+          }
         })}
       </Script>
       {children}

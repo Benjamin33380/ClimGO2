@@ -63,34 +63,75 @@ import Script from 'next/script';
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "ClimGO",
-          "image": "https://www.climgo.fr/villes/ares.jpg",
-          "@id": "https://www.climgo.fr/ares-chauffage-climatisation",
-          "url": "https://www.climgo.fr/ares-chauffage-climatisation",
-          "telephone": "+33 7 66 46 00 08",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Pierre Pauilhac",
-            "addressLocality": "Arès",
-            "postalCode": "33740",
-            "addressCountry": "FR"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 44.7983533,
-            "longitude": -1.0714701
-          },
-          "sameAs": [
-            "https://www.instagram.com/climgo_climatisation_chauffage/",
-            "https://www.facebook.com/people/Climgo/61578576031066/",
-            "https://www.linkedin.com/company/climgo"
-          ]
-        })}
-      </Script>
+<Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ClimGO",
+    "image": "https://www.climgo.fr/villes/ares.jpg",
+    "@id": "https://www.climgo.fr/ares-chauffage-climatisation",
+    "url": "https://www.climgo.fr/ares-chauffage-climatisation",
+    "telephone": "+33 7 66 46 00 08",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Pierre Pauilhac",
+      "addressLocality": "Arès",
+      "postalCode": "33740",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.7983533,
+      "longitude": -1.0714701
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:30"
+      }
+    ],
+    "priceRange": "€€",
+    "areaServed": [
+      { "@type": "Place", "name": "Arès" },
+      { "@type": "Place", "name": "Andernos-les-Bains" },
+      { "@type": "Place", "name": "Lège-Cap-Ferret" },
+      { "@type": "Place", "name": "Audenge" }
+    ],
+    "description": "Installation, entretien et dépannage de systèmes de chauffage, climatisation et chauffe-eau à Arès. ClimGO est certifié RGE et vous accompagne pour bénéficier des aides d'État.",
+    "sameAs": [
+      "https://www.instagram.com/climgo_climatisation_chauffage/",
+      "https://www.facebook.com/people/Climgo/61578576031066/",
+      "https://www.linkedin.com/company/climgo"
+    ],
+    "foundingDate": "2025",
+    "founder": {
+      "@type": "Person",
+      "name": "Benjamin Cardoso"
+    },
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.climgo.fr/Logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "serviceType": [
+      "Installation de climatisation réversible",
+      "Pompes à chaleur air/air et air/eau",
+      "Chauffe-eau thermodynamique",
+      "Entretien annuel et dépannage",
+      "Conseil et accompagnement aux aides MaPrimeRénov', CEE, TVA réduite"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33 7 66 46 00 08",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": ["French"]
+    }
+  })}
+</Script>
       {children}
     </>
   );

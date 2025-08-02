@@ -71,6 +71,66 @@ export const viewport: Viewport = {
 export default function EauChaudeSanitaireLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Production d’eau chaude sanitaire",
+      "description": "Installation, remplacement et entretien de chauffe-eaux thermodynamiques ou électriques. ClimGO vous accompagne à Marcheprime et alentours.",
+      "url": "https://www.climgo.fr/eau-chaude-sanitaire",
+      "mainEntity": [
+        {
+          "@type": "Service",
+          "name": "Chauffe-eau thermodynamique",
+          "description": "Solution économique et écologique pour produire de l’eau chaude sanitaire à partir des calories de l’air ambiant."
+        },
+        {
+          "@type": "Service",
+          "name": "Chauffe-eau électrique",
+          "description": "Installation ou remplacement de chauffe-eau classiques adaptés aux besoins des particuliers et petits logements."
+        },
+        {
+          "@type": "Service",
+          "name": "Entretien chauffe-eau",
+          "description": "Maintenance préventive et curative pour prolonger la durée de vie de votre équipement et garantir un fonctionnement optimal."
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "ClimGO",
+        "url": "https://www.climgo.fr",
+        "logo": "https://www.climgo.fr/Logo.png",
+        "founder": {
+          "@type": "Person",
+          "name": "Benjamin Cardoso"
+        },
+        "foundingDate": "2025",
+        "sameAs": [
+          "https://www.instagram.com/climgo_climatisation_chauffage/",
+          "https://www.facebook.com/people/Climgo/61578576031066/",
+          "https://www.linkedin.com/company/climgo"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "28 Rue de Cantelaude",
+          "addressLocality": "Marcheprime",
+          "addressRegion": "Nouvelle-Aquitaine",
+          "postalCode": "33380",
+          "addressCountry": "FR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+33 7 66 46 00 08",
+          "contactType": "customer service",
+          "areaServed": "FR",
+          "availableLanguage": ["French"]
+        }
+      }
+    })
+  }}
+/>
       {children}
     </div>
   );

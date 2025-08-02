@@ -63,38 +63,52 @@ export const metadata: Metadata = {
 export default function AProposLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "ClimGO",
-            "url": "https://www.climgo.fr",
-            "logo": "https://www.climgo.fr/Logo.png",
-            "description": "ClimGO est une entreprise spécialisée dans l'installation de chauffage, climatisation et production d'eau chaude sanitaire en Gironde.",
-            "sameAs": [
-              "https://www.instagram.com/climgo_climatisation_chauffage/",
-              "https://www.facebook.com/people/Climgo/61578576031066/",
-              "https://www.linkedin.com/company/climgo"
-            ],
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Marcheprime",
-              "addressRegion": "Nouvelle-Aquitaine",
-              "postalCode": "33380",
-              "addressCountry": "FR"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+33 7 66 46 00 08",
-              "contactType": "customer service",
-              "areaServed": "FR",
-              "availableLanguage": ["French"]
-            }
-          })
-        }}
-      />
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ClimGO",
+      "url": "https://www.climgo.fr",
+      "logo": "https://www.climgo.fr/Logo.png",
+      "description": "ClimGO est une entreprise spécialisée dans l'installation de chauffage, climatisation et production d'eau chaude sanitaire en Gironde.",
+      "founder": {
+        "@type": "Person",
+        "name": "Benjamin Cardoso"
+      },
+      "foundingDate": "2025",
+      "sameAs": [
+        "https://www.instagram.com/climgo_climatisation_chauffage/",
+        "https://www.facebook.com/people/Climgo/61578576031066/",
+        "https://www.linkedin.com/company/climgo"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "28 Rue de Cantelaude",
+        "addressLocality": "Marcheprime",
+        "addressRegion": "Nouvelle-Aquitaine",
+        "postalCode": "33380",
+        "addressCountry": "FR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33 7 66 46 00 08",
+        "contactType": "customer service",
+        "areaServed": "FR",
+        "availableLanguage": ["French"]
+      },
+      "service": [
+        { "@type": "Service", "serviceType": "Installation de climatisation" },
+        { "@type": "Service", "serviceType": "Entretien de climatisation" },
+        { "@type": "Service", "serviceType": "Pompe à chaleur air/eau" },
+        { "@type": "Service", "serviceType": "Pompe à chaleur air/air" },
+        { "@type": "Service", "serviceType": "Chauffe-eau thermodynamique" },
+        { "@type": "Service", "serviceType": "Dépannage chauffage" }
+      ]
+    })
+  }}
+/>
       {children}
     </div>
   );

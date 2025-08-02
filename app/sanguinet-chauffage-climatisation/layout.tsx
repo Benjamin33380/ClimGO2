@@ -72,11 +72,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           "@id": "https://www.climgo.fr/sanguinet-chauffage-climatisation",
           "url": "https://www.climgo.fr/sanguinet-chauffage-climatisation",
           "telephone": "+33 7 66 46 00 08",
+          "priceRange": "€€",
+          "description": "ClimGO est votre partenaire de confiance à Sanguinet pour tous vos besoins en chauffage, climatisation et production d’eau chaude. Nous intervenons avec sérieux, discrétion et efficacité dans toute la région.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Place de la Mairie",
             "addressLocality": "Sanguinet",
             "postalCode": "40460",
+            "addressRegion": "Nouvelle-Aquitaine",
             "addressCountry": "FR"
           },
           "geo": {
@@ -84,11 +87,52 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             "latitude": 44.4833984375,
             "longitude": -1.076384425163269
           },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "18:30"
+            }
+          ],
+          "areaServed": [
+            { "@type": "Place", "name": "Sanguinet" },
+            { "@type": "Place", "name": "Biscarrosse" },
+            { "@type": "Place", "name": "Parentis-en-Born" },
+            { "@type": "Place", "name": "La Teste-de-Buch" },
+            { "@type": "Place", "name": "Ychoux" }
+          ],
+          "foundingDate": "2025",
+          "founder": {
+            "@type": "Person",
+            "name": "Benjamin Cardoso"
+          },
           "sameAs": [
+            "https://www.climgo.fr",
             "https://www.instagram.com/climgo_climatisation_chauffage/",
             "https://www.facebook.com/people/Climgo/61578576031066/",
             "https://www.linkedin.com/company/climgo"
-          ]
+          ],
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.climgo.fr/Logo.png",
+            "width": 512,
+            "height": 512
+          },
+          "serviceType": [
+            "Installation de climatisation",
+            "Installation de pompe à chaleur",
+            "Entretien PAC et clim",
+            "Installation chauffe-eau thermodynamique",
+            "Plomberie et chauffage"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+33 7 66 46 00 08",
+            "contactType": "customer service",
+            "areaServed": "FR",
+            "availableLanguage": ["French"]
+          }
         })}
       </Script>
       {children}

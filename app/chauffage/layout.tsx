@@ -62,6 +62,118 @@ export const metadata: Metadata = {
 export default function ChauffageLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": [
+        "Pompe à chaleur air/air",
+        "Pompe à chaleur air/eau",
+        "Plancher chauffant",
+        "Radiateurs basse température",
+        "Radiateurs électriques",
+        "Sèche-serviettes"
+      ],
+      "name": "Solutions de chauffage par ClimGO",
+      "description": "Installation, remplacement et entretien de systèmes de chauffage performants : pompes à chaleur, planchers chauffants, radiateurs et sèche-serviettes.",
+      "provider": {
+        "@type": "Organization",
+        "name": "ClimGO",
+        "url": "https://www.climgo.fr",
+        "logo": "https://www.climgo.fr/Logo.png",
+        "founder": {
+          "@type": "Person",
+          "name": "Benjamin Cardoso"
+        },
+        "foundingDate": "2025",
+        "sameAs": [
+          "https://www.instagram.com/climgo_climatisation_chauffage/",
+          "https://www.facebook.com/people/Climgo/61578576031066/",
+          "https://www.linkedin.com/company/climgo"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "28 Rue de Cantelaude",
+          "addressLocality": "Marcheprime",
+          "addressRegion": "Nouvelle-Aquitaine",
+          "postalCode": "33380",
+          "addressCountry": "FR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+33 7 66 46 00 08",
+          "contactType": "customer service",
+          "areaServed": "FR",
+          "availableLanguage": ["French"]
+        }
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Marcheprime"
+        },
+        {
+          "@type": "Place",
+          "name": "Bassin d’Arcachon"
+        },
+        {
+          "@type": "Place",
+          "name": "Gironde"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Catalogue de services chauffage",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pompe à chaleur air/air"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pompe à chaleur air/eau"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Plancher chauffant"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Radiateurs basse température"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Radiateurs électriques"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sèche-serviettes"
+            }
+          }
+        ]
+      }
+    })
+  }}
+/>
       {children}
     </div>
   );

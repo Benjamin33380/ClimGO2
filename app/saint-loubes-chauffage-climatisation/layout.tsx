@@ -63,34 +63,76 @@ import Script from 'next/script';
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "ClimGO",
-          "image": "https://www.climgo.fr/villes/stlo.jpg",
-          "@id": "https://www.climgo.fr/saint-loubes-chauffage-climatisation",
-          "url": "https://www.climgo.fr/saint-loubes-chauffage-climatisation",
-          "telephone": "+33 7 66 46 00 08",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Pl. de l'Hôtel de ville,",
-            "addressLocality": "Saint-Loubès",
-            "postalCode": "33450",
-            "addressCountry": "FR"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 44.91651153564453,
-            "longitude": -0.42713022232055664
-          },
-          "sameAs": [
-            "https://www.instagram.com/climgo_climatisation_chauffage/",
-            "https://www.facebook.com/people/Climgo/61578576031066/",
-            "https://www.linkedin.com/company/climgo"
-          ]
-        })}
-      </Script>
+<Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ClimGO",
+    "image": "https://www.climgo.fr/villes/stlo.jpg",
+    "@id": "https://www.climgo.fr/saint-loubes-chauffage-climatisation",
+    "url": "https://www.climgo.fr/saint-loubes-chauffage-climatisation",
+    "telephone": "+33 7 66 46 00 08",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Pl. de l'Hôtel de ville",
+      "addressLocality": "Saint-Loubès",
+      "postalCode": "33450",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.91651153564453,
+      "longitude": -0.42713022232055664
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:30"
+      }
+    ],
+    "priceRange": "€€",
+    "areaServed": [
+      { "@type": "Place", "name": "Saint-Loubès" },
+      { "@type": "Place", "name": "Yvrac" },
+      { "@type": "Place", "name": "Sainte-Eulalie" },
+      { "@type": "Place", "name": "Ambarès-et-Lagrave" },
+      { "@type": "Place", "name": "Carbon-Blanc" }
+    ],
+    "description": "ClimGO propose ses services à Saint-Loubès pour l'installation, la maintenance et le dépannage de climatisations, pompes à chaleur et chauffe-eau. Artisan RGE, service local et fiable.",
+    "sameAs": [
+      "https://www.instagram.com/climgo_climatisation_chauffage/",
+      "https://www.facebook.com/people/Climgo/61578576031066/",
+      "https://www.linkedin.com/company/climgo"
+    ],
+    "foundingDate": "2025",
+    "founder": {
+      "@type": "Person",
+      "name": "Benjamin Cardoso"
+    },
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.climgo.fr/Logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "serviceType": [
+      "Installation de climatisation",
+      "Installation de pompe à chaleur",
+      "Entretien PAC et climatisation",
+      "Installation chauffe-eau thermodynamique",
+      "Plomberie et chauffage"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33 7 66 46 00 08",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": ["French"]
+    }
+  })}
+</Script>
       {children}
     </>
   );

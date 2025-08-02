@@ -63,34 +63,76 @@ import Script from 'next/script';
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "ClimGO",
-          "image": "https://www.climgo.fr/villes/sadm.jpg",
-          "@id": "https://www.climgo.fr/saint-aubin-de-medoc-chauffage-climatisation",
-          "url": "https://www.climgo.fr/saint-aubin-de-medoc-chauffage-climatisation",
-          "telephone": "+33 7 66 46 00 08",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Route de Joli Bois",
-            "addressLocality": "Saint-Aubin-de-Médoc",
-            "postalCode": "33160",
-            "addressCountry": "FR"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 44.9158388,
-            "longitude": -0.7220542
-          },
-          "sameAs": [
-            "https://www.instagram.com/climgo_climatisation_chauffage/",
-            "https://www.facebook.com/people/Climgo/61578576031066/",
-            "https://www.linkedin.com/company/climgo"
-          ]
-        })}
-      </Script>
+<Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ClimGO",
+    "image": "https://www.climgo.fr/villes/sadm.jpg",
+    "@id": "https://www.climgo.fr/saint-aubin-de-medoc-chauffage-climatisation",
+    "url": "https://www.climgo.fr/saint-aubin-de-medoc-chauffage-climatisation",
+    "telephone": "+33 7 66 46 00 08",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Route de Joli Bois",
+      "addressLocality": "Saint-Aubin-de-Médoc",
+      "postalCode": "33160",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.9158388,
+      "longitude": -0.7220542
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:30"
+      }
+    ],
+    "priceRange": "€€",
+    "areaServed": [
+      { "@type": "Place", "name": "Saint-Aubin-de-Médoc" },
+      { "@type": "Place", "name": "Saint-Médard-en-Jalles" },
+      { "@type": "Place", "name": "Le Taillan-Médoc" },
+      { "@type": "Place", "name": "Eysines" },
+      { "@type": "Place", "name": "Le Haillan" }
+    ],
+    "description": "ClimGO vous accompagne à Saint-Aubin-de-Médoc pour l'installation, l'entretien et le dépannage de pompes à chaleur, climatisations et chauffe-eaux. Intervention rapide et service de proximité certifié RGE.",
+    "sameAs": [
+      "https://www.instagram.com/climgo_climatisation_chauffage/",
+      "https://www.facebook.com/people/Climgo/61578576031066/",
+      "https://www.linkedin.com/company/climgo"
+    ],
+    "foundingDate": "2025",
+    "founder": {
+      "@type": "Person",
+      "name": "Benjamin Cardoso"
+    },
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.climgo.fr/Logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "serviceType": [
+      "Installation de climatisation",
+      "Installation de pompe à chaleur",
+      "Entretien PAC et climatisation",
+      "Installation chauffe-eau thermodynamique",
+      "Plomberie et chauffage"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33 7 66 46 00 08",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": ["French"]
+    }
+  })}
+</Script>
       {children}
     </>
   );

@@ -40,12 +40,53 @@ export default function BlogLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="min-h-screen bg-[#F8F9F4] my-24">
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
+    <div><script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Le blog de ClimGO",
+      "description": "Conseils, actualités et informations sur le chauffage, la climatisation, les aides d’État et l’entretien de vos équipements.",
+      "url": "https://www.climgo.fr/blog",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ClimGO",
+        "url": "https://www.climgo.fr",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.climgo.fr/Logo.png"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Benjamin Cardoso"
+        },
+        "foundingDate": "2025",
+        "sameAs": [
+          "https://www.instagram.com/climgo_climatisation_chauffage/",
+          "https://www.facebook.com/people/Climgo/61578576031066/",
+          "https://www.linkedin.com/company/climgo"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "28 Rue de Cantelaude",
+          "addressLocality": "Marcheprime",
+          "addressRegion": "Nouvelle-Aquitaine",
+          "postalCode": "33380",
+          "addressCountry": "FR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+33 7 66 46 00 08",
+          "contactType": "customer service",
+          "areaServed": "FR",
+          "availableLanguage": ["French"]
+        }
+      }
+    })
+  }}
+/> 
           {children}
-        </div>
-      </div>
-    </div>
+           </div>
   )
 }

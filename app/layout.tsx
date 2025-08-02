@@ -120,6 +120,85 @@ export default function RootLayout({
             `
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "ClimGO",
+              "image": "https://www.climgo.fr/Logo.png",
+              "url": "https://www.climgo.fr",
+              "telephone": "+33-7-66-46-00-08",
+              "priceRange": "€€",
+              "description": "ClimGO est une entreprise spécialisée en installation, entretien et dépannage de pompes à chaleur, climatisation, chauffe-eau et systèmes de chauffage dans le Sud-Ouest.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "28 rue de Cantelaude",
+                "addressLocality": "Marcheprime",
+                "postalCode": "33380",
+                "addressRegion": "Nouvelle-Aquitaine",
+                "addressCountry": "FR"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 44.6882,
+                "longitude": -0.8901
+              },
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  "opens": "08:00",
+                  "closes": "18:30"
+                }
+              ],
+              "areaServed": [
+                { "@type": "Place", "name": "Marcheprime" },
+                { "@type": "Place", "name": "Biganos" },
+                { "@type": "Place", "name": "Cestas" },
+                { "@type": "Place", "name": "Mios" },
+                { "@type": "Place", "name": "Gujan-Mestras" },
+                { "@type": "Place", "name": "La Teste-de-Buch" },
+                { "@type": "Place", "name": "Pessac" },
+                { "@type": "Place", "name": "Mérignac" },
+                { "@type": "Place", "name": "Saint-Médard-en-Jalles" },
+                { "@type": "Place", "name": "Arcachon" }
+              ],
+              "foundingDate": "2025",
+              "founder": {
+                "@type": "Person",
+                "name": "Benjamin Cardoso"
+              },
+              "sameAs": [
+                "https://www.climgo.fr",
+                "https://www.facebook.com/profile.php?id=61578576031066",
+                "https://www.instagram.com/climgo_climatisation_chauffage/",
+                "https://www.linkedin.com/company/climgo"
+              ],
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.climgo.fr/Logo.png",
+                "width": 512,
+                "height": 512
+              },
+              "serviceType": [
+                "Installation de climatisation",
+                "Installation de pompe à chaleur",
+                "Entretien PAC et clim",
+                "Installation chauffe-eau thermodynamique",
+                "Plomberie et chauffage"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+33-7-66-46-00-08",
+                "contactType": "customer service",
+                "areaServed": "FR",
+                "availableLanguage": ["French"]
+              }
+            })
+          }}
+        />
       </head>
       <body
       >

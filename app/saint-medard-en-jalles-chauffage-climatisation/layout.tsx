@@ -63,34 +63,76 @@ import Script from 'next/script';
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "ClimGO",
-          "image": "https://www.climgo.fr/villes/smej.webp",
-          "@id": "https://www.climgo.fr/saint-medard-en-jalles-chauffage-climatisation",
-          "url": "https://www.climgo.fr/saint-medard-en-jalles-chauffage-climatisation",
-          "telephone": "+33 7 66 46 00 08",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "6 Pl. de l'Hôtel de ville",
-            "addressLocality": "Saint-Médard-en-Jalles",
-            "postalCode": "33160",
-            "addressCountry": "FR"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 44.895660400390625,
-            "longitude": -0.7170525193214417
-          },
-          "sameAs": [
-            "https://www.instagram.com/climgo_climatisation_chauffage/",
-            "https://www.facebook.com/people/Climgo/61578576031066/",
-            "https://www.linkedin.com/company/climgo"
-          ]
-        })}
-      </Script>
+<Script type="application/ld+json" id="ld-json-schema" strategy="afterInteractive">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ClimGO",
+    "image": "https://www.climgo.fr/villes/smej.webp",
+    "@id": "https://www.climgo.fr/saint-medard-en-jalles-chauffage-climatisation",
+    "url": "https://www.climgo.fr/saint-medard-en-jalles-chauffage-climatisation",
+    "telephone": "+33 7 66 46 00 08",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6 Pl. de l'Hôtel de ville",
+      "addressLocality": "Saint-Médard-en-Jalles",
+      "postalCode": "33160",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.895660400390625,
+      "longitude": -0.7170525193214417
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:30"
+      }
+    ],
+    "priceRange": "€€",
+    "areaServed": [
+      { "@type": "Place", "name": "Saint-Médard-en-Jalles" },
+      { "@type": "Place", "name": "Le Haillan" },
+      { "@type": "Place", "name": "Eysines" },
+      { "@type": "Place", "name": "Martignas-sur-Jalle" },
+      { "@type": "Place", "name": "Mérignac" }
+    ],
+    "description": "ClimGO propose à Saint-Médard-en-Jalles l'installation, la maintenance et le dépannage de climatisations, pompes à chaleur et chauffe-eau. Artisan certifié RGE pour des projets fiables et durables.",
+    "sameAs": [
+      "https://www.instagram.com/climgo_climatisation_chauffage/",
+      "https://www.facebook.com/people/Climgo/61578576031066/",
+      "https://www.linkedin.com/company/climgo"
+    ],
+    "foundingDate": "2025",
+    "founder": {
+      "@type": "Person",
+      "name": "Benjamin Cardoso"
+    },
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.climgo.fr/Logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "serviceType": [
+      "Installation de climatisation",
+      "Installation de pompe à chaleur",
+      "Entretien PAC et climatisation",
+      "Installation chauffe-eau thermodynamique",
+      "Plomberie et chauffage"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33 7 66 46 00 08",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": ["French"]
+    }
+  })}
+</Script>
       {children}
     </>
   );
