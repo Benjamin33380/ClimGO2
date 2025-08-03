@@ -1,4 +1,6 @@
-export const metadata = {
+import { Metadata, Viewport } from 'next';
+
+export const metadata: Metadata = {
   title: "Chauffage, Climatisation et PAC à Biganos ",
   description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Biganos. Profitez d'un service local, certifié RGE.",
   keywords: [
@@ -59,7 +61,14 @@ export const metadata = {
 };
 
 import Script from 'next/script';
-
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover',
+  height: 'device-height',
+};
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>

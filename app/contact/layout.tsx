@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.climgo.fr'),
@@ -61,7 +61,14 @@ export const metadata: Metadata = {
   publisher: 'ClimGO',
   category: 'business',
 };
-
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover',
+  height: 'device-height',
+};
 export default function ContactLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>

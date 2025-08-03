@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Header from './components/Header';
 import InteractiveMap from './components/InteractiveMap';
@@ -65,6 +65,14 @@ export const metadata: Metadata = {
   authors: [{ name: 'ClimGO', url: 'https://www.climgo.fr' }],
   creator: 'ClimGO',
   publisher: 'ClimGO',
+};
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover',
+  height: 'device-height',
 };
 
 export default function RootLayout({

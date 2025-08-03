@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 
 export const metadata: Metadata = {
   title: 'Chauffage ClimGO',
@@ -58,7 +58,14 @@ export const metadata: Metadata = {
   publisher: 'ClimGO',
   category: 'chauffage, pompe à chaleur, plancher chauffant, radiateurs, énergies renouvelables',
 };  
-
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover',
+  height: 'device-height',
+};
 export default function ChauffageLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>

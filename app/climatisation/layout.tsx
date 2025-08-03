@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 
 export const metadata: Metadata = {
   title: 'Climatisation ClimGO',
@@ -58,7 +58,14 @@ export const metadata: Metadata = {
   viewport: 'width=device-width, initial-scale=1',
   manifest: '/site.webmanifest',
 };
-
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover',
+  height: 'device-height',
+};
 export default function ClimatisationLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>

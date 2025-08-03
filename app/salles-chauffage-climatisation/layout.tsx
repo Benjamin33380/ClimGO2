@@ -1,6 +1,7 @@
 import Script from "next/script";
+import { Metadata, Viewport } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Chauffage, Climatisation et PAC à Salles - ClimGO",
   description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Salles. Profitez d'un service local, certifié RGE.",
   keywords: [
@@ -59,7 +60,14 @@ export const metadata = {
     canonical: "/salles-chauffage-climatisation"
   }
 };
-
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover',
+  height: 'device-height',
+};
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>

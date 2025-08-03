@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 
 export const metadata: Metadata = {
   title: 'Aides & Subventions ClimGO',
@@ -58,6 +58,14 @@ export const metadata: Metadata = {
   category: 'business',
   generator: 'Next.js',
   themeColor: '#ffffff',
+};
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover',
+  height: 'device-height',
 };
 
 export default function AidesEtatLayout({ children }: { children: React.ReactNode }) {
