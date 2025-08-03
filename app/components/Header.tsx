@@ -326,6 +326,15 @@ export default function Header() {
           </div>
         </div>
       </div>
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-5 right-5 z-50 p-3 rounded-full bg-[#03144a] text-white shadow-lg hover:scale-110 transition-transform duration-300"
+        aria-label="Remonter en haut"
+      >
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+      </button>
     </header>
   );
 } 
