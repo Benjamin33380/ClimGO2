@@ -9,15 +9,11 @@ interface HeroProps {
 
 export default function Hero({ ville, backgroundImage }: HeroProps) {
   return (
-    <div className="relative w-full min-h-screen flex items-center justify-center text-white overflow-hidden">
-      <Image
-        src={backgroundImage}
-        alt={`ClimGO - Chauffage Climatisation à ${ville}`}
-        fill
-        priority
-        quality={90}
-        className="object-cover"
-      />
+    <div className="relative w-full min-h-screen flex items-center justify-center text-white overflow-hidden bg-center bg-no-repeat bg-cover md:bg-fixed">
+      <div
+        className="absolute inset-0 z-0 bg-center bg-no-repeat bg-cover md:bg-fixed"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      ></div>
       {/* Overlay sombre */}
       <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
 
