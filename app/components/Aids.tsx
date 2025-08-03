@@ -14,7 +14,7 @@ export default function Aids() {
               Profitez des aides financières !
             </h2>
             <p className="text-lg text-[#f8f8f9] max-w-4xl mx-auto leading-relaxed" style={{ color: '#f8f8f9' }}>
-              <strong style={{ color: '#f8f8f9' }}>Optimisez votre investissement</strong> grâce aux nombreuses <strong style={{ color: '#f8f8f9' }}>subventions</strong> et <strong style={{ color: '#f8f8f9' }}>avantages fiscaux</strong> disponibles pour vos travaux d&apos;amélioration énergétique. <strong style={{ color: '#f8f8f9' }}>ClimGO vous accompagne pas à pas</strong> pour simplifier vos démarches et <strong style={{ color: '#f8f8f9' }}>maximiser vos économies</strong>.
+              <strong style={{ color: '#f8f8f9' }}>Optimisez votre investissement</strong> grâce aux nombreuses <strong style={{ color: '#f8f8f9' }}>subventions,</strong> et <strong style={{ color: '#f8f8f9' }}>avantages fiscaux</strong> disponibles pour vos travaux d&apos;amélioration énergétique. <strong style={{ color: '#f8f8f9' }}>ClimGO vous accompagne pas à pas</strong> pour simplifier vos démarches et <strong style={{ color: '#f8f8f9' }}>maximiser vos économies</strong>.
             </p>
           </div>
   
