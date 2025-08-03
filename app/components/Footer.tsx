@@ -5,7 +5,14 @@ export default function Footer() {
   return (
     <>
       <div style={{ position: 'absolute', zIndex: -90 }}>
-        <a href="https://www.oxelya.com" target="_blank" rel="noopener noreferrer"></a>
+        <a
+          href="https://www.oxelya.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Site partenaire Oxelya"
+        >
+          <span style={{ display: 'none' }}>Site partenaire Oxelya</span>
+        </a>
       </div>
       <footer className="bg-[#f8f9f4] text-gray-900 py-10">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
