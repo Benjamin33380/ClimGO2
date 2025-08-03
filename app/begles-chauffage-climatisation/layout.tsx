@@ -116,14 +116,47 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "width": 512,
       "height": 512
     },
-    "serviceType": [
-      "Climatisation réversible",
-      "Pompe à chaleur air/eau",
-      "Pompe à chaleur air/air",
-      "Chauffe-eau thermodynamique",
-      "Entretien et maintenance",
-      "Installation chauffage & climatisation"
-    ],
+  "hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Prestations ClimGO",
+  "itemListElement": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Installation de climatisation"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Installation de pompe à chaleur"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Entretien PAC et climatisation"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Installation chauffe-eau thermodynamique"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Plomberie et chauffage"
+      }
+    }
+  ]
+},
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+33 7 66 46 00 08",
