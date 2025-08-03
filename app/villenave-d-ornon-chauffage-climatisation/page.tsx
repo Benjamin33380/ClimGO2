@@ -30,28 +30,28 @@ export default function VillenaveDornon() {
         <GoogleReviews ville="Villenave d&apos;Ornon" />
       </section>
 
-      <div className="relative w-full min-h-screen flex items-center justify-center text-white overflow-hidden bg-center bg-no-repeat bg-cover md:bg-fixed">
-        <div
-          className="absolute inset-0 z-0 bg-center bg-no-repeat bg-cover md:bg-fixed"
-          style={{ backgroundImage: "url('/mo.png')" }}
-        ></div>
-        <div className="relative z-10 bg-white/80 backdrop-blur-md p-6 rounded-lg max-w-4xl mx-auto">
+      <section
+        className="relative bg-fixed bg-center bg-cover bg-no-repeat py-20 mb-12"
+        style={{ backgroundImage: "url('/mo.png')" }}
+      >
+        <div className="absolute inset-0 bg-black/30 z-0" />
+        <div className="relative z-10 bg-white/70 backdrop-blur-lg p-8 rounded-xl shadow-xl max-w-3xl mx-auto">
           <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Nos interventions à Villenave-d&apos;Ornon</h2>
           <p className="text-gray-800 leading-relaxed text-center">
             Des quartiers de la Geneste jusqu’à la rue Léon Blum, nos équipes interviennent dans tous les secteurs de Villenave-d&apos;Ornon pour vous offrir un confort thermique optimal.
           </p>
         </div>
-      </div>
+      </section>
 
       <section className="mb-12">
         <Testimonials />
       </section>
 
-      <div className="relative w-full min-h-screen flex items-center justify-center text-white overflow-hidden bg-center bg-no-repeat bg-cover md:bg-fixed">
-        <div
-          className="absolute inset-0 z-0 bg-center bg-no-repeat bg-cover md:bg-fixed"
-          style={{ backgroundImage: "url('/fond3.png')" }}
-        ></div>
+      <div
+        className="relative bg-fixed bg-center bg-cover bg-no-repeat py-20"
+        style={{ backgroundImage: "url('/fond3.png')" }}
+      >
+        <div className="absolute inset-0 bg-black/30 z-0" />
         <div className="relative z-10 bg-white/80 backdrop-blur-md p-6 rounded-lg max-w-4xl mx-auto">
           <section className="mb-12">
             <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Pourquoi choisir ClimGO à Villenave-d&apos;Ornon ?</h2>
@@ -110,12 +110,12 @@ export default function VillenaveDornon() {
         </div>
       </div>
 
-      <div className="relative w-full min-h-screen flex items-center justify-center text-white overflow-hidden bg-center bg-no-repeat bg-cover md:bg-fixed">
-        <div
-          className="absolute inset-0 z-0 bg-center bg-no-repeat bg-cover md:bg-fixed"
-          style={{ backgroundImage: "url('/faq.jpg')" }}
-        ></div>
-        <div className="relative z-10 bg-white/80 backdrop-blur-md p-6 rounded-lg max-w-4xl mx-auto px-4">
+      <div
+        className="relative bg-fixed bg-center bg-cover bg-no-repeat py-20 mb-12"
+        style={{ backgroundImage: "url('/faq.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black/30 z-0" />
+        <div className="relative z-10 bg-white/60 backdrop-blur-md p-6 rounded-lg max-w-4xl mx-auto px-4">
           <section>
             <h2 className="text-2xl font-semibold text-[#03144a] mb-6 text-center">Mini FAQ locale</h2>
             <Faq
