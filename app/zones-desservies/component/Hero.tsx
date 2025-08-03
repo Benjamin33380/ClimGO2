@@ -19,7 +19,7 @@ export default function Hero({ ville, backgroundImage }: HeroProps) {
 
       <div className="relative z-20 text-center px-4 md:px-8 animate-fade-in-up">
         <h1 className="text-4xl md:text-5xl font-bold font-playfair mb-4">
-          Chauffage, Climatisations à {ville} – ClimGO
+          Chauffage, Climatisation à {ville} – ClimGO
         </h1>
         <p className="text-xl md:text-2xl font-medium mb-6">
           100% confort. Service local certifié RGE.
