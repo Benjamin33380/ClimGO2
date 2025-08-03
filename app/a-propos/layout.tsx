@@ -98,14 +98,48 @@ export default function AProposLayout({ children }: { children: React.ReactNode 
         "areaServed": "FR",
         "availableLanguage": ["French"]
       },
-      "service": [
-        { "@type": "Service", "serviceType": "Installation de climatisation" },
-        { "@type": "Service", "serviceType": "Entretien de climatisation" },
-        { "@type": "Service", "serviceType": "Pompe à chaleur air/eau" },
-        { "@type": "Service", "serviceType": "Pompe à chaleur air/air" },
-        { "@type": "Service", "serviceType": "Chauffe-eau thermodynamique" },
-        { "@type": "Service", "serviceType": "Dépannage chauffage" }
-      ]
+      "hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Prestations ClimGO",
+  "itemListElement": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Installation de climatisation"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Installation de pompe à chaleur"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Entretien PAC et climatisation"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Installation chauffe-eau thermodynamique"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Plomberie et chauffage"
+      }
+    }
+  ]
+}
+      
     })
   }}
 />
