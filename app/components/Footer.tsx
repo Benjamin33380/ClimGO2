@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
 
           {/* Bloc 2 : Navigation */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-md font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2 text-sm text-black">
               <li><Link href="/" className="hover:text-[#1e40af] transition-colors">Accueil</Link></li>
@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
 
           {/* Bloc 3 : Infos légales */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-md font-semibold mb-4">Infos légales</h3>
             <ul className="space-y-2 text-sm text-black">
               <li><Link href="/aides-etat" className="hover:text-[#1e40af] transition-colors">Aides & subventions</Link></li>
