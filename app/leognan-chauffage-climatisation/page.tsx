@@ -27,7 +27,7 @@ export default function Leognan() {
       </section>
 
       <section className="my-20">
-        <GoogleReviews />
+       <GoogleReviews ville="Léognan" />
       </section>
 
       <section

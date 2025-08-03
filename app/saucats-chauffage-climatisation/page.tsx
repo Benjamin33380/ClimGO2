@@ -28,7 +28,7 @@ export default function Saucats() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+        <GoogleReviews ville="Saucats" />
       </section>
 
       <section

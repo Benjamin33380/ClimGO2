@@ -27,7 +27,7 @@ export default function Bruges() {
       </section>
 
       <section className="my-20">
-        <GoogleReviews />
+        <GoogleReviews ville="Bruges" />
       </section>
 
       <section

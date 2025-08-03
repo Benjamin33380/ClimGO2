@@ -1,10 +1,18 @@
 import Link from 'next/link';
 import Image from 'next/image';
-export default function GoogleReviews() {
+
+interface GoogleReviewsProps {
+  ville: string;
+}
+
+export default function GoogleReviews({ ville }: GoogleReviewsProps) {
   return (
     <section className="py-20 bgPage">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
+          <p className="text-lg text-gray-700 mb-2">
+            Avis clients {ville}
+          </p>
           <div className="flex items-center justify-center mb-4">
             <div className="flex text-yellow-400 text-2xl">
               {[...Array(5)].map((_, i) => (

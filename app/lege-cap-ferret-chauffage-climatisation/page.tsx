@@ -28,7 +28,7 @@ export default function LegeCapFerret() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+      <GoogleReviews ville="Lège-Cap-Ferret" />
       </section>
 
       <section

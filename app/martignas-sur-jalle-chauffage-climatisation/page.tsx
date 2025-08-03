@@ -28,7 +28,7 @@ export default function SaintAubinDeMedoc() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+      <GoogleReviews ville="Martignas-sur-Jalle" />
       </section>
 
       <section

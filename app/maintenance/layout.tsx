@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 
 export const metadata: Metadata = {
   title: 'Maintenance ClimGO',
@@ -60,7 +60,14 @@ export const metadata: Metadata = {
   publisher: 'ClimGO',
   category: 'climatisation, chauffage, plomberie, énergies renouvelables',
 };
-
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover',
+  height: 'device-height',
+}
 export default function MaintenanceLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>

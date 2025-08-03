@@ -28,7 +28,7 @@ export default function LeBarp() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+        <GoogleReviews ville="à Le Barp" />
       </section>
 
       <section

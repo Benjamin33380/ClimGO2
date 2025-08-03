@@ -7,6 +7,3 @@ Disallow: /api/
 
 # Sitemap
 Sitemap: https://www.climgo.fr/sitemap.xml
-
-# Crawl-delay pour éviter la surcharge
-Crawl-delay: 1 

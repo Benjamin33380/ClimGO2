@@ -28,7 +28,7 @@ export default function BelinBeliet() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+        <GoogleReviews ville="Belin-Béliet" />
       </section>
 
       <section

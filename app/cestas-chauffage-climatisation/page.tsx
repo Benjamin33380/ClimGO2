@@ -27,7 +27,7 @@ export default function Cestas() {
       </section>
 
       <section className="my-20">
-        <GoogleReviews />
+        <GoogleReviews ville="Cestas" />
       </section>
 
       <section

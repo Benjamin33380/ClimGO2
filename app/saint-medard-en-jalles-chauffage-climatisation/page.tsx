@@ -28,7 +28,7 @@ export default function Pessac() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+       <GoogleReviews ville="Saint-Médard-en-Jalles" />
       </section>
 
       <section

@@ -28,7 +28,7 @@ export default function Bordeaux() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+       <GoogleReviews ville="Mérignac" />
       </section>
 
       <section

@@ -27,7 +27,7 @@ export default function Gradignan() {
       </section>
 
       <section className="my-20">
-        <GoogleReviews />
+       <GoogleReviews ville="Gradignan" />
       </section>
 
       <section

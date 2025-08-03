@@ -27,7 +27,7 @@ export default function Talence() {
       </section>
 
       <section className="my-20">
-        <GoogleReviews />
+        <GoogleReviews ville="Talence" />
       </section>
 
       <section

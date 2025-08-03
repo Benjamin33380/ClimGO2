@@ -28,7 +28,7 @@ export default function Salles() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+       <GoogleReviews ville="Salles" />
       </section>
 
       <section

@@ -27,7 +27,7 @@ export default function Cadaujac() {
       </section>
 
       <section className="my-20">
-        <GoogleReviews />
+        <GoogleReviews ville="Cadaujac" />
       </section>
 
       <section

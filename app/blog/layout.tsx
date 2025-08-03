@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import { Metadata, Viewport } from 'next';
 
 export const metadata: Metadata = {
   title: 'Blog ClimGO | Conseils Chauffage, Climatisation à Marcheprime',
@@ -33,7 +33,14 @@ export const metadata: Metadata = {
     follow: true,
   },
 }
-
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover',
+  height: 'device-height',
+}
 export default function BlogLayout({
   children,
 }: {

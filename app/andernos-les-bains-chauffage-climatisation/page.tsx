@@ -28,7 +28,7 @@ export default function Andernos() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+        <GoogleReviews ville="Andernos-les-Bains" />
       </section>
 
       <section

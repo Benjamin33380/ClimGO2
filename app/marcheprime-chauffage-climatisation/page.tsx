@@ -28,7 +28,7 @@ Avec une parfaite connaissance du secteur, nous intégrons les particularités t
 
       <section className="my-20">
   
-        <GoogleReviews />
+       <GoogleReviews ville="Marcheprime" />
       </section>
 
       <section

@@ -28,7 +28,7 @@ ClimGO conçoit des solutions adaptées au climat des Landes pour garantir effic
 
       <section className="my-20">
   
-        <GoogleReviews />
+       <GoogleReviews ville="Parentis-en-Born" />
       </section>
 
       <section

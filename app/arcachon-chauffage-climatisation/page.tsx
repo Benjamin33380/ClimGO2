@@ -28,7 +28,7 @@ export default function Arcachon() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+        <GoogleReviews ville="Arcachon" />
       </section>
 
       <section

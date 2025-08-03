@@ -28,7 +28,7 @@ export default function LeTeich() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+       <GoogleReviews ville="Le Teich" />
       </section>
 
       <section

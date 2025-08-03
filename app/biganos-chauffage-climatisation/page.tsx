@@ -28,7 +28,7 @@ export default function Biganos() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+        <GoogleReviews ville="Biganos" />
       </section>
 
       <section

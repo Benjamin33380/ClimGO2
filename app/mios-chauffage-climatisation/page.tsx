@@ -28,7 +28,7 @@ export default function Mios() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+       <GoogleReviews ville="Mios" />
       </section>
 
       <section

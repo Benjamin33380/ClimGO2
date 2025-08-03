@@ -27,7 +27,7 @@ export default function Martillac() {
       </section>
 
       <section className="my-20">
-        <GoogleReviews />
+       <GoogleReviews ville="Martillac" />
       </section>
 
       <section

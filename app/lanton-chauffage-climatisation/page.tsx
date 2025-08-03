@@ -28,7 +28,7 @@ export default function Lanton() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+       <GoogleReviews ville="Lanton" />
       </section>
 
       <section

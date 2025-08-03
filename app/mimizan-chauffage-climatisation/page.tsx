@@ -28,7 +28,7 @@ Nous tenons compte des spécificités salines et climatiques propres à la faça
 
       <section className="my-20">
   
-        <GoogleReviews />
+       <GoogleReviews ville="Mimizan" />
       </section>
 
       <section

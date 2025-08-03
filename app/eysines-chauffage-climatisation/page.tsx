@@ -27,7 +27,7 @@ export default function Eysines() {
       </section>
 
       <section className="my-20">
-        <GoogleReviews />
+       <GoogleReviews ville="Eysines" />
       </section>
 
       <section

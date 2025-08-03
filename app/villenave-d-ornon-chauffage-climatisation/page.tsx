@@ -27,7 +27,7 @@ export default function VillenaveDornon() {
       </section>
 
       <section className="my-20">
-        <GoogleReviews />
+        <GoogleReviews ville="Villenave d&apos;Ornon" />
       </section>
 
       <section

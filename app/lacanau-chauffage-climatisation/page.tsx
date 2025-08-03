@@ -28,7 +28,7 @@ export default function Lacanau() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+        <GoogleReviews ville="Lacanau" />
       </section>
 
       <section

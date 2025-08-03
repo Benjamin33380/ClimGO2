@@ -18,12 +18,12 @@ export default function Hero({ ville, backgroundImage }: HeroProps) {
       <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
 
       <div className="relative z-20 text-center px-4 md:px-8 animate-fade-in-up">
-        <h2 className="text-4xl md:text-5xl font-bold font-playfair mb-4">
-          ClimGO à {ville}
-        </h2>
-        <h1 className="text-2xl md:text-3xl font-medium mb-6">
-          Chauffage, climatisation et pompe à chaleur, 100% confort.
+        <h1 className="text-4xl md:text-5xl font-bold font-playfair mb-4">
+          Chauffage, Climatisation à {ville} – ClimGO
         </h1>
+        <p className="text-xl md:text-2xl font-medium mb-6">
+          100% confort. Service local certifié RGE.
+        </p>
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <Link href="/contact">
             <button className="bg-white text-[#03144a] font-semibold px-6 py-3 rounded-full shadow-xl transition duration-300 transform hover:scale-105 hover:bg-[#03144a] hover:text-white">

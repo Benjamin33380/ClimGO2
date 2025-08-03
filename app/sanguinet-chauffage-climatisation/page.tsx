@@ -28,7 +28,7 @@ Nous maîtrisons les contraintes thermiques propres au climat landais pour conce
 
       <section className="my-20">
   
-        <GoogleReviews />
+       <GoogleReviews ville="Sanguinet" />
       </section>
 
       <section

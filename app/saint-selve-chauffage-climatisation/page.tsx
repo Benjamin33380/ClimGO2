@@ -27,7 +27,7 @@ export default function SaintSelve() {
       </section>
 
       <section className="my-20">
-        <GoogleReviews />
+       <GoogleReviews ville="Saint-Selve" />
       </section>
 
       <section

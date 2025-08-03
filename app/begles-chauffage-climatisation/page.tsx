@@ -27,7 +27,7 @@ export default function Begles() {
       </section>
 
       <section className="my-20">
-        <GoogleReviews />
+        <GoogleReviews ville="Bègles" />
       </section>
 
       <section

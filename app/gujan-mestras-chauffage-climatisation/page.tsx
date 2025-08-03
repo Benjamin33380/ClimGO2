@@ -28,7 +28,7 @@ export default function GujanMestras() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+      <GoogleReviews ville="Gujan-Mestras" />
       </section>
 
       <section

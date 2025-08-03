@@ -28,7 +28,7 @@ export default function Audenge() {
 
       <section className="my-20">
   
-        <GoogleReviews />
+        <GoogleReviews ville="Audenge" />
       </section>
 
       <section

@@ -27,7 +27,7 @@ export default function LaBrede() {
       </section>
 
       <section className="my-20">
-        <GoogleReviews />
+      <GoogleReviews ville="La Brède" />
       </section>
 
       <section

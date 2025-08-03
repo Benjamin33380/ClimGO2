@@ -28,7 +28,7 @@ Nos systèmes tiennent compte du climat océanique et des exigences énergétiqu
 
       <section className="my-20">
   
-        <GoogleReviews />
+        <GoogleReviews ville="Biscarrosse" />
       </section>
 
       <section
