@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { MapPin, Phone, Clock, CheckCircle, ArrowRight, Users, Star , DraftingCompass } from 'lucide-react';
-import { useEffect, useState } from 'react';
 
 
 export default function ZonesDesservies() {
@@ -119,19 +118,6 @@ export default function ZonesDesservies() {
     { number: '24/7', label: 'Service d\'urgence' }
   ];
 
-  const [bgAttachment, setBgAttachment] = useState('scroll');
-
-  useEffect(() => {
-    const handleResize = () => {
-      setBgAttachment(window.innerWidth > 768 ? 'fixed' : 'scroll');
-    };
-
-    handleResize(); // Initial check
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
     <div className="min-h-screen bg-[#F8F9F4]">
         {/* Hero Section */}
@@ -143,7 +129,7 @@ export default function ZonesDesservies() {
           style={{
             backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/mo.png')",
             backgroundSize: 'cover',
-            backgroundAttachment: bgAttachment,
+            backgroundAttachment: 'fixed',
             backgroundPosition: 'center',
           }}
         >
