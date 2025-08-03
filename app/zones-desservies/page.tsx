@@ -125,7 +125,7 @@ export default function ZonesDesservies() {
           {/* <div className="absolute inset-0 bg-linear-to-r from-[#03144a]/30 to-transparent"></div> */}
           
     <div
-          className="relative w-full h-[60vh] md:h-[70vh] pt-20 flex items-center justify-center text-center"
+          className="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-center text-center"
           style={{
             backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/mo.png')",
             backgroundSize: 'cover',
