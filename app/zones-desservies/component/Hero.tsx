@@ -9,7 +9,7 @@ interface HeroProps {
 
 export default function Hero({ ville, backgroundImage }: HeroProps) {
   return (
-    <div className="relative w-full h-[100vh] flex items-center justify-center text-white overflow-hidden">
+    <div className="relative w-full min-h-screen flex items-center justify-center text-white overflow-hidden">
       <Image
         src={backgroundImage}
         alt={`ClimGO - Chauffage Climatisation à ${ville}`}
