@@ -10,7 +10,7 @@ export default function Engagements() {
         aria-hidden="true"
       ></div>
       <div className="relative z-10 container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#f8f8f5] mb-6 text-center drop-shadow-lg">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#f8f9f4] mb-6 text-center drop-shadow-lg">
           Notre savoir-faire
         </h2>
         <p className="text-lg text-[#f8f8f5] max-w-4xl mx-auto leading-relaxed mb-8 text-center drop-shadow-md">
