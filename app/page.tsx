@@ -8,7 +8,7 @@ import History from './components/History';
 import FinancialAids from './components/FinancialAids';
 import Partenaires from './components/Partenaires';
 import Aids from './components/Aids';
-
+import Tableau from './zones-desservies/component/Tableau';
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -23,6 +23,7 @@ export default function Home() {
         <Partenaires />
         <Aids />
         <History />
+        <Tableau />
 
       </div>
     </main>
