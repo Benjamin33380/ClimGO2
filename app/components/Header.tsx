@@ -43,9 +43,9 @@ export default function Header() {
       {/* Section navigation centrée avec logo intégré */}
       <div className="w-full bg-transparent">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center h-30 relative z-10">
+          <div className="flex items-center justify-center h-20 relative z-10">
             {/* Navigation centrée avec logo intégré */}
-            <div className="bg-[#F9F8F4] hover:bg-[#03144a] transition-colors duration-300 rounded-full px-4 py-0.5 backdrop-blur-md group-hover:text-white">
+            <div className="bg-[#F8f9f4] hover:bg-[#03144a] transition-colors duration-300 rounded-full px-4 py-0.5 backdrop-blur-md group-hover:text-white">
               {/* Navigation Desktop */}
               <nav className="hidden md:flex items-center space-x-6 text-[#03144a] group bg-transparent">
                 <Link href="/" className="flex items-center">
