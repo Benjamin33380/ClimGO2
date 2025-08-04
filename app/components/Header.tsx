@@ -43,7 +43,7 @@ export default function Header() {
       {/* Section navigation centrée avec logo intégré */}
       <div className="w-full bg-transparent">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center h-30 relative z-10">
+          <div className="flex items-center justify-center h-28 relative z-10">
             {/* Navigation centrée avec logo intégré */}
             <div className="bg-[#F8f9f4] hover:bg-[#03144a] transition-colors duration-300 rounded-full px-4 py-0.5 backdrop-blur-md group-hover:text-white">
               {/* Navigation Desktop */}
