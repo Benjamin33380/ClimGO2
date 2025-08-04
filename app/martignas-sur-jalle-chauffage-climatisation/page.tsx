@@ -3,7 +3,7 @@ import Testimonials from "../zones-desservies/component/Testimonials";
 import Faq from "../zones-desservies/component/Faq";
 import Hero from "../zones-desservies/component/Hero";
 import Partenaires from "../zones-desservies/component/Partenaires";
-
+import Tableau from "../zones-desservies/component/Tableau";
 export default function SaintAubinDeMedoc() {
   return (
     <main className="px-0">
@@ -202,6 +202,9 @@ export default function SaintAubinDeMedoc() {
 
       <section className="my-20">
         <Partenaires />
+      </section>
+      <section className="my-20">
+        <Tableau />
       </section>
     </main>
   );

@@ -3,14 +3,13 @@ import Testimonials from "../zones-desservies/component/Testimonials";
 import Faq from "../zones-desservies/component/Faq";
 import Hero from "../zones-desservies/component/Hero";
 import Partenaires from "../zones-desservies/component/Partenaires";
-
+import Tableau from "../zones-desservies/component/Tableau";
 export default function VillenaveDornon() {
   return (
     <main className="px-0">
       <section className="w-full">
         <Hero ville="Villenave-d'Ornon" backgroundImage="/villes/villenave-d-ornon.jpg" />
       </section>
-
       <section className="my-20">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Villenave-d&apos;Ornon, entre tradition, accessibilité et performance énergétique</h2>
@@ -25,11 +24,9 @@ export default function VillenaveDornon() {
           </p>
         </div>
       </section>
-
       <section className="my-20">
         <GoogleReviews ville="Villenave d&apos;Ornon" />
       </section>
-
       <section
         className="relative bg-fixed bg-center bg-cover bg-no-repeat py-20 mb-12"
         style={{ backgroundImage: "url('/mo.png')" }}
@@ -42,11 +39,9 @@ export default function VillenaveDornon() {
           </p>
         </div>
       </section>
-
       <section className="mb-12">
         <Testimonials />
       </section>
-
       <div
         className="relative bg-fixed bg-center bg-cover bg-no-repeat py-20"
         style={{ backgroundImage: "url('/fond3.png')" }}
@@ -67,7 +62,6 @@ export default function VillenaveDornon() {
           </section>
         </div>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 my-12">
         <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
           <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-white mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -88,7 +82,6 @@ export default function VillenaveDornon() {
             Un projet démarre toujours par une visite technique sur place. Nous établissons ensuite un devis précis, avant de programmer une installation rapide, propre et certifiée conforme.
           </p>
         </div>
-
         <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 text-[#03144a] mx-auto mb-4">
             <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
@@ -109,7 +102,6 @@ export default function VillenaveDornon() {
           </p>
         </div>
       </div>
-
       <div
         className="relative bg-fixed bg-center bg-cover bg-no-repeat py-20 mb-12"
         style={{ backgroundImage: "url('/faq.jpg')" }}
@@ -167,7 +159,6 @@ export default function VillenaveDornon() {
       • Rue du Bocage : mise en place d’un chauffe-eau thermodynamique pour une maison RT2012.
     </p>
   </div>
-
   <div className="bg-[#03144a]/90 backdrop-blur-md rounded-lg shadow-md p-6">
     <h2 className="text-xl font-semibold text-white mb-4 text-center">Une expertise locale adaptée au cadre urbain et pavillonnaire</h2>
     <p className="text-white leading-relaxed text-center">
@@ -177,7 +168,6 @@ export default function VillenaveDornon() {
       Nos installations sont pensées pour s’intégrer discrètement à l’environnement urbain, tout en offrant performance, confort acoustique et économies d’énergie.
     </p>
   </div>
-
   <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-md p-6">
     <h2 className="text-xl font-semibold text-[#03144a] mb-4 text-center">Votre projet thermique à Villenave-d&apos;Ornon</h2>
     <p className="text-[#03144a] leading-relaxed text-center">
@@ -197,9 +187,11 @@ export default function VillenaveDornon() {
           Demandez votre devis gratuit à Villenave-d&apos;Ornon
         </a>
       </section>
-
       <section className="my-20">
         <Partenaires />
+      </section>
+      <section className="my-20">
+        <Tableau />
       </section>
     </main>
   );
