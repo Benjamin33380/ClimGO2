@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import Header from './components/Header';
-import InteractiveMap from './components/InteractiveMap';
-import Footer from './components/Footer';
+import Header from '../app/components/Header';
+import InteractiveMap from '../app/components/InteractiveMap';
+import Footer from '../app/components/Footer';
 
 
 

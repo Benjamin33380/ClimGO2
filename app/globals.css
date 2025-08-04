@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
 
 /* Force le rechargement des styles en développement */
 @layer base {
@@ -8,7 +10,7 @@
 }
 
 :root {
-  --background: #ffffff;
+  --background: #f8f9f4;
   --foreground: #171717;
 }
 
@@ -22,7 +24,11 @@
 body {
   background: #F9F8F4;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Manrope', sans-serif;
+}
+
+.font-retro {
+  font-family: 'Press Start 2P', monospace;
 }
 
 .climText {
@@ -105,30 +111,4 @@ body {
 
 .animate-scroll-move {
   animation: scroll-move 3s ease-in-out infinite;
-}
-
-/* Bannière défilante */
-.scrolling-banner {
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-  background-color: #F8F9F4;
-  padding: 0.2rem 0;
-}
-
-.scrolling-banner p {
-  display: inline-block;
-  padding-left: 100%;
-  animation: scroll-left 22s linear infinite;
-  font-weight: 600;
-  color: #001845;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }

@@ -40,13 +40,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Bannière défilante */}
-      <div className="scrolling-banner">
-        <p>
-         Website en plein réglage. Si une page vous claque la porte, c’est qu’on est en train de la visser. L&apos;entreprise est également fermée du 11/08 au 22/08 inclus.
-        </p>
-      </div>
-
       {/* Section navigation centrée avec logo intégré */}
       <div className="w-full bg-transparent">
         <div className="container mx-auto px-4">
