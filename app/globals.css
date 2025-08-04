@@ -1,5 +1,19 @@
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
 
 /* Force le rechargement des styles en développement */
@@ -24,12 +38,9 @@
 body {
   background: #F9F8F4;
   color: var(--foreground);
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Satoshi', sans-serif;
 }
 
-.font-retro {
-  font-family: 'Press Start 2P', monospace;
-}
 
 .climText {
   color: #03144a;

@@ -43,7 +43,7 @@ export default function Header() {
       {/* Section navigation centrée avec logo intégré */}
       <div className="w-full bg-transparent">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center h-20 relative z-10">
+          <div className="flex items-center justify-center h-30 relative z-10">
             {/* Navigation centrée avec logo intégré */}
             <div className="bg-[#F9F8F4] hover:bg-[#03144a] transition-colors duration-300 rounded-full px-4 py-0.5 backdrop-blur-md group-hover:text-white">
               {/* Navigation Desktop */}
@@ -71,26 +71,32 @@ export default function Header() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </Link>
-                  <div
-                    className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-1 transition-all duration-200 pointer-events-auto z-50"
+                  <ul
+                    className="absolute top-full mt-2 w-56 rounded-md shadow-lg bg-[#F8F9F4] left-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-1 transition-all duration-200 pointer-events-auto z-50"
                     onMouseEnter={() => setIsMenuOpen(true)}
                     onMouseLeave={() => setIsMenuOpen(false)}
                   >
-                    <div className="py-2">
+                    <li>
                       <Link href="/chauffage" className="block px-4 py-2 text-base text-[#03144a] hover:bg-[#03144a] hover:text-white">
                         Chauffage
                       </Link>
+                    </li>
+                    <li>
                       <Link href="/climatisation" className="block px-4 py-2 text-base text-[#03144a] hover:bg-[#03144a] hover:text-white">
                         Climatisation
                       </Link>
+                    </li>
+                    <li>
                       <Link href="/eau-chaude-sanitaire" className="block px-4 py-2 text-base text-[#03144a] hover:bg-[#03144a] hover:text-white">
                         Eau chaude sanitaire
                       </Link>
+                    </li>
+                    <li>
                       <Link href="/maintenance" className="block px-4 py-2 text-base text-[#03144a] hover:bg-[#03144a] hover:text-white">
                         Maintenance
                       </Link>
-                    </div>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
                 <Link href="/zones-desservies" className="group-hover:text-white transition-colors text-base font-semibold">
                   Z.I

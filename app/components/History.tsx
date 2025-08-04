@@ -20,7 +20,7 @@ export default function History() {
               </p>
               
               <div className="flex flex-col items-center justify-center text-center space-y-4 mt-12">
-                <Link href="/a-propos" className="bg-[#001E60] text-white px-6 py-3 rounded-full shadow-md transition transform hover:scale-105 duration-300">
+                <Link href="/a-propos" className="bg-[#03144a] text-white px-6 py-3 rounded-full shadow-md transition transform hover:scale-105 duration-300">
                   Notre histoire
                 </Link>
               </div>
