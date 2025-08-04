@@ -135,10 +135,10 @@ export default function ClimatisationPage() {
                     Un savoir-faire fiable, au service de votre quotidien.
                   </strong>
                 </div>
-                <strong className="text-lg text-white mb-8 max-w-4xl mx-auto leading-relaxed">
+                <strong className="text-lg text-white mb-8 max-w-4xl mx-auto leading-relaxed text-center block">
                   Chez ClimGO, chaque installation est pensée pour durer. Nous sélectionnons les équipements les plus performants, et nous les posons avec rigueur, précision et discrétion.
                 </strong>
-                <strong className="text-lg text-white max-w-4xl mx-auto leading-relaxed italic">
+                <strong className="text-lg text-white max-w-4xl mx-auto leading-relaxed italic text-center block">
                   Chez nous, le confort, c’est pas une option. C’est un engagement.
                 </strong>
             </div>

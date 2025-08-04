@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { IoWater, IoFlame, IoSnow, IoSettings } from 'react-icons/io5';
 import Link from 'next/link';
-
+import Tableau from '../zones-desservies/component/Tableau';
 export default function ServicesPage() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
 
@@ -272,6 +272,9 @@ export default function ServicesPage() {
              Je veux être rappelé
           </Link>
         </div>
+      </section>
+      <section className="my-20">
+        <Tableau />
       </section>
 
       {/* Les sections Services Grid et CTA Section ont été supprimées */}

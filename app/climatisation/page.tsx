@@ -147,7 +147,7 @@ export default function ClimatisationPage() {
                     Un savoir-faire maîtrisé, au service de votre confort toute l&apos;année.
                   </strong>
                 </div>
-                <strong className="text-lg text-white mb-8 max-w-4xl mx-auto leading-relaxed">
+                <strong className="text-lg text-white mb-8 max-w-4xl mx-auto leading-relaxed text-center block">
                   Chez ClimGO, chaque projet est pensé sur-mesure. Nous installons des systèmes de climatisation fiables, 
                   discrets et performants, adaptés à vos besoins et à l&apos;esthétique de votre logement. Le confort, sans le compromis.
                 </strong>

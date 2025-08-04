@@ -170,11 +170,11 @@ export default function ChauffagePage() {
                     L&apos;alliance du savoir-faire et de la rigueur.
                   </strong>
                 </div>
-                <strong className="text-lg text-white mb-8 max-w-4xl mx-auto leading-relaxed">
+                <strong className="text-lg text-white mb-8 max-w-4xl mx-auto leading-relaxed text-center block">
                   Chez ClimGO, chaque installation est réalisée avec précision, exigence et soin. 
                   Nous ne laissons rien au hasard, car votre confort mérite notre engagement le plus total.
                 </strong>
-                <strong className="text-lg text-white max-w-4xl mx-auto leading-relaxed italic">
+                <strong className="text-lg text-white max-w-4xl mx-auto leading-relaxed italic text-center block">
                   Chez nous, le confort, c&apos;est pas une option. C&apos;est un engagement.
                 </strong>
               </div>
