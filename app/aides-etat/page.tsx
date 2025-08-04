@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import Tableau from '../zones-desservies/component/Tableau';
 // Effet zoom au hover sur le bouton
 
 
@@ -429,6 +429,9 @@ export default function AidesEtatPage() {
           <span style={{ color: '#fff' }}>Demander mon devis</span>
         </Link>
       </div>
+      <section className="my-20">
+        <Tableau />
+      </section>
 
       {/* Style pour le zoom-hover, pastilles étapes ClimGO, logos, effet parallax, et disposition verticale des étapes */}
       <style jsx>{`

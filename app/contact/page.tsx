@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
-
+import Tableau from '../zones-desservies/component/Tableau';
 export default function ContactPage() {
   return (
     <div className="min-h-screen bgPage my-24">
@@ -149,6 +149,9 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+      </section>
+      <section className="my-20">
+        <Tableau />
       </section>
     </div>
   );

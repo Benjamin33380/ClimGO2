@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import Tableau from '../zones-desservies/component/Tableau';
 export default function MaintenancePage() {
   const [expandedIndex, setExpandedIndex] = useState<string | null>(null);
 
@@ -184,6 +184,9 @@ export default function MaintenancePage() {
                 </Link>
               </div>
             </section>
+            <section className="my-20">
+        <Tableau />
+      </section>
           </div>
         </div>
       </section>

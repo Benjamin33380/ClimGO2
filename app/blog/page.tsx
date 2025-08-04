@@ -119,6 +119,7 @@ export default async function BlogPage() {
                 </Link>
               </div>
             </article>
+            
           ))}
         </div>
       )}

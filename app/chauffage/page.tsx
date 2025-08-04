@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import Tableau from "../zones-desservies/component/Tableau";
 
 export default function ChauffagePage() {
   return (
@@ -178,6 +179,9 @@ export default function ChauffagePage() {
                 </strong>
               </div>
             </section>
+            <section className="my-20">
+        <Tableau />
+      </section>
           </div>
         </div>
       </section>
