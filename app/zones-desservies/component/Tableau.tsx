@@ -68,8 +68,6 @@ const CitiesTable = () => {
           <a
             key={city.name}
             href={city.url}
-            target="_blank"
-            rel="noopener noreferrer"
             className="px-3 py-1 bg-[#F8F9F4] text-[#03144a] text-sm rounded border border-[#03144a] hover:bg-[#e8e9e4] transition-colors"
           >
             {city.name}
