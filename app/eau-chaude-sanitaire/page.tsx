@@ -158,7 +158,7 @@ export default function PremiumEauChaudePage() {
           
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight tracking-wide mb-8">
             <span className="bg-gradient-to-r from-[#0EA5E9] via-[#03144A] to-[#0EA5E9] bg-clip-text text-transparent">
-              Eau Chaude
+              Eau Chaude Sanitaire
             </span>
             <br />
             <span className="bg-gradient-to-r from-[#03144A] via-[#0EA5E9] to-[#03144A] bg-clip-text text-transparent">

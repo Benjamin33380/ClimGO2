@@ -12,26 +12,17 @@ export default function VillenaveDornon() {
       <section className="w-full">
         <Hero ville="Villenave-d'Ornon" backgroundImage="/villes/villenave-d-ornon.jpg" />
       </section>
-      <nav className="max-w-7xl mx-auto px-4 text-sm text-gray-600 my-6" aria-label="breadcrumb">
-        <ol className="list-reset flex items-center space-x-2" itemScope itemType="https://schema.org/BreadcrumbList">
-          <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-            <a itemProp="item" href="/" className="hover:underline text-[#03144a]">
-              <span itemProp="name">Accueil</span>
-            </a>
-            <meta itemProp="position" content="1" />
+      <nav className="max-w-7xl mx-auto px-4 text-sm text-gray-600 my-6" aria-label="Fil d'Ariane">
+        <ol className="list-reset flex items-center space-x-2">
+          <li>
+            <Link href="/" className="hover:underline text-[#03144a]">Accueil</Link>
             <span className="mx-2">/</span>
           </li>
-          <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-            <a itemProp="item" href="/zones-desservies" className="hover:underline text-[#03144a]">
-              <span itemProp="name">Zones desservies</span>
-            </a>
-            <meta itemProp="position" content="2" />
+          <li>
+            <Link href="/zones-desservies" className="hover:underline text-[#03144a]">Zones desservies</Link>
             <span className="mx-2">/</span>
           </li>
-          <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem" className="text-gray-500">
-            <span itemProp="name">Villenave-d'Ornon</span>
-            <meta itemProp="position" content="3" />
-          </li>
+          <li className="text-gray-500">Villenave-d&apos;Ornon</li>
         </ol>
       </nav>
       <section className="my-20">
