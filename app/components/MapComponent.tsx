@@ -1,5 +1,4 @@
 // components/MapContent.tsx
-// components/MapContent.tsx
 'use client';
 
 import { usePathname } from 'next/navigation';
@@ -84,22 +83,50 @@ export default function MapContent() {
 
   const getCurrentPageInfo = () => {
     const segments = pathname.split('/').filter(Boolean);
-    const lastSegment = segments[segments.length - 1] || '';
+    console.log('🔍 URL segments:', segments);
+    console.log('🔍 Pathname complet:', pathname);
     
-    if (CITIES_CONFIG[lastSegment as keyof typeof CITIES_CONFIG]) {
-      return {
-        city: lastSegment as keyof typeof CITIES_CONFIG,
-        isDefaultPage: false
-      };
+    // Chercher dans tous les segments une ville avec le suffixe -chauffage-climatisation
+    for (const segment of segments) {
+      console.log('🔍 Test segment:', segment);
+      
+      // Vérifier si le segment se termine par -chauffage-climatisation
+      if (segment.endsWith('-chauffage-climatisation')) {
+        // Extraire le nom de la ville en retirant le suffixe
+        const cityName = segment.replace('-chauffage-climatisation', '');
+        console.log('🔍 Nom de ville extrait:', cityName);
+        
+        if (CITIES_CONFIG[cityName as keyof typeof CITIES_CONFIG]) {
+          console.log('✅ Ville trouvée:', cityName);
+          return {
+            city: cityName as keyof typeof CITIES_CONFIG,
+            isDefaultPage: false
+          };
+        }
+      }
+      
+      // Vérification directe pour les segments sans suffixe (au cas où)
+      if (CITIES_CONFIG[segment as keyof typeof CITIES_CONFIG]) {
+        console.log('✅ Ville trouvée (directe):', segment);
+        return {
+          city: segment as keyof typeof CITIES_CONFIG,
+          isDefaultPage: false
+        };
+      }
     }
     
+    const lastSegment = segments[segments.length - 1] || '';
+    console.log('🔍 Dernier segment:', lastSegment);
+    
     if (DEFAULT_PAGES.includes(lastSegment)) {
+      console.log('✅ Page par défaut détectée');
       return {
         city: 'marcheprime' as keyof typeof CITIES_CONFIG,
         isDefaultPage: true
       };
     }
     
+    console.log('⚠️ Fallback vers Marcheprime');
     return {
       city: 'marcheprime' as keyof typeof CITIES_CONFIG,
       isDefaultPage: true
@@ -135,6 +162,9 @@ export default function MapContent() {
 
   // Calcul de la ville courante à l'extérieur de useEffect
   const { city, isDefaultPage } = getCurrentPageInfo();
+  
+  console.log('🗺️ Ville courante:', city);
+  console.log('🗺️ Coordonnées:', CITIES_CONFIG[city]);
   
   useEffect(() => {
     if (!mapRef.current) return;
