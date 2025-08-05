@@ -4,13 +4,26 @@ import Faq from "../zones-desservies/component/Faq";
 import Hero from "../zones-desservies/component/Hero";
 import Partenaires from "../zones-desservies/component/Partenaires";
 import Tableau from "../zones-desservies/component/Tableau";
+import { Link } from "lucide-react";
 export default function Marcheprime() {
   return (
     <main className="px-0">
       <section className="w-full">
         <Hero ville="Marcheprime" backgroundImage="/villes/marcheprime.jpg.webp" />
       </section>
-
+      <nav className="max-w-7xl mx-auto px-4 text-sm text-gray-600 my-6" aria-label="Fil d'Ariane">
+        <ol className="list-reset flex items-center space-x-2">
+          <li>
+            <Link href="/" className="hover:underline text-[#03144a]">Accueil</Link>
+            <span className="mx-2">/</span>
+          </li>
+          <li>
+            <Link href="/zones-desservies" className="hover:underline text-[#03144a]">Zones desservies</Link>
+            <span className="mx-2">/</span>
+          </li>
+          <li className="text-gray-500">Marcheprime</li>
+        </ol>
+      </nav>
       <section className="my-20">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl font-semibold text-[#03144a] mb-4 text-center">Marcheprime, équilibre entre nature et accessibilité</h2>

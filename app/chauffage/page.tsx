@@ -401,6 +401,19 @@ export default function PremiumHeatingPage() {
           </div>
         </div>
         <Tableau />
+        <nav className="max-w-7xl mx-auto px-4 text-sm text-gray-600 mt-12 mb-24" aria-label="Fil d'Ariane">
+          <ol className="list-reset flex items-center space-x-2">
+            <li>
+              <Link href="/" className="hover:underline text-[#DC2626]">Accueil</Link>
+              <span className="mx-2">/</span>
+            </li>
+            <li>
+              <Link href="/nos-services" className="hover:underline text-[#DC2626]">Nos services</Link>
+              <span className="mx-2">/</span>
+            </li>
+            <li className="text-gray-500">Chauffage</li>
+          </ol>
+        </nav>
       </section>
       <style jsx global>{`
         @keyframes float {

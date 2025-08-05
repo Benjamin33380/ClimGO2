@@ -384,6 +384,19 @@ export default function PremiumEauChaudePage() {
           </div>
         </div>
         <Tableau />
+        <nav className="max-w-7xl mx-auto px-4 text-sm text-gray-600 my-6" aria-label="Fil d'Ariane">
+          <ol className="list-reset flex items-center space-x-2">
+            <li>
+              <Link href="/" className="hover:underline text-[#0EA5E9]">Accueil</Link>
+              <span className="mx-2">/</span>
+            </li>
+            <li>
+              <Link href="/nos-services" className="hover:underline text-[#0EA5E9]">Nos services</Link>
+              <span className="mx-2">/</span>
+            </li>
+            <li className="text-gray-500">Eau chaude</li>
+          </ol>
+        </nav>
       </section>
       <style jsx global>{`
         @keyframes float {

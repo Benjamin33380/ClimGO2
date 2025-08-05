@@ -120,21 +120,27 @@ export default function ZonesDesservies() {
 
   return (
     <div className="min-h-screen bg-[#F8F9F4]">
-        {/* Hero Section */}
-        
-          {/* <div className="absolute inset-0 bg-linear-to-r from-[#03144a]/30 to-transparent"></div> */}
-          
-    <div
-          className="relative w-full min-h-[100dvh] flex flex-col justify-between pt-80 px-4 pb-12"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/mo.png')",
-            backgroundSize: 'cover',
-            backgroundAttachment: 'scroll',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}
-        >
+      {/* Fil d’Ariane */}
+      <div className="max-w-7xl mx-auto px-4 mt-8">
+        <nav className="text-sm text-gray-600 mb-4">
+          <Link href="/" className="hover:underline text-[#03144a]">Accueil</Link>
+          <span className="mx-2 text-gray-400">/</span>
+          <Link href="/zones-desservies" className="hover:underline text-[#03144a] font-semibold">Zones desservies</Link>
+        </nav>
+      </div>
+      {/* Hero Section */}
+      {/* <div className="absolute inset-0 bg-linear-to-r from-[#03144a]/30 to-transparent"></div> */}
+      <div
+        className="relative w-full min-h-[100dvh] flex flex-col justify-between pt-80 px-4 pb-12"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/mo.png')",
+          backgroundSize: 'cover',
+          backgroundAttachment: 'scroll',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
             <div className="text-center">
               <div className="inline-flex items-center gap-2 bg-[#F8F9F4] backdrop-blur-sm rounded-full px-8 py-4 mb-12">
               <MapPin className="w-5 h-5" />
@@ -166,33 +172,33 @@ export default function ZonesDesservies() {
                 ))}
               </div>
             </div>
-          </div>
+      </div>
 
-        {/* Services Section */}
-        <section className="py-16 ">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-6xl font-bold text-[#03144a] mb-4 climText">Nos Services sur Toute la Zone</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Une expertise complète pour tous vos besoins en climatisation, chauffage et pompe à chaleur
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="group bg-gradient-to-br from-[#F8F9F4] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-[#03144a]/10 text-center flex flex-col items-center justify-center"
-                >
-                  <div className="bg-[#F8F9F4] border border-[#03144a] w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-7 h-7 text-[#03144a]" />
-                  </div>
-                  <h3 className="text-xl font-bold text-[#03144a] mb-3 text-center">{service.title}</h3>
-                  <p className="text-gray-600 text-center">{service.desc}</p>
-                </div>
-              ))}
-            </div>
+      {/* Services Section */}
+      <section className="py-16 ">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-6xl font-bold text-[#03144a] mb-4 climText">Nos Services sur Toute la Zone</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Une expertise complète pour tous vos besoins en climatisation, chauffage et pompe à chaleur
+            </p>
           </div>
-        </section>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="group bg-gradient-to-br from-[#F8F9F4] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-[#03144a]/10 text-center flex flex-col items-center justify-center"
+              >
+                <div className="bg-[#F8F9F4] border border-[#03144a] w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <service.icon className="w-7 h-7 text-[#03144a]" />
+                </div>
+                <h3 className="text-xl font-bold text-[#03144a] mb-3 text-center">{service.title}</h3>
+                <p className="text-gray-600 text-center">{service.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
         {/* Zones Section */}
         <section className="py-20 bg-[#F8F9F4]">

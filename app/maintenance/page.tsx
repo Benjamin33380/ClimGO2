@@ -400,6 +400,21 @@ export default function PremiumMaintenancePage() {
           </div>
         </div>
         <Tableau />
+        <div className="max-w-6xl mx-auto px-6 py-12">
+          <nav className="text-sm text-[#03144A]">
+            <ol className="list-reset flex items-center space-x-2">
+              <li>
+                <Link href="/" className="hover:underline text-[#10B981]">Accueil</Link>
+                <span className="mx-2">/</span>
+              </li>
+              <li>
+                <Link href="/nos-services" className="hover:underline text-[#10B981]">Nos services</Link>
+                <span className="mx-2">/</span>
+              </li>
+              <li className="text-[#03144A]/70">Maintenance</li>
+            </ol>
+          </nav>
+        </div>
          </section>
       <style jsx global>{`
         @keyframes float {
