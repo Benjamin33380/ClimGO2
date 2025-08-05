@@ -1,11 +1,12 @@
 'use client';
 
 import { useEffect } from 'react';
-import { start3D } from './zzzz/scene';
 
 export default function NotFoundPage() {
   useEffect(() => {
-    start3D();
+    import('./zzzz/scene').then(({ start3D }) => {
+      start3D();
+    });
 
     return () => {
       const canvas = document.querySelector('canvas');
