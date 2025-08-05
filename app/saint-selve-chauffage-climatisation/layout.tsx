@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Saint-Selve",
     "entreprise chauffage Saint-Selve"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Saint-Selve - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Selve. Profitez d'un service local, certifié RGE.",

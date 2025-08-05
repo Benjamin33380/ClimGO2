@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     "confort thermique Salles",
     "entreprise chauffage Salles"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Salles - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Salles. Profitez d'un service local, certifié RGE.",

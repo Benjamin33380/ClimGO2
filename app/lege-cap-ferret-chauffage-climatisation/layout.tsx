@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Lège-Cap-Ferret",
     "entreprise chauffage Lège-Cap-Ferret"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Lège-Cap-Ferret - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Lège-Cap-Ferret. Certifié RGE.",

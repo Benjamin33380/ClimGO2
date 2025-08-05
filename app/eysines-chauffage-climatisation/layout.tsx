@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Eysines",
     "entreprise chauffage Eysines"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Eysines - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Eysines. Profitez d'un service local, certifié RGE.",

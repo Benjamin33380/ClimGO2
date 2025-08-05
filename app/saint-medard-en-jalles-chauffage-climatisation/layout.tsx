@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Saint-Médard-en-Jalles",
     "entreprise chauffage Saint-Médard-en-Jalles"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Saint-Médard-en-Jalles - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Médard-en-Jalles. Certifié RGE.",

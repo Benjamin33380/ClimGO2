@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Andernos-les-Bains",
     "entreprise chauffage Andernos-les-Bains"
   ],
+  robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Andernos-les-Bains - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Andernos-les-Bains. Profitez d'un service local, certifié RGE.",

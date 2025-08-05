@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Mimizan",
     "entreprise chauffage Mimizan"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Mimizan - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Mimizan. Profitez d'un service local, certifié RGE.",

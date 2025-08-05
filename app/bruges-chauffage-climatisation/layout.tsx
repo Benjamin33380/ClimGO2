@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Bruges",
     "entreprise chauffage Bruges"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Bruges - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Bruges. Profitez d'un service local, certifié RGE.",

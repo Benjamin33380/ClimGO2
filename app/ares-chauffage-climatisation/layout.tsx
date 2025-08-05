@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Arès",
     "entreprise chauffage Arès"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Arès - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Arès. Profitez d'un service local, certifié RGE.",

@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Cestas",
     "entreprise chauffage Cestas"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Cestas - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Cestas. Profitez d'un service local, certifié RGE.",

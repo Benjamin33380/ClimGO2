@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Cadaujac",
     "entreprise chauffage Cadaujac"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Cadaujac - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Cadaujac. Profitez d'un service local, certifié RGE.",

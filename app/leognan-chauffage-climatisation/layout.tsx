@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Léognan",
     "entreprise chauffage Léognan"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Léognan - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Léognan. Profitez d'un service local, certifié RGE.",

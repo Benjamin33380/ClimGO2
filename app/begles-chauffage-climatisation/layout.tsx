@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Bègles",
     "entreprise chauffage Bègles"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Bègles - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Bègles. Profitez d'un service local, certifié RGE.",

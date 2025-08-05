@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Saucats",
     "entreprise chauffage Saucats"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Saucats - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saucats. Profitez d'un service local, certifié RGE.",

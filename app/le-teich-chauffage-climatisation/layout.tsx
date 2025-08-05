@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Le Teich",
     "entreprise chauffage Le Teich"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Le Teich - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Le Teich. Profitez d'un service local, certifié RGE.",

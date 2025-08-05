@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Canéjan",
     "entreprise chauffage Canéjan"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Canéjan - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Canéjan. Profitez d'un service local, certifié RGE.",

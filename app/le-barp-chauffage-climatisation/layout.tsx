@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     "confort thermique Le Barp",
     "entreprise chauffage Le Barp"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Le Barp - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Le Barp. Profitez d'un service local, certifié RGE.",

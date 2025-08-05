@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Lacanau",
     "entreprise chauffage Lacanau"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Lacanau - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Lacanau. Certifié RGE.",

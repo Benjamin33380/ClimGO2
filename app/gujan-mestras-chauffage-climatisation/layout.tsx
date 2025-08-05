@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Gujan-Mestras",
     "entreprise chauffage Gujan-Mestras"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Gujan-Mestras - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Gujan-Mestras. Profitez d'un service local, certifié RGE.",

@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Cenon",
     "entreprise chauffage Cenon"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Cenon - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Cenon. Profitez d'un service local, certifié RGE.",

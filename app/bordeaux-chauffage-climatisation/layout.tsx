@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Bordeaux",
     "entreprise chauffage Bordeaux"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Bordeaux - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Bordeaux. Profitez d'un service local, certifié RGE.",

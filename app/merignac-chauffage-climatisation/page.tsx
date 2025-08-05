@@ -5,7 +5,7 @@ import Hero from "../zones-desservies/component/Hero";
 import Partenaires from "../zones-desservies/component/Partenaires";
 import Tableau from "../zones-desservies/component/Tableau";
 import Link from "next/link";
-export default function Bordeaux() {
+export default function Mérignac() {
   return (
     <main className="px-0">
       <section className="w-full">

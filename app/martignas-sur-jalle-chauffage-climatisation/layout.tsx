@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Martignas-sur-Jalle",
     "entreprise chauffage Martignas-sur-Jalle"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Martignas-sur-Jalle - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Martignas-sur-Jalle. Certifié RGE.",

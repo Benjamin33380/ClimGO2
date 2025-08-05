@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     "confort thermique Mios",
     "entreprise chauffage Mios"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Mios - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Mios. Profitez d'un service local, certifié RGE.",

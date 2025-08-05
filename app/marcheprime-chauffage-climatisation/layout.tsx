@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Marcheprime",
     "entreprise chauffage Marcheprime"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Marcheprime - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Marcheprime. Profitez d'un service local, certifié RGE.",

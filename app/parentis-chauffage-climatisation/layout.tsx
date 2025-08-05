@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Parentis-en-Born",
     "entreprise chauffage Parentis-en-Born"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Parentis-en-Born - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Parentis-en-Born. Profitez d'un service local, certifié RGE.",

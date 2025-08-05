@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Pessac",
     "entreprise chauffage Pessac"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Pessac - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Pessac. Profitez d'un service local, certifié RGE.",

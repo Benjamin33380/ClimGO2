@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Sanguinet",
     "entreprise chauffage Sanguinet"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Sanguinet - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Sanguinet. Profitez d'un service local, certifié RGE.",

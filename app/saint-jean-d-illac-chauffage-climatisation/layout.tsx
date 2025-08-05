@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "confort thermique Saint-Jean-d'Illac",
     "entreprise chauffage Saint-Jean-d'Illac"
   ],
+   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Saint-Jean-d'Illac - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Jean-d'Illac. Certifié RGE.",

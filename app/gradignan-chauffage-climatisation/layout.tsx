@@ -55,9 +55,20 @@ export const metadata: Metadata = {
     images: ["https://www.climgo.fr/villes/gradignan.jpg.jpg"]
   },
   metadataBase: new URL("https://www.climgo.fr"),
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true
+  },
   alternates: {
     canonical: "/gradignan-chauffage-climatisation"
   }
+};
+
+export const robots = {
+  index: true,
+  follow: true,
+  nocache: true
 };
 
 import Script from 'next/script';
