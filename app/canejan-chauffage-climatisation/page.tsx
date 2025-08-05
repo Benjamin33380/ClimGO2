@@ -9,7 +9,7 @@ export default function Canejan() {
   return (
     <main className="px-0">
       <section className="w-full">
-        <Hero ville="Canéjan" backgroundImage="/villes/canéjan.jpg" />
+        <Hero ville="Canéjan" backgroundImage="/villes/Canéjan.jpg" />
       </section>
       <nav className="max-w-7xl mx-auto px-4 text-sm text-gray-600 my-6" aria-label="Fil d'Ariane">
         <ol className="list-reset flex items-center space-x-2">

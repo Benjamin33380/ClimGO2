@@ -68,11 +68,6 @@ export const metadata: Metadata = {
   }
 };
 
-export const robots = {
-  index: true,
-  follow: true,
-  nocache: true
-};
 
 import Script from 'next/script';
 export const viewport: Viewport = {
