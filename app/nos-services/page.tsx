@@ -277,6 +277,16 @@ export default function ServicesPage() {
         <Tableau />
       </section>
 
+      <nav className="max-w-7xl mx-auto px-4 text-sm text-gray-600 mt-10 mb-20" aria-label="Fil d'Ariane">
+        <ol className="list-reset flex items-center space-x-2">
+          <li>
+            <Link href="/" className="hover:underline text-[#03144a]">Accueil</Link>
+            <span className="mx-2">/</span>
+          </li>
+          <li className="text-[#03144a] font-semibold">Nos services</li>
+        </ol>
+      </nav>
+
       {/* Les sections Services Grid et CTA Section ont été supprimées */}
     </div>
   );

@@ -4,7 +4,7 @@ import Faq from "../zones-desservies/component/Faq";
 import Hero from "../zones-desservies/component/Hero";
 import Partenaires from "../zones-desservies/component/Partenaires";
 import Tableau from "../zones-desservies/component/Tableau";
-import { Link } from "lucide-react";
+import Link from "next/link";
 export default function Biganos() {
   return (
     <main className="px-0">
