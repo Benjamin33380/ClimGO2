@@ -1,195 +1,413 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Tableau from '../zones-desservies/component/Tableau';
-export default function MaintenancePage() {
-  const [expandedIndex, setExpandedIndex] = useState<string | null>(null);
+export default function PremiumMaintenancePage() {
+  const solutionsRef = useRef<HTMLDivElement>(null);
 
   const solutions = [
     {
-      title: "Maintenance ClimGO",
+      id: 'maintenance-climatisation',
+      title: "Maintenance climatisation",
+      subtitle: "Entretien Professionnel",
       image: "/MaintenanceClim.png",
-      intro: "Entretenez vos équipements pour durer",
-      description: "Chez ClimGO, on ne se contente pas d'installer. On vous accompagne aussi dans le temps pour garantir la performance, la sécurité et la longévité de vos systèmes de chauffage, climatisation ou eau chaude.",
-      listItems: [
-        "Prolonger leur durée de vie",
-        "Maintenir leur performance",
-        "Respecter les garanties fabricants"
+      badge: "Contrat annuel",
+      features: [
+        "Vérification complète du système",
+        "Nettoyage des filtres et échangeurs",
+        "Contrôle des pressions et températures",
+        "Rapport détaillé d'intervention"
       ],
-      additionalDescription: "Chez ClimGO, on ne se contente pas d'installer. On vous accompagne aussi dans le temps pour garantir la performance, la sécurité et la longévité de vos systèmes de chauffage, climatisation ou eau chaude."
+      description: "Maintenez votre climatisation en parfait état avec nos contrats d'entretien personnalisés. Performance optimale et longévité garanties.",
+      price: "À partir de 120€",
+      gradient: "from-[#03144A] to-[#10B981]"
     },
+    {
+      id: 'maintenance-chauffage',
+      title: "Maintenance chauffage",
+      subtitle: "Sécurité & Performance",
+      image: "/MaintenanceChauffage.png",
+      badge: "Intervention rapide",
+      features: [
+        "Contrôle des systèmes de sécurité",
+        "Vérification des performances",
+        "Nettoyage des composants",
+        "Mise à jour des réglages"
+      ],
+      description: "Nos techniciens qualifiés assurent l'entretien de votre système de chauffage pour votre sécurité et votre confort optimal.",
+      price: "À partir de 150€",
+      gradient: "from-[#03144A] to-[#10B981]"
+    },
+    {
+      id: 'maintenance-eau-chaude',
+      title: "Maintenance eau chaude",
+      subtitle: "Fiabilité & Durabilité",
+      image: "/MaintenanceEauChaude.png",
+      badge: "Préventif",
+      features: [
+        "Détartrage et nettoyage",
+        "Contrôle des résistances",
+        "Vérification de l'isolation",
+        "Test des systèmes de sécurité"
+      ],
+      description: "Préservez votre production d'eau chaude sanitaire avec un entretien régulier adapté à votre installation.",
+      price: "À partir de 100€",
+      gradient: "from-[#03144A] to-[#10B981]"
+    },
+    {
+      id: 'maintenance-pompe-chaleur',
+      title: "Maintenance pompe à chaleur",
+      subtitle: "Expertise Technique",
+      image: "/MaintenancePAC.png",
+      badge: "Obligatoire",
+      features: [
+        "Contrôle du fluide frigorigène",
+        "Vérification des échangeurs",
+        "Test des performances COP",
+        "Maintenance préventive complète"
+      ],
+      description: "Entretien obligatoire pour les PAC, nos experts certifiés garantissent performance énergétique et conformité réglementaire.",
+      price: "À partir de 180€",
+      gradient: "from-[#03144A] to-[#10B981]"
+    }
   ];
 
+  const advantages = [
+    {
+      icon: "🔧",
+      title: "Expertise maintenance",
+      desc: "15 ans d'expérience dans l'entretien"
+    },
+    {
+      icon: "⚡",
+      title: "Intervention rapide",
+      desc: "Dépannage en 24h chrono"
+    },
+    {
+      icon: "🛡️",
+      title: "Contrats sur-mesure",
+      desc: "Solutions adaptées à vos besoins"
+    },
+    {
+      icon: "💰",
+      title: "Tarifs transparents",
+      desc: "Devis gratuit et sans surprise"
+    }
+  ];
+
+  // Carousel state for desktop
+  const [currentIndex, setCurrentIndex] = useState(0);
+  // For auto-scroll logic
+  const autoScrollRef = useRef<NodeJS.Timeout | null>(null);
+  const carouselHovering = useRef(false);
+
+  // Helper to clear interval
+  const clearAutoScroll = () => {
+    if (autoScrollRef.current) {
+      clearInterval(autoScrollRef.current);
+      autoScrollRef.current = null;
+    }
+  };
+
+  // Start auto-scroll
+  const startAutoScroll = () => {
+    clearAutoScroll();
+    autoScrollRef.current = setInterval(() => {
+      setCurrentIndex((prev) =>
+        prev === solutions.length - 1 ? 0 : prev + 1
+      );
+    }, 5000);
+  };
+
+  // Effect to start auto-scroll and clean up on unmount
+  useEffect(() => {
+    startAutoScroll();
+    return () => {
+      clearAutoScroll();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Reset auto-scroll when index is changed manually
+  useEffect(() => {
+    if (!carouselHovering.current) {
+      startAutoScroll();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentIndex]);
+
   return (
-    <div className="bgPage mt-48">
-      {/* Section badge titre statique */}
-      <section className="section2 mt-16">
-        <div className="flex justify-center mb-14">
-          <div className="bg-[#10B981]/10 border border-[#10B981] text-[#10B981] rounded-xl px-6 py-4 shadow-sm text-center">
-            <h1 className="text-xl md:text-2xl font-bold mb-1">Nos solutions de maintenance</h1>
-            <strong className="text-sm md:text-base font-medium text-[#10B981]">Entretenez vos équipements pour durer</strong>
-          </div>
+    <div className="min-h-screen bg-[#F8F9F4] text-[#03144A]">
+      
+      {/* Hero Section */}
+      <section className="relative min-h-screen pt-24 md:pt-0 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-[#F8F9F4]" />
+        
+        {/* Background effects */}
+        {/* Blue particles */}
+        <div className="absolute w-2 h-2 bg-[#03144a] rounded-full top-10 left-10" style={{ animation: 'float 4s ease-in-out infinite' }} />
+        <div className="absolute w-2 h-2 bg-[#03144a] rounded-full top-1/3 left-1/2" style={{ animation: 'float 4s ease-in-out infinite' }} />
+        <div className="absolute w-2 h-2 bg-[#03144a] rounded-full bottom-1/3 right-20" style={{ animation: 'float 4s ease-in-out infinite' }} />
+
+        {/* Accent particles */}
+        <div className="absolute w-2 h-2 bg-[#10B981] rounded-full top-20 right-10" style={{ animation: 'float 4s ease-in-out infinite' }} />
+        <div className="absolute w-2 h-2 bg-[#10B981] rounded-full bottom-10 left-1/3" style={{ animation: 'float 4s ease-in-out infinite' }} />
+        <div className="absolute w-2 h-2 bg-[#10B981] rounded-full top-1/2 right-1/4" style={{ animation: 'float 4s ease-in-out infinite' }} />
+
+        {/* New animated particles */}
+        <div className="absolute w-2 h-2 bg-[#03144a] rounded-full top-[15%] left-[20%]" style={{ animation: 'float 6s ease-in-out infinite' }} />
+        <div className="absolute w-2 h-2 bg-[#10B981] rounded-full bottom-[20%] right-[15%]" style={{ animation: 'float 5s ease-in-out infinite' }} />
+        <div className="absolute w-2 h-2 bg-[#03144a] rounded-full top-[60%] left-[45%]" style={{ animation: 'float 7s ease-in-out infinite' }} />
+
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#10B981] rounded-full filter blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#F8F9F4] rounded-full filter blur-3xl animate-pulse" style={{animationDelay: '2s'}} />
         </div>
-        <div className="flex justify-center">
-          <strong className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-base leading-relaxed">
-            Découvrez nos solutions de maintenance pour chaque besoin : climatisation, chauffage ou eau chaude. À chaque logement, sa solution ClimGO.
-          </strong>
+
+        <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
+          <div className="inline-flex items-center px-6 py-3 rounded-full border border-[#03144A]/20 text-sm tracking-widest uppercase mb-8 text-[#03144A] bg-[#F8F9F4] backdrop-blur-sm">
+            <div className="w-2 h-2 bg-[#10B981] rounded-full mr-3 animate-pulse" />
+            Nos solutions de maintenance
+          </div>
+          
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight tracking-wide mb-8">
+            <span className="bg-gradient-to-r from-[#10B981] via-[#03144A] to-[#10B981] bg-clip-text text-transparent">
+              Maintenance
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-[#03144A] via-[#10B981] to-[#03144A] bg-clip-text text-transparent">
+              ClimGO
+            </span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-[#03144A] mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+            Entretenez vos équipements pour durer. Performance, sécurité et longévité garanties par nos experts techniques.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <button
+              onClick={() => solutionsRef.current?.scrollIntoView({ behavior: 'smooth' })}
+              className="group relative px-10 py-4 bg-[#F8F9F4] text-[#03144A] rounded-full font-medium transition-all duration-300 hover:scale-105 overflow-hidden border border-[#03144A]/30"
+            >
+              <span className="relative z-10">Découvrir nos solutions</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#03144A] to-[#10B981] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </button>
+            
+            <button className="group px-10 py-4 border border-[#03144A] rounded-full font-medium transition-all duration-300 hover:border-[#10B981] hover:bg-[#03144A]/5 text-[#03144A]">
+              Demander un devis
+            </button>
+          </div>
         </div>
       </section>
 
-      {/* Solutions de climatisation */}
-      <section className="py-16 bgPage">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto flex flex-col gap-16">
+      {/* Solutions Section */}
+      <section ref={solutionsRef} className="py-24 relative">
+        <div className="max-w-7xl mx-auto px-6">
+          
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-extralight mb-6 tracking-wide">
+              Nos <span className="text-[#03144a]">Services</span>
+            </h2>
+            <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#03144a] to-transparent mx-auto mb-8" />
+            <p className="text-xl text-[#03144A] max-w-3xl mx-auto">
+              Chaque solution est pensée pour maximiser la durée de vie de vos équipements tout en optimisant leurs performances énergétiques
+            </p>
+          </div>
 
-            {solutions.map((item) => (
-              <div key={item.title} className="group flex p-4 flex-col md:flex-row bg-gradient-to-br from-[#f8f9f4] via-[#ffffff] to-[#f0f2ec] border border-gray-200 rounded-xl shadow-md overflow-hidden transition-all duration-300 group hover:shadow-lg">
-                <div className="w-full md:w-1/2 flex items-center justify-center bg-[#f8f9f4]">
-                  <div className="w-[220px] h-[160px] relative">
-                    <Image src={item.image} alt={item.title} fill className="object-contain transition-transform duration-300 group-hover:scale-105" />
-                  </div>
-                </div>
-                <div className="p-6 w-full md:w-1/2 flex flex-col justify-center text-gray-900">
-                  <h3 className="text-2xl font-bold text-[#1c1e21]">{item.title}</h3>
-                  <p className="text-base text-[#4b4f56] mt-2">{item.intro}</p>
-                  <button
-                    onClick={() => setExpandedIndex(expandedIndex === item.title ? null : item.title)}
-                    className="text-md font-medium text-[#03144a] hover:text-blue-600 hover:underline cursor-pointer transition-colors duration-150 flex items-center space-x-1 mt-2"
-                  >
-                    <>
-                      {expandedIndex === item.title ? 'Voir moins' : 'Voir plus'}
-                      <svg className="w-3 h-3 ml-1 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </>
-                  </button>
-                  <div
-                    className={`overflow-hidden transition-all duration-500 ease-in-out mt-4 ${
-                      expandedIndex === item.title ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-                    }`}
-                  >
-                    <p className="text-sm text-gray-700">{item.description}</p>
-                    <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-3">
-                      {item.listItems.map((li, idx) => (
-                        <li key={idx}>{li}</li>
-                      ))}
-                    </ul>
-                    <p className="text-sm text-gray-700 mt-3">{item.additionalDescription}</p>
-                    <p className="text-xs text-gray-500 italic mt-3">Vous êtes intéressé ?</p>
-                    <Link href="/contact" className="inline-flex items-center px-4 py-2 bg-[#03144a] text-white text-sm rounded-md hover:bg-[#021035] w-max mt-2">
-                      <span>Demander un devis</span>
-                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-
-            {/* Bloc SEO enrichi */}
-            <section className="py-20 px-4 max-w-5xl mx-auto text-gray-800">
-              <h2 className="text-3xl font-bold text-center mb-6 text-[#03144a]">
-                Confier l&apos;entretien de vos systèmes à ClimGO, c’est choisir l’expertise locale
-              </h2>
-              <p className="text-base leading-relaxed text-center mb-10">
-                ClimGO, spécialiste en maintenance de climatisation, chauffage et production d’eau chaude sanitaire en Gironde, vous accompagne tout au long de la vie de vos équipements. Nous intervenons à domicile pour garantir sécurité, durabilité et confort thermique dans chaque logement. Qu’il s’agisse d’une pompe à chaleur air/air, air/eau, d’un chauffe-eau thermodynamique ou d’un système de climatisation gainable, notre équipe assure un suivi technique rigoureux, conforme aux normes en vigueur.
-              </p>
-              <p className="text-base leading-relaxed text-center mb-6">
-                Nos contrats de maintenance personnalisés incluent les vérifications essentielles, le nettoyage, les contrôles de pression et l’ajustement des performances. Grâce à notre présence locale autour de Bordeaux, Arcachon, Marcheprime et leurs alentours, nous garantissons une réactivité optimale, avec un service client humain, précis et ponctuel.
-              </p>
-              <p className="text-base leading-relaxed text-center text-gray-600 italic">
-                Un entretien régulier, c’est l’assurance d’un équipement performant, économique et durable.
-              </p>
-            </section>
-
-            {/* Bloc SEO complémentaire 2 */}
-            <section className="py-20 px-4 max-w-5xl mx-auto text-gray-800">
-              <h3 className="text-2xl font-bold text-center mb-6 text-[#03144a]">Pourquoi choisir ClimGO pour votre maintenance ?</h3>
-              <p className="text-base leading-relaxed text-center mb-6">
-                Un savoir-faire fiable, au service de votre confort.
-              </p>
-              <p className="text-base leading-relaxed text-center mb-6">
-                Chez ClimGO, on ne se contente pas d’installer. On vous accompagne aussi dans le temps pour garantir la performance, la sécurité et la longévité de vos systèmes de chauffage, climatisation ou eau chaude.
-              </p>
-              <p className="text-base leading-relaxed text-center text-gray-600 italic">
-                Chez nous, le confort, c’est pas une option. C’est un engagement.
-              </p>
-            </section>
-
-            {/* Pourquoi choisir ClimGO */}
-
-            <section
-              className="section3 relative w-full py-24 mt-24 text-center shadow-md bg-scroll md:bg-fixed"
-              style={{
-                backgroundImage: "url('/fond3.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                width: "100vw",
-                marginLeft: "calc(-50vw + 50%)",
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)'
+          {/* Carousel Solutions */}
+          <div className="relative">
+            {/* Desktop version : une solution visible à la fois */}
+            <div
+              className="hidden md:block"
+              onMouseEnter={() => {
+                carouselHovering.current = true;
+                clearAutoScroll();
+              }}
+              onMouseLeave={() => {
+                carouselHovering.current = false;
+                startAutoScroll();
               }}
             >
-              <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
-              <div className="relative z-10">
-                <h2 className="text-3xl font-bold climText mb-6" style={{ color: '#ffffff' }}>
-                  Pourquoi choisir ClimGO pour votre maintenance ?                </h2>
-                <div className="flex justify-center">
-                  <p className="text-xl text-white mb-8 text-center">
-                  Un savoir-faire fiable, au service de votre confort.</p>
-                </div>
-                <p className="text-lg text-white mb-8 max-w-4xl mx-auto leading-relaxed">
-                  Chez ClimGO, on ne se contente pas d&apos;installer. On vous accompagne aussi dans le temps pour garantir la performance, la sécurité et la longévité de vos systèmes de chauffage, climatisation ou eau chaude.
-                </p>
-                <p className="text-lg text-white max-w-4xl mx-auto leading-relaxed italic">
-                  Chez nous, le confort, c’est pas une option. C’est un engagement.
-                </p>
+              <div className="transition-all duration-700">
+                {solutions.map((solution, index) =>
+                  index === currentIndex ? (
+                    <div key={index} className="inline-block w-full px-4">
+                      <div className="bg-[#F8F9F4] rounded-3xl border border-[#03144A]/20 overflow-hidden backdrop-blur-sm">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                          {/* Content Side */}
+                          <div className="p-12 lg:p-16">
+                            <div className="mb-8">
+                            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-[#03144A]/10 to-[#10B981]/10 border border-[#10B981] text-[#10B981] text-sm font-medium mb-6">
+                                {solution.badge}
+                              </div>
+                              <h3 className="text-3xl md:text-4xl font-light mb-4 text-[#03144A]">
+                                {solution.title}
+                              </h3>
+                              <p className="text-xl text-[#10B981] mb-6 font-light">
+                                {solution.subtitle}
+                              </p>
+                            </div>
+                            <p className="text-[#03144A] text-lg leading-relaxed mb-8">
+                              {solution.description}
+                            </p>
+                            <div className="space-y-4 mb-8">
+                              {solution.features.map((feature, i) => (
+                                <div key={i} className="flex items-center space-x-3">
+                                  <div className="w-2 h-2 bg-[#10B981] rounded-full flex-shrink-0" />
+                                  <span className="text-[#03144A]">{feature}</span>
+                                </div>
+                              ))}
+                            </div>
+                            <div className="flex items-center justify-between">
+                              <div className="text-2xl font-light text-[#03144A]">
+                                {solution.price}
+                              </div>
+                              <Link
+                                href="/contact"
+                                className="group px-8 py-3 bg-gradient-to-r from-[#03144A] to-[#10B981] rounded-full text-[#F8F9F4] font-medium transition-all duration-300 hover:scale-105"
+                              >
+                                Devis gratuit
+                              </Link>
+                            </div>
+                          </div>
+
+                          {/* Image Side */}
+                          <div className="relative bg-gradient-to-br from-[#03144A] to-[#10B981] flex items-center justify-center p-12">
+                            <div className="relative w-80 h-80">
+                              <Image
+                                src={solution.image}
+                                alt={solution.title}
+                                fill
+                                className="object-contain filter drop-shadow-2xl"
+                              />
+                            </div>
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#03144A]/20 to-transparent rounded-bl-full" />
+                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#10B981]/20 to-transparent rounded-tr-full" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ) : null
+                )}
+              </div>
+
+              {/* Boutons de sélection */}
+              <div className="flex justify-center gap-4 mt-6">
+                {solutions.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrentIndex(i)}
+                    className={`w-4 h-4 rounded-full ${
+                      i === currentIndex ? 'bg-[#10B981]' : 'bg-[#03144A]/30'
+                    } transition-all duration-300`}
+                  />
+                ))}
+              </div>
             </div>
-            </section>
 
-            {/* Bloc SEO complémentaire */}
-            <section className="py-20 px-4 max-w-5xl mx-auto text-gray-800">
-              <h3 className="text-2xl font-bold text-center mb-6 text-[#03144a]">Pour quel type de logement ou bâtiment ?</h3>
-              <p className="text-base leading-relaxed text-center mb-10">
-                Que vous soyez en maison individuelle, en appartement, ou gestionnaire d’un petit local professionnel, ClimGO adapte ses contrats de maintenance à votre situation. Nous assurons l’entretien de vos équipements dans tout le Sud-Ouest, avec des solutions adaptées aux résidences principales, secondaires ou aux petits bâtiments tertiaires.
-              </p>
-
-              <h3 className="text-2xl font-bold text-center mb-6 text-[#03144a]">Questions fréquentes</h3>
-              <div className="space-y-6">
-                <div>
-                  <strong className="block text-md font-semibold mb-1">À quelle fréquence faut-il entretenir une pompe à chaleur ?</strong>
-                  <p className="text-sm text-gray-700">Il est recommandé de faire entretenir votre pompe à chaleur une fois par an. Cet entretien permet de maintenir son rendement, d’éviter les pannes et de prolonger sa durée de vie.</p>
+            {/* Mobile version : carrousel horizontal */}
+            <div className="md:hidden overflow-x-auto flex snap-x snap-mandatory scrollbar-hide px-2">
+              {solutions.map((solution, index) => (
+                <div key={index} className="snap-center flex-shrink-0 w-full px-2">
+                  <div className="bg-[#F8F9F4] rounded-3xl border border-[#03144A]/20 overflow-hidden backdrop-blur-sm min-h-[600px] flex flex-col">
+                    <div className="w-full h-48 relative">
+                      <Image
+                        src={solution.image}
+                        alt={solution.title}
+                        fill
+                        className="object-contain rounded-t-3xl"
+                      />
+                    </div>
+                    <div className="p-6 flex-1 flex flex-col justify-between">
+                      <div>
+                        <h3 className="text-2xl text-[#03144A] mb-2">{solution.title}</h3>
+                        <p className="text-[#10B981] mb-4">{solution.subtitle}</p>
+                        <p className="text-[#03144A] mb-4">{solution.description}</p>
+                      </div>
+                      <div>
+                        <p className="text-[#03144A] text-lg mb-2">{solution.price}</p>
+                        <Link href="/contact" className="text-[#10B981] underline">Devis</Link>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <strong className="block text-md font-semibold mb-1">L’entretien est-il obligatoire ?</strong>
-                  <p className="text-sm text-gray-700">Oui, pour les pompes à chaleur dont la charge gaz frigorifique est au dessus de 2kg, un entretien annuel est obligatoire selon la réglementation française.</p>
-                </div>
-                <div>
-                  <strong className="block text-md font-semibold mb-1">Proposez-vous des contrats annuels ?</strong>
-                  <p className="text-sm text-gray-700">Absolument. Nous proposons des contrats annuels sur-mesure incluant le déplacement, la main-d’œuvre et les vérifications techniques nécessaires.</p>
-                </div>
-              </div>
-
-              <div className="mt-12 text-center">
-                <p className="text-base text-gray-700 mb-4">
-                  Besoin d’un entretien rapide ou d’un contrat de maintenance personnalisé ? ClimGO intervient sur rendez-vous dans toute la Gironde, notamment à Bordeaux, Arcachon, Marcheprime, Biganos, Gujan-Mestras et alentours.
-                </p>
-                <Link href="/contact" className="inline-flex items-center px-5 py-3 bg-[#03144a] text-white text-sm rounded-md hover:bg-[#021035]">
-                  <span>Demander un devis personnalisé</span>
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            </section>
-            <section className="my-20">
-        <Tableau />
-      </section>
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Advantages Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#F8F9F4]" />
+        
+        <div className="relative z-10 max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-extralight mb-8">
+              Pourquoi nous <span className="text-[#03144A]">choisir</span> ?
+            </h2>
+            <p className="text-xl text-[#03144A] max-w-2xl mx-auto">
+              L'alliance du savoir-faire technique et de l'excellence service
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {advantages.map((advantage, index) => (
+              <div
+                key={index}
+                className="group text-center p-8 rounded-2xl bg-[#F8F9F4] border border-[#03144A]/20 hover:border-[#10B981]/50 transition-all duration-300 hover:bg-[#10B981]/5"
+              >
+                <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                  {advantage.icon}
+                </div>
+                <h3 className="text-xl font-medium mb-4 text-[#03144A] group-hover:text-[#10B981] transition-colors">
+                  {advantage.title}
+                </h3>
+                <p className="text-[#03144A]/80 group-hover:text-[#10B981] transition-colors">
+                  {advantage.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 relative">
+        <div className="max-w-4xl mx-auto text-center px-6">
+          <div className="bg-gradient-to-br from-[#F8F9F4] to-[#F8F9F4] rounded-3xl p-16 border border-[#03144A]/20 backdrop-blur-sm">
+            <h2 className="text-4xl md:text-5xl font-light mb-8">
+              Prêt à optimiser votre
+              <br />
+              <span className="text-[#10B981]">maintenance technique</span> ?
+            </h2>
+            
+            <p className="text-xl text-[#03144A] mb-12 leading-relaxed">
+              Nos experts vous accompagnent dans l'entretien de vos équipements pour garantir leur longévité
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link
+                href="/contact"
+                className="group relative px-10 py-4 bg-gradient-to-r from-[#03144A] to-[#10B981] rounded-full text-[#F8F9F4] font-medium transition-all duration-300 hover:scale-105"
+              >
+                Demander un devis gratuit
+              </Link>
+            </div>
+          </div>
+        </div>
+        <Tableau />
+         </section>
+      <style jsx global>{`
+        @keyframes float {
+          0% { transform: translateY(0px) translateX(0px); }
+          50% { transform: translateY(-10px) translateX(5px); }
+          100% { transform: translateY(0px) translateX(0px); }
+        }
+      `}</style>
     </div>
   );
 }
