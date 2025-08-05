@@ -83,7 +83,7 @@ const SimpleCitiesSection = () => {
             placeholder="Rechercher une ville..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-6 py-4 bg-[#03144a]/10 border border-[#03144a]/30 rounded-lg text-[#03144a] placeholder-[#03144a]/60 focus:outline-none focus:border-[#03144a]"
+            className="w-full px-6 py-4 bg-[#F8F9F4] border border-[#03144a]/30 rounded-lg text-[#03144a] placeholder-[#03144a]/60 focus:outline-none focus:border-[#03144a]"
           />
         </div>
 
@@ -102,7 +102,7 @@ const SimpleCitiesSection = () => {
               <Link
                 key={city.name}
                 href={city.url}
-                className="block p-4 bg-[#03144a]/10 rounded-lg border border-[#03144a]/20 hover:border-[#03144a] hover:bg-[#03144a]/20 transition-all"
+                className="block p-4 bg-[#F8F9F4] rounded-lg border border-[#03144a]/20 hover:border-[#03144a] hover:bg-[#03144a]/10 transition-all"
               >
                 <h3 className="text-[#03144a] font-medium text-center">
                   {city.name}
@@ -114,7 +114,7 @@ const SimpleCitiesSection = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <div className="bg-[#03144a]/10 rounded-xl p-8 border border-[#03144a]/20">
+          <div className="bg-[#F8F9F4] rounded-xl p-8 border border-[#03144a]/20">
             <h3 className="text-2xl font-semibold mb-4">
               Votre ville n&apos;apparaît pas ?
             </h3>
