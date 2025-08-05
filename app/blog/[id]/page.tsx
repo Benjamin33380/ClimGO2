@@ -157,6 +157,15 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       modifiedTime: article.updatedAt.toISOString(),
       authors: ['ClimGo'],
       section: 'Chauffage et Climatisation',
+      images: [
+        {
+          url: imageUrl || '',
+          width: 1200,
+          height: 630,
+          alt: cleanTitle,
+          type: 'image/jpeg',
+        }
+      ]
     },
     
     twitter: {

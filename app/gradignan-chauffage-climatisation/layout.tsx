@@ -58,18 +58,16 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    nocache: true
+    googleBot: {
+      index: true,
+      follow: true,
+    }
   },
   alternates: {
     canonical: "/gradignan-chauffage-climatisation"
   }
 };
 
-export const robots = {
-  index: true,
-  follow: true,
-  nocache: true
-};
 
 import Script from 'next/script';
 export const viewport: Viewport = {
