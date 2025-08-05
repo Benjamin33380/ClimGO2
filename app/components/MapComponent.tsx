@@ -148,7 +148,7 @@ export default function MapContent() {
           justify-content: center;
           box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         ">
-          <img src="/favicon/favicon-16x16.png" alt="ClimGO" style="width: 24px; height: 24px;" />
+          <img src="/favicon/favicon-32x32.png" alt="ClimGO" style="width: 24px; height: 24px;" />
         </div>
       `,
       className: 'custom-climgo-marker',
@@ -260,7 +260,7 @@ export default function MapContent() {
   const cityName = city.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-[#F8F9F4]">
       <div className="w-full px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-light mb-4 text-gray-900">
@@ -296,9 +296,9 @@ export default function MapContent() {
           />
           
           {!isLoading && (
-            <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg z-20">
+            <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg z-20">
               <div className="flex items-center space-x-2 mb-1">
-                <div className="w-3 h-3 bg-blue-600 rounded-full animate-pulse"></div>
+                <div className="w-3 h-3 bg-[#03144a] rounded-full animate-pulse"></div>
                 <span className="text-gray-900 font-semibold">
                   {cityName}
                 </span>
