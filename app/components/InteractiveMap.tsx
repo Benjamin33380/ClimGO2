@@ -281,7 +281,7 @@ export default function InteractiveMap() {
             <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg z-20">
               <div className="flex items-center space-x-2 text-xs">
                 <div className="w-2 h-2 bg-[#10B981]/50 rounded-full"></div>
-                <span className="text-gray-600">Zone de service 5km</span>
+                <span className="text-gray-600">Zone de service</span>
               </div>
             </div>
           )}
