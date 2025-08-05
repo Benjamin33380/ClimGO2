@@ -80,6 +80,7 @@ export default function InteractiveMap() {
   const mapInstanceRef = useRef<L.Map | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isClient, setIsClient] = useState(false);
 
   // Extraire l'info de la page courante
   const getCurrentPageInfo = () => {
@@ -138,7 +139,11 @@ export default function InteractiveMap() {
   };
 
   useEffect(() => {
-    if (!mapRef.current) return;
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient || !mapRef.current) return;
 
     // Nettoyer la carte existante si elle existe
     if (mapInstanceRef.current) {
@@ -203,7 +208,7 @@ export default function InteractiveMap() {
       setError('Erreur lors du chargement de la carte');
       setIsLoading(false);
     }
-  }, [pathname]); // Re-render quand l'URL change
+  }, [pathname, isClient]); // Re-render quand l'URL change ET que le client est prêt
 
   // Cleanup à la destruction du composant
   useEffect(() => {
@@ -214,6 +219,32 @@ export default function InteractiveMap() {
       }
     };
   }, []);
+
+  // Ne pas rendre côté serveur
+  if (!isClient) {
+    return (
+      <section className="py-16 bg-gradient-to-br from-[#F8F9F4] to-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-light mb-4 text-[#03144A]">
+              Notre Zone d'Intervention
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Nous intervenons dans toute la Gironde pour vos projets de climatisation, chauffage et maintenance
+            </p>
+          </div>
+          <div className="relative rounded-xl overflow-hidden shadow-xl">
+            <div className="w-full h-[400px] md:h-[500px] bg-gray-100 flex items-center justify-center">
+              <div className="flex items-center space-x-3">
+                <div className="w-4 h-4 bg-[#10B981] rounded-full animate-pulse"></div>
+                <span className="text-[#03144A] font-medium">Chargement de la carte...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   if (error) {
     return (
@@ -272,7 +303,7 @@ export default function InteractiveMap() {
                   {cityName}
                 </span>
               </div>
-              <p className="text-xs text-gray-600">Zone d&apos;intervention ClimGO</p>
+              <p className="text-xs text-gray-600">Zone d'intervention ClimGO</p>
             </div>
           )}
 
@@ -281,7 +312,7 @@ export default function InteractiveMap() {
             <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg z-20">
               <div className="flex items-center space-x-2 text-xs">
                 <div className="w-2 h-2 bg-[#10B981]/50 rounded-full"></div>
-                <span className="text-gray-600">Zone de service</span>
+                <span className="text-gray-600">Zone de service 5km</span>
               </div>
             </div>
           )}
