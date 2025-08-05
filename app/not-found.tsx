@@ -4,14 +4,16 @@ import { useEffect } from 'react';
 
 export default function NotFoundPage() {
   useEffect(() => {
-    import('./zzzz/scene').then(({ start3D }) => {
-      start3D();
-    });
+    if (typeof window !== 'undefined') {
+      import('./zzzz/scene').then(({ start3D }) => {
+        start3D();
+      });
 
-    return () => {
-      const canvas = document.querySelector('canvas');
-      if (canvas) canvas.remove(); // Nettoyage du canvas à la sortie
-    };
+      return () => {
+        const canvas = document.querySelector('canvas');
+        if (canvas) canvas.remove(); // Nettoyage du canvas à la sortie
+      };
+    }
   }, []);
 
   return (
