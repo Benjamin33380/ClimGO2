@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import Link from 'next/link';
 
 // Configuration des villes avec leurs coordonnées
 const CITIES_CONFIG = {
@@ -147,7 +148,7 @@ export default function MapContent() {
           justify-content: center;
           box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         ">
-          <img src="/public/favicon/favicon-16x16.png" alt="ClimGO" style="width: 24px; height: 24px;" />
+          <img src="/favicon/favicon-16x16.png" alt="ClimGO" style="width: 24px; height: 24px;" />
         </div>
       `,
       className: 'custom-climgo-marker',
@@ -245,7 +246,7 @@ export default function MapContent() {
 
   if (error) {
     return (
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#f8f9f4]">
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-gray-100 rounded-lg p-8 text-center">
             <div className="text-red-600 mb-2 text-2xl">⚠️</div>
@@ -271,19 +272,19 @@ export default function MapContent() {
               : `Découvrez nos services de climatisation et chauffage à ${cityName}`
             }
           </p>
-          <a 
+          <Link 
             href="tel:0766460008" 
-            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300"
+            className="inline-block bg-[#03144a] text-[#f8f9f4] px-8 py-3 rounded-lg font-medium hover:bg-[#03144a] transition-colors duration-300"
           >
-            Nous appeler : 07 66 46 00 08
-          </a>
+            Nous appeler 
+          </Link>
         </div>
 
         <div className="relative rounded-xl overflow-hidden shadow-xl">
           {isLoading && (
-            <div className="absolute inset-0 bg-gray-100 flex items-center justify-center z-20">
+            <div className="absolute inset-0 bg-gray-100 flex items-center justify-center z-10">
               <div className="flex items-center space-x-3">
-                <div className="w-4 h-4 bg-blue-600 rounded-full animate-pulse"></div>
+                <div className="w-4 h-4 bg-[#03144a] rounded-full animate-pulse"></div>
                 <span className="text-gray-900 font-medium">Chargement de la carte...</span>
               </div>
             </div>
