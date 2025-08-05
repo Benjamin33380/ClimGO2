@@ -11,9 +11,10 @@ export default function ContactPage() {
           className="absolute inset-0"
           style={{
             backgroundImage: "url('/contact.png')",
-            backgroundSize: "100% auto",
-            backgroundPosition: "center top",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
+            backgroundAttachment: "scroll",
             zIndex: 0
           }}
         ></div>
