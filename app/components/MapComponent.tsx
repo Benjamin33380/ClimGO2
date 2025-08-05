@@ -1,5 +1,4 @@
 // components/MapContent.tsx
-// components/MapContent.tsx
 'use client';
 
 import { usePathname } from 'next/navigation';
@@ -201,20 +200,29 @@ export default function MapContent() {
         maxZoom: 18
       }).addTo(map);
 
+      // Ajouter le cercle de 15km avec couleur gris transparente
+      const circle = L.circle([cityConfig.lat, cityConfig.lng], {
+        color: '#9CA3AF',        // Couleur de la bordure (gris)
+        fillColor: '#9CA3AF',    // Couleur de remplissage (gris)
+        fillOpacity: 0.2,        // Transparence du remplissage
+        opacity: 0.4,            // Transparence de la bordure
+        radius: 15000,           // Rayon de 15km en mètres
+        weight: 2                // Épaisseur de la bordure
+      }).addTo(map);
+
       // Ajouter le marqueur
       const marker = L.marker([cityConfig.lat, cityConfig.lng], {
         icon: createCustomIcon()
       }).addTo(map);
 
       const cityName = city.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
+      
+      // Popup modifié : juste le nom ClimGO et la ville
       marker.bindPopup(`
         <div style="text-align: center; padding: 8px;">
-          <strong style="color: #03144A;">ClimGO - ${cityName}</strong><br>
-          <small style="color: #10B981;">Zone d'intervention</small>
+          <strong style="color: #03144A;">ClimGO - ${cityName}</strong>
         </div>
       `);
-
-      // Suppression du cercle de zone
 
       mapInstanceRef.current = map;
       setIsLoading(false);
@@ -224,7 +232,7 @@ export default function MapContent() {
       setError('Erreur lors du chargement de la carte');
       setIsLoading(false);
     }
-  }, [city]); // ← CORRECTION : Dépendance sur 'city' au lieu de 'pathname'
+  }, [city]);
 
   useEffect(() => {
     return () => {
