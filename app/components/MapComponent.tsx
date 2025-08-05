@@ -1,4 +1,5 @@
 // components/MapContent.tsx
+// components/MapContent.tsx
 'use client';
 
 import { usePathname } from 'next/navigation';
@@ -139,18 +140,15 @@ export default function MapContent() {
         <div style="
           width: 40px;
           height: 40px;
-          background: linear-gradient(135deg, #10B981 0%, #03144A 100%);
-          border: 2px solid white;
+          background: white;
+          border: 2px solid #03144A;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
           box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-          font-weight: bold;
-          color: white;
-          font-size: 12px;
         ">
-          CG
+          <img src="/public/favicon/favicon.svg" alt="ClimGO" style="width: 24px; height: 24px;" />
         </div>
       `,
       className: 'custom-climgo-marker',
@@ -216,14 +214,7 @@ export default function MapContent() {
         </div>
       `);
 
-      // Ajouter le cercle de zone
-      L.circle([cityConfig.lat, cityConfig.lng], {
-        color: '#10B981',
-        fillColor: '#10B981',
-        fillOpacity: 0.1,
-        radius: 5000,
-        weight: 2
-      }).addTo(map);
+      // Suppression du cercle de zone
 
       mapInstanceRef.current = map;
       setIsLoading(false);
@@ -261,17 +252,23 @@ export default function MapContent() {
 
   return (
     <section className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="w-full px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-light mb-4 text-gray-900">
             {isDefaultPage ? 'Notre Zone d\'Intervention' : `ClimGO à ${cityName}`}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
             {isDefaultPage 
               ? 'Nous intervenons dans toute la Gironde pour vos projets de climatisation, chauffage et maintenance'
               : `Découvrez nos services de climatisation et chauffage à ${cityName}`
             }
           </p>
+          <a 
+            href="tel:0766460008" 
+            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300"
+          >
+            Nous appeler : 07 66 46 00 08
+          </a>
         </div>
 
         <div className="relative rounded-xl overflow-hidden shadow-xl">
@@ -290,7 +287,7 @@ export default function MapContent() {
           />
           
           {!isLoading && (
-            <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg z-20">
+            <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg z-20">
               <div className="flex items-center space-x-2 mb-1">
                 <div className="w-3 h-3 bg-blue-600 rounded-full animate-pulse"></div>
                 <span className="text-gray-900 font-semibold">
@@ -300,27 +297,6 @@ export default function MapContent() {
               <p className="text-xs text-gray-600">Zone d&apos;intervention ClimGO</p>
             </div>
           )}
-
-          {!isLoading && (
-            <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg z-20">
-              <div className="flex items-center space-x-2 text-xs">
-                <div className="w-2 h-2 bg-blue-600/50 rounded-full"></div>
-                <span className="text-gray-600">Zone de service</span>
-              </div>
-            </div>
-          )}
-        </div>
-
-        <div className="text-center mt-8">
-          <p className="text-gray-600 mb-4">
-            {isDefaultPage 
-              ? 'Besoin d\'un devis personnalisé dans votre ville ?'
-              : `Besoin d'une intervention à ${cityName} ?`
-            }
-          </p>
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300">
-            Demander un devis gratuit
-          </button>
         </div>
       </div>
     </section>
