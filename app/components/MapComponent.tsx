@@ -1,4 +1,5 @@
 // components/MapContent.tsx
+// components/MapContent.tsx
 'use client';
 
 import { usePathname } from 'next/navigation';
@@ -58,7 +59,6 @@ const CITIES_CONFIG = {
   'martignas-sur-jalle': { lat: 44.8439, lng: -0.7811, zoom: 13 }
 };
 
-// Pages qui doivent afficher Marcheprime par défaut
 const DEFAULT_PAGES = [
   '',
   'accueil',
@@ -82,12 +82,10 @@ export default function MapContent() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Extraire l'info de la page courante
   const getCurrentPageInfo = () => {
     const segments = pathname.split('/').filter(Boolean);
     const lastSegment = segments[segments.length - 1] || '';
     
-    // Si le dernier segment est une ville connue
     if (CITIES_CONFIG[lastSegment as keyof typeof CITIES_CONFIG]) {
       return {
         city: lastSegment as keyof typeof CITIES_CONFIG,
@@ -95,7 +93,6 @@ export default function MapContent() {
       };
     }
     
-    // Si c'est une page par défaut
     if (DEFAULT_PAGES.includes(lastSegment)) {
       return {
         city: 'marcheprime' as keyof typeof CITIES_CONFIG,
@@ -103,14 +100,12 @@ export default function MapContent() {
       };
     }
     
-    // Fallback vers Marcheprime
     return {
       city: 'marcheprime' as keyof typeof CITIES_CONFIG,
       isDefaultPage: true
     };
   };
 
-  // Créer une icône personnalisée ClimGO
   const createCustomIcon = () => {
     return L.divIcon({
       html: `
@@ -138,16 +133,21 @@ export default function MapContent() {
     });
   };
 
+  // Calcul de la ville courante à l'extérieur de useEffect
+  const { city, isDefaultPage } = getCurrentPageInfo();
+  
   useEffect(() => {
     if (!mapRef.current) return;
 
-    // Nettoyer la carte existante si elle existe
+    setIsLoading(true);
+    setError(null);
+
+    // Nettoyer la carte existante
     if (mapInstanceRef.current) {
       mapInstanceRef.current.remove();
       mapInstanceRef.current = null;
     }
 
-    const { city } = getCurrentPageInfo();
     const cityConfig = CITIES_CONFIG[city];
 
     if (!cityConfig) {
@@ -157,7 +157,7 @@ export default function MapContent() {
     }
 
     try {
-      // Initialiser la carte avec les coordonnées de la ville
+      // Créer une nouvelle carte
       const map = L.map(mapRef.current, {
         zoomControl: true,
         scrollWheelZoom: true,
@@ -165,7 +165,7 @@ export default function MapContent() {
         touchZoom: true
       }).setView([cityConfig.lat, cityConfig.lng], cityConfig.zoom);
 
-      // Ajouter les tuiles MapTiler
+      // Ajouter les tuiles
       L.tileLayer('https://api.maptiler.com/maps/satellite/{z}/{x}/{y}.png?key=6Wc87ApEs23sBOY0iu6X', {
         attribution: '&copy; <a href="https://www.maptiler.com/">MapTiler</a> | ClimGO',
         tileSize: 512,
@@ -173,12 +173,11 @@ export default function MapContent() {
         maxZoom: 18
       }).addTo(map);
 
-      // Ajouter un marqueur personnalisé pour la ville
+      // Ajouter le marqueur
       const marker = L.marker([cityConfig.lat, cityConfig.lng], {
         icon: createCustomIcon()
       }).addTo(map);
 
-      // Ajouter un popup au marqueur
       const cityName = city.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
       marker.bindPopup(`
         <div style="text-align: center; padding: 8px;">
@@ -187,12 +186,12 @@ export default function MapContent() {
         </div>
       `);
 
-      // Ajouter un cercle pour montrer la zone de service
+      // Ajouter le cercle de zone
       L.circle([cityConfig.lat, cityConfig.lng], {
         color: '#10B981',
         fillColor: '#10B981',
         fillOpacity: 0.1,
-        radius: 5000, // 5km de rayon
+        radius: 5000,
         weight: 2
       }).addTo(map);
 
@@ -204,9 +203,8 @@ export default function MapContent() {
       setError('Erreur lors du chargement de la carte');
       setIsLoading(false);
     }
-  }, [pathname]);
+  }, [city]); // ← CORRECTION : Dépendance sur 'city' au lieu de 'pathname'
 
-  // Cleanup à la destruction du composant
   useEffect(() => {
     return () => {
       if (mapInstanceRef.current) {
@@ -229,15 +227,13 @@ export default function MapContent() {
     );
   }
 
-  const { city, isDefaultPage } = getCurrentPageInfo();
   const cityName = city.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
 
   return (
-    <section className="py-16 bg-gradient-to-br from-[#F8F9F4] to-white">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
-        {/* En-tête de section */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-light mb-4 text-[#03144A]">
+          <h2 className="text-3xl md:text-4xl font-light mb-4 text-gray-900">
             {isDefaultPage ? 'Notre Zone d\'Intervention' : `ClimGO à ${cityName}`}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -248,13 +244,12 @@ export default function MapContent() {
           </p>
         </div>
 
-        {/* Carte */}
         <div className="relative rounded-xl overflow-hidden shadow-xl">
           {isLoading && (
             <div className="absolute inset-0 bg-gray-100 flex items-center justify-center z-20">
               <div className="flex items-center space-x-3">
-                <div className="w-4 h-4 bg-[#10B981] rounded-full animate-pulse"></div>
-                <span className="text-[#03144A] font-medium">Chargement de la carte...</span>
+                <div className="w-4 h-4 bg-blue-600 rounded-full animate-pulse"></div>
+                <span className="text-gray-900 font-medium">Chargement de la carte...</span>
               </div>
             </div>
           )}
@@ -264,12 +259,11 @@ export default function MapContent() {
             className="w-full h-[400px] md:h-[500px] relative z-10"
           />
           
-          {/* Overlay avec info de la ville */}
           {!isLoading && (
             <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg z-20">
               <div className="flex items-center space-x-2 mb-1">
-                <div className="w-3 h-3 bg-[#10B981] rounded-full animate-pulse"></div>
-                <span className="text-[#03144A] font-semibold">
+                <div className="w-3 h-3 bg-blue-600 rounded-full animate-pulse"></div>
+                <span className="text-gray-900 font-semibold">
                   {cityName}
                 </span>
               </div>
@@ -277,18 +271,16 @@ export default function MapContent() {
             </div>
           )}
 
-          {/* Légende */}
           {!isLoading && (
             <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg z-20">
               <div className="flex items-center space-x-2 text-xs">
-                <div className="w-2 h-2 bg-[#10B981]/50 rounded-full"></div>
+                <div className="w-2 h-2 bg-blue-600/50 rounded-full"></div>
                 <span className="text-gray-600">Zone de service</span>
               </div>
             </div>
           )}
         </div>
 
-        {/* Call-to-action */}
         <div className="text-center mt-8">
           <p className="text-gray-600 mb-4">
             {isDefaultPage 
@@ -296,7 +288,7 @@ export default function MapContent() {
               : `Besoin d'une intervention à ${cityName} ?`
             }
           </p>
-          <button className="bg-gradient-to-r from-[#03144A] to-[#10B981] text-white px-8 py-3 rounded-full font-medium hover:scale-105 transition-transform duration-300 shadow-lg">
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300">
             Demander un devis gratuit
           </button>
         </div>
