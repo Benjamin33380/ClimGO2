@@ -201,7 +201,7 @@ export default function MapContent() {
       }).addTo(map);
 
       // Ajouter le cercle de 15km avec couleur gris transparente
-      const circle = L.circle([cityConfig.lat, cityConfig.lng], {
+      L.circle([cityConfig.lat, cityConfig.lng], {
         color: '#9CA3AF',        // Couleur de la bordure (gris)
         fillColor: '#9CA3AF',    // Couleur de remplissage (gris)
         fillOpacity: 0.2,        // Transparence du remplissage
