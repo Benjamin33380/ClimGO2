@@ -143,7 +143,7 @@ export default function PremiumHeatingPage() {
     <div className="min-h-screen bg-[#F8F9F4] text-[#03144A]">
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen pt-24 md:pt-0 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-[#F8F9F4]" />
         
         {/* Background effects */}
