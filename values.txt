@@ -1,1 +1,0 @@
-Bg Header = #0B1C3D
