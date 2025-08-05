@@ -272,7 +272,7 @@ export default function InteractiveMap() {
                   {cityName}
                 </span>
               </div>
-              <p className="text-xs text-gray-600">Zone d'intervention ClimGO</p>
+              <p className="text-xs text-gray-600">Zone d&apos;intervention ClimGO</p>
             </div>
           )}
 
