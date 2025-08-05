@@ -32,7 +32,6 @@ export const metadata: Metadata = {
     "confort thermique La Teste-de-Buch",
     "entreprise chauffage La Teste-de-Buch"
   ],
-   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à La Teste-de-Buch - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à La Teste-de-Buch. Certifié RGE.",
@@ -58,6 +57,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.climgo.fr"),
   alternates: {
     canonical: "/la-teste-de-buch-chauffage-climatisation"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    }
   }
 };
 

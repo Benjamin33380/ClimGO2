@@ -32,7 +32,6 @@ export const metadata: Metadata = {
     "confort thermique Saint-Aubin-de-Médoc",
     "entreprise chauffage Saint-Aubin-de-Médoc"
   ],
-   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Saint-Aubin-de-Médoc - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Aubin-de-Médoc. Certifié RGE.",
@@ -58,6 +57,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.climgo.fr"),
   alternates: {
     canonical: "/saint-aubin-de-medoc-chauffage-climatisation"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    }
   }
 };
 

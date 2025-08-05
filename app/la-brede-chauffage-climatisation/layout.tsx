@@ -32,7 +32,6 @@ export const metadata: Metadata = {
     "confort thermique La Brède",
     "entreprise chauffage La Brède"
   ],
-   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à La Brède - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à La Brède. Profitez d'un service local, certifié RGE.",
@@ -58,6 +57,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.climgo.fr"),
   alternates: {
     canonical: "/la-brede-chauffage-climatisation"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    }
   }
 };
 

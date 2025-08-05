@@ -32,7 +32,6 @@ export const metadata: Metadata = {
     "confort thermique Biscarrosse",
     "entreprise chauffage Biscarrosse"
   ],
-   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Biscarrosse - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Biscarrosse. Profitez d'un service local, certifié RGE.",
@@ -58,6 +57,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.climgo.fr"),
   alternates: {
     canonical: "/biscarrosse-chauffage-climatisation"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    }
   }
 };
 

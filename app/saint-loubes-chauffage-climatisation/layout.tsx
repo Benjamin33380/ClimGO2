@@ -32,7 +32,6 @@ export const metadata: Metadata = {
     "confort thermique Saint-Loubès",
     "entreprise chauffage Saint-Loubès"
   ],
-   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Saint-Loubès - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Saint-Loubès. Profitez d'un service local, certifié RGE.",
@@ -58,6 +57,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.climgo.fr"),
   alternates: {
     canonical: "/saint-loubes-chauffage-climatisation"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    }
   }
 };
 

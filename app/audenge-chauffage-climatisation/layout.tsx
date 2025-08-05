@@ -32,7 +32,6 @@ export const metadata: Metadata = {
     "confort thermique Audenge",
     "entreprise chauffage Audenge"
   ],
-   robots: "index, follow",
   openGraph: {
     title: "Chauffage, Climatisation et PAC à Audenge - ClimGO",
     description: "Installation, entretien et dépannage de chauffage, climatisation, chauffe-eau et pompes à chaleur à Audenge. Profitez d'un service local, certifié RGE.",
