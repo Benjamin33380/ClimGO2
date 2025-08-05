@@ -4,16 +4,21 @@ import { useEffect } from 'react';
 
 export default function NotFoundPage() {
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      import('./zzzz/scene').then(({ start3D }) => {
-        start3D();
-      });
-
-      return () => {
+    let cleanup = () => {};
+    const run = async () => {
+      const { start3D } = await import('./zzzz/scene');
+      start3D();
+      cleanup = () => {
         const canvas = document.querySelector('canvas');
-        if (canvas) canvas.remove(); // Nettoyage du canvas à la sortie
+        if (canvas) canvas.remove();
       };
+    };
+
+    if (typeof window !== 'undefined') {
+      run();
     }
+
+    return cleanup;
   }, []);
 
   return (
