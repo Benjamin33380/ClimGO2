@@ -78,12 +78,12 @@ export default function PremiumMaintenancePage() {
     {
       icon: "🔧",
       title: "Expertise maintenance",
-      desc: "15 ans d'expérience dans l'entretien"
+      desc: "10 ans d'expérience dans l'entretien"
     },
     {
       icon: "⚡",
       title: "Intervention rapide",
-      desc: "Dépannage en 24h chrono"
+      desc: "Dépannage sous contrat"
     },
     {
       icon: "🛡️",
