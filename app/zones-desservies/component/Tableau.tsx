@@ -112,7 +112,7 @@ const SimpleCitiesSection = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center">
+        <div className="text-center mt-20">
           <div className="bg-[#F8F9F4] rounded-xl p-8 border border-[#03144a]/20">
             <h3 className="text-2xl font-semibold mb-4">
               Votre ville n&apos;apparaît pas ?
