@@ -120,14 +120,6 @@ export default function ZonesDesservies() {
 
   return (
     <div className="min-h-screen bg-[#F8F9F4]">
-      {/* Fil d’Ariane */}
-      <div className="max-w-7xl mx-auto px-4 mt-8">
-        <nav className="text-sm text-gray-600 mb-4">
-          <Link href="/" className="hover:underline text-[#03144a]">Accueil</Link>
-          <span className="mx-2 text-gray-400">/</span>
-          <Link href="/zones-desservies" className="hover:underline text-[#03144a] font-semibold">Zones desservies</Link>
-        </nav>
-      </div>
       {/* Hero Section */}
       {/* <div className="absolute inset-0 bg-linear-to-r from-[#03144a]/30 to-transparent"></div> */}
       <div
@@ -173,7 +165,13 @@ export default function ZonesDesservies() {
               </div>
             </div>
       </div>
-
+      <div className="max-w-7xl mx-auto px-4 mt-8">
+        <nav className="text-sm text-gray-600 mb-4">
+          <Link href="/" className="hover:underline text-[#03144a]">Accueil</Link>
+          <span className="mx-2 text-gray-400">/</span>
+          <Link href="/zones-desservies" className="hover:underline text-[#03144a] font-semibold">Zones desservies</Link>
+        </nav>
+      </div>
       {/* Services Section */}
       <section className="py-16 ">
         <div className="max-w-7xl mx-auto px-4">
