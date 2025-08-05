@@ -286,7 +286,7 @@ export default function MapContent() {
           
           <div
             ref={mapRef}
-            className="fixed inset-0 z-10"
+            className="w-full h-[400px] md:h-[500px] relative z-10"
           />
           
           {!isLoading && (
