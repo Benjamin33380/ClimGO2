@@ -193,7 +193,7 @@ export default function PremiumHeatingPage() {
           </h1>
           
           <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-            Découvrez nos solutions thermiques d'exception. Performance, économies et confort réunis dans des technologies de pointe.
+            D&eacute;couvrez nos solutions thermiques d&apos;exception. Performance, &eacute;conomies et confort r&eacute;unis dans des technologies de pointe.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -223,7 +223,7 @@ export default function PremiumHeatingPage() {
             </h2>
             <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#03144a] to-transparent mx-auto mb-8" />
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              Chaque solution est pensée pour maximiser votre confort tout en optimisant vos économies d'énergie
+              Chaque solution est pens&eacute;e pour maximiser votre confort tout en optimisant vos &eacute;conomies d&rsquo;&eacute;nergie
             </p>
           </div>
 
@@ -311,7 +311,7 @@ export default function PremiumHeatingPage() {
               Pourquoi nous <span className="text-[#03144a]">choisir</span> ?
             </h2>
             <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-              L'alliance du savoir-faire technique et de l'excellence service
+              L&apos;;alliance du savoir-faire technique et de l&apos;excellence service
             </p>
           </div>
 
@@ -341,7 +341,7 @@ export default function PremiumHeatingPage() {
         <div className="max-w-4xl mx-auto text-center px-6">
           <div className="bg-gradient-to-br from-slate[#F8F9F4] to-slate-[#F8F9F4] rounded-3xl p-16 border border-slate-600/30 backdrop-blur-sm">
             <h2 className="text-4xl md:text-5xl font-light mb-8">
-              Prêt à optimiser votre
+              Pr&ecirc;t &agrave; optimiser votre
               <br />
               <span className="text-[#03144a]">confort thermique</span> ?
             </h2>
