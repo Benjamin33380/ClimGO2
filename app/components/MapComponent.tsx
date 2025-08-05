@@ -147,7 +147,7 @@ export default function MapContent() {
           justify-content: center;
           box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         ">
-          <img src="/public/favicon/favicon.svg" alt="ClimGO" style="width: 24px; height: 24px;" />
+          <img src="/public/favicon/favicon-16x16.png" alt="ClimGO" style="width: 24px; height: 24px;" />
         </div>
       `,
       className: 'custom-climgo-marker',
@@ -206,7 +206,7 @@ export default function MapContent() {
         fillColor: '#9CA3AF',    // Couleur de remplissage (gris)
         fillOpacity: 0.2,        // Transparence du remplissage
         opacity: 0.4,            // Transparence de la bordure
-        radius: 15000,           // Rayon de 15km en mètres
+        radius: 6000,           // Rayon de 15km en mètres
         weight: 2                // Épaisseur de la bordure
       }).addTo(map);
 
