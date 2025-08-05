@@ -10,7 +10,7 @@ const DynamicMapContent = dynamic(() => import('./MapComponent'), {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-light mb-4 text-[#03144A]">
-            Notre Zone d'Intervention
+            Notre Zone d&apos;Intervention
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Nous intervenons dans toute la Gironde pour vos projets de climatisation, chauffage et maintenance
