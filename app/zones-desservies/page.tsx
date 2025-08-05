@@ -127,10 +127,12 @@ export default function ZonesDesservies() {
     <div
           className="relative w-full min-h-[100dvh] flex flex-col justify-between pt-80 px-4 pb-12"
           style={{
-            backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/mo.png')",
+            backgroundImage:
+              "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/mo.png')",
             backgroundSize: 'cover',
-            backgroundAttachment: 'fixed',
+            backgroundAttachment: 'scroll',
             backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
           }}
         >
             <div className="text-center">
