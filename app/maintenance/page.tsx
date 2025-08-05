@@ -350,7 +350,7 @@ export default function PremiumMaintenancePage() {
               Pourquoi nous <span className="text-[#03144A]">choisir</span> ?
             </h2>
             <p className="text-xl text-[#03144A] max-w-2xl mx-auto">
-              L'alliance du savoir-faire technique et de l'excellence service
+              L&apos;alliance du savoir-faire technique et de l&apos;excellence service
             </p>
           </div>
 
@@ -386,7 +386,7 @@ export default function PremiumMaintenancePage() {
             </h2>
             
             <p className="text-xl text-[#03144A] mb-12 leading-relaxed">
-              Nos experts vous accompagnent dans l'entretien de vos équipements pour garantir leur longévité
+              Nos experts vous accompagnent dans l&apos;entretien de vos équipements pour garantir leur longévité
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
