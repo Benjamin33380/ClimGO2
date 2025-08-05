@@ -96,21 +96,20 @@ const SimpleCitiesSection = () => {
           </button>
         </div>
 
-        {(showCities || searchTerm) && (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-12">
-            {filteredCities.map((city) => (
-              <Link
-                key={city.name}
-                href={city.url}
-                className="block p-4 bg-[#F8F9F4] rounded-lg border border-[#03144a]/20 hover:border-[#03144a] hover:bg-[#03144a]/10 transition-all"
-              >
-                <h3 className="text-[#03144a] font-medium text-center">
-                  {city.name}
-                </h3>
-              </Link>
-            ))}
-          </div>
-        )}
+        {/* Toujours rendre les liens des villes dans le DOM pour le SEO, mais masquer visuellement si besoin */}
+        <div aria-hidden={!showCities && !searchTerm} style={{ display: !showCities && !searchTerm ? 'none' : 'grid' }} className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {filteredCities.map((city) => (
+            <Link
+              key={city.name}
+              href={city.url}
+              className="block p-4 bg-[#F8F9F4] rounded-lg border border-[#03144a]/20 hover:border-[#03144a] hover:bg-[#03144a]/10 transition-all"
+            >
+              <h3 className="text-[#03144a] font-medium text-center">
+                {city.name}
+              </h3>
+            </Link>
+          ))}
+        </div>
 
         {/* CTA */}
         <div className="text-center">
