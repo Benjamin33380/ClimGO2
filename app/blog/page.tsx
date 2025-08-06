@@ -167,11 +167,11 @@ function BlogHero({ featuredArticle }: { featuredArticle: ArticlePreview | null 
 // Composant de catégories/filtres
 function CategoryFilter() {
   const categories = [
-    { name: "Tous les articles", icon: "📚", active: true },
-    { name: "Chauffage", icon: "🔥", active: false },
-    { name: "Climatisation", icon: "❄️", active: false },
-    { name: "Maintenance", icon: "🔧", active: false },
-    { name: "Économies", icon: "💡", active: false }
+    { name: "Tous les articles", active: true },
+    { name: "Chauffage", active: false },
+    { name: "Climatisation", active: false },
+    { name: "Maintenance", active: false },
+    { name: "Économies", active: false }
   ]
 
   return (
@@ -186,7 +186,7 @@ function CategoryFilter() {
                 : 'bg-[#f8f9f4] text-[#03144a] border border-gray-200 hover:border-[#03144a] hover:text-[#03144a]'
             }`}
           >
-            <span className="mr-2">{category.icon}</span>
+            <span className="mr-2"></span>
             {category.name}
           </button>
         ))}
