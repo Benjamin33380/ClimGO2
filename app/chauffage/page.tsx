@@ -23,7 +23,7 @@ export default function PremiumHeatingPage() {
         "Fonctionnement jusqu'à -15°C"
       ],
       description: "Technologie de pointe qui transforme l'énergie gratuite de l'air en chaleur pour votre habitation. Solution idéale pour remplacer votre ancienne chaudière.",
-      price: "À partir de 9 900€",
+      price: "À partir de 9 990€",
       gradient: "from-[#03144A] to-[#DC2626]"
     },
     {
@@ -39,7 +39,7 @@ export default function PremiumHeatingPage() {
         "Design ultra-moderne"
       ],
       description: "Un seul équipement pour votre confort toute l'année. Chauffage l'hiver, climatisation l'été, avec une efficacité énergétique remarquable.",
-      price: "À partir de 1 499€",
+      price: "À partir de 1 490€",
       gradient: "from-[#03144A] to-[#DC2626]"
     },
     {
@@ -71,7 +71,7 @@ export default function PremiumHeatingPage() {
         "Installation sans gros œuvre"
       ],
       description: "L'évolution des radiateurs traditionnels. Design contemporain, performance énergétique et facilité d'installation réunis.",
-      price: "À partir de 190€",
+      price: "À partir de 290€",
       gradient: "from-[#03144A] to-[#DC2626]"
     }
   ];

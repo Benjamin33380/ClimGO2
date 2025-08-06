@@ -4,6 +4,8 @@ import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Tableau from '../zones-desservies/component/Tableau';
+import { Wrench, Ruler, ShieldCheck, BadgeEuro } from 'lucide-react';
+
 export default function PremiumClimatisationPage() {
   const solutionsRef = useRef<HTMLDivElement>(null);
 
@@ -21,7 +23,7 @@ export default function PremiumClimatisationPage() {
         "Télécommande intelligente"
       ],
       description: "Le choix le plus courant, parfait pour les logements individuels ou petits espaces professionnels. Compacte, performante et facile à intégrer.",
-      price: "À partir de 890€",
+      price: "À partir de 1 490€",
       gradient: "from-[#03144A] to-[#2563EB]"
     },
     {
@@ -37,7 +39,7 @@ export default function PremiumClimatisationPage() {
         "Compatible domotique"
       ],
       description: "Solution haut de gamme intégrée dans les combles ou faux plafonds, idéale pour maisons neuves ou rénovées. Invisible et ultra silencieuse.",
-      price: "À partir de 3 500€",
+      price: "À partir de 9 990€",
       gradient: "from-[#03144A] to-[#2563EB]"
     },
     {
@@ -53,7 +55,7 @@ export default function PremiumClimatisationPage() {
         "Parfaite pour remplacer radiateur"
       ],
       description: "Idéale en rénovation, notamment pour remplacer un radiateur existant, sans gros travaux. Alternative murale pour les zones basses.",
-      price: "À partir de 1 200€",
+      price: "À partir de 1 690€",
       gradient: "from-[#03144A] to-[#2563EB]"
     },
     {
@@ -69,30 +71,30 @@ export default function PremiumClimatisationPage() {
         "Parfaite pour grands volumes"
       ],
       description: "Installée en plafond, parfaite pour les bureaux, commerces ou grands séjours. Discrétion totale pour grands volumes.",
-      price: "À partir de 1 800€",
+      price: "À partir de 1 990€",
       gradient: "from-[#03144A] to-[#2563EB]"
     }
   ];
 
   const advantages = [
     {
-      icon: "❄️",
+      icon: <Wrench className="inline w-6 h-6 text-[#2563EB]" />,
       title: "Expertise climatique",
-      desc: "15 ans d'expérience dans le rafraîchissement"
+      desc: "10 ans d'expérience dans le rafraîchissement"
     },
     {
-      icon: "⚡",
-      title: "Installation express",
-      desc: "Mise en service en 24h chrono"
+      icon: <Ruler className="inline w-6 h-6 text-[#2563EB]" />,
+      title: "Installation sur mesure",
+      desc: "Prestation certifiée"
     },
     {
-      icon: "🔧",
-      title: "Garantie premium",
+      icon: <ShieldCheck className="inline w-6 h-6 text-[#2563EB]" />,
+      title: "Garantie",
       desc: "SAV réactif et pièces d'origine"
     },
     {
-      icon: "💰",
-      title: "Financement 0%",
+      icon: <BadgeEuro className="inline w-6 h-6 text-[#2563EB]" />,
+      title: "Financement",
       desc: "Solutions adaptées à votre budget"
     }
   ];
@@ -275,7 +277,7 @@ export default function PremiumClimatisationPage() {
                           </div>
 
                           {/* Image Side */}
-                          <div className="relative bg-gradient-to-br from-[#03144A] to-[#2563EB] flex items-center justify-center p-12">
+                          <div className="relative bg-gradient-to-br from-[#f9f8f4] to-[#f9f8f4] flex items-center justify-center p-12">
                             <div className="relative w-80 h-80">
                               <Image
                                 src={solution.image}
@@ -284,8 +286,7 @@ export default function PremiumClimatisationPage() {
                                 className="object-contain filter drop-shadow-2xl"
                               />
                             </div>
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#03144A]/20 to-transparent rounded-bl-full" />
-                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#2563EB]/20 to-transparent rounded-tr-full" />
+                          
                           </div>
                         </div>
                       </div>
