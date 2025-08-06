@@ -96,7 +96,7 @@ async function getRelatedArticles(currentArticleId: string): Promise<Article[]> 
 // Composant Hero avec breadcrumb
 function ArticleHero({ article }: { article: Article }) {
   return (
-    <div className="relative bg-gradient-to-b from-[#f8f9f4] to-[#f8f9f4] border-b border-gray-100">
+    <div className="relative bg-gradient-to-b from-[#f8f9f4] to-[#f8f9f4] border-b border-gray-100 pt-42">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
         <nav className="flex items-center text-sm text-gray-500 mb-6">

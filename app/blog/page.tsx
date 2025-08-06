@@ -73,7 +73,7 @@ async function getFeaturedArticle(): Promise<ArticlePreview | null> {
 // Composant Hero avec article en vedette
 function BlogHero({ featuredArticle }: { featuredArticle: ArticlePreview | null }) {
   return (
-    <div className="relative bg-gradient-to-br from-[#03144a] via-[#03144a] to-[#03144a] overflow-hidden">
+    <div className="relative bg-gradient-to-br from-[#03144a] via-[#03144a] to-[#03144a] overflow-hidden pt-42">
       <div className="absolute inset-0 bg-black opacity-10"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 scroll-mt-32">
         <div className="text-center">
@@ -88,7 +88,7 @@ function BlogHero({ featuredArticle }: { featuredArticle: ArticlePreview | null 
             Blog ClimGo
           </h1>
           
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed py-6">
             Découvrez nos conseils d&apos;experts en chauffage et climatisation. 
             Installation, maintenance, économies d&apos;énergie : tout ce que vous devez savoir !
           </p>
