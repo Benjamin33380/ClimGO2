@@ -306,8 +306,11 @@ export default async function BlogPage() {
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {otherArticles.map((article) => (
-                <article
-                  key={article.id}
+                <Link
+                href={`/blog/${article.slug}`}
+                key={article.id}
+                >
+                <article  
                   className="group bg-[#f8f9f4] rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-[#03144a]"
                 >
                   <div className="relative">
@@ -360,17 +363,18 @@ export default async function BlogPage() {
                       </p>
                     )}
 
-                    <Link
-                      href={`/blog/${article.slug}`}
-                      className="inline-flex items-center text-[#03144a] hover:text-[#03144a] font-semibold transition-colors duration-200 group"
-                    >
+                    
+
+                      <p className="inline-flex items-center text-[#03144a] hover:text-[#03144a] font-semibold transition-colors duration-200 group">
                       Lire l&apos;article
                       <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
-                    </Link>
+                      </p>
+                    
                   </div>
                 </article>
+                </Link>
               ))}
             </div>
 
