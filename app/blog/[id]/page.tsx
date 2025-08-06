@@ -240,7 +240,7 @@ function ExpertiseZone() {
   return (
     <div className="bg-gray-50 rounded-xl p-6">
       <h3 className="font-bold text-lg text-[#03144a] mb-4 text-center">
-        Nos Services d'Expert
+        Nos Services d&apos;Expert
       </h3>
       <div className="grid grid-cols-2 gap-4">
         {services.map((service, index) => (
@@ -568,7 +568,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <section className="bg-gradient-to-r from-[#03144a] to-[#03144a] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Besoin d'un professionnel pour vos installations ?
+            Besoin d&apos;un professionnel pour vos installations ?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
             Notre équipe d&apos;experts ClimGo vous accompagne pour tous vos projets de chauffage et climatisation.
