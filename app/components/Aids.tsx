@@ -10,7 +10,7 @@ export default function Aids() {
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#f8f8f9] mb-6" style={{ color: '#f8f8f9' }}>
+            <h2 className="text-3xl md:text-4xl font-medium text-[#f8f8f9] mb-6" style={{ color: '#f8f8f9' }}>
               Profitez des aides financières !
             </h2>
             <p className="text-lg text-[#f8f8f9] max-w-4xl mx-auto leading-relaxed" style={{ color: '#f8f8f9' }}>

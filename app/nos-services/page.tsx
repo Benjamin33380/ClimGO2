@@ -26,7 +26,7 @@ export default function ServicesPage() {
       >
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="container relative z-10 mx-auto px-4 text-center mt-64">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-xl">
+          <h1 className="text-4xl md:text-5xl font-medium text-white mb-6 drop-shadow-xl">
             Notre savoir-faire à votre service
           </h1>
           <strong className="text-xl text-white max-w-3xl mx-auto mb-8">
@@ -81,7 +81,7 @@ export default function ServicesPage() {
             </div>
             {activeSection === 'clim' && (
               <section className="mt-6 bg-[#f8f9f4] rounded-lg shadow-lg px-8 py-12 transition-all duration-500 ease-in-out text-center">
-                <h2 className="text-2xl font-bold text-[#1E40AF] mb-4 flex items-center justify-center gap-2">
+                <h2 className="text-2xl font-medium text-[#1E40AF] mb-4 flex items-center justify-center gap-2">
                   <IoSnow className="w-6 h-6 text-[#1E40AF]" /> Climatisation
                 </h2>
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">
@@ -98,7 +98,7 @@ export default function ServicesPage() {
                   <li>✔️ Systèmes discrets et silencieux</li>
                   <li>✔️ Entretien simple et performant</li>
                 </ul>
-                <p className="text-[#1E40AF] font-bold">
+                <p className="text-[#1E40AF] font-medium">
                   Profitez d&apos;un air pur et d&apos;une température idéale, été comme hiver.
                 </p>
                 <Link
@@ -125,7 +125,7 @@ export default function ServicesPage() {
             </div>
             {activeSection === 'chauffage' && (
               <section className="mt-6 bg-[#f8f9f4] rounded-lg shadow-lg px-8 py-12 transition-all duration-500 ease-in-out text-center">
-                <h2 className="text-2xl font-bold text-[#dc2626] mb-4 flex items-center justify-center gap-2">
+                <h2 className="text-2xl font-medium text-[#dc2626] mb-4 flex items-center justify-center gap-2">
                   <IoFlame className="w-6 h-6 text-[#dc2626]" /> Chauffage
                 </h2>
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">
@@ -142,7 +142,7 @@ export default function ServicesPage() {
                   <li>✔️ Systèmes éligibles aux aides de l&apos;État</li>
                   <li>✔️ Installation rapide et personnalisée</li>
                 </ul>
-                <p className="text-[#dc2626] font-bold">
+                <p className="text-[#dc2626] font-medium">
                   Profitez d&apos;une chaleur homogène et économe en énergie, tout au long de l&apos;année.
                 </p>
                 <Link
@@ -169,7 +169,7 @@ export default function ServicesPage() {
             </div>
             {activeSection === 'eau-chaude' && (
               <section className="mt-6 bg-[#f8f9f4] rounded-lg shadow-lg px-8 py-12 transition-all duration-500 ease-in-out text-center">
-                <h2 className="text-2xl font-bold text-[#0EA5E9] mb-4 flex items-center justify-center gap-2">
+                <h2 className="text-2xl font-medium text-[#0EA5E9] mb-4 flex items-center justify-center gap-2">
                   <IoWater className="w-6 h-6 text-[#0EA5E9]" /> Eau chaude sanitaire
                 </h2>
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">
@@ -186,7 +186,7 @@ export default function ServicesPage() {
                   <li>✔️ Installation adaptée à vos besoins et à votre logement</li>
                   <li>✔️ Équipements éligibles aux aides financières</li>
                 </ul>
-                <p className="text-[#0EA5E9] font-bold">
+                <p className="text-[#0EA5E9] font-medium">
                   Profitez d&apos;une eau chaude fiable, économique et disponible à tout moment.
                 </p>
                 <Link
@@ -213,7 +213,7 @@ export default function ServicesPage() {
             </div>
             {activeSection === 'maintenance' && (
               <section className="mt-6 bg-[#f8f9f4] rounded-lg shadow-lg px-8 py-12 transition-all duration-500 ease-in-out text-center">
-                <h2 className="text-2xl font-bold text-[#10B981] mb-4 flex items-center justify-center gap-2">
+                <h2 className="text-2xl font-medium text-[#10B981] mb-4 flex items-center justify-center gap-2">
                   <IoSettings className="w-6 h-6 text-[#10B981]" /> Maintenance
                 </h2>
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">
@@ -230,7 +230,7 @@ export default function ServicesPage() {
                   <li>✔️ Diagnostic préventif pour éviter les pannes</li>
                   <li>✔️ Intervention rapide et suivie</li>
                 </ul>
-                <p className="text-[#10B981] font-bold">
+                <p className="text-[#10B981] font-medium">
                   Prolongez la durée de vie de vos équipements en toute sérénité.
                 </p>
                 <Link
@@ -267,7 +267,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="tel:0766460008"
-            className="inline-block bg-[#03144a] hover:scale-105 hover:brightness-110 text-white font-bold py-4 px-10 rounded-full text-lg shadow-xl transition-all duration-300"
+            className="inline-block bg-[#03144a] hover:scale-105 hover:brightness-110 text-white font-medium py-4 px-10 rounded-full text-lg shadow-xl transition-all duration-300"
           >
              Je veux être rappelé
           </Link>

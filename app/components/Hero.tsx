@@ -55,10 +55,10 @@ export default function Hero() {
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
           
           <div className="relative z-20 text-center text-white px-4 md:px-8 mt-28 md:mt-12 animate-fade-in-up">
-            <h2 className="text-3xl md:text-5xl font-bold mt-12 mb-4 font-playfair text-white">
+            <h2 className="text-3xl md:text-5xl font-medium mt-12 mb-4 font-playfair text-white font-light">
               ClimGO
             </h2>
-            <h1 className="text-2xl md:text-4xl font-bold mt-4 mb-6 text-white">
+            <h1 className="text-2xl md:text-4xl font-medium mt-4 mb-6 text-white">
               Installateur de Chauffage, Climatisation & Pompe à chaleur.
             </h1>
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">

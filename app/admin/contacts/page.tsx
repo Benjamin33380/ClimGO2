@@ -217,7 +217,7 @@ export default function AdminContactsPage() {
               <Link href="/admin/dashboard" className="text-blue-600 hover:text-blue-800 mr-4">
                 ← Retour au dashboard
               </Link>
-              <h1 className="text-2xl font-bold text-gray-900">Demandes de Contact</h1>
+              <h1 className="text-2xl font-medium text-gray-900">Demandes de Contact</h1>
             </div>
             <div className="text-sm text-gray-500">
               {contacts.length} demande(s)

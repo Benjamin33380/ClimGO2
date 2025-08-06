@@ -14,7 +14,7 @@ export default function GoogleReviews() {
               ))}
             </div>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">5.0 EXCELLENT</h2>
+          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-4">5.0 EXCELLENT</h2>
           <div className="relative mb-8">
             <div className="flex flex-col items-center justify-center">
               <p className="text-lg text-gray-600 flex items-center justify-center gap-2 mb-2">

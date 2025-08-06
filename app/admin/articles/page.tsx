@@ -246,7 +246,7 @@ export default function AdminArticlesPage() {
         <div className="mb-8">
           <div className="flex justify-between items-center">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">Gestion des Articles</h1>
+              <h1 className="text-3xl font-medium text-gray-900">Gestion des Articles</h1>
               <p className="mt-2 text-gray-600">Créez et gérez les articles du blog</p>
             </div>
             <div className="flex space-x-4">

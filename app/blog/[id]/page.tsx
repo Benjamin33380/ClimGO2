@@ -132,7 +132,7 @@ function ArticleHero({ article }: { article: Article }) {
               <span className="text-[#03144a] font-medium">Expert ClimGo</span>
             </div>
             
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#03144a] mb-6 leading-tight">
+            <h1 className="text-4xl lg:text-5xl font-medium text-[#03144a] mb-6 leading-tight">
               {article.title}
             </h1>
             
@@ -187,7 +187,7 @@ function EmergencyContact() {
           </svg>
         </div>
         <div>
-          <h3 className="font-bold text-lg mb-2">Urgence 24h/7j</h3>
+          <h3 className="font-medium text-lg mb-2">Urgence 24h/7j</h3>
           <p className="text-sm opacity-90 mb-3">
             Panne de chauffage ou climatisation ? Notre équipe intervient rapidement !
           </p>
@@ -213,7 +213,7 @@ function QuoteWidget() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         </div>
-        <h3 className="font-bold text-lg mb-2">Devis Gratuit</h3>
+        <h3 className="font-medium text-lg mb-2">Devis Gratuit</h3>
         <p className="text-sm opacity-90 mb-4">
           Installation, dépannage ou maintenance : obtenez votre devis personnalisé
         </p>
@@ -239,7 +239,7 @@ function ExpertiseZone() {
 
   return (
     <div className="bg-gray-50 rounded-xl p-6">
-      <h3 className="font-bold text-lg text-[#03144a] mb-4 text-center">
+      <h3 className="font-medium text-lg text-[#03144a] mb-4 text-center">
         Nos Services d&apos;Expert
       </h3>
       <div className="grid grid-cols-2 gap-4">
@@ -397,10 +397,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 <ReactMarkdown 
                   remarkPlugins={[remarkGfm]}
                   components={{
-                    h1: ({ children }) => <h1 className="text-3xl font-bold text-[#03144a] mb-6 mt-8 first:mt-0">{children}</h1>,
-                    h2: ({ children }) => <h2 className="text-2xl font-bold text-[#03144a] mb-4 mt-8 pb-2 border-b border-gray-100">{children}</h2>,
-                    h3: ({ children }) => <h3 className="text-xl font-bold text-[#03144a] mb-3 mt-6">{children}</h3>,
-                    h4: ({ children }) => <h4 className="text-lg font-bold text-[#03144a] mb-2 mt-5">{children}</h4>,
+                    h1: ({ children }) => <h1 className="text-3xl font-medium text-[#03144a] mb-6 mt-8 first:mt-0">{children}</h1>,
+                    h2: ({ children }) => <h2 className="text-2xl font-medium text-[#03144a] mb-4 mt-8 pb-2 border-b border-gray-100">{children}</h2>,
+                    h3: ({ children }) => <h3 className="text-xl font-medium text-[#03144a] mb-3 mt-6">{children}</h3>,
+                    h4: ({ children }) => <h4 className="text-lg font-medium text-[#03144a] mb-2 mt-5">{children}</h4>,
                     p: ({ children }) => <p className="mb-6 text-gray-700 leading-relaxed text-lg">{children}</p>,
                     ul: ({ children }) => <ul className="list-disc list-inside mb-6 space-y-2 ml-4">{children}</ul>,
                     ol: ({ children }) => <ol className="list-decimal list-inside mb-6 space-y-2 ml-4">{children}</ol>,
@@ -501,7 +501,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
             {/* Articles liés */}
             <div className="bg-[#f8f9f4] rounded-xl shadow-sm border border-gray-100 p-6">
-              <h3 className="text-lg font-bold text-[#03144a] mb-6">
+              <h3 className="text-lg font-medium text-[#03144a] mb-6">
                 Autres articles qui pourraient vous intéresser
               </h3>
               
@@ -567,7 +567,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       {/* Section CTA finale */}
       <section className="bg-gradient-to-r from-[#03144a] to-[#03144a] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-3xl font-medium text-white mb-4">
             Besoin d&apos;un professionnel pour vos installations ?
           </h2>
           <p className="text-xl text-blue-100 mb-8">

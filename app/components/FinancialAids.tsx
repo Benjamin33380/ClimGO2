@@ -10,7 +10,7 @@ export default function FinancialAids() {
         aria-hidden="true"
       ></div>
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#f8f9f4] mb-6 text-center">
+        <h2 className="text-3xl md:text-4xl font-medium text-[#f8f9f4] mb-6 text-center">
           Nos Engagements 
         </h2>
         <p className="text-lg text-[#f8f9f4] max-w-4xl mx-auto leading-relaxed mb-8 text-center">

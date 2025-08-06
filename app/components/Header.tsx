@@ -22,7 +22,7 @@ export default function Header() {
           <div className="flex items-center justify-between h-15">
             {/* Bouton d'appel */}
             <Link href="tel:0766460008" className="flex items-center space-x-2">
-              <button className="bg-[#F9F8F4] climText px-6 py-2 rounded-lg font-bold transform transition-transform duration-300 hover:scale-110" aria-label="Nous appeler">NOUS APPELER</button>
+              <button className="bg-[#F9F8F4] climText px-6 py-2 rounded-lg font-medium transform transition-transform duration-300 hover:scale-110" aria-label="Nous appeler">NOUS APPELER</button>
             </Link>
             {/* Réseaux sociaux */}
             <div className="flex items-center px-2 py-1 gap-3">

@@ -84,7 +84,7 @@ function BlogHero({ featuredArticle }: { featuredArticle: ArticlePreview | null 
             Conseils d&apos;experts
           </div>
           
-          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl lg:text-6xl font-medium text-white mb-6">
             Blog ClimGo
           </h1>
           
@@ -131,7 +131,7 @@ function BlogHero({ featuredArticle }: { featuredArticle: ArticlePreview | null 
                     </time>
                   </div>
                   
-                  <h2 className="text-2xl lg:text-3xl font-bold text-[#03144a] mb-4 line-clamp-3">
+                  <h2 className="text-2xl lg:text-3xl font-medium text-[#03144a] mb-4 line-clamp-3">
                     {featuredArticle.title}
                   </h2>
                   
@@ -208,7 +208,7 @@ function CTASection() {
               </svg>
             </div>
             
-            <h2 className="text-3xl font-bold text-[#03144a] mb-4">
+            <h2 className="text-3xl font-medium text-[#03144a] mb-4">
               Besoin d&apos;un conseil personnalisé ?
             </h2>
             
@@ -286,7 +286,7 @@ export default async function BlogPage() {
           <>
             <div className="flex items-center justify-between mb-10">
               <div>
-                <h2 className="text-3xl font-bold text-[#03144a]">
+                <h2 className="text-3xl font-medium text-[#03144a]">
                   Nos derniers articles
                 </h2>
                 <p className="text-gray-600 mt-2">
@@ -353,7 +353,7 @@ export default async function BlogPage() {
                       </time>
                     </div>
 
-                    <h3 className="text-xl font-bold text-[#03144a] mb-3 line-clamp-2 group-hover:text-[#03144a] transition-colors">
+                    <h3 className="text-xl font-medium text-[#03144a] mb-3 line-clamp-2 group-hover:text-[#03144a] transition-colors">
                       {article.title}
                     </h3>
 

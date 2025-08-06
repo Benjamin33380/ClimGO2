@@ -11,7 +11,7 @@ export default function WhyChooseUs() {
       ></div>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#f8f8f5] mb-6">
+          <h2 className="text-3xl md:text-4xl font-medium text-[#f8f8f5] mb-6">
             Pourquoi choisir ClimGO ?
           </h2>
           <p className="text-lg text-[#f8f8f9] max-w-4xl mx-auto leading-relaxed">

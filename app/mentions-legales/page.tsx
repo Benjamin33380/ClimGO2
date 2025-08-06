@@ -2,7 +2,7 @@ export default function MentionsLegales() {
     return (
       <div className="bgPage flex justify-center mt-48">
         <div className="max-w-4xl text-black p-8">
-          <h1 className="text-4xl font-bold mb-8">Mentions légales</h1>
+          <h1 className="text-4xl font-medium mb-8">Mentions légales</h1>
   
           <h2 className="text-2xl font-semibold mb-4 mt-8">1. Informations sur l&apos;entreprise</h2>
           <ul className="list-none space-y-2 mb-6">

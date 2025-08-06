@@ -30,7 +30,7 @@ export default function AidesEtatPage() {
       >
         <div className="pt-36">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Aides & Subventions</h1>
+            <h1 className="text-4xl md:text-5xl font-medium mb-6 text-white">Aides & Subventions</h1>
             <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-white">Simplifiez vos démarches avec ClimGO</h2>
             <p className="text-lg max-w-4xl mx-auto leading-relaxed text-white">
               <strong>Aides & Subventions</strong> : plusieurs dispositifs existent pour alléger le coût de vos travaux de chauffage, climatisation ou rénovation énergétique. Chez ClimGO, nous vous aidons à chaque étape pour bénéficier sereinement des aides de l&apos;État.
@@ -358,7 +358,7 @@ export default function AidesEtatPage() {
       >
         <div className="absolute inset-0 bg-black/40 z-0"></div>
         <div className="relative z-10 flex flex-col justify-center items-center h-full">
-          <h2 className="text-3xl font-bold mb-8">
+          <h2 className="text-3xl font-medium mb-8">
             Comment ça se passe avec ClimGO ?
           </h2>
           {/* Empilement vertical des blocs étapes */}
@@ -410,7 +410,7 @@ export default function AidesEtatPage() {
       {/* Section 5 - CTA Final */}
       <div className="text-center mb-24">
         <h2
-          className="text-3xl font-bold mb-4"
+          className="text-3xl font-medium mb-4"
           style={{ color: '#03144a' }}
         >
           Profitez des aides avec ClimGO

@@ -162,7 +162,7 @@ export default function AdminSecurityPage() {
               <Link href="/admin/dashboard" className="text-blue-600 hover:text-blue-800 mr-4">
                 ← Retour au dashboard
               </Link>
-              <h1 className="text-2xl font-bold text-gray-900">Sécurité - Tentatives de Bruteforce</h1>
+              <h1 className="text-2xl font-medium text-gray-900">Sécurité - Tentatives de Bruteforce</h1>
             </div>
             <div className="text-sm text-gray-500">
               {attempts.length} tentative(s) détectée(s)
@@ -190,17 +190,17 @@ export default function AdminSecurityPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
             <div className="bg-white p-4 rounded-lg shadow">
               <h3 className="text-lg font-semibold text-gray-900">Total</h3>
-              <p className="text-2xl font-bold text-blue-600">{attempts.length}</p>
+              <p className="text-2xl font-medium text-blue-600">{attempts.length}</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow">
               <h3 className="text-lg font-semibold text-gray-900">Bloqués</h3>
-              <p className="text-2xl font-bold text-red-600">
+              <p className="text-2xl font-medium text-red-600">
                 {attempts.filter(a => isCurrentlyBlocked(a)).length}
               </p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow">
               <h3 className="text-lg font-semibold text-gray-900">Aujourd&apos;hui</h3>
-              <p className="text-2xl font-bold text-yellow-600">
+              <p className="text-2xl font-medium text-yellow-600">
                 {attempts.filter(a => {
                   const today = new Date()
                   const attemptDate = new Date(a.createdAt)
@@ -210,7 +210,7 @@ export default function AdminSecurityPage() {
             </div>
             <div className="bg-white p-4 rounded-lg shadow">
               <h3 className="text-lg font-semibold text-gray-900">Cette semaine</h3>
-              <p className="text-2xl font-bold text-green-600">
+              <p className="text-2xl font-medium text-green-600">
                 {attempts.filter(a => {
                   const weekAgo = new Date()
                   weekAgo.setDate(weekAgo.getDate() - 7)

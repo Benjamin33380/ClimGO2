@@ -138,14 +138,14 @@ export default function ZonesDesservies() {
               <MapPin className="w-5 h-5" />
               </div>
               
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#F8F9F4]">
+              <h1 className="text-5xl md:text-6xl font-medium mb-6 text-[#F8F9F4]">
                 Zones Desservies
               </h1>
               
               <p className="text-xl md:text-2xl text-[#F8F9F4] mb-8 max-w-4xl mx-auto leading-relaxed font-semibold">
                 {/* FR: Nous intervenons en Gironde, sur tout le Bassin d'Arcachon et Bordeaux Métropole */}
                 Nous intervenons en Gironde, sur tout le Bassin d&apos;Arcachon et 
-                <span className="font-bold text-[#F8F9F4]"> Bordeaux Métropole</span>
+                <span className="font-medium text-[#F8F9F4]"> Bordeaux Métropole</span>
               </p>
               
               <p className="mb-12 text-lg text-[#F8F9F4]/80 max-w-3xl mx-auto">
@@ -158,7 +158,7 @@ export default function ZonesDesservies() {
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 {stats.map((stat, index) => (
                   <div key={index} className="bg-[#F8F9F4]/10 backdrop-blur-sm rounded-lg px-6 py-4 text-center border border-[#F8F9F4]/20">
-                    <div className="text-2xl font-bold text-[#F8F9F4]">{stat.number}</div>
+                    <div className="text-2xl font-medium text-[#F8F9F4]">{stat.number}</div>
                     <div className="text-sm text-[#F8F9F4]/80">{stat.label}</div>
                   </div>
                 ))}
@@ -176,7 +176,7 @@ export default function ZonesDesservies() {
       <section className="py-16 ">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-6xl font-bold text-[#03144a] mb-4 climText">Nos Services sur Toute la Zone</h2>
+            <h2 className="text-6xl font-medium text-[#03144a] mb-4 climText">Nos Services sur Toute la Zone</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Une expertise complète pour tous vos besoins en climatisation, chauffage et pompe à chaleur
             </p>
@@ -190,7 +190,7 @@ export default function ZonesDesservies() {
                 <div className="bg-[#F8F9F4] border border-[#03144a] w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-7 h-7 text-[#03144a]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#03144a] mb-3 text-center">{service.title}</h3>
+                <h3 className="text-xl font-medium text-[#03144a] mb-3 text-center">{service.title}</h3>
                 <p className="text-gray-600 text-center">{service.desc}</p>
               </div>
             ))}
@@ -202,7 +202,7 @@ export default function ZonesDesservies() {
         <section className="py-20 bg-[#F8F9F4]">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-[#03144a] mb-6 climText">Découvrez Nos Zones d&apos;Interventions</h2>
+              <h2 className="text-4xl font-medium text-[#03144a] mb-6 climText">Découvrez Nos Zones d&apos;Interventions</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Cliquez sur une zone pour découvrir toutes les communes desservies et nos spécificités locales
               </p>
@@ -230,7 +230,7 @@ export default function ZonesDesservies() {
                       <div className="absolute top-0 right-0 text-6xl opacity-20 transform rotate-12 translate-x-4 -translate-y-2">
                       </div>
                       <div className="relative z-10">
-                        <h3 className="text-2xl font-bold mb-3 text-[#03144a]">
+                        <h3 className="text-2xl font-medium mb-3 text-[#03144a]">
                           <Link
                             href={zone.cities?.[0]?.url || '#'}
                             className="hover:text-[#03144a] transition-colors text-[#03144a]"
@@ -266,7 +266,7 @@ export default function ZonesDesservies() {
                               }`}
                           >
                             <div className="flex items-center justify-between">
-                              <span className="text-sm font-bold transition-colors text-[#03144a] group-hover/city:text-white">
+                              <span className="text-sm font-medium transition-colors text-[#03144a] group-hover/city:text-white">
                                 {city.name}
                               </span>
                               <ArrowRight className="w-3 h-3 text-[#03144a]/60 group-hover/city:text-white transform group-hover/city:translate-x-1 transition-all duration-200" />
@@ -286,7 +286,7 @@ export default function ZonesDesservies() {
         <section className="py-20 relative">
           <div className="relative max-w-4xl mx-auto px-4 text-center">
             <Users className="w-16 h-16 mx-auto mb-8 text-[#03144a]" />
-            <h2 className="text-4xl font-bold mb-6 climText">Besoin d&apos;une Intervention ?</h2>
+            <h2 className="text-4xl font-medium mb-6 climText">Besoin d&apos;une Intervention ?</h2>
             <p className="text-xl text-[#03144a]/90 mb-8 leading-relaxed">
               Notre équipe d&apos;experts est à votre disposition dans toute la région. 
               Devis gratuit et intervention rapide garantie !
@@ -296,14 +296,14 @@ export default function ZonesDesservies() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="tel:0766460008"
-                className="bg-[#03144a] text-[#F8F9F4] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#F8F9F4] hover:text-[#03144a] transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
+                className="bg-[#03144a] text-[#F8F9F4] px-8 py-4 rounded-full font-medium text-lg hover:bg-[#F8F9F4] hover:text-[#03144a] transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
               >
                 <Phone className="w-5 h-5 inline mr-2" />
                 Appeler Maintenant
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-[#F8F9F4] text-[#03144a] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#F8F9F4] hover:text-[#03144a] transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
+                className="border-2 border-[#F8F9F4] text-[#03144a] px-8 py-4 rounded-full font-medium text-lg hover:bg-[#F8F9F4] hover:text-[#03144a] transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
               >
                 Devis Gratuit
               </Link>
@@ -312,17 +312,17 @@ export default function ZonesDesservies() {
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-[#F8F9F4]/10 backdrop-blur-sm rounded-lg p-6 border border-[#03144a]/10">
                 <DraftingCompass className="w-8 h-8 text-[#03144a] mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-2">Installation sur mesure</h3>
+                <h3 className="font-medium text-lg mb-2">Installation sur mesure</h3>
                 <p className="text-[#03144a]/80 text-sm">projet personnalisé sur-mesure</p>
               </div>
               <div className="bg-[#F8F9F4]/10 backdrop-blur-sm rounded-lg p-6 border border-[#03144a]/10">
                 <CheckCircle className="w-8 h-8 text-[#03144a] mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-2">Devis Gratuit</h3>
+                <h3 className="font-medium text-lg mb-2">Devis Gratuit</h3>
                 <p className="text-[#03144a]/80 text-sm">Estimation précise sans engagement</p>
               </div>
               <div className="bg-[#F8F9F4]/10 backdrop-blur-sm rounded-lg p-6 border border-[#03144a]/10">
                 <Star className="w-8 h-8 text-[#03144a] mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-2">Garantie Qualité</h3>
+                <h3 className="font-medium text-lg mb-2">Garantie Qualité</h3>
                 <p className="text-[#03144a]/80 text-sm">Service après-vente</p>
               </div>
             </div>

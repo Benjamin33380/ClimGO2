@@ -11,7 +11,7 @@ export default function AboutPage() {
         <Image src="/Logo + nom.png" alt="ClimGO" width={1000} height={500} className="w-fit h-auto" />
         </div>
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold climText mb-6">
+          <h1 className="text-4xl md:text-5xl font-medium climText mb-6">
             À propos de ClimGO
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold climText mb-8">
@@ -50,7 +50,7 @@ export default function AboutPage() {
 
             {/* Garanties professionnelles */}
             <div className="p-8 mb-12">
-              <h3 className="text-2xl font-bold climText mb-6">
+              <h3 className="text-2xl font-medium climText mb-6">
                 Garanties professionnelles avec votre artisan RGE à Marcheprime
               </h3>
               
@@ -86,7 +86,7 @@ export default function AboutPage() {
             
             {/* Certifications */}
             <div className="p-8 mb-12">
-              <h3 className="text-2xl font-bold climText mb-6">
+              <h3 className="text-2xl font-medium climText mb-6">
                 Nos certifications d&apos;artisan RGE à Marcheprime
               </h3>
               
@@ -172,7 +172,7 @@ export default function AboutPage() {
             <CarouselRGE />
 
             <div className="p-8">
-              <h3 className="text-2xl font-bold climText mb-6">
+              <h3 className="text-2xl font-medium climText mb-6">
                 Pourquoi choisir un artisan RGE à Marcheprime pour vos travaux ?
               </h3>
               

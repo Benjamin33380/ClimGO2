@@ -2,7 +2,7 @@ export default function PrivacyPolicy() {
   return (
     <div className="bgPage flex justify-center mt-48">
       <div className="max-w-4xl text-black p-8">
-        <h1 className="text-4xl font-bold mb-4">Politique de Confidentialité</h1>
+        <h1 className="text-4xl font-medium mb-4">Politique de Confidentialité</h1>
         <p className="text-gray-600 mb-8">Dernière mise à jour : 12 mai 2025</p>
 
         <p className="mb-6">La présente Politique de Confidentialité décrit la manière dont ClimGO collecte, utilise et protège vos données personnelles lors de votre utilisation du site www.climgo.fr. En accédant à nos services, vous acceptez les pratiques décrites ci-dessous.</p>

@@ -22,7 +22,7 @@ export default function ContactPage() {
         {/* Texte au-dessus */}
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="bg-white/20 backdrop-blur-md rounded-xl p-6 inline-block">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#03144a] mb-6">
+            <h2 className="text-4xl md:text-5xl font-medium text-[#03144a] mb-6">
               Parlons de votre projet
             </h2>
             <h1 className="text-2xl md:text-3xl font-semibold text-[#03144a] mb-8">
@@ -79,13 +79,13 @@ export default function ContactPage() {
             <div className="grid md:grid-cols-2 gap-12 place-items-center">
               {/* Formulaire */}
               <div className="bg-white/10 backdrop-blur-[10px] border border-white/30 rounded-xl p-8 shadow-[inset_0_0_0.5px_rgba(255,255,255,0.2),0_4px_30px_rgba(0,0,0,0.2)]">
-                <h3 className="text-2xl font-bold text-[#03144a] mb-6">Envoyez-nous un message</h3>
+                <h3 className="text-2xl font-medium text-[#03144a] mb-6">Envoyez-nous un message</h3>
                 <ContactForm />
               </div>
 
               {/* Informations de contact */}
               <div className="bg-white/10 backdrop-blur-[10px] border border-white/30 rounded-xl p-8 text-center w-fit h-fit shadow-[inset_0_0_0.5px_rgba(255,255,255,0.2),0_4px_30px_rgba(0,0,0,0.2)]">
-                <h3 className="text-2xl font-bold text-[#03144a] mb-6">Une question ? On est là pour vous répondre.</h3>
+                <h3 className="text-2xl font-medium text-[#03144a] mb-6">Une question ? On est là pour vous répondre.</h3>
                 
                 <div className="space-y-6">
                   {/* Chaque bloc icône + texte */}
