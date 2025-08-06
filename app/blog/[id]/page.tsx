@@ -218,7 +218,7 @@ function QuoteWidget() {
           Installation, dépannage ou maintenance : obtenez votre devis personnalisé
         </p>
         <Link 
-          href="/devis"
+          href="/contact"
           className="inline-block bg-white text-[#03144a] px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors shadow-md"
         >
           Demander un devis
@@ -257,7 +257,7 @@ function ExpertiseZone() {
       </div>
       <div className="mt-4 pt-4 border-t border-gray-200 text-center">
         <Link 
-          href="/services"
+          href="/nos-services"
           className="text-[#03144a] hover:text-[#03144a] font-medium text-sm inline-flex items-center"
         >
           Voir tous nos services
