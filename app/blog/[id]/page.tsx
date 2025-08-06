@@ -151,7 +151,7 @@ function ArticleHero({ article }: { article: Article }) {
                 Climatisation
               </span>
               <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm font-medium rounded-full">
-                Conseils d'expert
+                Conseils d&apos;expert
               </span>
             </div>
           </div>
@@ -192,10 +192,10 @@ function EmergencyContact() {
             Panne de chauffage ou climatisation ? Notre équipe intervient rapidement !
           </p>
           <Link 
-            href="tel:0556789012"
+            href="tel:0766460008"
             className="inline-block bg-white text-red-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
           >
-            📞 05 56 78 90 12
+            Nous Appeler
           </Link>
         </div>
       </div>
@@ -571,7 +571,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             Besoin d'un professionnel pour vos installations ?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Notre équipe d'experts ClimGo vous accompagne pour tous vos projets de chauffage et climatisation.
+            Notre équipe d&apos;experts ClimGo vous accompagne pour tous vos projets de chauffage et climatisation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -581,10 +581,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               Nous contacter
             </Link>
             <Link 
-              href="tel:0556789012"
+              href="tel:0766460008"
               className="bg-[#03144a] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#03144a] transition-colors border-2 border-[#03144a]"
             >
-              📞 05 56 78 90 12
+              Nous appeler
             </Link>
           </div>
         </div>
