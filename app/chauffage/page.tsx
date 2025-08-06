@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Tableau from '../zones-desservies/component/Tableau';
+import { Wrench, Ruler, ShieldCheck, BadgeEuro } from 'lucide-react';
 
 export default function PremiumHeatingPage() {
   const solutionsRef = useRef<HTMLDivElement>(null);
@@ -22,7 +23,7 @@ export default function PremiumHeatingPage() {
         "Fonctionnement jusqu'à -15°C"
       ],
       description: "Technologie de pointe qui transforme l'énergie gratuite de l'air en chaleur pour votre habitation. Solution idéale pour remplacer votre ancienne chaudière.",
-      price: "À partir de 8 900€",
+      price: "À partir de 9 900€",
       gradient: "from-[#03144A] to-[#DC2626]"
     },
     {
@@ -38,7 +39,7 @@ export default function PremiumHeatingPage() {
         "Design ultra-moderne"
       ],
       description: "Un seul équipement pour votre confort toute l'année. Chauffage l'hiver, climatisation l'été, avec une efficacité énergétique remarquable.",
-      price: "À partir de 3 200€",
+      price: "À partir de 1 499€",
       gradient: "from-[#03144A] to-[#DC2626]"
     },
     {
@@ -70,30 +71,30 @@ export default function PremiumHeatingPage() {
         "Installation sans gros œuvre"
       ],
       description: "L'évolution des radiateurs traditionnels. Design contemporain, performance énergétique et facilité d'installation réunis.",
-      price: "À partir de 290€",
+      price: "À partir de 190€",
       gradient: "from-[#03144A] to-[#DC2626]"
     }
   ];
 
   const advantages = [
     {
-      
+      icon: <Wrench className="inline w-6 h-6 text-[#DC2626]" />,
       title: "Expertise technique",
-      desc: "15 ans d'expérience dans le thermique"
+      desc: "10 ans d'expérience dans le thermique"
     },
     {
-      
-      title: "Installation express",
-      desc: "Mise en service en 24h chrono"
+      icon: <Ruler className="inline w-6 h-6 text-[#DC2626]" />,
+      title: "Installation sur mesure",
+      desc: "Prestation certifiée"
     },
     {
-      icon: "🔧",
-      title: "Garantie premium",
+      icon: <ShieldCheck className="inline w-6 h-6 text-[#DC2626]" />,
+      title: "Garantie",
       desc: "SAV réactif et pièces d'origine"
     },
     {
-      
-      title: "Financement 0%",
+      icon: <BadgeEuro className="inline w-6 h-6 text-[#DC2626]" />,
+      title: "Financement",
       desc: "Solutions adaptées à votre budget"
     }
   ];
@@ -276,7 +277,7 @@ export default function PremiumHeatingPage() {
                           </div>
 
                           {/* Image Side */}
-                          <div className="relative bg-gradient-to-br from-[#03144A] to-[#DC2626] flex items-center justify-center p-12">
+                          <div className="relative bg-gradient-to-br from-[#f9f8f4] to-[#f9f8f4] flex items-center justify-center p-12">
                             <div className="relative w-80 h-80">
                               <Image
                                 src={solution.image}
@@ -285,8 +286,6 @@ export default function PremiumHeatingPage() {
                                 className="object-contain filter drop-shadow-2xl"
                               />
                             </div>
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#03144A]/20 to-transparent rounded-bl-full" />
-                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#DC2626]/20 to-transparent rounded-tr-full" />
                           </div>
                         </div>
                       </div>
