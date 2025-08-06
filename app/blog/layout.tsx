@@ -11,7 +11,15 @@ export const metadata: Metadata = {
     url: 'https://www.climgo.fr/blog', // Change l'URL
     title: 'Blog ClimGO | Conseils Chauffage, Climatisation à Marcheprime', // Change le titre
     description: 'Découvrez nos articles experts sur le chauffage, la climatisation et les solutions énergétiques. Conseils, actualités et guides techniques par ClimGO.', // Change la description
-    images: ['/Logo.png'],
+    images: [
+      {
+        url:'https://www.climgo.fr/Logo.png',
+        width: 1200,
+        height: 630,
+        alt: "Climgo - Chauffage Climatisation"
+      }
+      ],
+
     locale: 'fr_FR',
     siteName: 'ClimGO',
      // Change l'URL
@@ -93,6 +101,7 @@ export default function BlogLayout({
     })
   }}
 /> 
+
           {children}
            </div>
   )
