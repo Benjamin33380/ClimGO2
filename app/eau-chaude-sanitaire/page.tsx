@@ -4,6 +4,8 @@ import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Tableau from '../zones-desservies/component/Tableau';
+import { Wrench, Ruler, ShieldCheck, BadgeEuro } from 'lucide-react';
+
 export default function PremiumEauChaudePage() {
   const solutionsRef = useRef<HTMLDivElement>(null);
 
@@ -21,7 +23,7 @@ export default function PremiumEauChaudePage() {
         "Technologie écologique avancée"
       ],
       description: "Ce système capte les calories de l'air ambiant pour chauffer l'eau de votre ballon. Une eau chaude sanitaire économique et écoresponsable.",
-      price: "À partir de 2 500€",
+      price: "À partir de 2 490€",
       gradient: "from-[#03144A] to-[#0EA5E9]"
     },
     {
@@ -37,7 +39,7 @@ export default function PremiumEauChaudePage() {
         "Maintenance simplifiée"
       ],
       description: "Le chauffe-eau électrique classique assure une production d'eau chaude constante pour toute la maison. Discret, facile à installer et adapté aux petits budgets.",
-      price: "À partir de 350€",
+      price: "À partir de 390€",
       gradient: "from-[#03144A] to-[#0EA5E9]"
     },
     {
@@ -53,30 +55,30 @@ export default function PremiumEauChaudePage() {
         "Design discret et moderne"
       ],
       description: "Un maximum de confort dans un minimum d'espace pour votre eau chaude sanitaire. Parfait pour les petits logements ou les espaces optimisés.",
-      price: "À partir de 450€",
+      price: "À partir de 490€",
       gradient: "from-[#03144A] to-[#0EA5E9]"
     }
   ];
 
   const advantages = [
     {
-      icon: "🚿",
+      icon: <Wrench className="inline w-6 h-6 text-[#2563EB]" />,
       title: "Expertise sanitaire",
-      desc: "15 ans d'expérience en eau chaude"
+      desc: "10 ans d'expérience en eau chaude"
     },
     {
-      icon: "⚡",
-      title: "Installation express",
-      desc: "Mise en service en 24h chrono"
+      icon: <Ruler className="inline w-6 h-6 text-[#2563EB]" />,
+      title: "Installation sur mesure",
+      desc: "Prestation certifiée"
     },
     {
-      icon: "🔧",
-      title: "Garantie premium",
+      icon: <ShieldCheck className="inline w-6 h-6 text-[#2563EB]" />,
+      title: "Garantie",
       desc: "SAV réactif et pièces d'origine"
     },
     {
-      icon: "💰",
-      title: "Financement 0%",
+      icon: <BadgeEuro className="inline w-6 h-6 text-[#2563EB]" />,
+      title: "Financement",
       desc: "Solutions adaptées à votre budget"
     }
   ];
@@ -259,7 +261,7 @@ export default function PremiumEauChaudePage() {
                           </div>
 
                           {/* Image Side */}
-                          <div className="relative bg-gradient-to-br from-[#03144A] to-[#0EA5E9] flex items-center justify-center p-12">
+                          <div className="relative bg-gradient-to-br from-[#f8f9f4] to-[#f8f9f4] flex items-center justify-center p-12">
                             <div className="relative w-80 h-80">
                               <Image
                                 src={solution.image}
@@ -268,8 +270,6 @@ export default function PremiumEauChaudePage() {
                                 className="object-contain filter drop-shadow-2xl"
                               />
                             </div>
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#03144A]/20 to-transparent rounded-bl-full" />
-                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#0EA5E9]/20 to-transparent rounded-tr-full" />
                           </div>
                         </div>
                       </div>
