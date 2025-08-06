@@ -4,6 +4,8 @@ import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Tableau from '../zones-desservies/component/Tableau';
+import { Wrench, Ruler, ShieldCheck, BadgeEuro } from 'lucide-react';
+
 export default function PremiumMaintenancePage() {
   const solutionsRef = useRef<HTMLDivElement>(null);
 
@@ -25,8 +27,8 @@ export default function PremiumMaintenancePage() {
       gradient: "from-[#03144A] to-[#10B981]"
     },
     {
-      id: 'maintenance-chauffage',
-      title: "Maintenance chauffage",
+      id: 'maintenance-gainable',
+      title: "Maintenance gainabe",
       subtitle: "Sécurité & Performance",
       image: "/MaintenanceChauffage.png",
       badge: "Intervention rapide",
@@ -37,12 +39,12 @@ export default function PremiumMaintenancePage() {
         "Mise à jour des réglages"
       ],
       description: "Nos techniciens qualifiés assurent l'entretien de votre système de chauffage pour votre sécurité et votre confort optimal.",
-      price: "À partir de 150€",
+      price: "À partir de €",
       gradient: "from-[#03144A] to-[#10B981]"
     },
     {
       id: 'maintenance-eau-chaude',
-      title: "Maintenance eau chaude",
+      title: "Maintenance Thermodynamique",
       subtitle: "Fiabilité & Durabilité",
       image: "/MaintenanceEauChaude.png",
       badge: "Préventif",
@@ -53,7 +55,7 @@ export default function PremiumMaintenancePage() {
         "Test des systèmes de sécurité"
       ],
       description: "Préservez votre production d'eau chaude sanitaire avec un entretien régulier adapté à votre installation.",
-      price: "À partir de 100€",
+      price: "À partir de €",
       gradient: "from-[#03144A] to-[#10B981]"
     },
     {
@@ -69,29 +71,29 @@ export default function PremiumMaintenancePage() {
         "Maintenance préventive complète"
       ],
       description: "Entretien obligatoire pour les PAC, nos experts certifiés garantissent performance énergétique et conformité réglementaire.",
-      price: "À partir de 180€",
+      price: "À partir de €",
       gradient: "from-[#03144A] to-[#10B981]"
     }
   ];
 
   const advantages = [
     {
-      icon: "🔧",
+      icon: <Wrench className="inline w-6 h-6 text-[#10B981]" />,
       title: "Expertise maintenance",
       desc: "10 ans d'expérience dans l'entretien"
     },
     {
-      icon: "⚡",
-      title: "Intervention rapide",
-      desc: "Dépannage sous contrat"
+      icon:  <Ruler className="inline w-6 h-6 text-[#10B981]" />,
+      title: "Intervention sur mesue",
+      desc: "Prestation certifiée"
     },
     {
-      icon: "🛡️",
-      title: "Contrats sur-mesure",
-      desc: "Solutions adaptées à vos besoins"
+      icon: <ShieldCheck className="inline w-6 h-6 text-[#10B981]" />,
+      title: "Garantie",
+      desc: "SAV réactif et pièces d'origine"
     },
     {
-      icon: "💰",
+      icon: <BadgeEuro className="inline w-6 h-6 text-[#10B981]" />,
       title: "Tarifs transparents",
       desc: "Devis gratuit et sans surprise"
     }
@@ -275,7 +277,7 @@ export default function PremiumMaintenancePage() {
                           </div>
 
                           {/* Image Side */}
-                          <div className="relative bg-gradient-to-br from-[#03144A] to-[#10B981] flex items-center justify-center p-12">
+                          <div className="relative bg-gradient-to-br from-[#f8f9f4] to-[#f8f9f4] flex items-center justify-center p-12">
                             <div className="relative w-80 h-80">
                               <Image
                                 src={solution.image}
@@ -284,8 +286,6 @@ export default function PremiumMaintenancePage() {
                                 className="object-contain filter drop-shadow-2xl"
                               />
                             </div>
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#03144A]/20 to-transparent rounded-bl-full" />
-                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#10B981]/20 to-transparent rounded-tr-full" />
                           </div>
                         </div>
                       </div>
