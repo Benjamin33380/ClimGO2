@@ -5,11 +5,15 @@ import { IoWater, IoFlame, IoSnow, IoSettings } from 'react-icons/io5';
 import Link from 'next/link';
 import Tableau from '../zones-desservies/component/Tableau';
 
-export default function ServicesPage() {
-  const [activeSection, setActiveSection] = useState(null);
-  const servicesRef = React.useRef(null);
+// Définir le type pour les sections
+type SectionType = 'clim' | 'chauffage' | 'eau-chaude' | 'maintenance' | null;
 
-  const toggleSection = (section) => {
+export default function ServicesPage() {
+  const [activeSection, setActiveSection] = useState<SectionType>(null);
+  const servicesRef = React.useRef<HTMLElement>(null);
+
+  // Typer correctement le paramètre section
+  const toggleSection = (section: SectionType) => {
     setActiveSection((prev) => (prev === section ? null : section));
   };
 
