@@ -180,7 +180,7 @@ export default function CityPageTemplate({
                   </svg>
                 </div>
                 <h3 className="font-semibold text-[#03144a] mb-2">Garantie</h3>
-                <p className="text-sm text-gray-600">10 ans d'expérience</p>
+                <p className="text-sm text-gray-600">10 ans d&apos;expérience</p>
               </div>
             </div>
           </div>

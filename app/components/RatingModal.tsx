@@ -48,6 +48,7 @@ export default function RatingModal({ isOpen, onClose, articleId, articleTitle, 
         setError(data.error || 'Erreur lors de l\'envoi de la note');
       }
     } catch (error) {
+      console.error('Erreur:', error);
       setError('Erreur lors de l\'envoi de la note');
     } finally {
       setLoading(false);

@@ -1,10 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 import { notFound } from 'next/navigation'
-import Image from 'next/image'
-import Link from 'next/link'
 import type { Metadata } from 'next'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
 import ArticleClient from './ArticleClient'
 
 // Revalidate rapide pour voir les nouveaux articles
@@ -32,7 +28,7 @@ type Article = {
   updatedAt: Date
   category?: {
     name: string
-    color: string
+    color: string | null
     slug: string
   } | null
   _count: {

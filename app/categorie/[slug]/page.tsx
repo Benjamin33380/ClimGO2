@@ -45,14 +45,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         title: `${category.name} - Articles ClimGO`,
         description: category.description || `Découvrez tous nos articles sur ${category.name}`,
         type: 'website',
-        images: [
-          {
-            url: category.imageUrl || '',
-            width: 1200,
-            height: 630,
-            alt: category.name,
-          },
-        ],
         siteName: 'ClimGO',
         locale: 'fr_FR',
         url: 'https://www.climgo.fr',
@@ -61,14 +53,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         card: 'summary_large_image',
         title: `${category.name} - Articles ClimGO`,
         description: category.description || `Découvrez tous nos articles sur ${category.name}`,
-        images: [
-          {
-            url: category.imageUrl || '',
-            width: 1200,
-            height: 630,
-            alt: category.name,
-          },
-        ],
       },
       alternates: {
         canonical: `https://www.climgo.fr/categorie/${resolvedParams.slug}`,
@@ -154,7 +138,7 @@ export default async function CategoryPage({ params }: PageProps) {
             <div className="flex items-center gap-4">
               <div 
                 className="w-8 h-8 rounded-full"
-                style={{ backgroundColor: category.color }}
+                style={{ backgroundColor: category.color || '#808080' }}
               ></div>
               <div>
                 <h1 className="text-3xl font-bold text-gray-900">{category.name}</h1>
@@ -174,7 +158,7 @@ export default async function CategoryPage({ params }: PageProps) {
                 Aucun article dans cette catégorie
               </h2>
               <p className="text-gray-600 mb-8">
-                Aucun article n'a encore été publié dans cette catégorie.
+                Aucun article n&apos;a encore été publié dans cette catégorie.
               </p>
               <Link
                 href="/blog"
@@ -203,7 +187,7 @@ export default async function CategoryPage({ params }: PageProps) {
                     <div className="flex items-center gap-2 mb-3">
                       <div 
                         className="w-3 h-3 rounded-full"
-                        style={{ backgroundColor: category.color }}
+                        style={{ backgroundColor: category.color || '#808080' }}
                       ></div>
                       <span className="text-sm font-medium text-gray-600">{category.name}</span>
                     </div>
@@ -261,7 +245,5 @@ export default async function CategoryPage({ params }: PageProps) {
   } catch (error) {
     console.error('Erreur lors du chargement de la catégorie:', error);
     notFound();
-  } finally {
-    await prisma.$disconnect();
   }
 } 

@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 interface GoogleAdvice {
@@ -23,7 +22,6 @@ export default function GoogleReviewsAdmin() {
     rating: 5,
     publishedDate: new Date().toISOString().split('T')[0]
   });
-  const router = useRouter();
 
   useEffect(() => {
     fetchReviews();
@@ -190,7 +188,7 @@ export default function GoogleReviewsAdmin() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Contenu de l'avis
+                  Contenu de l&apos;avis
                 </label>
                 <textarea
                   value={formData.content}

@@ -3,23 +3,21 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-// GET - Récupérer une catégorie spécifique
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const resolvedParams = await params;
     const category = await prisma.category.findUnique({
-      where: { id: params.id },
+      where: { id: resolvedParams.id },
       include: {
-        articles: {
+        _count: {
           select: {
-            id: true,
-            title: true,
-            slug: true,
-          },
-        },
-      },
+            articles: true
+          }
+        }
+      }
     });
 
     if (!category) {
@@ -36,22 +34,20 @@ export async function GET(
       { error: 'Erreur lors de la récupération de la catégorie' },
       { status: 500 }
     );
-  } finally {
-    await prisma.$disconnect();
   }
 }
 
-// PUT - Modifier une catégorie
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const resolvedParams = await params;
     const body = await request.json();
 
     // Vérifier si la catégorie existe
     const existingCategory = await prisma.category.findUnique({
-      where: { id: params.id },
+      where: { id: resolvedParams.id },
     });
 
     if (!existingCategory) {
@@ -61,7 +57,7 @@ export async function PUT(
       );
     }
 
-    // Vérifier si le slug existe déjà (sauf pour cette catégorie)
+    // Vérifier l'unicité du slug si modifié
     if (body.slug && body.slug !== existingCategory.slug) {
       const slugExists = await prisma.category.findUnique({
         where: { slug: body.slug },
@@ -69,7 +65,21 @@ export async function PUT(
 
       if (slugExists) {
         return NextResponse.json(
-          { error: 'Une catégorie avec ce slug existe déjà' },
+          { error: 'Ce slug existe déjà' },
+          { status: 400 }
+        );
+      }
+    }
+
+    // Vérifier l'unicité du nom si modifié
+    if (body.name && body.name !== existingCategory.name) {
+      const nameExists = await prisma.category.findUnique({
+        where: { name: body.name },
+      });
+
+      if (nameExists) {
+        return NextResponse.json(
+          { error: 'Ce nom existe déjà' },
           { status: 400 }
         );
       }
@@ -77,44 +87,50 @@ export async function PUT(
 
     // Mettre à jour la catégorie
     const updatedCategory = await prisma.category.update({
-      where: { id: params.id },
+      where: { id: resolvedParams.id },
       data: {
-        name: body.name,
-        slug: body.slug,
-        description: body.description || '',
-        color: body.color || '#3B82F6',
-        isActive: body.isActive !== undefined ? body.isActive : true,
+        name: body.name || existingCategory.name,
+        slug: body.slug || existingCategory.slug,
+        description: body.description || existingCategory.description,
+        color: body.color || existingCategory.color,
+        isActive: body.isActive !== undefined ? body.isActive : existingCategory.isActive,
       },
+      include: {
+        _count: {
+          select: {
+            articles: true
+          }
+        }
+      }
     });
 
     return NextResponse.json(updatedCategory);
   } catch (error) {
-    console.error('Erreur lors de la modification de la catégorie:', error);
+    console.error('Erreur lors de la mise à jour de la catégorie:', error);
     return NextResponse.json(
-      { error: 'Erreur lors de la modification de la catégorie' },
+      { error: 'Erreur lors de la mise à jour de la catégorie' },
       { status: 500 }
     );
-  } finally {
-    await prisma.$disconnect();
   }
 }
 
-// DELETE - Supprimer une catégorie
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const resolvedParams = await params;
+    
     // Vérifier si la catégorie existe
     const existingCategory = await prisma.category.findUnique({
-      where: { id: params.id },
+      where: { id: resolvedParams.id },
       include: {
-        articles: {
+        _count: {
           select: {
-            id: true,
-          },
-        },
-      },
+            articles: true
+          }
+        }
+      }
     });
 
     if (!existingCategory) {
@@ -125,7 +141,7 @@ export async function DELETE(
     }
 
     // Vérifier s'il y a des articles liés
-    if (existingCategory.articles.length > 0) {
+    if (existingCategory._count.articles > 0) {
       return NextResponse.json(
         { error: 'Impossible de supprimer une catégorie qui contient des articles' },
         { status: 400 }
@@ -134,17 +150,15 @@ export async function DELETE(
 
     // Supprimer la catégorie
     await prisma.category.delete({
-      where: { id: params.id },
+      where: { id: resolvedParams.id },
     });
 
-    return NextResponse.json({ message: 'Catégorie supprimée avec succès' });
+    return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Erreur lors de la suppression de la catégorie:', error);
     return NextResponse.json(
       { error: 'Erreur lors de la suppression de la catégorie' },
       { status: 500 }
     );
-  } finally {
-    await prisma.$disconnect();
   }
 } 

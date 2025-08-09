@@ -25,8 +25,6 @@ export async function GET() {
       { error: 'Erreur lors de la récupération des avis' },
       { status: 500 }
     );
-  } finally {
-    await prisma.$disconnect();
   }
 }
 
@@ -51,7 +49,5 @@ export async function POST(request: Request) {
       { error: 'Erreur lors de l\'ajout de l\'avis' },
       { status: 500 }
     );
-  } finally {
-    await prisma.$disconnect();
   }
 } 

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 const SimpleCitiesSection = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm] = useState('');
   const [showCities, setShowCities] = useState(false);
 
   const cities = [

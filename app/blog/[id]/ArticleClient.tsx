@@ -7,6 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import CommentModal from '../../components/CommentModal';
 import RatingModal from '../../components/RatingModal';
+import CommentsList from '../../components/CommentsList';
 
 type Article = {
   id: string
@@ -22,7 +23,7 @@ type Article = {
   updatedAt: Date
   category?: {
     name: string
-    color: string
+    color: string | null
     slug: string
   } | null
   _count: {
@@ -65,7 +66,7 @@ function ArticleHero({ article }: { article: Article }) {
               >
                 <div 
                   className="w-3 h-3 rounded-full"
-                  style={{ backgroundColor: article.category.color }}
+                  style={{ backgroundColor: article.category.color || '#808080' }}
                 ></div>
                 {article.category.name}
               </Link>
@@ -188,7 +189,7 @@ function ArticleSidebar({ article, onRatingSubmitted, onCommentSubmitted }: {
       {/* Contact rapide */}
       <div className="bg-gradient-to-br from-[#03144a] to-[#03144a] rounded-xl p-6 text-white">
         <h3 className="text-lg font-semibold mb-3">
-          Besoin d'aide ?
+          Besoin d&apos;aide ?
         </h3>
         <p className="text-blue-100 mb-4">
           Nos experts sont là pour vous conseiller
@@ -279,7 +280,8 @@ function ExpertiseZone() {
 }
 
 export default function ArticleClient({ article, relatedArticles }: ArticleClientProps) {
-  const [currentArticle, setCurrentArticle] = useState(article);
+  const [currentArticle] = useState(article);
+  const [refreshComments, setRefreshComments] = useState(0);
 
   const handleRatingSubmitted = () => {
     // Recharger les données de l'article
@@ -287,8 +289,8 @@ export default function ArticleClient({ article, relatedArticles }: ArticleClien
   };
 
   const handleCommentSubmitted = () => {
-    // Recharger les données de l'article
-    window.location.reload();
+    // Rafraîchir les commentaires
+    setRefreshComments(prev => prev + 1);
   };
 
   return (
@@ -473,6 +475,9 @@ export default function ArticleClient({ article, relatedArticles }: ArticleClien
                   Demander un devis
                 </Link>
               </div>
+
+              {/* Liste des commentaires */}
+              <CommentsList key={refreshComments} articleId={currentArticle.id} />
             </div>
           </div>
         </div>

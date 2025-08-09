@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 
 interface CityPage {
   id: string;
@@ -16,7 +15,6 @@ interface CityPage {
 export default function CitiesAdmin() {
   const [cities, setCities] = useState<CityPage[]>([]);
   const [loading, setLoading] = useState(true);
-  const router = useRouter();
 
   useEffect(() => {
     fetchCities();

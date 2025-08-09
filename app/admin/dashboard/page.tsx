@@ -263,7 +263,7 @@ export default function AdminDashboard() {
                         Catégories
                       </dt>
                       <dd className="text-lg font-medium text-gray-900">
-                        Gérer les catégories d'articles
+                        Gérer les catégories d&apos;articles
                       </dd>
                     </dl>
                   </div>
@@ -296,7 +296,7 @@ export default function AdminDashboard() {
                         Commentaires
                       </dt>
                       <dd className="text-lg font-medium text-gray-900">
-                        Gérer les commentaires d'articles
+                        Gérer les commentaires d&apos;articles
                       </dd>
                     </dl>
                   </div>

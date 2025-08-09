@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { createHash } from 'crypto';
 
 export async function POST(request: NextRequest) {
   try {
@@ -37,7 +38,7 @@ export async function POST(request: NextRequest) {
 
     // Upload vers Cloudinary avec signature
     const timestamp = Math.round(new Date().getTime() / 1000);
-    const signature = require('crypto').createHash('sha1')
+    const signature = createHash('sha1')
       .update(`folder=climgo-cities&timestamp=${timestamp}${process.env.CLOUDINARY_API_SECRET}`)
       .digest('hex');
     

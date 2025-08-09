@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import Image from 'next/image';
 
 interface ImageUploadProps {
   value: string;
@@ -70,7 +71,7 @@ export default function ImageUpload({ value, onChange, label, required = false, 
         dataTransfer.items.add(file);
         if (fileInputRef.current) {
           fileInputRef.current.files = dataTransfer.files;
-          await handleFileSelect({ target: { files: dataTransfer.files } } as any);
+          await handleFileSelect({ target: { files: dataTransfer.files } } as any); // eslint-disable-line @typescript-eslint/no-explicit-any
         }
       } else {
         setError('Le fichier doit être une image');
@@ -114,10 +115,12 @@ export default function ImageUpload({ value, onChange, label, required = false, 
         ) : value ? (
           <div className="space-y-3">
             <div className="relative inline-block">
-              <img
+              <Image
                 src={value}
                 alt="Aperçu"
                 className="max-h-32 max-w-full rounded-lg shadow-sm"
+                width={500}
+                height={500}
               />
               <button
                 type="button"
@@ -144,7 +147,7 @@ export default function ImageUpload({ value, onChange, label, required = false, 
               </button>
               <span className="text-gray-500"> ou glissez-déposez</span>
             </div>
-            <p className="text-xs text-gray-500">PNG, JPG, GIF jusqu'à 5MB</p>
+            <p className="text-xs text-gray-500">PNG, JPG, GIF jusqu&apos;à 5MB</p>
           </div>
         )}
       </div>

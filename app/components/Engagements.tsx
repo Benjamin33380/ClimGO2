@@ -16,7 +16,7 @@ export default function Engagements() {
             </h2>
             <div className="w-24 h-1 bg-blue-400 mx-auto mb-8"></div>
             <p className="text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-              Chez <strong className="text-white">ClimGO</strong>, nous vous accompagnons dans tous les domaines du confort thermique et sanitaire : <strong className="text-white">chauffage</strong>, <strong className="text-white">climatisation</strong>, <strong className="text-white">eau chaude sanitaire</strong> et <strong className="text-white">maintenance</strong>. Nos solutions sont pensées pour allier <strong className="text-white">performance</strong>, <strong className="text-white">durabilité</strong>, <strong className="text-white">économies d'énergie</strong> et <strong className="text-white">sérénité</strong>, année après année.
+              Chez <strong className="text-white">ClimGO</strong>, nous vous accompagnons dans tous les domaines du confort thermique et sanitaire : <strong className="text-white">chauffage</strong>, <strong className="text-white">climatisation</strong>, <strong className="text-white">eau chaude sanitaire</strong> et <strong className="text-white">maintenance</strong>. Nos solutions sont pensées pour allier <strong className="text-white">performance</strong>, <strong className="text-white">durabilité</strong>, <strong className="text-white">économies d&apos;énergie</strong> et <strong className="text-white">sérénité</strong>, année après année.
             </p>
           </div>
 
@@ -43,7 +43,7 @@ export default function Engagements() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Climatisation</h3>
                 <p className="text-blue-100 leading-relaxed">
-                  Systèmes de climatisation réversibles pour un confort optimal toute l'année.
+                  Systèmes de climatisation réversibles pour un confort optimal toute l&apos;année.
                 </p>
               </div>
             </Link>
@@ -79,7 +79,7 @@ export default function Engagements() {
           <div className="text-center mt-16">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold text-white mb-4">
-                Besoin d'un devis personnalisé ?
+                Besoin d&apos;un devis personnalisé ?
               </h3>
               <p className="text-blue-100 mb-6">
                 Nos experts sont à votre disposition pour étudier votre projet et vous proposer la solution la plus adaptée.

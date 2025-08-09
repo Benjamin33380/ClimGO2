@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Search, MapPin, Phone, ArrowRight } from 'lucide-react';
 import { TbFlame, TbSnowflake, TbBolt, TbDroplet, TbTools } from 'react-icons/tb';
 
@@ -177,7 +176,7 @@ export default function Hero() {
             
             {/* Sous-titre */}
             <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
-              Votre expert en <strong className="text-white">chauffage</strong>, <strong className="text-white">climatisation</strong> et <strong className="text-white">pompes à chaleur</strong> entre Bordeaux et le Bassin d'Arcachon
+              Votre expert en <strong className="text-white">chauffage</strong>, <strong className="text-white">climatisation</strong> et <strong className="text-white">pompes à chaleur</strong> entre Bordeaux et le Bassin d&apos;Arcachon
             </p>
 
             {/* Recherche de villes avec Suspense */}

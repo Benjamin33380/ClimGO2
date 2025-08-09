@@ -19,7 +19,7 @@ type ArticlePreview = {
   metaDesc: string | null
   category?: {
     name: string
-    color: string
+    color: string | null
     slug: string
   } | null
   _count: {
@@ -33,17 +33,17 @@ type Category = {
   id: string
   name: string
   slug: string
-  color: string
+  color: string | null
   _count: {
     articles: number
   }
 }
 
 interface PageProps {
-  searchParams: {
+  searchParams: Promise<{
     page?: string
     sort?: string
-  }
+  }>
 }
 
 async function getArticles(page: number = 1, sort: string = 'recent'): Promise<{ articles: ArticlePreview[], total: number, totalPages: number }> {
@@ -51,7 +51,7 @@ async function getArticles(page: number = 1, sort: string = 'recent'): Promise<{
     const pageSize = 9
     const skip = (page - 1) * pageSize
 
-    let orderBy: any = { createdAt: 'desc' }
+    let orderBy: any = { createdAt: 'desc' } // eslint-disable-line @typescript-eslint/no-explicit-any
 
     // Définir l'ordre selon le tri sélectionné
     switch (sort) {
@@ -349,7 +349,7 @@ function CategoryFilter({ categories }: { categories: Category[] }) {
           >
             <div 
               className="w-3 h-3 rounded-full mr-2"
-              style={{ backgroundColor: category.color }}
+              style={{ backgroundColor: category.color || '#808080' }}
             ></div>
             {category.name}
             <span className="ml-2 text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
@@ -505,7 +505,7 @@ export default async function BlogPage({ searchParams }: PageProps) {
   const currentPage = parseInt(resolvedSearchParams.page || '1')
   const sort = resolvedSearchParams.sort || 'recent'
   
-  const { articles, total, totalPages } = await getArticles(currentPage, sort)
+  const { articles, totalPages } = await getArticles(currentPage, sort)
   const featuredArticle = await getFeaturedArticle()
   const categories = await getCategories()
 
@@ -518,7 +518,7 @@ export default async function BlogPage({ searchParams }: PageProps) {
         {/* Filtres et tri */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
           <CategoryFilter categories={categories} />
-          <SortSelect currentSort={sort} />
+          <SortSelect defaultValue={sort} />
         </div>
 
         {/* Grille d'articles */}
@@ -548,13 +548,13 @@ export default async function BlogPage({ searchParams }: PageProps) {
                         <span 
                           className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium"
                           style={{ 
-                            backgroundColor: `${article.category.color}20`,
-                            color: article.category.color 
+                            backgroundColor: `${article.category.color || '#808080'}20`,
+                            color: article.category.color || '#808080' 
                           }}
                         >
                           <div 
                             className="w-2 h-2 rounded-full"
-                            style={{ backgroundColor: article.category.color }}
+                            style={{ backgroundColor: article.category.color || '#808080' }}
                           ></div>
                           {article.category.name}
                         </span>

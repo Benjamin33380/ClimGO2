@@ -1,24 +1,30 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-// GET - Lister tous les commentaires
-export async function GET() {
+export async function GET(
+  request: NextRequest,
+  { params }: { params: Promise<{ articleId: string }> }
+) {
   try {
+    const resolvedParams = await params;
     const comments = await prisma.comment.findMany({
+      where: {
+        articleId: resolvedParams.articleId,
+        approved: true // Seulement les commentaires approuvés
+      },
+      orderBy: {
+        createdAt: 'desc'
+      },
       include: {
         article: {
           select: {
-            id: true,
             title: true,
-            slug: true,
-          },
-        },
-      },
-      orderBy: {
-        createdAt: 'desc',
-      },
+            slug: true
+          }
+        }
+      }
     });
 
     return NextResponse.json(comments);
@@ -28,7 +34,5 @@ export async function GET() {
       { error: 'Erreur lors de la récupération des commentaires' },
       { status: 500 }
     );
-  } finally {
-    await prisma.$disconnect();
   }
 } 

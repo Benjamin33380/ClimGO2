@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 
 interface Comment {
   id: string;
@@ -21,7 +20,6 @@ interface Comment {
 export default function CommentsAdmin() {
   const [comments, setComments] = useState<Comment[]>([]);
   const [loading, setLoading] = useState(true);
-  const router = useRouter();
 
   useEffect(() => {
     fetchComments();
@@ -121,7 +119,7 @@ export default function CommentsAdmin() {
         {comments.length === 0 ? (
           <div className="bg-white rounded-lg shadow-md p-8 text-center">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Aucun commentaire</h3>
-            <p className="text-gray-600">Aucun commentaire n'a été soumis pour le moment.</p>
+            <p className="text-gray-600">Aucun commentaire n&apos;a été soumis pour le moment.</p>
           </div>
         ) : (
           <div className="bg-white rounded-lg shadow-md overflow-hidden">

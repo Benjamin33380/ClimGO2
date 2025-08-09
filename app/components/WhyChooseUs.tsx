@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { TbBulb, TbHeart, TbShield, TbLeaf, TbArrowRight, TbPhone, TbBook } from "react-icons/tb";
+import { TbBulb, TbArrowRight, TbPhone, TbBook } from "react-icons/tb";
 
 export default function WhyChooseUs() {
   return (
@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
               
               <button className="text-sm absolute bottom-4 left-4 text-blue-600 group-hover:text-white duration-500">
                 <Link href="/nos-services" className="relative before:h-0.5 before:absolute before:w-full before:content-[''] before:bg-blue-600 group-hover:before:bg-white duration-300 before:bottom-0 before:left-0">
-                  Plus d'infos
+                  Plus d&apos;infos
                 </Link>
                 <TbArrowRight className="inline ml-1 w-3 h-3" />
               </button>
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
               
               <button className="text-sm absolute bottom-4 left-4 text-green-600 group-hover:text-white duration-500">
                 <Link href="/aides-etat" className="relative before:h-0.5 before:absolute before:w-full before:content-[''] before:bg-green-600 group-hover:before:bg-white duration-300 before:bottom-0 before:left-0">
-                  Plus d'infos
+                  Plus d&apos;infos
                 </Link>
                 <TbArrowRight className="inline ml-1 w-3 h-3" />
               </button>
@@ -76,7 +76,7 @@ export default function WhyChooseUs() {
               
               <button className="text-sm absolute bottom-4 left-4 text-purple-600 group-hover:text-white duration-500">
                 <Link href="/a-propos" className="relative before:h-0.5 before:absolute before:w-full before:content-[''] before:bg-purple-600 group-hover:before:bg-white duration-300 before:bottom-0 before:left-0">
-                  Plus d'infos
+                  Plus d&apos;infos
                 </Link>
                 <TbArrowRight className="inline ml-1 w-3 h-3" />
               </button>
@@ -96,7 +96,7 @@ export default function WhyChooseUs() {
               
               <button className="text-sm absolute bottom-4 left-4 text-emerald-600 group-hover:text-white duration-500">
                 <Link href="/blog" className="relative before:h-0.5 before:absolute before:w-full before:content-[''] before:bg-emerald-600 group-hover:before:bg-white duration-300 before:bottom-0 before:left-0">
-                  Plus d'infos
+                  Plus d&apos;infos
                 </Link>
                 <TbArrowRight className="inline ml-1 w-3 h-3" />
               </button>
@@ -128,7 +128,7 @@ export default function WhyChooseUs() {
                         <TbBulb className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="text-2xl md:text-3xl font-bold text-white">
-                        Prêt à expérimenter l'excellence ?
+                        Prêt à expérimenter l&apos;excellence ?
                       </h3>
                     </div>
                     

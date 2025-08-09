@@ -101,7 +101,7 @@ export default function NewCityPage() {
     ctaButtonText: '',
   });
 
-  const handleInputChange = (field: keyof CityPageForm, value: any) => {
+  const handleInputChange = (field: keyof CityPageForm, value: any) => { // eslint-disable-line @typescript-eslint/no-explicit-any
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
@@ -444,7 +444,7 @@ export default function NewCityPage() {
             {/* Cards Section */}
             {activeSection === 'cards' && (
               <div className="space-y-4">
-                <h2 className="text-xl font-semibold text-gray-900 mb-4">Cartes d'information</h2>
+                <h2 className="text-xl font-semibold text-gray-900 mb-4">Cartes d&apos;information</h2>
                 <div className="space-y-6">
                   {[1, 2, 3, 4].map((num) => (
                     <div key={num} className="border border-gray-200 rounded-lg p-4">
@@ -556,7 +556,7 @@ export default function NewCityPage() {
                             <div key={index} className="flex gap-2">
                               <textarea
                                 value={content}
-                                onChange={(e) => handleSectionContentChange(`section${num}Content` as any, index, e.target.value)}
+                                onChange={(e) => handleSectionContentChange(`section${num}Content` as any, index, e.target.value)} // eslint-disable-line @typescript-eslint/no-explicit-any
                                 className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 rows={2}
                                 required
@@ -564,7 +564,7 @@ export default function NewCityPage() {
                               {(formData[`section${num}Content` as keyof CityPageForm] as string[]).length > 1 && (
                                 <button
                                   type="button"
-                                  onClick={() => removeSectionContent(`section${num}Content` as any, index)}
+                                  onClick={() => removeSectionContent(`section${num}Content` as any, index)} // eslint-disable-line @typescript-eslint/no-explicit-any
                                   className="text-red-600 hover:text-red-800 px-2"
                                 >
                                   ×
@@ -574,7 +574,7 @@ export default function NewCityPage() {
                           ))}
                           <button
                             type="button"
-                            onClick={() => addSectionContent(`section${num}Content` as any)}
+                            onClick={() => addSectionContent(`section${num}Content` as any)} // eslint-disable-line @typescript-eslint/no-explicit-any
                             className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition-colors text-sm"
                           >
                             Ajouter un paragraphe
@@ -694,7 +694,7 @@ export default function NewCityPage() {
                 <div className="text-gray-400 text-6xl mb-4">🏙️</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Aperçu de la page</h3>
                 <p className="text-gray-600">
-                  Commencez par remplir les informations de base (nom de la ville et image de fond) pour voir l'aperçu de votre page.
+                  Commencez par remplir les informations de base (nom de la ville et image de fond) pour voir l&apos;aperçu de votre page.
                 </p>
               </div>
             )}

@@ -35,11 +35,11 @@ export default function Services() {
                 </div>
                 
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong className="text-[#03144a]">ClimGO est votre partenaire local entre Bordeaux et le Bassin d'Arcachon pour tous vos projets de chauffage, climatisation et confort thermique. </strong>
+                  <strong className="text-[#03144a]">ClimGO est votre partenaire local entre Bordeaux et le Bassin d&apos;Arcachon pour tous vos projets de chauffage, climatisation et confort thermique. </strong>
                 </p>
                 
                 <p className="text-gray-600 leading-relaxed">
-                  Basée entre Bordeaux et le Bassin d'Arcachon, l'entreprise <strong className="text-[#03144a]">ClimGO</strong>, certifiée <strong className="text-green-600">RGE</strong>, vous accompagne dans tous vos projets
+                  Basée entre Bordeaux et le Bassin d&apos;Arcachon, l&apos;entreprise <strong className="text-[#03144a]">ClimGO</strong>, certifiée <strong className="text-green-600">RGE</strong>, vous accompagne dans tous vos projets
                    d&apos;<strong className="text-[#03144a]">installation</strong>, de <strong className="text-[#03144a]">dépannage</strong> et de <strong className="text-[#03144a]">maintenance</strong> en <strong className="text-[#03144a]">pompe à chaleur</strong>, <strong className="text-[#03144a]">chauffage</strong>
                    , <strong className="text-[#03144a]">climatisation</strong>, <strong className="text-[#03144a]">eau chaude sanitaire</strong> et <strong className="text-[#03144a]">énergies renouvelables</strong>.
                 </p>

@@ -77,14 +77,14 @@ declare global {
   interface Window {
     google: {
       maps: {
-        Map: any;
-        Marker: any;
-        Circle: any;
-        InfoWindow: any;
-        Size: any;
-        Point: any;
-        SymbolPath: any;
-        event: any;
+        Map: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+        Marker: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+        Circle: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+        InfoWindow: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+        Size: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+        Point: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+        SymbolPath: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+        event: any; // eslint-disable-line @typescript-eslint/no-explicit-any
       };
     };
   }
@@ -93,10 +93,10 @@ declare global {
 export default function MapContent() {
   const pathname = usePathname();
   const mapRef = useRef<HTMLDivElement>(null);
-  const mapInstanceRef = useRef<any>(null);
-  const markerRef = useRef<any>(null);
-  const miniCircleRef = useRef<any>(null);
-  const circleRef = useRef<any>(null);
+  const mapInstanceRef = useRef<any>(null); // eslint-disable-line @typescript-eslint/no-explicit-any
+  const markerRef = useRef<any>(null); // eslint-disable-line @typescript-eslint/no-explicit-any
+  const miniCircleRef = useRef<any>(null); // eslint-disable-line @typescript-eslint/no-explicit-any
+  const circleRef = useRef<any>(null); // eslint-disable-line @typescript-eslint/no-explicit-any
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isGoogleMapsLoaded, setIsGoogleMapsLoaded] = useState(false);

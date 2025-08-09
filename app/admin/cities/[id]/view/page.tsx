@@ -49,11 +49,11 @@ export default function ViewCityPage() {
   const [city, setCity] = useState<CityPage | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  useEffect(() => { 
     if (params.id) {
       fetchCity();
     }
-  }, [params.id]);
+  }, [params.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchCity = async () => {
     try {
@@ -234,7 +234,7 @@ export default function ViewCityPage() {
 
           {/* Cartes d'information */}
           <div className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Cartes d'information</h2>
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">Cartes d&apos;information</h2>
             <div className="space-y-4">
               {[
                 { title: city.card1Title, description: city.card1Description },

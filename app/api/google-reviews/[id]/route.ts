@@ -5,16 +5,16 @@ const prisma = new PrismaClient();
 
 export async function PUT(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params;
+    const resolvedParams = await params;
     const body = await request.json();
     const { fullName, content, rating, publishedDate } = body;
 
     const review = await prisma.googleAdvice.update({
       where: {
-        id: id
+        id: resolvedParams.id
       },
       data: {
         fullName,
@@ -31,21 +31,19 @@ export async function PUT(
       { error: 'Erreur lors de la modification de l\'avis' },
       { status: 500 }
     );
-  } finally {
-    await prisma.$disconnect();
   }
 }
 
 export async function DELETE(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params;
+    const resolvedParams = await params;
 
     await prisma.googleAdvice.delete({
       where: {
-        id: id
+        id: resolvedParams.id
       }
     });
 
@@ -56,7 +54,5 @@ export async function DELETE(
       { error: 'Erreur lors de la suppression de l\'avis' },
       { status: 500 }
     );
-  } finally {
-    await prisma.$disconnect();
   }
 } 

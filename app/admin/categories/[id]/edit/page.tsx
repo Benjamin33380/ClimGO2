@@ -24,12 +24,12 @@ export default function EditCategory() {
     color: '#3B82F6',
     isActive: true,
   });
-
-  useEffect(() => {
+  
+  useEffect(() => { 
     if (params.id) {
       fetchCategoryData();
     }
-  }, [params.id]);
+  }, [params.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchCategoryData = async () => {
     try {
@@ -53,7 +53,7 @@ export default function EditCategory() {
     }
   };
 
-  const handleInputChange = (field: keyof CategoryForm, value: any) => {
+  const handleInputChange = (field: keyof CategoryForm, value: any) => { // eslint-disable-line @typescript-eslint/no-explicit-any
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 

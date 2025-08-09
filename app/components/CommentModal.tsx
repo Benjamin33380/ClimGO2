@@ -67,6 +67,7 @@ export default function CommentModal({ isOpen, onClose, articleId, articleTitle,
         setError(data.error || 'Erreur lors de l\'envoi du commentaire');
       }
     } catch (error) {
+      console.error('Erreur:', error);
       setError('Erreur lors de l\'envoi du commentaire');
     } finally {
       setLoading(false);

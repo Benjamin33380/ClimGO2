@@ -103,11 +103,11 @@ export default function EditCityPage() {
     ctaButtonText: '',
   });
 
-  useEffect(() => {
+  useEffect(() => { 
     if (params.id) {
       fetchCityData();
     }
-  }, [params.id]);
+  }, [params.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchCityData = async () => {
     try {
@@ -767,7 +767,7 @@ export default function EditCityPage() {
                 <div className="text-gray-400 text-6xl mb-4">🏙️</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Aperçu de la page</h3>
                 <p className="text-gray-600">
-                  Commencez par remplir les informations de base (nom de la ville et image de fond) pour voir l'aperçu de votre page.
+                  Commencez par remplir les informations de base (nom de la ville et image de fond) pour voir l&apos;perçu de votre page.
                 </p>
               </div>
             )}

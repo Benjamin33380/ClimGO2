@@ -69,7 +69,7 @@ export default function Header() {
               </div>
               
               <Link href="/zones-desservies" className="text-white hover:text-blue-200 transition-colors text-base font-medium">
-                Zones d'intervention
+                Zones d&apos;intervention
               </Link>
               
               <Link href="/a-propos" className="text-white hover:text-blue-200 transition-colors text-base font-medium">
@@ -77,7 +77,7 @@ export default function Header() {
               </Link>
               
               <Link href="/aides-etat" className="text-white hover:text-blue-200 transition-colors text-base font-medium">
-                Aides d'État
+                Aides d&apos;État
               </Link>
               
               <Link href="/blog" className="text-white hover:text-blue-200 transition-colors text-base font-medium">
@@ -249,7 +249,7 @@ export default function Header() {
             >
               <span className="flex items-center gap-2">
                 <ImMap className="text-[16px]" />
-                Zones d'intervention
+                Zones d&apos;intervention
               </span>
             </Link>
             <Link 
