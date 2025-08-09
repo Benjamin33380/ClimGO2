@@ -1,8 +1,3 @@
-import Tree from './Tree';
-import Badge from './Badge';
-import Clock from './Clock';
-import Lightning from './Lightning';
-import Person from './Person';
 
 export default function FinancialAids() {
   return (
@@ -38,7 +33,7 @@ export default function FinancialAids() {
           <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                <Badge />
+
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-white mb-3">Qualité</h3>
@@ -53,7 +48,7 @@ export default function FinancialAids() {
           <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                <Person />
+
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-white mb-3">Service personnalisé</h3>
@@ -68,7 +63,6 @@ export default function FinancialAids() {
           <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                <Clock />
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-white mb-3">Ponctualité & rigueur</h3>
@@ -83,7 +77,6 @@ export default function FinancialAids() {
           <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                <Lightning />
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-white mb-3">Efficacité & Propreté</h3>
@@ -98,7 +91,6 @@ export default function FinancialAids() {
           <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                <Tree />
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-white mb-3">Engagement écologique</h3>

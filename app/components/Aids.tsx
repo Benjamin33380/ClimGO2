@@ -5,7 +5,7 @@ export default function Aids() {
       <section
         className="py-24 relative bg-fixed bg-center bg-no-repeat bg-cover md:bg-fixed"
         style={{
-          backgroundImage: 'linear-gradient(rgba(3, 20, 74, 0.8), rgba(3, 20, 74, 0.8)), url("https://images.unsplash.com/photo-1494888427482-242d32babc0b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")'
+          backgroundImage: 'linear-gradient(rgba(3, 20, 74, 0.9), rgba(3, 20, 74, 0.9))'
         }}
       >
         <div className="container mx-auto px-4">
