@@ -5,7 +5,7 @@ import { verifyJWT } from '@/lib/auth'
 // GET - Récupérer un article spécifique
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: { id: string } }
 ) {
   try {
     // Vérifier l'authentification
@@ -21,15 +21,21 @@ export async function GET(
       return NextResponse.json({ error: 'Token invalide' }, { status: 401 })
     }
 
-    const resolvedParams = await params
     const article = await prisma.article.findUnique({
-      where: { id: resolvedParams.id },
+      where: { id: params.id },
       include: {
         admin: {
           select: {
             id: true,
             name: true,
             email: true
+          }
+        },
+        category: {
+          select: {
+            id: true,
+            name: true,
+            color: true
           }
         }
       }
@@ -46,10 +52,10 @@ export async function GET(
   }
 }
 
-// PUT - Modifier un article
+// PUT - Mettre à jour un article
 export async function PUT(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: { id: string } }
 ) {
   try {
     // Vérifier l'authentification
@@ -65,7 +71,7 @@ export async function PUT(
       return NextResponse.json({ error: 'Token invalide' }, { status: 401 })
     }
 
-    const { title, content, slug, excerpt, imageUrl, published, metaTitle, metaDesc, metaKeywords } = await request.json()
+    const { title, content, slug, excerpt, imageUrl, published, metaTitle, metaDesc, metaKeywords, categoryId } = await request.json()
 
     // Validation des données
     if (!title || !content || !slug) {
@@ -73,9 +79,8 @@ export async function PUT(
     }
 
     // Vérifier si l'article existe
-    const resolvedParams = await params
     const existingArticle = await prisma.article.findUnique({
-      where: { id: resolvedParams.id }
+      where: { id: params.id }
     })
 
     if (!existingArticle) {
@@ -95,7 +100,7 @@ export async function PUT(
 
     // Mettre à jour l'article
     const article = await prisma.article.update({
-      where: { id: resolvedParams.id },
+      where: { id: params.id },
       data: {
         title,
         content,
@@ -105,7 +110,8 @@ export async function PUT(
         published: published || false,
         metaTitle,
         metaDesc,
-        metaKeywords
+        metaKeywords,
+        categoryId: categoryId || null
       },
       include: {
         admin: {
@@ -114,13 +120,20 @@ export async function PUT(
             name: true,
             email: true
           }
+        },
+        category: {
+          select: {
+            id: true,
+            name: true,
+            color: true
+          }
         }
       }
     })
 
-    return NextResponse.json({ article, message: 'Article modifié avec succès' })
+    return NextResponse.json({ article, message: 'Article mis à jour avec succès' })
   } catch (error) {
-    console.error('Erreur lors de la modification de l\'article:', error)
+    console.error('Erreur lors de la mise à jour de l\'article:', error)
     return NextResponse.json({ error: 'Erreur interne du serveur' }, { status: 500 })
   }
 }
@@ -128,7 +141,7 @@ export async function PUT(
 // DELETE - Supprimer un article
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: { id: string } }
 ) {
   try {
     // Vérifier l'authentification
@@ -145,9 +158,8 @@ export async function DELETE(
     }
 
     // Vérifier si l'article existe
-    const resolvedParams = await params
     const existingArticle = await prisma.article.findUnique({
-      where: { id: resolvedParams.id }
+      where: { id: params.id }
     })
 
     if (!existingArticle) {
@@ -156,7 +168,7 @@ export async function DELETE(
 
     // Supprimer l'article
     await prisma.article.delete({
-      where: { id: resolvedParams.id }
+      where: { id: params.id }
     })
 
     return NextResponse.json({ message: 'Article supprimé avec succès' })

@@ -3,8 +3,6 @@
 
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
 import Link from 'next/link';
 
 // Configuration des villes avec leurs coordonnées
@@ -75,12 +73,33 @@ const DEFAULT_PAGES = [
   'privacy'
 ];
 
+declare global {
+  interface Window {
+    google: {
+      maps: {
+        Map: any;
+        Marker: any;
+        Circle: any;
+        InfoWindow: any;
+        Size: any;
+        Point: any;
+        SymbolPath: any;
+        event: any;
+      };
+    };
+  }
+}
+
 export default function MapContent() {
   const pathname = usePathname();
   const mapRef = useRef<HTMLDivElement>(null);
-  const mapInstanceRef = useRef<L.Map | null>(null);
+  const mapInstanceRef = useRef<any>(null);
+  const markerRef = useRef<any>(null);
+  const miniCircleRef = useRef<any>(null);
+  const circleRef = useRef<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isGoogleMapsLoaded, setIsGoogleMapsLoaded] = useState(false);
 
   const getCurrentPageInfo = () => {
     const segments = pathname.split('/').filter(Boolean);
@@ -134,29 +153,48 @@ export default function MapContent() {
     };
   };
 
-  const createCustomIcon = () => {
-    return L.divIcon({
-      html: `
-        <div style="
-          width: 40px;
-          height: 40px;
-          background: white;
-          border: 2px solid #03144A;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        ">
-          <img src="/favicon/favicon-32x32.png" alt="ClimGO" style="width: 24px; height: 24px;" />
-        </div>
-      `,
-      className: 'custom-climgo-marker',
-      iconSize: [40, 40],
-      iconAnchor: [20, 20],
-      popupAnchor: [0, -20]
-    });
-  };
+  // Charger Google Maps API
+  useEffect(() => {
+    const loadGoogleMaps = () => {
+      // Vérifier si la clé API est définie
+      if (!process.env.NEXT_PUBLIC_GOOGLE_API_KEY || process.env.NEXT_PUBLIC_GOOGLE_API_KEY === 'your_google_maps_api_key_here') {
+        setError('Clé API Google Maps manquante. Veuillez configurer NEXT_PUBLIC_GOOGLE_API_KEY dans votre fichier .env.local');
+        setIsLoading(false);
+        return;
+      }
+
+      // Vérifier si l'API est déjà chargée
+      if (window.google && window.google.maps) {
+        setIsGoogleMapsLoaded(true);
+        return;
+      }
+
+      // Vérifier si le script est déjà en cours de chargement
+      const existingScript = document.querySelector('script[src*="maps.googleapis.com"]');
+      if (existingScript) {
+        // Attendre que le script existant se charge
+        existingScript.addEventListener('load', () => {
+          setIsGoogleMapsLoaded(true);
+        });
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}&libraries=geometry`;
+      script.async = true;
+      script.defer = true;
+      script.onload = () => {
+        setIsGoogleMapsLoaded(true);
+      };
+      script.onerror = () => {
+        setError('Erreur lors du chargement de Google Maps. Vérifiez votre clé API.');
+        setIsLoading(false);
+      };
+      document.head.appendChild(script);
+    };
+
+    loadGoogleMaps();
+  }, []);
 
   // Calcul de la ville courante à l'extérieur de useEffect
   const { city, isDefaultPage } = getCurrentPageInfo();
@@ -165,16 +203,10 @@ export default function MapContent() {
   console.log('🗺️ Coordonnées:', CITIES_CONFIG[city]);
   
   useEffect(() => {
-    if (!mapRef.current) return;
+    if (!mapRef.current || !isGoogleMapsLoaded) return;
 
     setIsLoading(true);
     setError(null);
-
-    // Nettoyer la carte existante
-    if (mapInstanceRef.current) {
-      mapInstanceRef.current.remove();
-      mapInstanceRef.current = null;
-    }
 
     const cityConfig = CITIES_CONFIG[city];
 
@@ -185,47 +217,89 @@ export default function MapContent() {
     }
 
     try {
-      // Créer une nouvelle carte
-      const map = L.map(mapRef.current, {
+      // Créer une nouvelle carte Google Maps
+      const map = new window.google.maps.Map(mapRef.current, {
+        center: { lat: cityConfig.lat, lng: cityConfig.lng },
+        zoom: cityConfig.zoom,
+        mapTypeId: 'satellite',
+        mapTypeControl: false,
+        streetViewControl: false,
+        fullscreenControl: false,
         zoomControl: true,
-        scrollWheelZoom: true,
-        doubleClickZoom: true,
-        touchZoom: true
-      }).setView([cityConfig.lat, cityConfig.lng], cityConfig.zoom);
+        scrollwheel: true,
+        gestureHandling: 'cooperative'
+      });
 
-      // Ajouter les tuiles
-      L.tileLayer('https://api.maptiler.com/maps/satellite/{z}/{x}/{y}.png?key=6Wc87ApEs23sBOY0iu6X', {
-        attribution: '&copy; <a href="https://www.maptiler.com/">MapTiler</a> | ClimGO',
-        tileSize: 512,
-        zoomOffset: -1,
-        maxZoom: 18
-      }).addTo(map);
+      // Créer le marqueur ClimGO
+      const marker = new window.google.maps.Marker({
+        position: { lat: cityConfig.lat, lng: cityConfig.lng },
+        map: map,
+        icon: {
+          url: '/favicon/favicon-32x32.png',
+          className: 'w-fit h-fit bg-white rounded-full border-2 border-white shadow-lg',
+          scaledSize: new window.google.maps.Size(32, 32),
+          anchor: new window.google.maps.Point(16, 16)
+        },
+        title: `ClimGO - ${city.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}`
+      });
 
-      // Ajouter le cercle de 15km avec couleur gris transparente
-      L.circle([cityConfig.lat, cityConfig.lng], {
-        color: '#9CA3AF',        // Couleur de la bordure (gris)
-        fillColor: '#9CA3AF',    // Couleur de remplissage (gris)
-        fillOpacity: 0.2,        // Transparence du remplissage
-        opacity: 0.4,            // Transparence de la bordure
-        radius: 6000,           // Rayon de 15km en mètres
-        weight: 2                // Épaisseur de la bordure
-      }).addTo(map);
+      const miniCircle = new window.google.maps.Circle({
+        map: map,
+        strokeColor: '#F8F9F4',
+        strokeOpacity: 1,
+        strokeWeight: 2,
+        fillColor: '#F8F9F4',
+        fillOpacity: 1,
+        radius: 300,
+        center: { lat: cityConfig.lat, lng: cityConfig.lng }
+      });
 
-      // Ajouter le marqueur
-      const marker = L.marker([cityConfig.lat, cityConfig.lng], {
-        icon: createCustomIcon()
-      }).addTo(map);
+      // Créer le cercle de 6km
+      const circle = new window.google.maps.Circle({
+        strokeColor: '#9CA3AF',
+        strokeOpacity: 0.4,
+        strokeWeight: 2,
+        fillColor: '#9CA3AF',
+        fillOpacity: 0.2,
+        map: map,
+        center: { lat: cityConfig.lat, lng: cityConfig.lng },
+        radius: 6000 // 6km en mètres
+      });
 
+      // InfoWindow pour le marqueur ClimGO
       const cityName = city.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
-      
-      // Popup modifié : juste le nom ClimGO et la ville
-      marker.bindPopup(`
-        <div style="text-align: center; padding: 8px;">
-          <strong style="color: #03144A;">ClimGO - ${cityName}</strong>
-        </div>
-      `);
+      const infoWindow = new window.google.maps.InfoWindow({
+        content: `
+          <div style="text-align: center; padding: 8px; font-family: Arial, sans-serif;">
+            <strong style="color: #03144A; font-size: 14px;">ClimGO - ${cityName}</strong>
+          </div>
+        `
+      });
+
+      marker.addListener('click', () => {
+        infoWindow.open(map, marker);
+      });
 
       mapInstanceRef.current = map;
+      markerRef.current = marker;
+      miniCircleRef.current = miniCircle;
+      circleRef.current = circle;
+      
+      // Forcer le redimensionnement de la carte après un délai
+      setTimeout(() => {
+        if (mapInstanceRef.current) {
+          window.google.maps.event.trigger(mapInstanceRef.current, 'resize');
+          mapInstanceRef.current.setCenter({ lat: cityConfig.lat, lng: cityConfig.lng });
+        }
+      }, 100);
+
+      // Redimensionner à nouveau après un délai plus long pour s'assurer que tout est chargé
+      setTimeout(() => {
+        if (mapInstanceRef.current) {
+          window.google.maps.event.trigger(mapInstanceRef.current, 'resize');
+        }
+      }, 500);
+
       setIsLoading(false);
       
     } catch (err) {
@@ -233,13 +307,15 @@ export default function MapContent() {
       setError('Erreur lors du chargement de la carte');
       setIsLoading(false);
     }
-  }, [city]);
+  }, [city, isGoogleMapsLoaded]);
 
   useEffect(() => {
     return () => {
       if (mapInstanceRef.current) {
-        mapInstanceRef.current.remove();
+        // Google Maps se nettoie automatiquement
         mapInstanceRef.current = null;
+        markerRef.current = null;
+        circleRef.current = null;
       }
     };
   }, []);
@@ -293,6 +369,7 @@ export default function MapContent() {
           <div
             ref={mapRef}
             className="w-full h-[400px] md:h-[500px] relative z-10"
+            style={{ minHeight: '400px' }}
           />
           
           {!isLoading && (

@@ -27,11 +27,23 @@ interface Article {
   metaKeywords: string | null
   createdAt: string
   updatedAt: string
+  category?: {
+    id: string
+    name: string
+    color: string
+  } | null
   admin: {
     id: string
     name: string
     email: string
   }
+}
+
+interface Category {
+  id: string
+  name: string
+  color: string
+  isActive: boolean
 }
 
 interface ArticleForm {
@@ -44,10 +56,12 @@ interface ArticleForm {
   metaTitle: string
   metaDesc: string
   metaKeywords: string
+  categoryId: string
 }
 
 export default function AdminArticlesPage() {
   const [articles, setArticles] = useState<Article[]>([])
+  const [categories, setCategories] = useState<Category[]>([])
   const [loading, setLoading] = useState(true)
   const [showForm, setShowForm] = useState(false)
   const [editingArticle, setEditingArticle] = useState<Article | null>(null)
@@ -60,7 +74,8 @@ export default function AdminArticlesPage() {
     published: false,
     metaTitle: '',
     metaDesc: '',
-    metaKeywords: ''
+    metaKeywords: '',
+    categoryId: ''
   })
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
@@ -69,6 +84,7 @@ export default function AdminArticlesPage() {
   useEffect(() => {
     checkAuth()
     loadArticles()
+    loadCategories()
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const checkAuth = async () => {
@@ -107,12 +123,28 @@ export default function AdminArticlesPage() {
 
       if (response.ok) {
         const data = await response.json()
-        setArticles(data.articles)
+        setArticles(data.articles || []) // Extraire la propriété articles
+      } else {
+        console.error('Erreur lors du chargement des articles')
       }
     } catch (error) {
-      console.error('Erreur lors du chargement des articles:', error)
+      console.error('Erreur:', error)
     } finally {
       setLoading(false)
+    }
+  }
+
+  const loadCategories = async () => {
+    try {
+      const response = await fetch('/api/admin/categories')
+      if (response.ok) {
+        const data = await response.json()
+        setCategories(data.filter((cat: Category) => cat.isActive))
+      } else {
+        console.error('Erreur lors du chargement des catégories')
+      }
+    } catch (error) {
+      console.error('Erreur:', error)
     }
   }
 
@@ -128,7 +160,7 @@ export default function AdminArticlesPage() {
         : '/api/admin/articles'
       
       const method = editingArticle ? 'PUT' : 'POST'
-
+      
       const response = await fetch(url, {
         method,
         headers: {
@@ -138,37 +170,54 @@ export default function AdminArticlesPage() {
         body: JSON.stringify(formData)
       })
 
-      const data = await response.json()
-
       if (response.ok) {
-        setSuccess(data.message)
+        setSuccess(editingArticle ? 'Article modifié avec succès' : 'Article créé avec succès')
         setShowForm(false)
-        setEditingArticle(null)
         resetForm()
-        loadArticles()
+        loadArticles() // Recharger la liste
       } else {
-        setError(data.error)
+        const errorData = await response.json()
+        setError(errorData.error || 'Erreur lors de l\'opération')
       }
     } catch (error) {
-      console.error('Erreur lors de la sauvegarde:', error)
-      setError('Erreur lors de la sauvegarde')
+      console.error('Erreur:', error)
+      setError('Erreur lors de l\'opération')
     }
   }
 
-  const handleEdit = (article: Article) => {
-    setEditingArticle(article)
-    setFormData({
-      title: article.title,
-      content: article.content || '',
-      slug: article.slug,
-      excerpt: article.excerpt || '',
-      imageUrl: article.imageUrl || '',
-      published: article.published,
-      metaTitle: article.metaTitle || '',
-      metaDesc: article.metaDesc || '',
-      metaKeywords: article.metaKeywords || ''
-    })
-    setShowForm(true)
+  const handleEdit = async (article: Article) => {
+    try {
+      const token = localStorage.getItem('admin_token')
+      const response = await fetch(`/api/admin/articles/${article.id}`, {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      })
+
+      if (response.ok) {
+        const data = await response.json()
+        const articleData = data.article // Extraire l'article de la réponse
+        
+        setFormData({
+          title: articleData.title,
+          content: articleData.content,
+          slug: articleData.slug,
+          excerpt: articleData.excerpt || '',
+          imageUrl: articleData.imageUrl || '',
+          published: articleData.published,
+          metaTitle: articleData.metaTitle || '',
+          metaDesc: articleData.metaDesc || '',
+          metaKeywords: articleData.metaKeywords || '',
+          categoryId: articleData.category?.id || ''
+        })
+        setEditingArticle(articleData)
+        setShowForm(true)
+      } else {
+        console.error('Erreur lors du chargement de l\'article')
+      }
+    } catch (error) {
+      console.error('Erreur:', error)
+    }
   }
 
   const handleDelete = async (id: string) => {
@@ -208,7 +257,8 @@ export default function AdminArticlesPage() {
       published: false,
       metaTitle: '',
       metaDesc: '',
-      metaKeywords: ''
+      metaKeywords: '',
+      categoryId: ''
     })
     setEditingArticle(null)
   }
@@ -251,7 +301,7 @@ export default function AdminArticlesPage() {
             </div>
             <div className="flex space-x-4">
               <Link
-                href="/admin"
+                href="/admin/dashboard"
                 className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
               >
                 <svg className="mr-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -424,6 +474,25 @@ export default function AdminArticlesPage() {
                 </div>
               </div>
 
+              {/* Category Selection */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Catégorie
+                </label>
+                <select
+                  value={formData.categoryId}
+                  onChange={(e) => setFormData({ ...formData, categoryId: e.target.value })}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="">Sélectionner une catégorie</option>
+                  {categories.map((category) => (
+                    <option key={category.id} value={category.id}>
+                      {category.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
               <div className="flex items-center">
                 <input
                   type="checkbox"
@@ -517,6 +586,9 @@ export default function AdminArticlesPage() {
                       Article
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Catégorie
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Statut
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -539,6 +611,21 @@ export default function AdminArticlesPage() {
                             /{article.slug}
                           </div>
                         </div>
+                      </td>
+                      <td className="px-6 py-4">
+                        {article.category ? (
+                          <div className="flex items-center gap-2">
+                            <div 
+                              className="w-3 h-3 rounded-full"
+                              style={{ backgroundColor: article.category.color }}
+                            ></div>
+                            <span className="text-sm text-gray-900">
+                              {article.category.name}
+                            </span>
+                          </div>
+                        ) : (
+                          <span className="text-sm text-gray-400">Aucune</span>
+                        )}
                       </td>
                       <td className="px-6 py-4">
                         <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${

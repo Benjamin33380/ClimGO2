@@ -27,6 +27,13 @@ export async function GET(request: NextRequest) {
             name: true,
             email: true
           }
+        },
+        category: {
+          select: {
+            id: true,
+            name: true,
+            color: true
+          }
         }
       },
       orderBy: {
@@ -57,7 +64,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Token invalide' }, { status: 401 })
     }
 
-    const { title, content, slug, excerpt, imageUrl, published, metaTitle, metaDesc, metaKeywords } = await request.json()
+    const { title, content, slug, excerpt, imageUrl, published, metaTitle, metaDesc, metaKeywords, categoryId } = await request.json()
 
     // Validation des données
     if (!title || !content || !slug) {
@@ -85,6 +92,7 @@ export async function POST(request: NextRequest) {
         metaTitle,
         metaDesc,
         metaKeywords,
+        categoryId: categoryId || null,
         adminId: jwtPayload.adminId
       },
       include: {
@@ -93,6 +101,13 @@ export async function POST(request: NextRequest) {
             id: true,
             name: true,
             email: true
+          }
+        },
+        category: {
+          select: {
+            id: true,
+            name: true,
+            color: true
           }
         }
       }

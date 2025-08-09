@@ -57,6 +57,22 @@ model AdminSession {
   @@map("admin_sessions")
 }
 
+model Category {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String   @unique
+  slug        String   @unique
+  description String?
+  color       String?  // Couleur pour l'affichage (ex: #3B82F6)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relations
+  articles    Article[]
+  
+  @@map("categories")
+}
+
 model Article {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   title       String
@@ -77,13 +93,15 @@ model Article {
   // Relations
   adminId     String   @db.ObjectId
   admin       Admin    @relation(fields: [adminId], references: [id])
+  categoryId  String?  @db.ObjectId
+  category    Category? @relation(fields: [categoryId], references: [id])
   comments    Comment[]
   ratings     Rating[]
 }
 
 model Comment {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  content   String
+  content   String   // Limite à 240 caractères (validation côté application)
   author    String
   email     String
   approved  Boolean  @default(false)
@@ -102,6 +120,18 @@ model Rating {
   createdAt DateTime @default(now())
   
   @@map("ratings")
+}
+
+model GoogleAdvice {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  fullName      String
+  content       String
+  rating        Int      // 1-5 étoiles
+  publishedDate DateTime @default(now())
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  @@map("google_advices")
 }
 
 model BruteforceAttempt {
@@ -135,4 +165,66 @@ model BruteforceAttempt {
   @@index([sessionId])
   @@index([isBlocked])
   @@map("bruteforce_attempts")
+}
+
+model CityPage {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  
+  // SEO Fields
+  slug          String   @unique
+  title         String   // Meta title
+  description   String   // Meta description
+  keywords      String   // Meta keywords
+  
+  // Basic Info
+  cityName      String
+  backgroundImage String
+  
+  // Main Section
+  mainTitle     String
+  mainDescription String
+  
+  // Interventions Section
+  interventionsTitle String
+  interventionsDescription String
+  
+  // Why Choose Section
+  whyChooseTitle String
+  whyChooseDescription1 String
+  whyChooseDescription2 String
+  whyChooseDescription3 String
+  
+  // Cards
+  card1Title    String
+  card1Description String
+  card2Title    String
+  card2Description String
+  card3Title    String
+  card3Description String
+  card4Title    String
+  card4Description String
+  
+  // FAQ
+  faqQuestions  Json     // Array of {question: string, answer: string}
+  
+  // Enriched Sections
+  section1Title String
+  section1Content Json   // Array of strings
+  section2Title String
+  section2Content Json   // Array of strings
+  section3Title String
+  section3Content Json   // Array of strings
+  section4Title String
+  section4Content Json   // Array of strings
+  
+  // CTA
+  ctaTitle      String
+  ctaDescription String
+  ctaButtonText String
+  
+  // Timestamps
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  @@map("city_pages")
 }

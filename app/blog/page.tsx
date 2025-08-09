@@ -2,6 +2,7 @@ import { PrismaClient } from '@prisma/client'
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
+import SortSelect from '../components/SortSelect'
 
 // Revalidate rapide pour voir les nouveaux articles
 export const revalidate = 60
@@ -16,30 +17,148 @@ type ArticlePreview = {
   imageUrl: string | null
   createdAt: Date
   metaDesc: string | null
+  category?: {
+    name: string
+    color: string
+    slug: string
+  } | null
+  _count: {
+    comments: number
+    ratings: number
+  }
+  averageRating: number
 }
 
-async function getArticles(): Promise<ArticlePreview[]> {
+type Category = {
+  id: string
+  name: string
+  slug: string
+  color: string
+  _count: {
+    articles: number
+  }
+}
+
+interface PageProps {
+  searchParams: {
+    page?: string
+    sort?: string
+  }
+}
+
+async function getArticles(page: number = 1, sort: string = 'recent'): Promise<{ articles: ArticlePreview[], total: number, totalPages: number }> {
   try {
-    const articles = await prisma.article.findMany({
-      where: {
-        published: true
-      },
-      orderBy: {
-        createdAt: 'desc'
-      },
-      select: {
-        id: true,
-        title: true,
-        slug: true,
-        excerpt: true,
-        imageUrl: true,
-        createdAt: true,
-        metaDesc: true
-      }
-    })
-    return articles
+    const pageSize = 9
+    const skip = (page - 1) * pageSize
+
+    let orderBy: any = { createdAt: 'desc' }
+
+    // Définir l'ordre selon le tri sélectionné
+    switch (sort) {
+      case 'popular':
+        // Pour le tri par popularité, on récupère d'abord tous les articles puis on les trie
+        orderBy = { createdAt: 'desc' }
+        break
+      case 'rating':
+        // Pour le tri par rating, on devra le faire après récupération
+        orderBy = { createdAt: 'desc' }
+        break
+      default: // 'recent'
+        orderBy = { createdAt: 'desc' }
+    }
+
+    const [articles, total] = await Promise.all([
+      prisma.article.findMany({
+        where: {
+          published: true
+        },
+        include: {
+          category: {
+            select: {
+              name: true,
+              color: true,
+              slug: true,
+            }
+          },
+          _count: {
+            select: {
+              comments: true,
+              ratings: true,
+            }
+          }
+        },
+        orderBy,
+        skip,
+        take: pageSize
+      }),
+      prisma.article.count({
+        where: {
+          published: true
+        }
+      })
+    ])
+
+    // Calculer la note moyenne pour chaque article
+    const articlesWithRating = await Promise.all(
+      articles.map(async (article) => {
+        const ratings = await prisma.rating.findMany({
+          where: { articleId: article.id },
+        });
+
+        const averageRating = ratings.length > 0
+          ? ratings.reduce((sum, rating) => sum + rating.rating, 0) / ratings.length
+          : 0;
+
+        return {
+          ...article,
+          averageRating,
+        };
+      })
+    )
+
+    // Trier par popularité (nombre de commentaires) si nécessaire
+    if (sort === 'popular') {
+      articlesWithRating.sort((a, b) => b._count.comments - a._count.comments)
+    }
+
+    // Trier par rating si nécessaire
+    if (sort === 'rating') {
+      articlesWithRating.sort((a, b) => b.averageRating - a.averageRating)
+    }
+
+    const totalPages = Math.ceil(total / pageSize)
+
+    return {
+      articles: articlesWithRating,
+      total,
+      totalPages
+    }
   } catch (error) {
     console.error('Erreur lors de la récupération des articles:', error)
+    return { articles: [], total: 0, totalPages: 0 }
+  }
+}
+
+async function getCategories(): Promise<Category[]> {
+  try {
+    const categories = await prisma.category.findMany({
+      where: {
+        isActive: true
+      },
+      include: {
+        _count: {
+          select: {
+            articles: true
+          }
+        }
+      },
+      orderBy: {
+        name: 'asc'
+      }
+    })
+    return categories
+  } catch (error) {
+    console.error('Erreur lors de la récupération des catégories:', error)
     return []
   }
 }
@@ -50,20 +169,41 @@ async function getFeaturedArticle(): Promise<ArticlePreview | null> {
       where: {
         published: true
       },
+      include: {
+        category: {
+          select: {
+            name: true,
+            color: true,
+            slug: true,
+          }
+        },
+        _count: {
+          select: {
+            comments: true,
+            ratings: true,
+          }
+        }
+      },
       orderBy: {
         createdAt: 'desc'
-      },
-      select: {
-        id: true,
-        title: true,
-        slug: true,
-        excerpt: true,
-        imageUrl: true,
-        createdAt: true,
-        metaDesc: true
       }
     })
-    return featuredArticle
+
+    if (!featuredArticle) return null
+
+    // Calculer la note moyenne
+    const ratings = await prisma.rating.findMany({
+      where: { articleId: featuredArticle.id },
+    });
+
+    const averageRating = ratings.length > 0
+      ? ratings.reduce((sum, rating) => sum + rating.rating, 0) / ratings.length
+      : 0;
+
+    return {
+      ...featuredArticle,
+      averageRating,
+    }
   } catch (error) {
     console.error('Erreur lors de la récupération de l\'article en vedette:', error)
     return null
@@ -140,6 +280,31 @@ function BlogHero({ featuredArticle }: { featuredArticle: ArticlePreview | null 
                       {featuredArticle.excerpt}
                     </p>
                   )}
+
+                  {/* Rating et commentaires */}
+                  <div className="flex items-center gap-4 mb-6">
+                    {/* Rating */}
+                    <div className="flex items-center gap-1">
+                      <div className="flex text-yellow-400">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className={`w-4 h-4 ${i < Math.round(featuredArticle.averageRating) ? 'fill-current' : 'fill-gray-300'}`} viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                          </svg>
+                        ))}
+                      </div>
+                      <span className="text-gray-600 font-medium">
+                        {featuredArticle.averageRating > 0 ? featuredArticle.averageRating.toFixed(1) : 'N/A'}
+                      </span>
+                    </div>
+
+                    {/* Commentaires */}
+                    <div className="flex items-center gap-1">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                      </svg>
+                      <span className="text-gray-600">{featuredArticle._count.comments}</span>
+                    </div>
+                  </div>
                   
                   <Link
                     href={`/blog/${featuredArticle.slug}`}
@@ -165,32 +330,118 @@ function BlogHero({ featuredArticle }: { featuredArticle: ArticlePreview | null 
 }
 
 // Composant de catégories/filtres
-function CategoryFilter() {
-  const categories = [
-    { name: "Tous les articles", active: true },
-    { name: "Chauffage", active: false },
-    { name: "Climatisation", active: false },
-    { name: "Maintenance", active: false },
-    { name: "Économies", active: false }
-  ]
-
+function CategoryFilter({ categories }: { categories: Category[] }) {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="flex flex-wrap justify-center gap-3">
-        {categories.map((category, index) => (
-          <button
-            key={index}
-            className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-              category.active
-                ? 'bg-[#03144a] text-white shadow-md'
-                : 'bg-[#f8f9f4] text-[#03144a] border border-gray-200 hover:border-[#03144a] hover:text-[#03144a]'
-            }`}
+        <Link
+          href="/blog"
+          className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-[#03144a] text-white shadow-md"
+        >
+          <span className="mr-2">📰</span>
+          Tous les articles
+        </Link>
+        {categories.map((category) => (
+          <Link
+            key={category.id}
+            href={`/categorie/${category.slug}`}
+            className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-[#f8f9f4] text-[#03144a] border border-gray-200 hover:border-[#03144a] hover:text-[#03144a] transition-all duration-200"
           >
-            <span className="mr-2"></span>
+            <div 
+              className="w-3 h-3 rounded-full mr-2"
+              style={{ backgroundColor: category.color }}
+            ></div>
             {category.name}
-          </button>
+            <span className="ml-2 text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
+              {category._count.articles}
+            </span>
+          </Link>
         ))}
       </div>
+    </div>
+  )
+}
+
+// Composant de pagination
+function Pagination({ currentPage, totalPages, sort }: { currentPage: number, totalPages: number, sort: string }) {
+  const generatePageUrl = (page: number) => {
+    const params = new URLSearchParams()
+    if (page > 1) params.set('page', page.toString())
+    if (sort !== 'recent') params.set('sort', sort)
+    return `/blog${params.toString() ? `?${params.toString()}` : ''}`
+  }
+
+  const pages = []
+  const maxVisiblePages = 5
+
+  if (totalPages <= maxVisiblePages) {
+    for (let i = 1; i <= totalPages; i++) {
+      pages.push(i)
+    }
+  } else {
+    if (currentPage <= 3) {
+      for (let i = 1; i <= 4; i++) {
+        pages.push(i)
+      }
+      pages.push('...')
+      pages.push(totalPages)
+    } else if (currentPage >= totalPages - 2) {
+      pages.push(1)
+      pages.push('...')
+      for (let i = totalPages - 3; i <= totalPages; i++) {
+        pages.push(i)
+      }
+    } else {
+      pages.push(1)
+      pages.push('...')
+      for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+        pages.push(i)
+      }
+      pages.push('...')
+      pages.push(totalPages)
+    }
+  }
+
+  return (
+    <div className="flex justify-center mt-16">
+      <nav className="flex items-center space-x-2">
+        {currentPage > 1 && (
+          <Link
+            href={generatePageUrl(currentPage - 1)}
+            className="px-4 py-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            Précédent
+          </Link>
+        )}
+        
+        {pages.map((page, index) => (
+          <div key={index}>
+            {page === '...' ? (
+              <span className="px-4 py-2 text-gray-400">...</span>
+            ) : (
+              <Link
+                href={generatePageUrl(page as number)}
+                className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                  page === currentPage
+                    ? 'bg-[#03144a] text-white'
+                    : 'text-[#03144a] hover:text-[#03144a] hover:bg-gray-100'
+                }`}
+              >
+                {page}
+              </Link>
+            )}
+          </div>
+        ))}
+        
+        {currentPage < totalPages && (
+          <Link
+            href={generatePageUrl(currentPage + 1)}
+            className="px-4 py-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            Suivant
+          </Link>
+        )}
+      </nav>
     </div>
   )
 }
@@ -203,7 +454,7 @@ function CTASection() {
         <div className="bg-[#f8f9f4] rounded-2xl shadow-lg p-8 lg:p-12">
           <div className="max-w-2xl mx-auto">
             <div className="w-16 h-16 bg-[#03144a] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg className="w-8 h-8 text-[#03144a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8 text-[#F8F9F4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
@@ -249,160 +500,133 @@ export const metadata: Metadata = {
   }
 }
 
-export default async function BlogPage() {
-  const articles = await getArticles()
-  const featuredArticle = await getFeaturedArticle()
+export default async function BlogPage({ searchParams }: PageProps) {
+  const resolvedSearchParams = await searchParams
+  const currentPage = parseInt(resolvedSearchParams.page || '1')
+  const sort = resolvedSearchParams.sort || 'recent'
   
-  // Séparer l'article en vedette des autres
-  const otherArticles = featuredArticle 
-    ? articles.filter(article => article.id !== featuredArticle.id)
-    : articles
+  const { articles, total, totalPages } = await getArticles(currentPage, sort)
+  const featuredArticle = await getFeaturedArticle()
+  const categories = await getCategories()
 
   return (
     <div className="min-h-screen bg-[#f8f9f4]">
-      {/* Hero avec article en vedette */}
+      {/* Hero Section */}
       <BlogHero featuredArticle={featuredArticle} />
-      
-      {/* Filtres par catégorie */}
-      <CategoryFilter />
 
-      {/* Liste des articles */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        {otherArticles.length === 0 ? (
-          <div className="text-center py-20">
-            <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-semibold text-[#03144a] mb-2">
-              Aucun article disponible
-            </h3>
-            <p className="text-gray-500 max-w-md mx-auto">
-              Nos experts préparent actuellement du contenu de qualité pour vous. Revenez bientôt !
-            </p>
-          </div>
-        ) : (
-          <>
-            <div className="flex items-center justify-between mb-10">
-              <div>
-                <h2 className="text-3xl font-medium text-[#03144a]">
-                  Nos derniers articles
-                </h2>
-                <p className="text-gray-600 mt-2">
-                  {otherArticles.length} article{otherArticles.length > 1 ? 's' : ''} disponible{otherArticles.length > 1 ? 's' : ''}
-                </p>
-              </div>
-              
-              <div className="hidden md:flex items-center space-x-4">
-                <span className="text-sm text-gray-500">Trier par :</span>
-                <select className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#03144a]">
-                  <option>Plus récent</option>
-                  <option>Plus ancien</option>
-                  <option>Populaire</option>
-                </select>
-              </div>
-            </div>
+      <div className="w-90/100 mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Filtres et tri */}
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+          <CategoryFilter categories={categories} />
+          <SortSelect currentSort={sort} />
+        </div>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {otherArticles.map((article) => (
-                <Link
-                href={`/blog/${article.slug}`}
+        {/* Grille d'articles */}
+        {articles.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {articles.map((article) => (
+              <Link
                 key={article.id}
-                >
-                <article  
-                  className="group bg-[#f8f9f4] rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-[#03144a]"
-                >
-                  <div className="relative">
-                    {article.imageUrl ? (
-                      <div className="relative h-48 w-full overflow-hidden">
-                        <Image
-                          fill
-                          src={article.imageUrl}
-                          alt={article.title}
-                          className="object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    ) : (
-                      <div className="h-48 bg-gradient-to-br from-[#03144a] to-[#03144a] flex items-center justify-center">
-                        <svg className="w-12 h-12 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H15" />
-                        </svg>
-                      </div>
-                    )}
+                href={`/blog/${article.slug}`}
+                className="group"
+              >
+                <article className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
+                  {article.imageUrl && (
+                    <div className="relative h-48">
+                      <Image
+                        src={article.imageUrl}
+                        alt={article.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
+                  
+                  <div className="p-6 flex flex-col flex-grow">
+                    <div className="flex items-center gap-2 mb-3">
+                      {article.category && (
+                        <span 
+                          className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium"
+                          style={{ 
+                            backgroundColor: `${article.category.color}20`,
+                            color: article.category.color 
+                          }}
+                        >
+                          <div 
+                            className="w-2 h-2 rounded-full"
+                            style={{ backgroundColor: article.category.color }}
+                          ></div>
+                          {article.category.name}
+                        </span>
+                      )}
+                    </div>
                     
-                    {/* Badge catégorie */}
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-[#f8f9f4] bg-opacity-90 text-[#03144a] text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm">
-                        Conseil expert
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="p-6">
-                    <div className="flex items-center text-sm text-gray-500 mb-3">
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4h3a1 1 0 011 1v8a1 1 0 01-1 1H3a1 1 0 01-1-1V8a1 1 0 011-1h3z" />
-                      </svg>
-                      <time dateTime={article.createdAt.toISOString()}>
-                        {new Date(article.createdAt).toLocaleDateString('fr-FR', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric'
-                        })}
-                      </time>
-                    </div>
-
-                    <h3 className="text-xl font-medium text-[#03144a] mb-3 line-clamp-2 group-hover:text-[#03144a] transition-colors">
+                    <h3 className="text-lg font-medium text-[#03144a] mb-3 line-clamp-2 group-hover:text-[#03144a] transition-colors">
                       {article.title}
                     </h3>
-
+                    
                     {article.excerpt && (
-                      <p className="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
+                      <p className="text-gray-600 mb-4 line-clamp-3 flex-grow">
                         {article.excerpt}
                       </p>
                     )}
-
                     
+                    <div className="flex items-center justify-between text-sm text-gray-500 mt-auto">
+                      <time>
+                        {new Date(article.createdAt).toLocaleDateString('fr-FR', {
+                          year: 'numeric',
+                          month: 'short',
+                          day: 'numeric'
+                        })}
+                      </time>
+                      <div className="flex items-center gap-4">
+                        {/* Rating */}
+                        <div className="flex items-center gap-1">
+                          <div className="flex text-yellow-400">
+                            {[...Array(5)].map((_, i) => (
+                              <svg key={i} className={`w-4 h-4 ${i < Math.round(article.averageRating) ? 'fill-current' : 'fill-gray-300'}`} viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                              </svg>
+                            ))}
+                          </div>
+                          <span className="text-gray-600 font-medium text-xs">
+                            {article.averageRating > 0 ? article.averageRating.toFixed(1) : 'N/A'}
+                          </span>
+                        </div>
 
-                      <p className="inline-flex items-center text-[#03144a] hover:text-[#03144a] font-semibold transition-colors duration-200 group">
-                      Lire l&apos;article
-                      <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                      </p>
-                    
+                        {/* Commentaires */}
+                        <div className="flex items-center gap-1">
+                          <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                          </svg>
+                          <span className="text-gray-600 text-xs">{article._count.comments}</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </article>
-                </Link>
-              ))}
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-12">
+            <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
             </div>
+            <h3 className="text-lg font-medium text-gray-900 mb-2">Aucun article trouvé</h3>
+            <p className="text-gray-600">Essayez de modifier vos filtres ou revenez plus tard.</p>
+          </div>
+        )}
 
-            {/* Pagination (exemple) */}
-            <div className="flex justify-center mt-16">
-              <nav className="flex items-center space-x-2">
-                <button className="px-4 py-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                  Précédent
-                </button>
-                <button className="px-4 py-2 bg-[#03144a] text-white rounded-lg font-medium">
-                  1
-                </button>
-                <button className="px-4 py-2 text-[#03144a] hover:text-[#03144a] hover:bg-gray-100 rounded-lg transition-colors">
-                  2
-                </button>
-                <button className="px-4 py-2 text-[#03144a] hover:text-[#03144a] hover:bg-gray-100 rounded-lg transition-colors">
-                  3
-                </button>
-                <button className="px-4 py-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                  Suivant
-                </button>
-              </nav>
-            </div>
-          </>
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <Pagination currentPage={currentPage} totalPages={totalPages} sort={sort} />
         )}
       </div>
 
-      {/* Section CTA */}
+      {/* CTA Section */}
       <CTASection />
     </div>
   )

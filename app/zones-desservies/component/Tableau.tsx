@@ -24,7 +24,7 @@ const SimpleCitiesSection = () => {
     { name: 'Salles', url: '/salles-chauffage-climatisation' },
     { name: 'Belin-Béliet', url: '/belin-beliet-chauffage-climatisation' },
     { name: 'Sanguinet', url: '/sanguinet-chauffage-climatisation' },
-    { name: 'Parentis-en-Born', url: '/parentis-chauffage-climatisation' },
+    { name: 'Parentis-en-Born', url: '/parentis-en-born-chauffage-climatisation' },
     { name: 'Biscarrosse', url: '/biscarrosse-chauffage-climatisation' },
     { name: 'Mimizan', url: '/mimizan-chauffage-climatisation' },
     { name: 'Canéjan', url: '/canejan-chauffage-climatisation' },
@@ -76,17 +76,6 @@ const SimpleCitiesSection = () => {
           </p>
         </div>
 
-        {/* Search */}
-        <div className="max-w-lg mx-auto mb-12">
-          <input
-            type="text"
-            placeholder="Rechercher une ville..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-6 py-4 bg-[#F8F9F4] border border-[#03144a]/30 rounded-lg text-[#03144a] placeholder-[#03144a]/60 focus:outline-none focus:border-[#03144a]"
-          />
-        </div>
-
         <div className="text-center mb-8">
           <button
             onClick={() => setShowCities(!showCities)}
@@ -111,21 +100,40 @@ const SimpleCitiesSection = () => {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-20">
-          <div className="bg-[#F8F9F4] rounded-xl p-8 border border-[#03144a]/20">
-            <h3 className="text-2xl font-semibold mb-4">
-              Votre ville n&apos;apparaît pas ?
-            </h3>
-            <p className="text-[#03144a]/80 mb-6">
-              Contactez-nous pour discuter de votre projet
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block px-8 py-3 bg-[#03144a] text-[#F8F9F4] rounded-lg hover:bg-[#03144a]/90 transition-colors"
-            >
-              Nous contacter
-            </Link>
+        {/* CTA - Layout flex pour les deux sections */}
+        <div className="mt-20">
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Section "Votre ville n'apparaît pas ?" */}
+            <div className="flex-1 bg-[#F8F9F4] rounded-xl p-8 border border-[#03144a]/20">
+              <h3 className="text-2xl font-semibold mb-4">
+                Votre ville n&apos;apparaît pas ?
+              </h3>
+              <p className="text-[#03144a]/80 mb-6">
+                Contactez-nous pour découvrir nos services dans votre ville, vous y verrez bientôt la page correspondante !
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block px-8 py-3 bg-[#03144a] text-[#F8F9F4] rounded-lg hover:bg-[#03144a]/90 transition-colors"
+              >
+                Nous contacter
+              </Link>
+            </div>
+
+            {/* Section "ClimGO à Bordeaux" */}
+            <div className="flex-1 bg-[#F8F9F4] rounded-xl p-8 border border-[#03144a]/20">
+              <h3 className="text-2xl font-semibold mb-4">
+                ClimGO à Bordeaux
+              </h3>
+              <p className="text-[#03144a]/80 mb-6">
+                Découvrez nos services de chauffage et climatisation dans la métropole bordelaise
+              </p>
+              <Link
+                href="/blog"
+                className="inline-block px-8 py-3 bg-[#03144a] text-[#F8F9F4] rounded-lg hover:bg-[#03144a]/90 transition-colors"
+              >
+                Consulter nos articles
+              </Link>
+            </div>
           </div>
         </div>
       </div>
